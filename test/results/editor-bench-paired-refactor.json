@@ -1,0 +1,1083 @@
+{
+  "schema": "editor-recipe-probe/2",
+  "status": "ok",
+  "mode": "full",
+  "startedAt": "2026-08-14T16:36:45.717Z",
+  "finishedAt": "2026-08-14T16:40:07.364Z",
+  "durationMs": 201647,
+  "command": {
+    "argv": [
+      "<checkout>/test/editor-recipe-probe.mjs"
+    ],
+    "node": "v20.19.4"
+  },
+  "env": {
+    "trials": 3,
+    "seed": 716208979,
+    "jitterMs": [
+      22,
+      129
+    ],
+    "candidates": "Slate,Draft",
+    "arms": null,
+    "allowVoid": false,
+    "allowTargetDrift": false,
+    "adHoc": null
+  },
+  "probe": {
+    "path": "<checkout>/test/editor-recipe-probe.mjs",
+    "sha256": "5d4656e956e5850e"
+  },
+  "targetsLib": {
+    "path": "<checkout>/test/lib/editor-targets.mjs",
+    "sha256": "c82424ff49c662b8"
+  },
+  "content": {
+    "path": "<checkout>/content.js",
+    "sha256": "ba29ca3a6ded5613",
+    "override": false,
+    "snapshot": "<temporary-directory>/bench/new-slate-draft.content.js"
+  },
+  "chrome": {
+    "path": "<home>/.cache/puppeteer/chrome/linux-145.0.7632.77/chrome-linux64/chrome",
+    "source": "Chrome for Testing",
+    "version": "Chrome/145.0.7632.77"
+  },
+  "recipeStamp": "spliceSentenceSlate 2026-08-14: same-tick selection + targetRanges + misplaced check",
+  "targetDriftCheck": {
+    "ok": true,
+    "checked": 7,
+    "drift": [],
+    "error": null,
+    "file": "<checkout>/test/sentence-editors-test.mjs"
+  },
+  "targets": [
+    {
+      "label": "Slate",
+      "recipe": "intent",
+      "control": true,
+      "arms": [
+        "intent",
+        "none"
+      ],
+      "probeDefault": true,
+      "quirk": "positive control; \\uFEFF placeholder furniture",
+      "focusVia": "click",
+      "minClickY": 0,
+      "clearPasses": 6,
+      "readyMs": 1500,
+      "focusSettleMs": 350,
+      "clearSettleMs": 240,
+      "pickOutermost": true,
+      "minWidth": 60,
+      "minHeight": 12,
+      "stripSelectors": [
+        "[contenteditable=\"false\"]",
+        "[data-slate-placeholder]",
+        "[aria-hidden=\"true\"]"
+      ],
+      "stripChars": "﻿​",
+      "source": "built-in",
+      "family": "Slate",
+      "url": "https://www.slatejs.org/examples/richtext",
+      "selector": "[data-slate-editor=\"true\"]",
+      "finalUrl": "https://www.slatejs.org/examples/richtext",
+      "picked": {
+        "x": 424,
+        "y": 200,
+        "matches": 1,
+        "tag": "div"
+      }
+    },
+    {
+      "label": "Draft",
+      "recipe": "mutation",
+      "control": false,
+      "arms": null,
+      "probeDefault": true,
+      "quirk": "starts empty",
+      "focusVia": "click",
+      "minClickY": 0,
+      "clearPasses": 6,
+      "readyMs": 1500,
+      "focusSettleMs": 350,
+      "clearSettleMs": 240,
+      "pickOutermost": true,
+      "minWidth": 60,
+      "minHeight": 12,
+      "stripSelectors": [
+        "[contenteditable=\"false\"]",
+        "[data-slate-placeholder]",
+        "[aria-hidden=\"true\"]"
+      ],
+      "stripChars": "﻿​",
+      "source": "built-in",
+      "family": "Draft",
+      "url": "https://draftjs.org/",
+      "selector": ".public-DraftEditor-content",
+      "finalUrl": "https://draftjs.org/",
+      "picked": {
+        "x": 493,
+        "y": 414,
+        "matches": 1,
+        "tag": "div"
+      }
+    }
+  ],
+  "nesting": [
+    {
+      "name": "Slate > [ce=false] > unregistered",
+      "id": "inner",
+      "want": null,
+      "got": {
+        "family": null,
+        "ok": false,
+        "detail": "unknown-editor",
+        "stFamily": null
+      },
+      "pass": true
+    },
+    {
+      "name": "Slate itself still resolves",
+      "id": "outer",
+      "want": "Slate",
+      "got": {
+        "family": "Slate",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Slate"
+      },
+      "pass": true
+    },
+    {
+      "name": "Slate > [ce=false] > Quill",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Slate > Quill, no island",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "ProseMirror > [ce=false] > unregistered",
+      "id": "inner",
+      "want": null,
+      "got": {
+        "family": null,
+        "ok": false,
+        "detail": "unknown-editor",
+        "stFamily": null
+      },
+      "pass": true
+    },
+    {
+      "name": "ProseMirror itself still resolves",
+      "id": "outer",
+      "want": "ProseMirror",
+      "got": {
+        "family": "ProseMirror",
+        "ok": true,
+        "detail": null,
+        "stFamily": "ProseMirror"
+      },
+      "pass": true
+    },
+    {
+      "name": "ProseMirror > [ce=false] > Quill",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "ProseMirror > Quill, no island",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Quill > [ce=false] > unregistered",
+      "id": "inner",
+      "want": null,
+      "got": {
+        "family": null,
+        "ok": false,
+        "detail": "unknown-editor",
+        "stFamily": null
+      },
+      "pass": true
+    },
+    {
+      "name": "Quill itself still resolves",
+      "id": "outer",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Quill > [ce=false] > Quill",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Quill > Quill, no island",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Lexical > [ce=false] > unregistered",
+      "id": "inner",
+      "want": null,
+      "got": {
+        "family": null,
+        "ok": false,
+        "detail": "unknown-editor",
+        "stFamily": null
+      },
+      "pass": true
+    },
+    {
+      "name": "Lexical itself still resolves",
+      "id": "outer",
+      "want": "Lexical",
+      "got": {
+        "family": "Lexical",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Lexical"
+      },
+      "pass": true
+    },
+    {
+      "name": "Lexical > [ce=false] > Quill",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Lexical > Quill, no island",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Draft > [ce=false] > unregistered",
+      "id": "inner",
+      "want": null,
+      "got": {
+        "family": null,
+        "ok": false,
+        "detail": "unknown-editor",
+        "stFamily": null
+      },
+      "pass": true
+    },
+    {
+      "name": "Draft itself still resolves",
+      "id": "outer",
+      "want": "Draft",
+      "got": {
+        "family": "Draft",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Draft"
+      },
+      "pass": true
+    },
+    {
+      "name": "Draft > [ce=false] > Quill",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Draft > Quill, no island",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Trix > [ce=false] > unregistered",
+      "id": "inner",
+      "want": null,
+      "got": {
+        "family": null,
+        "ok": false,
+        "detail": "unknown-editor",
+        "stFamily": null
+      },
+      "pass": true
+    },
+    {
+      "name": "Trix itself still resolves",
+      "id": "outer",
+      "want": "Trix",
+      "got": {
+        "family": "Trix",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Trix"
+      },
+      "pass": true
+    },
+    {
+      "name": "Trix > [ce=false] > Quill",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Trix > Quill, no island",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    }
+  ],
+  "table": [
+    {
+      "family": "Slate",
+      "label": "Slate",
+      "arm": "intent",
+      "idle": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "APPLIED": 3
+      },
+      "burst": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "APPLIED": 3
+      },
+      "errors": [],
+      "details": [],
+      "trials": [
+        {
+          "phase": "idle",
+          "i": 0,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 5183
+        },
+        {
+          "phase": "idle",
+          "i": 1,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 4904
+        },
+        {
+          "phase": "idle",
+          "i": 2,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 4954
+        },
+        {
+          "phase": "burst",
+          "i": 0,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": {
+              "userEdited": true,
+              "yielded": null,
+              "replayed": "hen ",
+              "blocked": null
+            }
+          },
+          "pageErrors": [],
+          "ms": 5824
+        },
+        {
+          "phase": "burst",
+          "i": 1,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": {
+              "userEdited": true,
+              "yielded": null,
+              "replayed": "en ",
+              "blocked": null
+            }
+          },
+          "pageErrors": [],
+          "ms": 6152
+        },
+        {
+          "phase": "burst",
+          "i": 2,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": {
+              "userEdited": true,
+              "yielded": null,
+              "replayed": "he",
+              "blocked": null
+            }
+          },
+          "pageErrors": [],
+          "ms": 6110
+        }
+      ],
+      "unmeasured": false
+    },
+    {
+      "family": "Slate",
+      "label": "Slate",
+      "arm": "none",
+      "idle": {},
+      "burst": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "REFUSED": 3
+      },
+      "errors": [],
+      "details": [
+        "burst[0] REFUSED control \"The techncian arrived early. Then we shipped it out to everyone.\"",
+        "burst[1] REFUSED control \"The techncian arrived early. Then we shipped it out to everyone.\"",
+        "burst[2] REFUSED control \"The techncian arrived early. Then we shipped it out to everyone.\""
+      ],
+      "trials": [
+        {
+          "phase": "burst",
+          "i": 0,
+          "verdict": "REFUSED",
+          "why": null,
+          "reason": "control",
+          "lost": 0,
+          "final": "The techncian arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": false,
+            "outcome": "not-fired",
+            "reason": "control"
+          },
+          "pageErrors": [],
+          "ms": 5937
+        },
+        {
+          "phase": "burst",
+          "i": 1,
+          "verdict": "REFUSED",
+          "why": null,
+          "reason": "control",
+          "lost": 0,
+          "final": "The techncian arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": false,
+            "outcome": "not-fired",
+            "reason": "control"
+          },
+          "pageErrors": [],
+          "ms": 6054
+        },
+        {
+          "phase": "burst",
+          "i": 2,
+          "verdict": "REFUSED",
+          "why": null,
+          "reason": "control",
+          "lost": 0,
+          "final": "The techncian arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": false,
+            "outcome": "not-fired",
+            "reason": "control"
+          },
+          "pageErrors": [],
+          "ms": 5738
+        }
+      ],
+      "unmeasured": false
+    },
+    {
+      "family": "Draft",
+      "label": "Draft",
+      "arm": "intent",
+      "idle": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "REFUSED": 3
+      },
+      "burst": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "REFUSED": 2,
+        "DAMAGED": 1,
+        "lost": 1
+      },
+      "errors": [],
+      "details": [
+        "idle[0] REFUSED ignored \"The techncian arrived early. Then we shipped\"",
+        "idle[1] REFUSED ignored \"The techncian arrived early. Then we shipped\"",
+        "idle[2] REFUSED ignored \"The techncian arrived early. Then we shipped\"",
+        "burst[0] REFUSED ignored \"The techncian arrived early. Then we shipped it out to everyone.\"",
+        "burst[1] REFUSED ignored \"The techncian arrived early. Then we shipped it out to everyone.\"",
+        "burst[2] DAMAGED refused (ignored): 1 user character(s) DELETED \"The techncian arrived early. Ten we shipped it out to everyone.\""
+      ],
+      "trials": [
+        {
+          "phase": "idle",
+          "i": 0,
+          "verdict": "REFUSED",
+          "why": null,
+          "reason": "ignored",
+          "lost": 0,
+          "final": "The techncian arrived early. Then we shipped",
+          "result": {
+            "ok": false,
+            "outcome": "failed-transport",
+            "reason": "ignored",
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 4807
+        },
+        {
+          "phase": "idle",
+          "i": 1,
+          "verdict": "REFUSED",
+          "why": null,
+          "reason": "ignored",
+          "lost": 0,
+          "final": "The techncian arrived early. Then we shipped",
+          "result": {
+            "ok": false,
+            "outcome": "failed-transport",
+            "reason": "ignored",
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 5047
+        },
+        {
+          "phase": "idle",
+          "i": 2,
+          "verdict": "REFUSED",
+          "why": null,
+          "reason": "ignored",
+          "lost": 0,
+          "final": "The techncian arrived early. Then we shipped",
+          "result": {
+            "ok": false,
+            "outcome": "failed-transport",
+            "reason": "ignored",
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 4978
+        },
+        {
+          "phase": "burst",
+          "i": 0,
+          "verdict": "REFUSED",
+          "why": null,
+          "reason": "ignored",
+          "lost": 0,
+          "final": "The techncian arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": false,
+            "outcome": "failed-transport",
+            "reason": "ignored",
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 6052
+        },
+        {
+          "phase": "burst",
+          "i": 1,
+          "verdict": "REFUSED",
+          "why": null,
+          "reason": "ignored",
+          "lost": 0,
+          "final": "The techncian arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": false,
+            "outcome": "failed-transport",
+            "reason": "ignored",
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 5707
+        },
+        {
+          "phase": "burst",
+          "i": 2,
+          "verdict": "DAMAGED",
+          "why": "refused (ignored): 1 user character(s) DELETED",
+          "reason": "ignored",
+          "lost": 1,
+          "final": "The techncian arrived early. Ten we shipped it out to everyone.",
+          "result": {
+            "ok": false,
+            "outcome": "failed-transport",
+            "reason": "ignored",
+            "window": {
+              "userEdited": true,
+              "yielded": null,
+              "replayed": "h",
+              "blocked": null
+            }
+          },
+          "pageErrors": [],
+          "ms": 5351
+        }
+      ],
+      "unmeasured": false
+    },
+    {
+      "family": "Draft",
+      "label": "Draft",
+      "arm": "mutation-checked",
+      "idle": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "APPLIED": 3
+      },
+      "burst": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "APPLIED": 3
+      },
+      "errors": [],
+      "details": [],
+      "trials": [
+        {
+          "phase": "idle",
+          "i": 0,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 4787
+        },
+        {
+          "phase": "idle",
+          "i": 1,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 5102
+        },
+        {
+          "phase": "idle",
+          "i": 2,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 4944
+        },
+        {
+          "phase": "burst",
+          "i": 0,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 6149
+        },
+        {
+          "phase": "burst",
+          "i": 1,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 6009
+        },
+        {
+          "phase": "burst",
+          "i": 2,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 6260
+        }
+      ],
+      "unmeasured": false
+    },
+    {
+      "family": "Draft",
+      "label": "Draft",
+      "arm": "mutation-reimpose",
+      "idle": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "APPLIED": 3
+      },
+      "burst": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "APPLIED": 3
+      },
+      "errors": [],
+      "details": [],
+      "trials": [
+        {
+          "phase": "idle",
+          "i": 0,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 5514
+        },
+        {
+          "phase": "idle",
+          "i": 1,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 4737
+        },
+        {
+          "phase": "idle",
+          "i": 2,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 4706
+        },
+        {
+          "phase": "burst",
+          "i": 0,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 6064
+        },
+        {
+          "phase": "burst",
+          "i": 1,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 6381
+        },
+        {
+          "phase": "burst",
+          "i": 2,
+          "verdict": "APPLIED",
+          "why": null,
+          "reason": "landed",
+          "lost": 0,
+          "final": "The technician arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": true,
+            "outcome": "landed",
+            "reason": null,
+            "window": null
+          },
+          "pageErrors": [],
+          "ms": 5753
+        }
+      ],
+      "unmeasured": false
+    },
+    {
+      "family": "Draft",
+      "label": "Draft",
+      "arm": "none",
+      "idle": {},
+      "burst": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "REFUSED": 3
+      },
+      "errors": [],
+      "details": [
+        "burst[0] REFUSED control \"The techncian arrived early. Then we shipped it out to everyone.\"",
+        "burst[1] REFUSED control \"The techncian arrived early. Then we shipped it out to everyone.\"",
+        "burst[2] REFUSED control \"The techncian arrived early. Then we shipped it out to everyone.\""
+      ],
+      "trials": [
+        {
+          "phase": "burst",
+          "i": 0,
+          "verdict": "REFUSED",
+          "why": null,
+          "reason": "control",
+          "lost": 0,
+          "final": "The techncian arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": false,
+            "outcome": "not-fired",
+            "reason": "control"
+          },
+          "pageErrors": [],
+          "ms": 5847
+        },
+        {
+          "phase": "burst",
+          "i": 1,
+          "verdict": "REFUSED",
+          "why": null,
+          "reason": "control",
+          "lost": 0,
+          "final": "The techncian arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": false,
+            "outcome": "not-fired",
+            "reason": "control"
+          },
+          "pageErrors": [],
+          "ms": 6046
+        },
+        {
+          "phase": "burst",
+          "i": 2,
+          "verdict": "REFUSED",
+          "why": null,
+          "reason": "control",
+          "lost": 0,
+          "final": "The techncian arrived early. Then we shipped it out to everyone.",
+          "result": {
+            "ok": false,
+            "outcome": "not-fired",
+            "reason": "control"
+          },
+          "pageErrors": [],
+          "ms": 5747
+        }
+      ],
+      "unmeasured": false
+    }
+  ],
+  "summary": {
+    "cells": 6,
+    "unmeasured": 0,
+    "nestingFailed": 0,
+    "skipped": [],
+    "broken": []
+  },
+  "exit": {
+    "code": 0,
+    "status": "ok"
+  }
+}

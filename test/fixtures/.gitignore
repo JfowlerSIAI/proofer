@@ -1,0 +1,4 @@
+# License texts retain their upstream archive paths, which can include names
+# such as dist/ and build/. They are reviewed notices, not generated bundles.
+!LICENSES/
+!LICENSES/**

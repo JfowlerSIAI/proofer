@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Set up Proofer</title>
+    <style>
+      :root { color-scheme: light dark; --fg: #1f2937; --muted: #6b7280; --line: #e5e7eb;
+              --ok-bg: #ecfdf5; --ok-fg: #065f46; --warn-bg: #fffbeb; --warn-fg: #92400e;
+              --bad-bg: #fef2f2; --bad-fg: #991b1b; --accent: #2563eb; --card: #ffffff; --page: #f9fafb; }
+      @media (prefers-color-scheme: dark) {
+        :root { --fg: #e5e7eb; --muted: #9ca3af; --line: #374151; --ok-bg: #064e3b; --ok-fg: #d1fae5;
+                --warn-bg: #451a03; --warn-fg: #fde68a; --bad-bg: #450a0a; --bad-fg: #fecaca;
+                --accent: #60a5fa; --card: #111827; --page: #0b1220; }
+      }
+      body { font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0;
+             background: var(--page); color: var(--fg); }
+      main { max-width: 640px; margin: 48px auto; padding: 0 20px; }
+      h1 { font-size: 24px; margin: 0 0 4px; }
+      .sub { color: var(--muted); margin: 0 0 28px; }
+      .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+              padding: 22px 24px; margin-bottom: 16px; }
+      .card h2 { font-size: 18px; margin: 0 0 8px; }
+      .card p { margin: 8px 0; }
+      .muted { color: var(--muted); font-size: 13px; }
+      button { font: inherit; padding: 9px 16px; border-radius: 6px; border: 1px solid var(--line);
+               background: var(--card); color: var(--fg); cursor: pointer; }
+      button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+      button:disabled { opacity: 0.5; cursor: default; }
+      .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+      .progress { height: 10px; background: var(--line); border-radius: 5px; overflow: hidden; margin: 12px 0 6px; }
+      .progress > div { height: 100%; width: 0; background: var(--accent); transition: width 0.3s; }
+      .note { padding: 10px 12px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+      .note.ok { background: var(--ok-bg); color: var(--ok-fg); }
+      .note.warn { background: var(--warn-bg); color: var(--warn-fg); }
+      .note.bad { background: var(--bad-bg); color: var(--bad-fg); }
+      ol { padding-left: 22px; margin: 8px 0; }
+      li { margin: 4px 0; }
+      .demo { font-size: 16px; border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px;
+              min-height: 26px; white-space: pre-wrap; }
+      .demo .fixed { background: rgba(34, 197, 94, 0.28); border-radius: 3px; transition: background 1.2s; }
+      .demo .fixed.fade { background: transparent; }
+      .kbd { font: 12px ui-monospace, monospace; border: 1px solid var(--line); border-bottom-width: 2px;
+             border-radius: 4px; padding: 1px 6px; }
+      [hidden] { display: none !important; }
+      .steps { list-style: none; padding: 0; margin: 12px 0 0; }
+      .steps li { display: flex; gap: 10px; align-items: baseline; color: var(--muted); }
+      .steps li.done { color: var(--ok-fg); }
+      .steps li.now { color: var(--fg); font-weight: 600; }
+      .steps li span:first-child { width: 18px; flex: none; text-align: center; }
+      details { margin-top: 10px; }
+      input[type="text"] { font: inherit; padding: 6px 8px; width: 100%; box-sizing: border-box; }
+      dialog { border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--fg);
+               max-width: 440px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Set up Proofer</h1>
+      <p class="sub">Proofer proofreads as you type, correcting finished sentences. It runs on your own computer, so nothing you type is sent anywhere.</p>
+
+      <ul class="steps" id="steps" aria-label="Setup progress">
+        <li data-step="ollama"><span>1</span><span>Ollama, which runs Proofer's proofreading engine</span></li>
+        <li data-step="download"><span>2</span><span>Download the proofreading engine (1.7 GB)</span></li>
+        <li data-step="check"><span>3</span><span>Speed check</span></li>
+        <li data-step="on"><span>4</span><span>Turn on</span></li>
+      </ul>
+      <p></p>
+
+      <!-- Every state is one card; welcome.js shows exactly one. -->
+      <section class="card" data-state="checking">
+        <h2>Looking for Ollama…</h2>
+        <p class="muted">This takes a moment.</p>
+      </section>
+
+      <section class="card" data-state="unsupported" hidden>
+        <h2>This computer can't run Proofer</h2>
+        <p id="unsupportedWhy"></p>
+        <p class="muted">Proofer needs Ollama, which runs on Windows 10 (version 22H2) or later and macOS 14 or later.</p>
+      </section>
+
+      <section class="card" data-state="install-needed" hidden>
+        <h2>Proofer needs Ollama running</h2>
+        <p>Ollama is a free app that runs Proofer's proofreading engine on this computer. It needs Windows 10 (version 22H2) or later, or macOS 14 or later.</p>
+        <p id="osCompat" class="note warn" hidden></p>
+        <p><strong>If you already have Ollama</strong>, open it (<span id="whereToOpen">from the Start menu</span>) and come back here.</p>
+        <p><strong>If you don't</strong>:</p>
+        <ol id="installSteps"></ol>
+        <div class="actions"><button class="primary" id="getOllama">Get Ollama</button></div>
+        <p class="muted">This page notices Ollama by itself when it starts. You don't need to change anything in Ollama.</p>
+      </section>
+
+      <section class="card" data-state="update-needed" hidden>
+        <h2>Ollama needs an update</h2>
+        <p>Proofer needs Ollama <span id="floorVersion"></span> or newer; this computer has <span id="haveVersion"></span>.</p>
+        <p>Download the installer and run it. It updates Ollama in place and keeps everything you already have.</p>
+        <div class="actions"><button class="primary" id="getOllamaUpdate">Get the update</button></div>
+      </section>
+
+      <section class="card" data-state="not-ollama" hidden>
+        <h2>Something else is using Ollama's address</h2>
+        <p>A program answered at Ollama's usual address, but it isn't Ollama. Close it, or start Ollama, and this page will carry on.</p>
+      </section>
+
+      <section class="card" data-state="downloading" hidden>
+        <h2>Downloading the proofreading engine</h2>
+        <p><span id="dlText">Starting…</span></p>
+        <div class="progress"><div id="dlBar"></div></div>
+        <p class="muted">1.7 GB. You can keep using your computer; the speed check starts by itself when this finishes.</p>
+        <div class="actions"><button id="pauseBtn">Pause</button></div>
+      </section>
+
+      <section class="card" data-state="paused" hidden>
+        <h2>Download paused</h2>
+        <p><span id="pausedText">The download is paused.</span> It picks up where it stopped.</p>
+        <div class="actions"><button class="primary" id="resumeBtn">Resume download</button></div>
+      </section>
+
+      <section class="card" data-state="interrupted" hidden>
+        <h2>The download stopped</h2>
+        <p id="interruptedWhy"></p>
+        <div class="actions"><button class="primary" id="retryDownload">Try again</button></div>
+        <p class="muted">Trying again continues from where it stopped.</p>
+      </section>
+
+      <section class="card" data-state="verifying" hidden>
+        <h2>Checking the download</h2>
+        <p class="muted">Making sure it is exactly the engine Proofer was tested with.</p>
+      </section>
+
+      <section class="card" data-state="testing" hidden>
+        <h2>Speed check</h2>
+        <p>Proofer is timing a few corrections on this computer. It takes one to three minutes, with one pause in the middle that is part of the test.</p>
+        <div class="progress"><div id="testBar"></div></div>
+        <p class="muted" id="testText">Starting…</p>
+      </section>
+
+      <section class="card" data-state="ready" hidden>
+        <h2 id="readyTitle">Ready</h2>
+        <p id="readyLead">This computer passed the speed check.</p>
+        <p class="muted" id="longNote" hidden>On this computer, when a sentence has a lot of text before it in the same box (about 300 words or more), Proofer will sometimes skip it and leave it as you typed it.</p>
+        <div class="demo" id="demo" aria-label="An example of a correction"></div>
+        <p class="muted">When you finish a sentence, Proofer fixes typos in it and the fixed words flash green. Press <span class="kbd">Esc</span> right away to take a correction back.</p>
+        <p class="muted">Turning Proofer on allows it to write corrections directly in supported English fields on every site except ones you switch off in the toolbar menu.</p>
+        <div class="actions" id="turnOnActions"><button class="primary" id="turnOn">Turn on</button></div>
+        <p class="note ok" id="onNote" hidden>Proofer is on. Try it in a supported English text field.</p>
+        <p class="muted"><strong>Pages that were already open</strong> need one refresh before Proofer works in them. Save anything you are typing first.</p>
+        <p class="muted" id="logCopy">Proofer keeps a log on this computer of the sentences it checks — including ones it didn't change — up to 400 characters of the text before each, the site, what Proofer proposed (including corrections it chose not to make), and any edits you make to its corrections. Nothing is sent anywhere. Export log saves it as a file you can choose to send; Clear deletes it. Both are in Proofer's toolbar menu.</p>
+        <div id="pinBox" hidden>
+          <p><strong>Recommended: pin Proofer to the toolbar.</strong> It shows a small mark there when it needs your attention, for example if Ollama isn't running.</p>
+          <ol><li>Click the puzzle-piece icon at the top right of the browser.</li><li>Click the pin next to Proofer.</li></ol>
+        </div>
+        <div class="actions"><button id="retestReady">Run the speed check again</button><button id="saveReport">Save test report</button></div>
+      </section>
+
+      <section class="card" data-state="too-slow" hidden>
+        <h2>Too slow for Proofer today</h2>
+        <p id="slowWhy">Corrections took too long on this computer, so they would arrive after you had moved on.</p>
+        <p class="muted">Proofer stays off. Closing other programs, plugging a laptop in, or trying again later can help.</p>
+        <div class="actions"><button class="primary" id="retestSlow">Run the speed check again</button><button id="saveReportSlow">Save test report</button></div>
+      </section>
+
+      <section class="card" data-state="unexpected" hidden>
+        <h2>The proofreading check gave an unexpected result</h2>
+        <p>The engine answered, but not with the corrections it gives on the computers Proofer was tested on. Proofer stays off rather than risk changing your writing wrongly.</p>
+        <div class="actions"><button class="primary" id="retestOdd">Run the speed check again</button><button id="saveReportOdd">Save test report</button></div>
+      </section>
+
+      <section class="card" data-state="operational" hidden>
+        <h2>The speed check couldn't finish</h2>
+        <p id="operationalWhy"></p>
+        <div class="actions"><button class="primary" id="retestOps">Try again</button><button id="saveReportOps">Save test report</button></div>
+      </section>
+
+      <p class="muted" id="footer">Proofer only talks to Ollama on this computer.</p>
+    </main>
+
+    <dialog id="reportDialog">
+      <form method="dialog">
+        <h2 style="font-size:17px;margin-top:0">Save test report</h2>
+        <p class="muted">The report holds timings, versions and hardware details the browser can tell (such as the number of processor cores and the graphics chip). It holds nothing you typed, no sites and no file paths.</p>
+        <label for="laptopModel">Laptop or computer model (optional)</label>
+        <input type="text" id="laptopModel" maxlength="80" placeholder="for example: Dell XPS 13 2021" />
+        <div class="actions"><button class="primary" value="save">Save</button><button value="cancel">Cancel</button></div>
+      </form>
+    </dialog>
+
+    <script src="welcome.js"></script>
+  </body>
+</html>

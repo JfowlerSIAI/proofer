@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Development and verification tools for Proofer",
+  "private": true,
+  "scripts": {
+    "test": "node ../tools/test.mjs source",
+    "test:source": "node ../tools/test.mjs source",
+    "test:browser": "node ../tools/test.mjs browser",
+    "test:e2e": "node ../tools/test.mjs e2e"
+  },
+  "engines": {
+    "node": ">=22.12.0",
+    "npm": ">=11.9.0"
+  },
+  "packageManager": "npm@11.12.1",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "puppeteer": "25.13.0"
+  }
+}

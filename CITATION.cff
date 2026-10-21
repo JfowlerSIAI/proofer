@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use Proofer in research, please cite this software and identify the version or commit you used. Citation is requested, not an additional license condition."
+type: software
+title: Proofer
+abstract: "Local sentence proofreading for Chrome and Brave, using an Ollama model and guarded live edits."
+authors:
+  - family-names: Fowler
+    given-names: Jay
+version: 0.2.0
+license: Apache-2.0
+repository-code: "https://github.com/JfowlerSIAI/proofer"
+url: "https://github.com/JfowlerSIAI/proofer"

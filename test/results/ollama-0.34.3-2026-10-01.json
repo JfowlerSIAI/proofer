@@ -1,0 +1,186 @@
+{
+  "date": "2026-10-01",
+  "hardware": "NVIDIA GeForce RTX 4090 24 GB; Intel Core Ultra 9 285K; Linux; Node v20.19.4",
+  "runtimes": {
+    "old": "Ollama 0.32.12",
+    "new": {
+      "version": "Ollama 0.34.3",
+      "release": "https://github.com/ollama/ollama/releases/tag/v0.34.3",
+      "published": "2026-09-19T00:02:57Z",
+      "archive": "ollama-linux-amd64.tar.zst",
+      "archive_sha256": "e83a089fd0cd2f79ee2933cca2085846a2065f497adbc6467c402177c68423f9"
+    }
+  },
+  "model": {
+    "tag": "proofer:v1-q4",
+    "digest": "8cc152b0cac4e3e2644141b725ada66b5cd7b643870118df6c766406601482c0"
+  },
+  "background_sha256": "08029bff936028500a61f9d9a4485cf53916cc64149eb5bcf01d438c57c7a9ea",
+  "benchmark_sha256": "784be237cb5f263ade6b1db771f430c2ce4e840dd869b00180b79b8621b3f2f2",
+  "warm_probe_2026_09_29": {
+    "n": 60,
+    "median_ms": {
+      "0.32.12": {
+        "wall": 199,
+        "load": 132.3,
+        "prompt": 9.2,
+        "eval": 34.2
+      },
+      "0.34.3": {
+        "wall": 68,
+        "load": 0.8,
+        "prompt": 8.7,
+        "eval": 36
+      }
+    }
+  },
+  "frozen": {
+    "records": 1590,
+    "runs": {
+      "0.32.12-a": "2026-10-01",
+      "0.32.12-b": "2026-10-01",
+      "0.34.3-0929": "2026-09-29",
+      "0.34.3-1001": "2026-10-01 (CPU shared with cache study)"
+    },
+    "latency_p50_ms": {
+      "0.32.12-a": 262,
+      "0.32.12-b": 259,
+      "0.34.3-0929": 139,
+      "0.34.3-1001": 164
+    },
+    "latency_p95_ms": {
+      "0.32.12-a": 496,
+      "0.32.12-b": 500,
+      "0.34.3-0929": 291,
+      "0.34.3-1001": 349
+    },
+    "first_pass_output_differs_pct": {
+      "0.32.12-a|0.32.12-b": 2.7,
+      "0.34.3-1001|0.34.3-0929": 2.96,
+      "0.32.12-a|0.34.3-1001": 3.9,
+      "0.32.12-a|0.34.3-0929": 4.03,
+      "0.32.12-b|0.34.3-1001": 3.02,
+      "0.32.12-b|0.34.3-0929": 3.9
+    },
+    "delivered_text_differs_pct": {
+      "0.32.12-a|0.32.12-b": 2.39,
+      "0.34.3-1001|0.34.3-0929": 2.58,
+      "0.32.12-a|0.34.3-1001": 3.58,
+      "0.32.12-a|0.34.3-0929": 3.65,
+      "0.32.12-b|0.34.3-1001": 2.33,
+      "0.32.12-b|0.34.3-0929": 3.27
+    },
+    "classes": {
+      "0.32.12-a": {
+        "clean-untouched": 596,
+        "safe-correction": 443,
+        "benign-edit": 49,
+        "pending-adjudication": 247,
+        "refused": 125,
+        "missed": 128,
+        "malformed": 2
+      },
+      "0.32.12-b": {
+        "clean-untouched": 602,
+        "safe-correction": 438,
+        "benign-edit": 45,
+        "pending-adjudication": 247,
+        "refused": 128,
+        "missed": 128,
+        "malformed": 2
+      },
+      "0.34.3-0929": {
+        "clean-untouched": 603,
+        "safe-correction": 441,
+        "benign-edit": 45,
+        "pending-adjudication": 252,
+        "refused": 121,
+        "missed": 128,
+        "malformed": 0
+      },
+      "0.34.3-1001": {
+        "clean-untouched": 603,
+        "safe-correction": 442,
+        "benign-edit": 44,
+        "pending-adjudication": 249,
+        "refused": 124,
+        "missed": 128,
+        "malformed": 0
+      }
+    },
+    "delivery_expired": 0
+  },
+  "setup_speed_check": {
+    "gpu": {
+      "0.32.12 (2026-09-25 record)": {
+        "result": "13/13",
+        "first": 280,
+        "warm_p50": 249,
+        "warm_p95": 266,
+        "after_idle": 314
+      },
+      "0.34.3": {
+        "result": "13/13",
+        "first": 183,
+        "warm_p50": 131,
+        "warm_p95": 149,
+        "max": 150,
+        "after_idle": 509
+      }
+    },
+    "cpu_8_pcores_ABBA": [
+      {
+        "runtime": "0.34.3",
+        "result": "13/13",
+        "first": 2796,
+        "warm_p50": 2882,
+        "warm_p95": 3100,
+        "max": 3191,
+        "after_idle": 2945,
+        "long_case_dropped_server_ms": 7491
+      },
+      {
+        "runtime": "0.32.12",
+        "result": "13/13",
+        "first": 2571,
+        "warm_p50": 2939,
+        "warm_p95": 3191,
+        "max": 3386,
+        "after_idle": 2710,
+        "long_case_dropped_server_ms": 7829
+      },
+      {
+        "runtime": "0.32.12",
+        "result": "13/13",
+        "first": 2566,
+        "warm_p50": 3033,
+        "warm_p95": 3242,
+        "max": 3379,
+        "after_idle": 2741,
+        "long_case_dropped_server_ms": 7333
+      },
+      {
+        "runtime": "0.34.3",
+        "result": "13/13",
+        "first": 2777,
+        "warm_p50": 2876,
+        "warm_p95": 3122,
+        "max": 3255,
+        "after_idle": 2881,
+        "long_case_dropped_server_ms": 5985
+      }
+    ]
+  },
+  "prompt_cache_study_on_0_34_3": {
+    "e1_original_and_addendum_identical": "24/24",
+    "e1_replay": "3/6 identical; 3 improved (identical re-send no longer prunes checkpoints: 407 reused vs 112)",
+    "e2_identical": "66/66 (P1-P3)",
+    "api_cached_count_equals_log_reuse": "96/96"
+  },
+  "docker_image": {
+    "tag": "ollama/ollama:0.34.3",
+    "index_digest": "sha256:7ab595e4ead391f6818c7215297781282babe0701f6d9a9f8862ac591360a58b",
+    "pushed": "2026-09-22T19:00:45Z",
+    "quarantine_clears": "2026-10-02"
+  }
+}

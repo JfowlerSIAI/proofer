@@ -1,0 +1,405 @@
+{
+  "trials": 3,
+  "content": {
+    "path": "<checkout>/content.js",
+    "sha256": "ba29ca3a6ded5613"
+  },
+  "recipeStamp": "spliceSentenceSlate 2026-08-14: same-tick selection + targetRanges + misplaced check",
+  "table": [
+    {
+      "family": "Slate",
+      "arm": "intent",
+      "idle": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "APPLIED": 3
+      },
+      "burst": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "APPLIED": 3
+      },
+      "errors": [],
+      "details": []
+    },
+    {
+      "family": "Slate",
+      "arm": "none",
+      "idle": {},
+      "burst": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "REFUSED": 3
+      },
+      "errors": [],
+      "details": [
+        "burst[0] REFUSED control \"The techncian arrived early. Then we shipped it out to everyone.\"",
+        "burst[1] REFUSED control \"The techncian arrived early. Then we shipped it out to everyone.\"",
+        "burst[2] REFUSED control \"The techncian arrived early. Then we shipped it out to everyone.\""
+      ]
+    },
+    {
+      "family": "Draft",
+      "arm": "intent",
+      "idle": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "REFUSED": 3
+      },
+      "burst": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "REFUSED": 2,
+        "DAMAGED": 1,
+        "lost": 2
+      },
+      "errors": [],
+      "details": [
+        "idle[0] REFUSED ignored \"The techncian arrived early. Then we shipped\"",
+        "idle[1] REFUSED ignored \"The techncian arrived early. Then we shipped\"",
+        "idle[2] REFUSED ignored \"The techncian arrived early. Then we shipped\"",
+        "burst[0] REFUSED ignored \"The techncian arrived early. Then we shipped it out to everyone.\"",
+        "burst[1] DAMAGED refused (ignored): 2 user character(s) DELETED \"The techncian arrived early. Tn we shipped it out to everyone.\"",
+        "burst[2] REFUSED ignored \"The techncian arrived early. Then we shipped it out to everyone.\""
+      ]
+    },
+    {
+      "family": "Draft",
+      "arm": "mutation-checked",
+      "idle": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "APPLIED": 3
+      },
+      "burst": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "APPLIED": 3
+      },
+      "errors": [],
+      "details": []
+    },
+    {
+      "family": "Draft",
+      "arm": "mutation-reimpose",
+      "idle": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "APPLIED": 3
+      },
+      "burst": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "APPLIED": 3
+      },
+      "errors": [],
+      "details": []
+    },
+    {
+      "family": "Draft",
+      "arm": "none",
+      "idle": {},
+      "burst": {
+        "threwIn": 0,
+        "errorTotal": 0,
+        "REFUSED": 3
+      },
+      "errors": [],
+      "details": [
+        "burst[0] REFUSED control \"The techncian arrived early. Then we shipped it out to everyone.\"",
+        "burst[1] REFUSED control \"The techncian arrived early. Then we shipped it out to everyone.\"",
+        "burst[2] REFUSED control \"The techncian arrived early. Then we shipped it out to everyone.\""
+      ]
+    }
+  ],
+  "nesting": [
+    {
+      "name": "Slate > [ce=false] > unregistered",
+      "id": "inner",
+      "want": null,
+      "got": {
+        "family": null,
+        "ok": false,
+        "detail": "unknown-editor",
+        "stFamily": null
+      },
+      "pass": true
+    },
+    {
+      "name": "Slate itself still resolves",
+      "id": "outer",
+      "want": "Slate",
+      "got": {
+        "family": "Slate",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Slate"
+      },
+      "pass": true
+    },
+    {
+      "name": "Slate > [ce=false] > Quill",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Slate > Quill, no island",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "ProseMirror > [ce=false] > unregistered",
+      "id": "inner",
+      "want": null,
+      "got": {
+        "family": null,
+        "ok": false,
+        "detail": "unknown-editor",
+        "stFamily": null
+      },
+      "pass": true
+    },
+    {
+      "name": "ProseMirror itself still resolves",
+      "id": "outer",
+      "want": "ProseMirror",
+      "got": {
+        "family": "ProseMirror",
+        "ok": true,
+        "detail": null,
+        "stFamily": "ProseMirror"
+      },
+      "pass": true
+    },
+    {
+      "name": "ProseMirror > [ce=false] > Quill",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "ProseMirror > Quill, no island",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Quill > [ce=false] > unregistered",
+      "id": "inner",
+      "want": null,
+      "got": {
+        "family": null,
+        "ok": false,
+        "detail": "unknown-editor",
+        "stFamily": null
+      },
+      "pass": true
+    },
+    {
+      "name": "Quill itself still resolves",
+      "id": "outer",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Quill > [ce=false] > Quill",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Quill > Quill, no island",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Lexical > [ce=false] > unregistered",
+      "id": "inner",
+      "want": null,
+      "got": {
+        "family": null,
+        "ok": false,
+        "detail": "unknown-editor",
+        "stFamily": null
+      },
+      "pass": true
+    },
+    {
+      "name": "Lexical itself still resolves",
+      "id": "outer",
+      "want": "Lexical",
+      "got": {
+        "family": "Lexical",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Lexical"
+      },
+      "pass": true
+    },
+    {
+      "name": "Lexical > [ce=false] > Quill",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Lexical > Quill, no island",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Draft > [ce=false] > unregistered",
+      "id": "inner",
+      "want": null,
+      "got": {
+        "family": null,
+        "ok": false,
+        "detail": "unknown-editor",
+        "stFamily": null
+      },
+      "pass": true
+    },
+    {
+      "name": "Draft itself still resolves",
+      "id": "outer",
+      "want": "Draft",
+      "got": {
+        "family": "Draft",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Draft"
+      },
+      "pass": true
+    },
+    {
+      "name": "Draft > [ce=false] > Quill",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Draft > Quill, no island",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Trix > [ce=false] > unregistered",
+      "id": "inner",
+      "want": null,
+      "got": {
+        "family": null,
+        "ok": false,
+        "detail": "unknown-editor",
+        "stFamily": null
+      },
+      "pass": true
+    },
+    {
+      "name": "Trix itself still resolves",
+      "id": "outer",
+      "want": "Trix",
+      "got": {
+        "family": "Trix",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Trix"
+      },
+      "pass": true
+    },
+    {
+      "name": "Trix > [ce=false] > Quill",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    },
+    {
+      "name": "Trix > Quill, no island",
+      "id": "inner",
+      "want": "Quill",
+      "got": {
+        "family": "Quill",
+        "ok": true,
+        "detail": null,
+        "stFamily": "Quill"
+      },
+      "pass": true
+    }
+  ]
+}

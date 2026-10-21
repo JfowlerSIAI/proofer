@@ -1,0 +1,873 @@
+{
+  "_version": 3,
+  "_note": "Fixture revision 3 replaces a recorded carrier in sn-req-09 with a synthetic label example. Its emtal -> metal edit and required-correction verdict are unchanged. See judge-harness.mjs for sentinel validation.",
+  "cases": [
+    {
+      "id": "sn-req-01",
+      "context": "",
+      "input": "The paket arrived this morning.",
+      "output": "The packet arrived this morning.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            4,
+            9
+          ],
+          "before": "paket",
+          "after": "packet",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "required-correction"
+        }
+      ]
+    },
+    {
+      "id": "sn-req-02",
+      "context": "",
+      "input": "We recieved the invoice yesterday.",
+      "output": "We received the invoice yesterday.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            3,
+            11
+          ],
+          "before": "recieved",
+          "after": "received",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "required-correction"
+        }
+      ]
+    },
+    {
+      "id": "sn-req-03",
+      "context": "",
+      "input": "Please filtererrors before you send it.",
+      "output": "Please filter errors before you send it.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            7,
+            19
+          ],
+          "before": "filtererrors",
+          "after": "filter errors",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "required-correction"
+        }
+      ]
+    },
+    {
+      "id": "sn-req-04",
+      "context": "",
+      "input": "The the deadline moved again.",
+      "output": "The deadline moved again.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            4,
+            8
+          ],
+          "before": "the ",
+          "after": "",
+          "kind": "deletion"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "required-correction"
+        }
+      ]
+    },
+    {
+      "id": "sn-req-05",
+      "context": "",
+      "input": "THis is the last one.",
+      "output": "This is the last one.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            0,
+            4
+          ],
+          "before": "THis",
+          "after": "This",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "required-correction"
+        }
+      ]
+    },
+    {
+      "id": "sn-req-06",
+      "context": "",
+      "input": "I dont have the file yet.",
+      "output": "I don't have the file yet.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            2,
+            6
+          ],
+          "before": "dont",
+          "after": "don't",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "required-correction"
+        }
+      ]
+    },
+    {
+      "id": "sn-req-07",
+      "context": "",
+      "input": "The servers was down all night.",
+      "output": "The servers were down all night.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            12,
+            15
+          ],
+          "before": "was",
+          "after": "were",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "required-correction"
+        }
+      ]
+    },
+    {
+      "id": "sn-req-08",
+      "context": "how do you want it done?",
+      "input": "Howdo you want it done?",
+      "output": "How do you want it done?",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            0,
+            5
+          ],
+          "before": "Howdo",
+          "after": "How do",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "required-correction"
+        }
+      ]
+    },
+    {
+      "id": "sn-ben-01",
+      "context": "",
+      "input": "the report is ready.",
+      "output": "The report is ready.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            0,
+            3
+          ],
+          "before": "the",
+          "after": "The",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "benign-optional"
+        }
+      ]
+    },
+    {
+      "id": "sn-ben-02",
+      "context": "",
+      "input": "When the queue drained we restarted it.",
+      "output": "When the queue drained, we restarted it.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            22,
+            22
+          ],
+          "before": "",
+          "after": ",",
+          "kind": "insertion"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "benign-optional"
+        }
+      ]
+    },
+    {
+      "id": "sn-ben-03",
+      "context": "",
+      "input": "The release is due on monday.",
+      "output": "The release is due on Monday.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            22,
+            28
+          ],
+          "before": "monday",
+          "after": "Monday",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "benign-optional"
+        }
+      ]
+    },
+    {
+      "id": "sn-ben-04",
+      "context": "",
+      "input": "We need a 30 day trial.",
+      "output": "We need a 30-day trial.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            10,
+            16
+          ],
+          "before": "30 day",
+          "after": "30-day",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "benign-optional"
+        }
+      ]
+    },
+    {
+      "id": "sn-ben-05",
+      "context": "",
+      "input": "The backup finished at midnight",
+      "output": "The backup finished at midnight.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            31,
+            31
+          ],
+          "before": "",
+          "after": ".",
+          "kind": "insertion"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "benign-optional"
+        }
+      ]
+    },
+    {
+      "id": "sn-ben-06",
+      "context": "",
+      "input": "Did it finish?).",
+      "output": "Did it finish?)",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            15,
+            16
+          ],
+          "before": ".",
+          "after": "",
+          "kind": "deletion"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "benign-optional"
+        }
+      ]
+    },
+    {
+      "id": "sn-unn-01",
+      "context": "",
+      "input": "ok sounds good",
+      "output": "Understood, that sounds acceptable.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            0,
+            2
+          ],
+          "before": "ok",
+          "after": "Understood, that",
+          "kind": "substitution"
+        },
+        {
+          "id": 2,
+          "srcSpan": [
+            10,
+            14
+          ],
+          "before": "good",
+          "after": "acceptable.",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "unnecessary"
+        },
+        {
+          "group": 2,
+          "verdict": "unnecessary"
+        }
+      ]
+    },
+    {
+      "id": "sn-unn-02",
+      "context": "",
+      "input": "It's a long queue today.",
+      "output": "It is a long queue today.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            0,
+            4
+          ],
+          "before": "It's",
+          "after": "It is",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "unnecessary"
+        }
+      ]
+    },
+    {
+      "id": "sn-unn-03",
+      "context": "",
+      "input": "yeah that works for me.",
+      "output": "Yes, that works for me.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            0,
+            4
+          ],
+          "before": "yeah",
+          "after": "Yes,",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "unnecessary"
+        }
+      ]
+    },
+    {
+      "id": "sn-unn-04",
+      "context": "",
+      "input": "We bought the licences in March.",
+      "output": "We purchased the licences in March.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            3,
+            9
+          ],
+          "before": "bought",
+          "after": "purchased",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "unnecessary"
+        }
+      ]
+    },
+    {
+      "id": "sn-unn-05",
+      "context": "",
+      "input": "Thanks, that helps.",
+      "output": "Thank you, that helps.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            0,
+            6
+          ],
+          "before": "Thanks",
+          "after": "Thank you",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "unnecessary"
+        }
+      ]
+    },
+    {
+      "id": "sn-unn-06",
+      "context": "",
+      "input": "The build broke because of a bad merge.",
+      "output": "Because of a bad merge, the build broke.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            0,
+            23
+          ],
+          "before": "The build broke because",
+          "after": "Because",
+          "kind": "substitution"
+        },
+        {
+          "id": 2,
+          "srcSpan": [
+            38,
+            38
+          ],
+          "before": "",
+          "after": ", the build broke",
+          "kind": "insertion"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "unnecessary"
+        },
+        {
+          "group": 2,
+          "verdict": "unnecessary"
+        }
+      ]
+    },
+    {
+      "id": "sn-dmg-01",
+      "context": "",
+      "input": "The batch had 240 rows.",
+      "output": "The batch had 250 rows.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            14,
+            17
+          ],
+          "before": "240",
+          "after": "250",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "meaning-damage"
+        }
+      ]
+    },
+    {
+      "id": "sn-dmg-02",
+      "context": "",
+      "input": "I sent it to Marcus this morning.",
+      "output": "I sent it to Marcos this morning.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            13,
+            19
+          ],
+          "before": "Marcus",
+          "after": "Marcos",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "meaning-damage"
+        }
+      ]
+    },
+    {
+      "id": "sn-dmg-03",
+      "context": "",
+      "input": "I'm not sure that is right.",
+      "output": "I'm sure that is right.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            4,
+            8
+          ],
+          "before": "not ",
+          "after": "",
+          "kind": "deletion"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "meaning-damage"
+        }
+      ]
+    },
+    {
+      "id": "sn-dmg-04",
+      "context": "",
+      "input": "The salt levels were fine.",
+      "output": "The slat levels were fine.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            4,
+            8
+          ],
+          "before": "salt",
+          "after": "slat",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "meaning-damage"
+        }
+      ]
+    },
+    {
+      "id": "sn-dmg-05",
+      "context": "",
+      "input": "Run npm run build before you push.",
+      "output": "Run npm run built before you push.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            12,
+            17
+          ],
+          "before": "build",
+          "after": "built",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "meaning-damage"
+        }
+      ]
+    },
+    {
+      "id": "sn-dmg-06",
+      "context": "",
+      "input": "The scalable option is cheaper.",
+      "output": "The salable option is cheaper.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            4,
+            12
+          ],
+          "before": "scalable",
+          "after": "salable",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "meaning-damage"
+        }
+      ]
+    },
+    {
+      "id": "sn-dmg-07",
+      "context": "",
+      "input": "Check example.com/docs/v2 for the schema.",
+      "output": "Check example.com/docs/v3 for the schema.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            23,
+            25
+          ],
+          "before": "v2",
+          "after": "v3",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "meaning-damage"
+        }
+      ]
+    },
+    {
+      "id": "sn-unc-01",
+      "context": "we still need to lock the agenda",
+      "input": "The counsel gave us a week.",
+      "output": "The council gave us a week.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            4,
+            11
+          ],
+          "before": "counsel",
+          "after": "council",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "uncertain"
+        }
+      ],
+      "why": "Both `counsel` (advisers/legal counsel) and `council` (a governing body) are ordinary nouns that this sentence supports equally, they are near-homophones and a very common typing confusion, and the prior context deliberately settles neither. So the judge cannot call the original wrong (ruling out unnecessary/benign) and cannot establish that the meaning changed (ruling out meaning-damage): the answer genuinely requires the author. MEASURED STABLE 9/9 and 6/6 across two probe rounds. See _uncertain_note: this is the ONLY pair that held out of 15 candidates."
+    },
+    {
+      "id": "sn-mix-01",
+      "context": "",
+      "input": "we shipped 240 unts on tuesday",
+      "output": "We shipped 250 units on Tuesday.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            0,
+            2
+          ],
+          "before": "we",
+          "after": "We",
+          "kind": "substitution"
+        },
+        {
+          "id": 2,
+          "srcSpan": [
+            11,
+            19
+          ],
+          "before": "240 unts",
+          "after": "250 units",
+          "kind": "substitution"
+        },
+        {
+          "id": 3,
+          "srcSpan": [
+            23,
+            30
+          ],
+          "before": "tuesday",
+          "after": "Tuesday.",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "benign-optional"
+        },
+        {
+          "group": 2,
+          "verdict": "meaning-damage"
+        },
+        {
+          "group": 3,
+          "verdict": "benign-optional"
+        }
+      ]
+    },
+    {
+      "id": "sn-mix-02",
+      "context": "",
+      "input": "the techncian arrived erly",
+      "output": "The technician arrived early.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            0,
+            13
+          ],
+          "before": "the techncian",
+          "after": "The technician",
+          "kind": "substitution"
+        },
+        {
+          "id": 2,
+          "srcSpan": [
+            22,
+            26
+          ],
+          "before": "erly",
+          "after": "early.",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "required-correction"
+        },
+        {
+          "group": 2,
+          "verdict": "required-correction"
+        }
+      ]
+    },
+    {
+      "id": "sn-unc-02",
+      "context": "nobody has signed off yet",
+      "input": "We are still waiting on the counsel.",
+      "output": "We are still waiting on the council.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            28,
+            35
+          ],
+          "before": "counsel",
+          "after": "council",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "uncertain"
+        }
+      ],
+      "why": "Both `counsel` (advisers/legal counsel) and `council` (a governing body) are ordinary nouns that this sentence supports equally, they are near-homophones and a very common typing confusion, and the prior context deliberately settles neither. So the judge cannot call the original wrong (ruling out unnecessary/benign) and cannot establish that the meaning changed (ruling out meaning-damage): the answer genuinely requires the author. MEASURED STABLE 9/9 and 6/6 across two probe rounds. See _uncertain_note: this is the ONLY pair that held out of 15 candidates."
+    },
+    {
+      "id": "sn-req-09",
+      "context": "",
+      "input": "The sample label refers to that emtal.",
+      "output": "The sample label refers to that metal.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            32,
+            37
+          ],
+          "before": "emtal",
+          "after": "metal",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "required-correction"
+        }
+      ],
+      "why": "The emtal -> metal edit is a required correction: metal is one edit away while email is two. The earlier uncertain label was reclassified rather than deleted (formerly sn-unc-02). Historical 3/3 calibration preceded this revision’s synthetic carrier replacement; the expected lexical verdict remains required-correction."
+    },
+    {
+      "id": "sn-unn-07",
+      "context": "",
+      "input": "The dedupe pass caught it.",
+      "output": "The dedup pass caught it.",
+      "groups": [
+        {
+          "id": 1,
+          "srcSpan": [
+            4,
+            10
+          ],
+          "before": "dedupe",
+          "after": "dedup",
+          "kind": "substitution"
+        }
+      ],
+      "expected": [
+        {
+          "group": 1,
+          "verdict": "unnecessary"
+        }
+      ],
+      "why": "Was authored as `uncertain` on the belief that two jargon spellings are undecidable. Under the prompt's own rubric it is decided: `dedupe` is not wrong, and a spelling-variant swap is not on the benign-optional list, so it is meddling. Measured STABLE unnecessary 3/3. Terra was right and the exemplar was wrong. Reclassified rather than deleted (was sn-unc-03)."
+    }
+  ],
+  "_uncertain_note": "The `uncertain` class is covered by TWO sentinels that share ONE word pair (counsel|council), and that is a measured limit rather than a choice. On the first dev-250 run every sentinel flip was an uncertain-class exemplar (sn-unc-03 three times in the same direction, sn-unc-02 once) — a reliably repeated non-expected answer is a defective exemplar, not drift. 15 replacement candidates were then probed against Terra across 5 structural patterns and 2 rounds (3 and 6 trials): possessive-number ambiguity, appositive/list scope, negation-scope commas, identifier-vs-typo, and real-word pairs. ONLY counsel|council held. Everything built to be 'structurally undecidable' — an unambiguous error with two meaning-distinct repairs — leaked into `meaning-damage` at 17-100%, and the reason is a gap in the prompt: it gives explicit tie-breaks for benign/unnecessary, unnecessary/damage and required/uncertain, but NONE for damage/uncertain, which are adjacent for exactly the cases that make a good uncertain exemplar. Adding that tie-break was rejected: it would resolve toward damage and make `uncertain` rarer still. Treat uncertain-class drift as covered by owner calibration, not by these two."
+}

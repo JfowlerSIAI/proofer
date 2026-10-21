@@ -1,0 +1,246 @@
+{
+  "retrieved": "2026-10-21",
+  "licenses": [
+    {
+      "file": "LICENSES/quill-2.0.3.txt",
+      "source": "https://raw.githubusercontent.com/slab/quill/v2.0.3/LICENSE",
+      "sha256": "395c12b616d6f58238b4be39284d4d9221b58dd6e1f1e34d9ab537e34abbb022"
+    },
+    {
+      "file": "quilljs.com/_external/cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js.LICENSE.txt",
+      "source": "https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js.LICENSE.txt",
+      "sha256": "7b1938804d68d96764233d0a148a7501f39e547e6ae2dead4b16836e9b8d123c"
+    },
+    {
+      "file": "LICENSES/slate.txt",
+      "source": "https://raw.githubusercontent.com/ianstormtaylor/slate/main/License.md",
+      "sha256": "519c180a1c7b62ae33d2beb749abd57dda92eddada65eb81daca7686fa1fef40"
+    },
+    {
+      "file": "LICENSES/lexical.txt",
+      "source": "https://raw.githubusercontent.com/facebook/lexical/main/LICENSE",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "LICENSES/draft-js.txt",
+      "source": "https://raw.githubusercontent.com/facebookarchive/draft-js/main/LICENSE",
+      "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+    },
+    {
+      "file": "LICENSES/prosemirror.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror-website.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/website/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/trix-2.1.19.txt",
+      "source": "https://raw.githubusercontent.com/basecamp/trix/v2.1.19/LICENSE",
+      "sha256": "fa0d1454375cbc7701bc13d916c3ae71e613b8ae718321641e678e09409393c4"
+    },
+    {
+      "file": "LICENSES/dompurify-3.4.2.txt",
+      "source": "https://raw.githubusercontent.com/cure53/DOMPurify/3.4.2/LICENSE",
+      "sha256": "968bdd5b053aa290a16cd073416c5ae4a8daa51076e43f2df423b9c4e2ccda0a"
+    },
+    {
+      "file": "LICENSES/react-18.2.0.txt",
+      "source": "https://raw.githubusercontent.com/facebook/react/v18.2.0/LICENSE",
+      "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+    },
+    {
+      "file": "LICENSES/react-16.13.1.txt",
+      "source": "https://raw.githubusercontent.com/facebook/react/v16.13.1/LICENSE",
+      "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+    },
+    {
+      "file": "LICENSES/react-19.2.5.txt",
+      "source": "https://raw.githubusercontent.com/facebook/react/v19.2.5/LICENSE",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "LICENSES/katex-0.16.9.txt",
+      "source": "https://raw.githubusercontent.com/KaTeX/KaTeX/v0.16.9/LICENSE",
+      "sha256": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3"
+    },
+    {
+      "file": "LICENSES/highlightjs-11.9.0.txt",
+      "source": "https://raw.githubusercontent.com/highlightjs/highlight.js/11.9.0/LICENSE",
+      "sha256": "6c081431591d9df696c82dc598fe1423765b8a299b200ed00b281afd0f64c490"
+    },
+    {
+      "file": "LICENSES/webfontloader-1.6.26.txt",
+      "source": "https://raw.githubusercontent.com/typekit/webfontloader/v1.6.26/LICENSE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "file": "draftjs.org/main.833711ea.js.LICENSE.txt",
+      "source": "https://draftjs.org/main.833711ea.js.LICENSE.txt",
+      "sha256": "c0bf8466ea5e5c33602a48929e84002206790146a90a4d4253cfe7756dcf9a33"
+    },
+    {
+      "file": "draftjs.org/1.3cc846be.js.LICENSE.txt",
+      "source": "https://draftjs.org/1.3cc846be.js.LICENSE.txt",
+      "sha256": "41199a7ebbe60c7f649be2f55b99109be354f6a2dcf19381d117365160e832c2"
+    },
+    {
+      "file": "draftjs.org/41.b3782273.js.LICENSE.txt",
+      "source": "https://draftjs.org/41.b3782273.js.LICENSE.txt",
+      "sha256": "749f91c43d5197798c6a4ca8d86fa394ec85567777333d794dd9386236b94176"
+    },
+    {
+      "file": "LICENSES/fonts/Roboto-OFL.txt",
+      "source": "https://raw.githubusercontent.com/googlefonts/roboto-classic/main/OFL.txt",
+      "sha256": "061402327a96aadb0bfb694a960ed289ecd38d383e396243831ab81feb109c41"
+    },
+    {
+      "file": "LICENSES/fonts/MaterialIcons-Apache-2.0.txt",
+      "source": "https://raw.githubusercontent.com/google/material-design-icons/master/LICENSE",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "file": "LICENSES/fonts/SourceSansPro-OFL.txt",
+      "source": "https://raw.githubusercontent.com/adobe-fonts/source-sans/1.050/LICENSE.txt",
+      "sha256": "cb30d3086a8b3ce0b9e3690bf48d6620402b61160bc658076f95180ccd9e9dae"
+    },
+    {
+      "file": "LICENSES/fonts/Merriweather-OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/merriweather/OFL.txt",
+      "sha256": "715bd349bfa6116f99e351e1548321dcfa25b91df65502d22ca8d624557697d2"
+    },
+    {
+      "file": "LICENSES/fonts/Slabo27px-OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/slabo27px/OFL.txt",
+      "sha256": "76a55594c9a18b7d94b8119de838237eb834bae4e8c646d6d363aee587b7b427"
+    },
+    {
+      "file": "LICENSES/fonts/UbuntuMono-UFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ufl/ubuntumono/UFL.txt",
+      "sha256": "2f0015108d68627bd788d313f529c21ff4da2c2c42a5e1f3883acc83480f9002"
+    },
+    {
+      "file": "LICENSES/fonts/Inconsolata-OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/inconsolata/OFL.txt",
+      "sha256": "29bd0cfd0fb2a45f9b057c834a057724bae1f63b525a8ac83d3e7525706d9f80"
+    },
+    {
+      "file": "LICENSES/fonts/RobotoSlab-Apache-2.0.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/apache/robotoslab/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "LICENSES/excalidraw-0.18.1.txt",
+      "source": "https://raw.githubusercontent.com/excalidraw/excalidraw/v0.18.1/LICENSE",
+      "sha256": "1352d204fdb90d5e482c13139d848bc2c9300a9a7de358a0a558a23e72d0d8be"
+    },
+    {
+      "file": "LICENSES/radix-ui.txt",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "file": "LICENSES/react-remove-scroll-bar.txt",
+      "source": "https://raw.githubusercontent.com/theKashey/react-remove-scroll-bar/master/LICENSE",
+      "sha256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-model.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-model/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-transform.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-transform/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-state.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-state/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-view.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-view/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-keymap.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-keymap/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-inputrules.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-inputrules/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-history.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-history/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-commands.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-commands/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-schema-basic.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-schema-basic/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-schema-list.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-schema-list/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-dropcursor.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-dropcursor/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-menu.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-menu/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-example-setup.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-example-setup/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/prosemirror-gapcursor.txt",
+      "source": "https://raw.githubusercontent.com/ProseMirror/prosemirror-gapcursor/master/LICENSE",
+      "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+    },
+    {
+      "file": "LICENSES/prosemirror/orderedmap.txt",
+      "source": "https://raw.githubusercontent.com/marijnh/orderedmap/master/LICENSE",
+      "sha256": "869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884"
+    },
+    {
+      "file": "LICENSES/prosemirror/rope-sequence.txt",
+      "source": "https://raw.githubusercontent.com/marijnh/rope-sequence/master/LICENSE",
+      "sha256": "530424aebdd0e73f53238d1f89df250057bc8d8ce090cf5954197fadce5bf226"
+    },
+    {
+      "file": "LICENSES/prosemirror/w3c-keyname.txt",
+      "source": "https://raw.githubusercontent.com/marijnh/w3c-keyname/master/LICENSE",
+      "sha256": "869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884"
+    },
+    {
+      "file": "LICENSES/prosemirror/crelt.txt",
+      "source": "https://raw.githubusercontent.com/marijnh/crelt/master/LICENSE",
+      "sha256": "23852ebf6aef7fadffc92514b3c5df163a8651f2c3ed0dbb494cb49d93bd5de5"
+    },
+    {
+      "file": "LICENSES/W3C-20150513.txt",
+      "source": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/W3C-20150513.txt",
+      "sha256": "38b688e653a972897f6a875c53abbf867b261cbeba7ded0bdf100ae9907a6c19",
+      "note": "Full standard terms linked by the intersection-observer upstream notice."
+    }
+  ]
+}

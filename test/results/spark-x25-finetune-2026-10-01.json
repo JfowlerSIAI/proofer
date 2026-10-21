@@ -1,0 +1,1688 @@
+{
+  "date": "2026-10-01",
+  "experiment": "One Spark-X2.5-1.7B v2 LoRA pilot; no prompt or hyperparameter sweep",
+  "hardware": "RTX 4090 24 GB; existing idle dictation/production processes could remain resident",
+  "runtime": "Ollama 0.34.3; Node 20.19.4",
+  "base_revision": "14d6e83c13c7add2b62a7c39b2131f4ed1cddcf8",
+  "converter_commit": "f072b103714dfa1eee531f80b24512faf38e3dd2",
+  "hashes": {
+    "background_sha256": "08029bff936028500a61f9d9a4485cf53916cc64149eb5bcf01d438c57c7a9ea",
+    "benchmark_sha256": "784be237cb5f263ade6b1db771f430c2ce4e840dd869b00180b79b8621b3f2f2",
+    "runner_sha256": "f60926d1fbff7a89158bb8cbf61c2df59c6d746ffa81d6aac925fe18f5593054"
+  },
+  "training": {
+    "revision": "14d6e83c13c7add2b62a7c39b2131f4ed1cddcf8",
+    "dataset_sha256": "418b5b460b50e4e2c9e7e7e8a1ac1c1370535a4c235711f83180d3d9ab53e90d",
+    "train": 6199,
+    "validation": 993,
+    "dropped": {
+      "train": 0,
+      "validation": 0
+    },
+    "targets": [
+      "q_k_v_proj",
+      "g_proj",
+      "out_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "seed": 3407,
+    "r": 32,
+    "alpha": 32,
+    "learning_rate": 0.0002,
+    "max_epochs": 2,
+    "effective_batch": 16,
+    "torch": "2.13.0+cu130",
+    "transformers": "4.57.6",
+    "lora_parameters": 33496064,
+    "seconds": 626.4868488311768,
+    "peak_cuda_allocated_bytes": 6001445376,
+    "best_checkpoint": "checkpoint-388",
+    "completed_epochs": 1.5006451612903224,
+    "validation_history": [
+      {
+        "step": 97,
+        "epoch": 0.2503225806451613,
+        "eval_loss": 0.04077116400003433
+      },
+      {
+        "step": 194,
+        "epoch": 0.5006451612903225,
+        "eval_loss": 0.03648705035448074
+      },
+      {
+        "step": 291,
+        "epoch": 0.7509677419354839,
+        "eval_loss": 0.03468292951583862
+      },
+      {
+        "step": 388,
+        "epoch": 1.0,
+        "eval_loss": 0.032165925949811935
+      },
+      {
+        "step": 485,
+        "epoch": 1.2503225806451612,
+        "eval_loss": 0.033076751977205276
+      },
+      {
+        "step": 582,
+        "epoch": 1.5006451612903224,
+        "eval_loss": 0.0349503792822361
+      }
+    ]
+  },
+  "merge_check": {
+    "adapter_on_loss": 0.013952884647654694,
+    "adapter_off_loss": 0.26257350667279183,
+    "merged_loss": 0.01440504740877206,
+    "merged_loss_delta": 0.00045216276111736606,
+    "greedy_matches": 3
+  },
+  "export_greedy_matches": 3,
+  "validation": {
+    "benchmark_records": 1590,
+    "benchmark_problems": [],
+    "arms": {
+      "tuned-q4": {
+        "rows": 1590,
+        "problems": [],
+        "all_gpu": true,
+        "malformed": 0,
+        "thinking": 0,
+        "truncated": 0,
+        "expired": 0
+      },
+      "baseline-v1": {
+        "rows": 1590,
+        "problems": [],
+        "all_gpu": true,
+        "malformed": 0,
+        "thinking": 0,
+        "truncated": 0,
+        "expired": 0
+      },
+      "baseline-v2": {
+        "rows": 1590,
+        "problems": [],
+        "all_gpu": true,
+        "malformed": 0,
+        "thinking": 0,
+        "truncated": 0,
+        "expired": 0
+      },
+      "stock-q4": {
+        "rows": 1590,
+        "problems": [],
+        "all_gpu": true,
+        "malformed": 0,
+        "thinking": 0,
+        "truncated": 0,
+        "expired": 0
+      }
+    }
+  },
+  "trained_artifacts": {
+    "run-v2/adapter/chat_template.jinja": {
+      "bytes": 4648,
+      "sha256": "705345721970da40e6aa56db548a46ecd1d8d94a5418808fa180ac19ee77a9ba"
+    },
+    "run-v2/adapter/special_tokens_map.json": {
+      "bytes": 613,
+      "sha256": "c687ee9f964244e3182f77fabab6f5bdc708381672994ce9b6a95b7841ef4968"
+    },
+    "run-v2/adapter/tokenizer.json": {
+      "bytes": 10115785,
+      "sha256": "f71f91ee1b2ac0b27e47bf49ee4859d322ab3d191217ec9964d0189b02454c49"
+    },
+    "run-v2/adapter/adapter_model.safetensors": {
+      "bytes": 134029288,
+      "sha256": "38eeaa80eef61b725f6ab6ec65c3fc8123aecf516c36fa4f975a5f5672906410"
+    },
+    "run-v2/adapter/README.md": {
+      "bytes": 5332,
+      "sha256": "2d3318052f3ff3e93fe97796aef76f74e091339ef9749778b19a7cd1beae8226"
+    },
+    "run-v2/adapter/tokenizer_config.json": {
+      "bytes": 20811,
+      "sha256": "43d2318d5ada8a81b72696e123bb3a328ce0617ce90c66e139b843756b9dc535"
+    },
+    "run-v2/adapter/adapter_config.json": {
+      "bytes": 1111,
+      "sha256": "36e49ef78136770216a733b6d2cef130002e360519fd69e37aa819122077bbbb"
+    },
+    "run-v2/spark-v2-q4_k_m.gguf": {
+      "bytes": 1107457824,
+      "sha256": "95dc90ba1f97bd3a4d262a17e5d8091aca76dc9df6c1451420e268a235bfe945"
+    },
+    "run-v2/merged-bf16.gguf": {
+      "bytes": 3420931872,
+      "sha256": "24886ef8942656ce7eed0268e3d621d6a52afef9e9c3477160298fa1c85202dc"
+    }
+  },
+  "recommendation": {
+    "retain": "proofer:v1-q4",
+    "pilot_promoted": false,
+    "reason": "Tuned Spark trails both Proofer controls on core passes and preapproved correction matches, with a delivered meaning-change counterexample against shipped Proofer; its smaller weights and similar latency do not establish replacement quality."
+  },
+  "benchmark": {
+    "records": 1590,
+    "clean": 732,
+    "error": 858,
+    "dev": 980,
+    "sealed": 610
+  },
+  "request": {
+    "concurrency": 1,
+    "deadline_ms": 4750,
+    "think": false,
+    "format": "json",
+    "num_ctx": 2048,
+    "num_predict": 512,
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "top_k": 20,
+    "repeat_penalty": 1
+  },
+  "arms": {
+    "tuned-q4": {
+      "label": "Tuned Spark 1.7B Q4",
+      "model": "proofer-spark-v2:q4_k_m",
+      "digest": "d030707f233d2703c8ef8c52a97c7b229e371d37a2d7c50143344bbab977cf48",
+      "bytes": 1107457945,
+      "details": {
+        "parent_model": "spark-v2-q4_k_m.gguf",
+        "format": "gguf",
+        "family": "spark2_5",
+        "families": [
+          "spark2_5"
+        ],
+        "parameter_size": "1.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 1048576,
+        "embedding_length": 2048
+      },
+      "suites": {
+        "core": {
+          "total": 105,
+          "pass": 82,
+          "partial": 0,
+          "fail": 23,
+          "byCategory": {
+            "typo": {
+              "PASS": 15,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 15
+            },
+            "word-boundary": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 7,
+              "total": 10
+            },
+            "missing-letter": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "extra-letter": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 7
+            },
+            "duplicate": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 8
+            },
+            "wrong-word": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 5,
+              "total": 10
+            },
+            "transposed": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 7
+            },
+            "missing-word": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 6
+            },
+            "extra-word": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 5
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 7
+            },
+            "clean": {
+              "PASS": 20,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 20
+            }
+          },
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 21,
+            "BAD_CORRECTION": 2,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 3
+          },
+          "latency": {
+            "count": 105,
+            "medianMs": 75,
+            "p95Ms": 172,
+            "meanMs": 84,
+            "minMs": 66,
+            "maxMs": 206,
+            "totalMs": 8786,
+            "genTokensPerSec": 431.7,
+            "promptTokensPerSec": 19254.4,
+            "evalTokensTotal": 1415,
+            "promptTokensTotal": 38761,
+            "maxLoadMs": 2
+          }
+        },
+        "holdout": {
+          "total": 55,
+          "pass": 50,
+          "partial": 0,
+          "fail": 5,
+          "byCategory": {
+            "typo": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "word-boundary": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 6
+            },
+            "wrong-word-clean": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 2
+            },
+            "missing-letter": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 6
+            },
+            "duplicate": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 4
+            },
+            "wrong-word": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 5
+            },
+            "missing-word": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 4
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 5
+            },
+            "clean": {
+              "PASS": 13,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 13
+            }
+          },
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 5,
+            "BAD_CORRECTION": 0,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 2
+          },
+          "latency": {
+            "count": 55,
+            "medianMs": 76,
+            "p95Ms": 94,
+            "meanMs": 79,
+            "minMs": 69,
+            "maxMs": 175,
+            "totalMs": 4325,
+            "genTokensPerSec": 434.5,
+            "promptTokensPerSec": 19368.6,
+            "evalTokensTotal": 773,
+            "promptTokensTotal": 20338,
+            "maxLoadMs": 2
+          }
+        },
+        "drift": {
+          "total": 40,
+          "pass": 28,
+          "drift": 0,
+          "unfixed": 12
+        }
+      },
+      "frozen": {
+        "n": 1590,
+        "bins": {
+          "all": {
+            "n": 1590,
+            "clean": 732,
+            "error": 858,
+            "cleanChanged": 87,
+            "errorChanged": 588,
+            "knownCorrection": 353,
+            "knownBenign": 31,
+            "pending": 291,
+            "refused": 127,
+            "malformed": 0
+          },
+          "chat-irc": {
+            "n": 397,
+            "clean": 131,
+            "error": 266,
+            "cleanChanged": 31,
+            "errorChanged": 199,
+            "knownCorrection": 88,
+            "knownBenign": 5,
+            "pending": 137,
+            "refused": 36,
+            "malformed": 0
+          },
+          "dev": {
+            "n": 980,
+            "clean": 461,
+            "error": 519,
+            "cleanChanged": 54,
+            "errorChanged": 355,
+            "knownCorrection": 211,
+            "knownBenign": 19,
+            "pending": 179,
+            "refused": 81,
+            "malformed": 0
+          },
+          "sealed": {
+            "n": 610,
+            "clean": 271,
+            "error": 339,
+            "cleanChanged": 33,
+            "errorChanged": 233,
+            "knownCorrection": 142,
+            "knownBenign": 12,
+            "pending": 112,
+            "refused": 46,
+            "malformed": 0
+          },
+          "chat-owner": {
+            "n": 480,
+            "clean": 238,
+            "error": 242,
+            "cleanChanged": 19,
+            "errorChanged": 155,
+            "knownCorrection": 103,
+            "knownBenign": 10,
+            "pending": 61,
+            "refused": 44,
+            "malformed": 0
+          },
+          "email-workplace": {
+            "n": 395,
+            "clean": 189,
+            "error": 206,
+            "cleanChanged": 24,
+            "errorChanged": 143,
+            "knownCorrection": 94,
+            "knownBenign": 9,
+            "pending": 64,
+            "refused": 31,
+            "malformed": 0
+          },
+          "forum-comments": {
+            "n": 318,
+            "clean": 174,
+            "error": 144,
+            "cleanChanged": 13,
+            "errorChanged": 91,
+            "knownCorrection": 68,
+            "knownBenign": 7,
+            "pending": 29,
+            "refused": 16,
+            "malformed": 0
+          }
+        },
+        "classes": {
+          "clean-untouched": 607,
+          "safe-correction": 353,
+          "benign-edit": 31,
+          "pending-adjudication": 291,
+          "refused": 127,
+          "missed": 181
+        },
+        "rawChanges": 796,
+        "retries": 108,
+        "salvaged": 27,
+        "thinkingOutputs": 0,
+        "latency_ms": {
+          "median": 133.6879939999926,
+          "p95": 272.748306999998,
+          "mean": 152.00888747672911,
+          "max": 769.8339080000005
+        },
+        "eval_tokens": 48268
+      },
+      "gpu_residency": [
+        {
+          "name": "proofer-spark-v2:q4_k_m",
+          "size": 1202758614,
+          "size_vram": 1202758614
+        }
+      ],
+      "started": "2026-10-01T21:24:53.343Z",
+      "finished": "2026-10-01T21:28:55.234Z"
+    },
+    "baseline-v1": {
+      "label": "Shipped Proofer Q4",
+      "model": "proofer:v1-q4",
+      "digest": "8cc152b0cac4e3e2644141b725ada66b5cd7b643870118df6c766406601482c0",
+      "bytes": 1674464650,
+      "details": {
+        "parent_model": "proofer-pilot-q4:v1",
+        "format": "gguf",
+        "family": "lfm2",
+        "families": [
+          "lfm2"
+        ],
+        "parameter_size": "2.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 128000,
+        "embedding_length": 2048
+      },
+      "suites": {
+        "core": {
+          "total": 105,
+          "pass": 90,
+          "partial": 0,
+          "fail": 15,
+          "byCategory": {
+            "typo": {
+              "PASS": 15,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 15
+            },
+            "word-boundary": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 6,
+              "total": 10
+            },
+            "missing-letter": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "extra-letter": {
+              "PASS": 7,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 7
+            },
+            "duplicate": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 8
+            },
+            "wrong-word": {
+              "PASS": 9,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 10
+            },
+            "transposed": {
+              "PASS": 7,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 7
+            },
+            "missing-word": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 6
+            },
+            "extra-word": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 5
+            },
+            "mixed": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 7
+            },
+            "clean": {
+              "PASS": 20,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 20
+            }
+          },
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 12,
+            "BAD_CORRECTION": 3,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 3
+          },
+          "latency": {
+            "count": 105,
+            "medianMs": 68,
+            "p95Ms": 154,
+            "meanMs": 75,
+            "minMs": 63,
+            "maxMs": 172,
+            "totalMs": 7871,
+            "genTokensPerSec": 374.5,
+            "promptTokensPerSec": 42819.2,
+            "evalTokensTotal": 1416,
+            "promptTokensTotal": 40335,
+            "maxLoadMs": 2
+          }
+        },
+        "holdout": {
+          "total": 55,
+          "pass": 50,
+          "partial": 0,
+          "fail": 5,
+          "byCategory": {
+            "typo": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "word-boundary": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 6
+            },
+            "wrong-word-clean": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 2
+            },
+            "missing-letter": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 6
+            },
+            "duplicate": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 4
+            },
+            "wrong-word": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 5
+            },
+            "missing-word": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 4
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 5
+            },
+            "clean": {
+              "PASS": 13,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 13
+            }
+          },
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 4,
+            "BAD_CORRECTION": 1,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 2
+          },
+          "latency": {
+            "count": 55,
+            "medianMs": 71,
+            "p95Ms": 78,
+            "meanMs": 74,
+            "minMs": 60,
+            "maxMs": 157,
+            "totalMs": 4044,
+            "genTokensPerSec": 376.1,
+            "promptTokensPerSec": 43389.1,
+            "evalTokensTotal": 776,
+            "promptTokensTotal": 21161,
+            "maxLoadMs": 2
+          }
+        },
+        "drift": {
+          "total": 40,
+          "pass": 28,
+          "drift": 0,
+          "unfixed": 12
+        }
+      },
+      "frozen": {
+        "n": 1590,
+        "bins": {
+          "all": {
+            "n": 1590,
+            "clean": 732,
+            "error": 858,
+            "cleanChanged": 98,
+            "errorChanged": 638,
+            "knownCorrection": 434,
+            "knownBenign": 47,
+            "pending": 255,
+            "refused": 126,
+            "malformed": 0
+          },
+          "chat-irc": {
+            "n": 397,
+            "clean": 131,
+            "error": 266,
+            "cleanChanged": 26,
+            "errorChanged": 200,
+            "knownCorrection": 108,
+            "knownBenign": 9,
+            "pending": 109,
+            "refused": 46,
+            "malformed": 0
+          },
+          "dev": {
+            "n": 980,
+            "clean": 461,
+            "error": 519,
+            "cleanChanged": 61,
+            "errorChanged": 387,
+            "knownCorrection": 260,
+            "knownBenign": 27,
+            "pending": 161,
+            "refused": 77,
+            "malformed": 0
+          },
+          "sealed": {
+            "n": 610,
+            "clean": 271,
+            "error": 339,
+            "cleanChanged": 37,
+            "errorChanged": 251,
+            "knownCorrection": 174,
+            "knownBenign": 20,
+            "pending": 94,
+            "refused": 49,
+            "malformed": 0
+          },
+          "chat-owner": {
+            "n": 480,
+            "clean": 238,
+            "error": 242,
+            "cleanChanged": 33,
+            "errorChanged": 185,
+            "knownCorrection": 140,
+            "knownBenign": 21,
+            "pending": 57,
+            "refused": 34,
+            "malformed": 0
+          },
+          "email-workplace": {
+            "n": 395,
+            "clean": 189,
+            "error": 206,
+            "cleanChanged": 22,
+            "errorChanged": 158,
+            "knownCorrection": 113,
+            "knownBenign": 9,
+            "pending": 58,
+            "refused": 28,
+            "malformed": 0
+          },
+          "forum-comments": {
+            "n": 318,
+            "clean": 174,
+            "error": 144,
+            "cleanChanged": 17,
+            "errorChanged": 95,
+            "knownCorrection": 73,
+            "knownBenign": 8,
+            "pending": 31,
+            "refused": 18,
+            "malformed": 0
+          }
+        },
+        "classes": {
+          "clean-untouched": 599,
+          "safe-correction": 434,
+          "benign-edit": 47,
+          "pending-adjudication": 255,
+          "refused": 126,
+          "missed": 129
+        },
+        "rawChanges": 857,
+        "retries": 90,
+        "salvaged": 15,
+        "thinkingOutputs": 0,
+        "latency_ms": {
+          "median": 137.16725999998744,
+          "p95": 290.94832899999165,
+          "mean": 154.87302444150913,
+          "max": 747.1959020000068
+        },
+        "eval_tokens": 47074
+      },
+      "gpu_residency": [
+        {
+          "name": "proofer:v1-q4",
+          "size": 1776707173,
+          "size_vram": 1776707173
+        }
+      ],
+      "started": "2026-10-01T21:29:14.347Z",
+      "finished": "2026-10-01T21:33:20.760Z"
+    },
+    "baseline-v2": {
+      "label": "LFM v2 Q4 control",
+      "model": "proofer-pilot-q4:v2-s1free",
+      "digest": "1af700846654ae000a0d0e49c41ce38de7811028cf1f050ea621836ca3fe31d3",
+      "bytes": 1674453694,
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "lfm2",
+        "families": [
+          "lfm2"
+        ],
+        "parameter_size": "2.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 128000,
+        "embedding_length": 2048
+      },
+      "suites": {
+        "core": {
+          "total": 105,
+          "pass": 86,
+          "partial": 0,
+          "fail": 19,
+          "byCategory": {
+            "typo": {
+              "PASS": 15,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 15
+            },
+            "word-boundary": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 6,
+              "total": 10
+            },
+            "missing-letter": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "extra-letter": {
+              "PASS": 7,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 7
+            },
+            "duplicate": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 8
+            },
+            "wrong-word": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 4,
+              "total": 10
+            },
+            "transposed": {
+              "PASS": 7,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 7
+            },
+            "missing-word": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 6
+            },
+            "extra-word": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 5
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 7
+            },
+            "clean": {
+              "PASS": 20,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 20
+            }
+          },
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 17,
+            "BAD_CORRECTION": 2,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 3
+          },
+          "latency": {
+            "count": 105,
+            "medianMs": 68,
+            "p95Ms": 151,
+            "meanMs": 75,
+            "minMs": 61,
+            "maxMs": 172,
+            "totalMs": 7827,
+            "genTokensPerSec": 377,
+            "promptTokensPerSec": 43252.6,
+            "evalTokensTotal": 1418,
+            "promptTokensTotal": 40335,
+            "maxLoadMs": 1
+          }
+        },
+        "holdout": {
+          "total": 55,
+          "pass": 49,
+          "partial": 0,
+          "fail": 6,
+          "byCategory": {
+            "typo": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "word-boundary": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 6
+            },
+            "wrong-word-clean": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 2
+            },
+            "missing-letter": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 6
+            },
+            "duplicate": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 4
+            },
+            "wrong-word": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 5
+            },
+            "missing-word": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 4
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 5
+            },
+            "clean": {
+              "PASS": 13,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 13
+            }
+          },
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 5,
+            "BAD_CORRECTION": 1,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 2
+          },
+          "latency": {
+            "count": 55,
+            "medianMs": 70,
+            "p95Ms": 94,
+            "meanMs": 73,
+            "minMs": 61,
+            "maxMs": 155,
+            "totalMs": 4042,
+            "genTokensPerSec": 374.6,
+            "promptTokensPerSec": 43801.3,
+            "evalTokensTotal": 776,
+            "promptTokensTotal": 21161,
+            "maxLoadMs": 1
+          }
+        },
+        "drift": {
+          "total": 40,
+          "pass": 29,
+          "drift": 0,
+          "unfixed": 11
+        }
+      },
+      "frozen": {
+        "n": 1590,
+        "bins": {
+          "all": {
+            "n": 1590,
+            "clean": 732,
+            "error": 858,
+            "cleanChanged": 92,
+            "errorChanged": 621,
+            "knownCorrection": 400,
+            "knownBenign": 41,
+            "pending": 272,
+            "refused": 119,
+            "malformed": 0
+          },
+          "chat-irc": {
+            "n": 397,
+            "clean": 131,
+            "error": 266,
+            "cleanChanged": 26,
+            "errorChanged": 204,
+            "knownCorrection": 97,
+            "knownBenign": 6,
+            "pending": 127,
+            "refused": 41,
+            "malformed": 0
+          },
+          "dev": {
+            "n": 980,
+            "clean": 461,
+            "error": 519,
+            "cleanChanged": 59,
+            "errorChanged": 380,
+            "knownCorrection": 239,
+            "knownBenign": 24,
+            "pending": 176,
+            "refused": 69,
+            "malformed": 0
+          },
+          "sealed": {
+            "n": 610,
+            "clean": 271,
+            "error": 339,
+            "cleanChanged": 33,
+            "errorChanged": 241,
+            "knownCorrection": 161,
+            "knownBenign": 17,
+            "pending": 96,
+            "refused": 50,
+            "malformed": 0
+          },
+          "chat-owner": {
+            "n": 480,
+            "clean": 238,
+            "error": 242,
+            "cleanChanged": 28,
+            "errorChanged": 169,
+            "knownCorrection": 124,
+            "knownBenign": 17,
+            "pending": 56,
+            "refused": 40,
+            "malformed": 0
+          },
+          "email-workplace": {
+            "n": 395,
+            "clean": 189,
+            "error": 206,
+            "cleanChanged": 25,
+            "errorChanged": 154,
+            "knownCorrection": 108,
+            "knownBenign": 10,
+            "pending": 61,
+            "refused": 24,
+            "malformed": 0
+          },
+          "forum-comments": {
+            "n": 318,
+            "clean": 174,
+            "error": 144,
+            "cleanChanged": 13,
+            "errorChanged": 94,
+            "knownCorrection": 71,
+            "knownBenign": 8,
+            "pending": 28,
+            "refused": 14,
+            "malformed": 0
+          }
+        },
+        "classes": {
+          "clean-untouched": 610,
+          "safe-correction": 400,
+          "pending-adjudication": 272,
+          "benign-edit": 41,
+          "refused": 119,
+          "missed": 148
+        },
+        "rawChanges": 827,
+        "retries": 90,
+        "salvaged": 20,
+        "thinkingOutputs": 0,
+        "latency_ms": {
+          "median": 138.32697000000917,
+          "p95": 294.0928500000009,
+          "mean": 155.46355039622637,
+          "max": 715.3008340000015
+        },
+        "eval_tokens": 47103
+      },
+      "gpu_residency": [
+        {
+          "name": "proofer-pilot-q4:v2-s1free",
+          "size": 1776707173,
+          "size_vram": 1776707173
+        }
+      ],
+      "started": "2026-10-01T21:33:40.123Z",
+      "finished": "2026-10-01T21:37:47.488Z"
+    },
+    "stock-q4": {
+      "label": "Stock Spark 1.7B Q4",
+      "model": "spark-pilot-base:q4_k_m",
+      "digest": "b8edbb3d40f6d669b8e8a437fd706f3dbf12c188b5d8d731c946b418d4b0ecfb",
+      "bytes": 1107457625,
+      "details": {
+        "parent_model": "base-q4_k_m.gguf",
+        "format": "gguf",
+        "family": "spark2_5",
+        "families": [
+          "spark2_5"
+        ],
+        "parameter_size": "1.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 1048576,
+        "embedding_length": 2048
+      },
+      "suites": {
+        "core": {
+          "total": 105,
+          "pass": 86,
+          "partial": 0,
+          "fail": 19,
+          "byCategory": {
+            "typo": {
+              "PASS": 15,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 15
+            },
+            "word-boundary": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 8,
+              "total": 10
+            },
+            "missing-letter": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "extra-letter": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 7
+            },
+            "duplicate": {
+              "PASS": 8,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 8
+            },
+            "wrong-word": {
+              "PASS": 7,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 10
+            },
+            "transposed": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 7
+            },
+            "missing-word": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 6
+            },
+            "extra-word": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 5
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 7
+            },
+            "clean": {
+              "PASS": 20,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 20
+            }
+          },
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 16,
+            "BAD_CORRECTION": 3,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 3
+          },
+          "latency": {
+            "count": 105,
+            "medianMs": 77,
+            "p95Ms": 191,
+            "meanMs": 88,
+            "minMs": 65,
+            "maxMs": 211,
+            "totalMs": 9235,
+            "genTokensPerSec": 419.5,
+            "promptTokensPerSec": 18890.3,
+            "evalTokensTotal": 1416,
+            "promptTokensTotal": 38761,
+            "maxLoadMs": 2
+          }
+        },
+        "holdout": {
+          "total": 55,
+          "pass": 49,
+          "partial": 0,
+          "fail": 6,
+          "byCategory": {
+            "typo": {
+              "PASS": 9,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 10
+            },
+            "word-boundary": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 6
+            },
+            "wrong-word-clean": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 2
+            },
+            "missing-letter": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 6
+            },
+            "duplicate": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 4
+            },
+            "wrong-word": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 5
+            },
+            "missing-word": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 4
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 5
+            },
+            "clean": {
+              "PASS": 13,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 13
+            }
+          },
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 6,
+            "BAD_CORRECTION": 0,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 1
+          },
+          "latency": {
+            "count": 55,
+            "medianMs": 77,
+            "p95Ms": 188,
+            "meanMs": 84,
+            "minMs": 69,
+            "maxMs": 200,
+            "totalMs": 4625,
+            "genTokensPerSec": 436,
+            "promptTokensPerSec": 19100.7,
+            "evalTokensTotal": 775,
+            "promptTokensTotal": 20338,
+            "maxLoadMs": 2
+          }
+        },
+        "drift": {
+          "total": 40,
+          "pass": 26,
+          "drift": 2,
+          "unfixed": 12
+        }
+      },
+      "frozen": {
+        "n": 1590,
+        "bins": {
+          "all": {
+            "n": 1590,
+            "clean": 732,
+            "error": 858,
+            "cleanChanged": 151,
+            "errorChanged": 567,
+            "knownCorrection": 279,
+            "knownBenign": 37,
+            "pending": 402,
+            "refused": 169,
+            "malformed": 0
+          },
+          "chat-irc": {
+            "n": 397,
+            "clean": 131,
+            "error": 266,
+            "cleanChanged": 51,
+            "errorChanged": 193,
+            "knownCorrection": 52,
+            "knownBenign": 7,
+            "pending": 185,
+            "refused": 48,
+            "malformed": 0
+          },
+          "dev": {
+            "n": 980,
+            "clean": 461,
+            "error": 519,
+            "cleanChanged": 95,
+            "errorChanged": 348,
+            "knownCorrection": 164,
+            "knownBenign": 21,
+            "pending": 258,
+            "refused": 105,
+            "malformed": 0
+          },
+          "sealed": {
+            "n": 610,
+            "clean": 271,
+            "error": 339,
+            "cleanChanged": 56,
+            "errorChanged": 219,
+            "knownCorrection": 115,
+            "knownBenign": 16,
+            "pending": 144,
+            "refused": 64,
+            "malformed": 0
+          },
+          "chat-owner": {
+            "n": 480,
+            "clean": 238,
+            "error": 242,
+            "cleanChanged": 19,
+            "errorChanged": 146,
+            "knownCorrection": 106,
+            "knownBenign": 7,
+            "pending": 52,
+            "refused": 46,
+            "malformed": 0
+          },
+          "email-workplace": {
+            "n": 395,
+            "clean": 189,
+            "error": 206,
+            "cleanChanged": 48,
+            "errorChanged": 148,
+            "knownCorrection": 69,
+            "knownBenign": 12,
+            "pending": 115,
+            "refused": 49,
+            "malformed": 0
+          },
+          "forum-comments": {
+            "n": 318,
+            "clean": 174,
+            "error": 144,
+            "cleanChanged": 33,
+            "errorChanged": 80,
+            "knownCorrection": 52,
+            "knownBenign": 11,
+            "pending": 50,
+            "refused": 26,
+            "malformed": 0
+          }
+        },
+        "classes": {
+          "pending-adjudication": 402,
+          "clean-untouched": 518,
+          "safe-correction": 279,
+          "refused": 169,
+          "missed": 185,
+          "benign-edit": 37
+        },
+        "rawChanges": 882,
+        "retries": 124,
+        "salvaged": 42,
+        "thinkingOutputs": 0,
+        "latency_ms": {
+          "median": 133.995888999998,
+          "p95": 302.06320099998266,
+          "mean": 155.7763565660375,
+          "max": 784.2497730000032
+        },
+        "eval_tokens": 48269
+      },
+      "gpu_residency": [
+        {
+          "name": "spark-pilot-base:q4_k_m",
+          "size": 1202758614,
+          "size_vram": 1202758614
+        }
+      ],
+      "started": "2026-10-01T21:38:09.536Z",
+      "finished": "2026-10-01T21:42:17.419Z"
+    }
+  },
+  "meaning_probe_flag_review": {
+    "stock-q4": {
+      "raw_flags": 2,
+      "partial_corrections": 2,
+      "verified_new_meaning_damage": 0
+    },
+    "tuned-q4": {
+      "raw_flags": 0
+    },
+    "baseline-v1": {
+      "raw_flags": 0
+    },
+    "baseline-v2": {
+      "raw_flags": 0
+    },
+    "tuned-bf16": {
+      "raw_flags": 0
+    }
+  },
+  "limitations": [
+    "Accepted-output matching is not fully adjudicated correction recall. Novel edits remain pending.",
+    "Clean-input edits include acceptable punctuation/style and are not automatically damage.",
+    "Targeted review is not exhaustive; do not infer a total damage rate from it.",
+    "One unseeded sampling run per model. One-case differences do not establish superiority.",
+    "Original train/validation split is disjoint by dedup cluster, but shares some source documents. Frozen benchmark is source/exclusion-group disjoint from all training data.",
+    "The frozen/sealed corpus was used in earlier model comparisons; it is not a new prospective validation set.",
+    "GPU-only evaluation through the shipped engine; browser interaction and CPU performance were not measured."
+  ],
+  "bf16_diagnostic": {
+    "core": {
+      "total": 105,
+      "pass": 82,
+      "partial": 0,
+      "fail": 23,
+      "byCategory": {
+        "typo": {
+          "PASS": 15,
+          "PARTIAL": 0,
+          "FAIL": 0,
+          "total": 15
+        },
+        "word-boundary": {
+          "PASS": 3,
+          "PARTIAL": 0,
+          "FAIL": 7,
+          "total": 10
+        },
+        "missing-letter": {
+          "PASS": 10,
+          "PARTIAL": 0,
+          "FAIL": 0,
+          "total": 10
+        },
+        "extra-letter": {
+          "PASS": 6,
+          "PARTIAL": 0,
+          "FAIL": 1,
+          "total": 7
+        },
+        "duplicate": {
+          "PASS": 6,
+          "PARTIAL": 0,
+          "FAIL": 2,
+          "total": 8
+        },
+        "wrong-word": {
+          "PASS": 5,
+          "PARTIAL": 0,
+          "FAIL": 5,
+          "total": 10
+        },
+        "transposed": {
+          "PASS": 7,
+          "PARTIAL": 0,
+          "FAIL": 0,
+          "total": 7
+        },
+        "missing-word": {
+          "PASS": 3,
+          "PARTIAL": 0,
+          "FAIL": 3,
+          "total": 6
+        },
+        "extra-word": {
+          "PASS": 2,
+          "PARTIAL": 0,
+          "FAIL": 3,
+          "total": 5
+        },
+        "mixed": {
+          "PASS": 5,
+          "PARTIAL": 0,
+          "FAIL": 2,
+          "total": 7
+        },
+        "clean": {
+          "PASS": 20,
+          "PARTIAL": 0,
+          "FAIL": 0,
+          "total": 20
+        }
+      },
+      "antiPatterns": {
+        "FALSE_POSITIVE": 0,
+        "MISSED_ERROR": 21,
+        "BAD_CORRECTION": 2,
+        "CONTRACT_FAIL": 0,
+        "CONTRACTION_STYLE": 3
+      },
+      "latency": {
+        "count": 105,
+        "medianMs": 110,
+        "p95Ms": 244,
+        "meanMs": 122,
+        "minMs": 98,
+        "maxMs": 286,
+        "totalMs": 12860,
+        "genTokensPerSec": 219.7,
+        "promptTokensPerSec": 14702.2,
+        "evalTokensTotal": 1416,
+        "promptTokensTotal": 38761,
+        "maxLoadMs": 2
+      }
+    },
+    "holdout": {
+      "total": 55,
+      "pass": 49,
+      "partial": 0,
+      "fail": 6,
+      "byCategory": {
+        "typo": {
+          "PASS": 10,
+          "PARTIAL": 0,
+          "FAIL": 0,
+          "total": 10
+        },
+        "word-boundary": {
+          "PASS": 4,
+          "PARTIAL": 0,
+          "FAIL": 2,
+          "total": 6
+        },
+        "wrong-word-clean": {
+          "PASS": 2,
+          "PARTIAL": 0,
+          "FAIL": 0,
+          "total": 2
+        },
+        "missing-letter": {
+          "PASS": 6,
+          "PARTIAL": 0,
+          "FAIL": 0,
+          "total": 6
+        },
+        "duplicate": {
+          "PASS": 4,
+          "PARTIAL": 0,
+          "FAIL": 0,
+          "total": 4
+        },
+        "wrong-word": {
+          "PASS": 2,
+          "PARTIAL": 0,
+          "FAIL": 3,
+          "total": 5
+        },
+        "missing-word": {
+          "PASS": 3,
+          "PARTIAL": 0,
+          "FAIL": 1,
+          "total": 4
+        },
+        "mixed": {
+          "PASS": 5,
+          "PARTIAL": 0,
+          "FAIL": 0,
+          "total": 5
+        },
+        "clean": {
+          "PASS": 13,
+          "PARTIAL": 0,
+          "FAIL": 0,
+          "total": 13
+        }
+      },
+      "antiPatterns": {
+        "FALSE_POSITIVE": 0,
+        "MISSED_ERROR": 5,
+        "BAD_CORRECTION": 1,
+        "CONTRACT_FAIL": 0,
+        "CONTRACTION_STYLE": 2
+      },
+      "latency": {
+        "count": 55,
+        "medianMs": 114,
+        "p95Ms": 142,
+        "meanMs": 118,
+        "minMs": 101,
+        "maxMs": 249,
+        "totalMs": 6481,
+        "genTokensPerSec": 219.6,
+        "promptTokensPerSec": 14880.5,
+        "evalTokensTotal": 772,
+        "promptTokensTotal": 20338,
+        "maxLoadMs": 1
+      }
+    },
+    "drift": {
+      "total": 40,
+      "pass": 28,
+      "drift": 0,
+      "unfixed": 12
+    }
+  }
+}

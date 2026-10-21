@@ -1,0 +1,103 @@
+/* Proofer's page styles. Since the beta (2026-09-24) the only thing Proofer
+   puts on a page is the green flash over a correction it has just written.
+   The manual path's floating button and rewrite panel, and suggestion mode's
+   amber mark and chip, went with those modes. */
+
+/* --- Sentence mode --- */
+
+/* The flash sits over the textarea, positioned from getBoundingClientRect, so
+   it is fixed rather than absolute. It is never kept in sync with the field:
+   the first input or scroll destroys it. */
+.proofer-sentence-mark {
+  position: fixed;
+  z-index: 2147483646;
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+/* 1600ms, matching SENTENCE_FLASH_MS -- it was 600ms for as long as the flash
+   itself was 600ms, and stayed there when the chip was removed and the flash
+   became the only signal. `forwards` holds the last keyframe, so the mark was
+   fully transparent from 600ms and then sat there invisibly for another
+   second: a 1600ms life that the eye got 600ms of. Nothing caught it, because
+   the suite counts .proofer-sentence-flash NODES and the node was there the
+   whole time. */
+.proofer-sentence-flash {
+  background: rgba(46, 160, 67, 0.28);
+  animation: proofer-sentence-fade 1600ms ease-out forwards;
+}
+
+@keyframes proofer-sentence-fade {
+  0%   { background: rgba(46, 160, 67, 0.28); }
+  60%  { background: rgba(46, 160, 67, 0.28); }
+  100% { background: rgba(46, 160, 67, 0); }
+}
+
+/* --- The contenteditable flash: a CSS Custom Highlight ---------------------
+
+   A contenteditable's text is in the document, so its flash is registered
+   Ranges rather than measured boxes and the browser paints them wherever the
+   text has moved to. `::highlight()` matches by REGISTERED NAME: a highlight
+   is not an element and cannot carry a class, so ONE name is one appearance
+   and the fade has to be three names stepped from content.js -- Chrome
+   supports neither transition nor animation on a highlight pseudo-element. The
+   steps mirror the keyframes above: hold to 60%, then down.
+
+   The selectors are bare rather than element-scoped. `div::highlight(x)` is
+   perfectly valid (the spec's own examples do it) and would raise specificity
+   above a page rule using the same registered name -- but it also picks WHICH
+   originating elements it styles, and the originating element here is whatever
+   node the editor happens to have put the text in. Scoping it would mean
+   guessing that per editor family. The exposure accepted is a page that
+   registers a `proofer-sn-*` name of its own and outranks these at equal
+   specificity; the names are distinctive enough that this is a collision, not
+   an attack, and it costs a tint rather than a correction.
+
+   Only background-color, color, text-decoration, text-shadow and
+   -webkit-text-stroke are honoured here. */
+::highlight(proofer-sn-flash-3) { background-color: rgba(46, 160, 67, 0.28); }
+::highlight(proofer-sn-flash-2) { background-color: rgba(46, 160, 67, 0.17); }
+::highlight(proofer-sn-flash-1) { background-color: rgba(46, 160, 67, 0.08); }
+
+@media (prefers-reduced-motion: reduce) {
+  /* Hold the tint statically instead of skipping it. The flash is the only
+     thing showing a silent edit, so it is a signal, not an animation.
+     The contenteditable flash does the same thing from content.js: its fade is
+     three registered highlight names stepped on a timer, and snReducedMotion()
+     stops it after the first. There is nothing to override here, because
+     ::highlight() never animated in the first place. */
+  .proofer-sentence-flash {
+    animation: none !important;
+    background: rgba(46, 160, 67, 0.28) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [class^="proofer-"],
+  [class*=" proofer-"] {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+}
+
+/* --- Print --- */
+
+@media print {
+  .proofer-sentence-mark,
+  #proofer-sr-live {
+    display: none !important;
+  }
+
+  /* A highlight is not an element, so `display: none` cannot reach it and the
+     rule above silently covered only half the flash once the contenteditable
+     path stopped painting divs. Clear its colours instead. */
+  ::highlight(proofer-sn-flash-3),
+  ::highlight(proofer-sn-flash-2),
+  ::highlight(proofer-sn-flash-1) {
+    background-color: transparent;
+    text-decoration: none;
+  }
+}

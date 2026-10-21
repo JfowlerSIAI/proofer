@@ -1,0 +1,13 @@
+{
+ "css/editor.css": "text/css; charset=utf-8",
+ "css/font/merriweather_bold.woff2": "font/woff2",
+ "css/font/source_sans.woff2": "font/woff2",
+ "css/font/source_sans_italic.woff2": "font/woff2",
+ "css/font/source_sans_semibold.woff2": "font/woff2",
+ "css/site.css": "text/css; charset=utf-8",
+ "examples/basic/example.js": "text/javascript; charset=utf-8",
+ "examples/basic/index.html": "text/html; charset=utf-8",
+ "examples/prosemirror.js": "text/javascript; charset=utf-8",
+ "favicon.ico": "image/x-icon",
+ "img/smiley.png": "image/png"
+}

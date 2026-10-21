@@ -1,0 +1,3452 @@
+{
+  "retrieved": "2026-10-21",
+  "method": "Read-only extraction of license/notice files from exact-version upstream npm distributions. No packages installed or executed.",
+  "packages": [
+    {
+      "package": "@algolia/autocomplete-core",
+      "version": "1.9.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/autocomplete-core/-/autocomplete-core-1.9.3.tgz",
+      "archive_sha256": "01581e8feb87ee87339c4c97218e1d993b56488ee6845b2f8800cf41b418d324",
+      "repository": {
+        "url": "https://github.com/algolia/autocomplete.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/autocomplete-plugin-algolia-insights",
+      "version": "1.9.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/autocomplete-plugin-algolia-insights/-/autocomplete-plugin-algolia-insights-1.9.3.tgz",
+      "archive_sha256": "416397a24248f335274fda65b75fbd6a940845709e228d71e83dd38621f5d085",
+      "repository": {
+        "url": "https://github.com/algolia/autocomplete.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/autocomplete-preset-algolia",
+      "version": "1.9.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.9.3.tgz",
+      "archive_sha256": "f447b1f58c192601f90c95565ad9f0d32c3b95858debcd49ce54783349a1bfa2",
+      "repository": {
+        "url": "https://github.com/algolia/autocomplete.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/autocomplete-shared",
+      "version": "1.9.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/autocomplete-shared/-/autocomplete-shared-1.9.3.tgz",
+      "archive_sha256": "35965cfbdbc7a1184ca8f783faec42aa53d4836c94ada38cd182578af587b12e",
+      "repository": {
+        "url": "https://github.com/algolia/autocomplete.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/cache-browser-local-storage",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/cache-browser-local-storage/-/cache-browser-local-storage-4.22.1.tgz",
+      "archive_sha256": "7b38baea12b78adb71eb8a024ac9268eb807b3be02a44ce4b98cda1a8ae2e570",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-javascript.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/cache-common",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/cache-common/-/cache-common-4.22.1.tgz",
+      "archive_sha256": "0e37dabd480b60aa5c6c8ecbce5d208c86d2203b549111289fe44d6ee92e6897",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-js.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/cache-in-memory",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/cache-in-memory/-/cache-in-memory-4.22.1.tgz",
+      "archive_sha256": "547a693d4dab0c896478b367c6a66877d89f1d6932a151832d3b31e6165bd540",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-javascript.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/client-account",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/client-account/-/client-account-4.22.1.tgz",
+      "archive_sha256": "a948de745049e9d845e26f84f128ec2ff4056d256c0e70b961108e6dd099663e",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-javascript.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/client-analytics",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/client-analytics/-/client-analytics-4.22.1.tgz",
+      "archive_sha256": "8ecdc5761fdaf9a3d091a727d7f53440dfc9356d91ded8a3ed1572827472e914",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-javascript.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/client-common",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/client-common/-/client-common-4.22.1.tgz",
+      "archive_sha256": "3cd732072fc9a42d96e6f1999159cf13c1d36783d53faeee2ca08d295bc54bfd",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-javascript.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/client-personalization",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/client-personalization/-/client-personalization-4.22.1.tgz",
+      "archive_sha256": "6939a7eaffc618619b182891d7913ab6479a8d8e38183ee3e11421f27cc03d16",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-javascript.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/client-search",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/client-search/-/client-search-4.22.1.tgz",
+      "archive_sha256": "922d0b4d2f89267e58a306de032f9c3d72bbdcc3a2e710783b3f230708557e63",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-javascript.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/logger-common",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/logger-common/-/logger-common-4.22.1.tgz",
+      "archive_sha256": "cd889b11481677bd619f1085a80ebdc995522440fa8dcc504313e120fad58d5a",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-js.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/logger-console",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/logger-console/-/logger-console-4.22.1.tgz",
+      "archive_sha256": "0d96e7a4a392064c034df739cc6693bb64d859a8c559b7d64d11665af256fba3",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-javascript.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/requester-browser-xhr",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/requester-browser-xhr/-/requester-browser-xhr-4.22.1.tgz",
+      "archive_sha256": "aeac72bed21cf58358dd6ce9122cb39d6b64d40d2972586f1a4585c9bbc7719e",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-javascript.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/requester-common",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/requester-common/-/requester-common-4.22.1.tgz",
+      "archive_sha256": "22ac6687a993188ea41b82195775b5fbed4ae6f7408a285bc60545298e0698ca",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-js.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/requester-node-http",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/requester-node-http/-/requester-node-http-4.22.1.tgz",
+      "archive_sha256": "bd3db51814e70fa3e7685ca5ba469a46804d0782a8bd7160c0416611972f454f",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-javascript.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@algolia/transporter",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@algolia/transporter/-/transporter-4.22.1.tgz",
+      "archive_sha256": "841916f918fbe2b57099e59bf329567ffdfac14fabffc6718492aa4de3fd8f39",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-javascript.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@babel/runtime",
+      "version": "7.10.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.10.2.tgz",
+      "archive_sha256": "04820cfaa102179b7ce0864b586759bd00ad043d1037f3d0f633545606fbb89f",
+      "repository": {
+        "url": "git+https://github.com/babel/babel.git",
+        "type": "git",
+        "directory": "packages/babel-runtime"
+      },
+      "git_head": "b0350e5b1e86bd2d53b4a25705e39eb380ec65a2",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@babel__runtime@7.10.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        }
+      ]
+    },
+    {
+      "package": "@babel/runtime",
+      "version": "7.24.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.24.0.tgz",
+      "archive_sha256": "90fa879c7dd722624e1a0908f816d3c8f087fe1544db1230db2ee4a5797afe9d",
+      "repository": {
+        "url": "https://github.com/babel/babel.git",
+        "type": "git",
+        "directory": "packages/babel-runtime"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/@babel__runtime@7.24.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        }
+      ]
+    },
+    {
+      "package": "@codemirror/autocomplete",
+      "version": "6.15.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@codemirror/autocomplete/-/autocomplete-6.15.0.tgz",
+      "archive_sha256": "8bf11fa047acf1a6580f82ab380fce1c6069e7bc95a987e05f5c9d30d57fb09c",
+      "repository": {
+        "url": "git+https://github.com/codemirror/autocomplete.git",
+        "type": "git"
+      },
+      "git_head": "5ad2ebc861f2f61cdc943fc087a5bfb756a7d0fa",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@codemirror__autocomplete@6.15.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "package": "@codemirror/commands",
+      "version": "6.3.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@codemirror/commands/-/commands-6.3.3.tgz",
+      "archive_sha256": "1abee7c944987c3c5ec8deda037eb614b76c3ee628f66232a221158047036169",
+      "repository": {
+        "url": "git+https://github.com/codemirror/commands.git",
+        "type": "git"
+      },
+      "git_head": "4361eb4f345015273ec7054036264f7234db68a0",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@codemirror__commands@6.3.3/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "package": "@codemirror/lang-css",
+      "version": "6.2.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@codemirror/lang-css/-/lang-css-6.2.1.tgz",
+      "archive_sha256": "f652c7d4c8696dbe8d945df7a78882c1f69f3cea32d099f2852ba5edad0aea63",
+      "repository": {
+        "url": "git+https://github.com/codemirror/lang-css.git",
+        "type": "git"
+      },
+      "git_head": "c1cfd8e8d8f716bdf6d35e9f2e200b5c736a9956",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@codemirror__lang-css@6.2.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "package": "@codemirror/lang-html",
+      "version": "6.4.8",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@codemirror/lang-html/-/lang-html-6.4.8.tgz",
+      "archive_sha256": "ac2663f2ad27f6b6d9375456c36dc36c9c5f7bbd9a48842c6286bdc82f070669",
+      "repository": {
+        "url": "git+https://github.com/codemirror/lang-html.git",
+        "type": "git"
+      },
+      "git_head": "25c64bc82ce63852fd19ec15875ea0e148797bd0",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@codemirror__lang-html@6.4.8/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "package": "@codemirror/lang-javascript",
+      "version": "6.2.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@codemirror/lang-javascript/-/lang-javascript-6.2.2.tgz",
+      "archive_sha256": "ce2ccef0a5fb8cd9f6c8ce7385e78ca5440a8832630899b17e50de96ca471565",
+      "repository": {
+        "url": "git+https://github.com/codemirror/lang-javascript.git",
+        "type": "git"
+      },
+      "git_head": "7edd3df9b0df41aef7c9835efac53fb52b747282",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@codemirror__lang-javascript@6.2.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "package": "@codemirror/language",
+      "version": "6.10.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@codemirror/language/-/language-6.10.1.tgz",
+      "archive_sha256": "dbe5ae72dd1a0b3d3b884f0971107890c86248b07e2b55dd9c49c1899f7883f5",
+      "repository": {
+        "url": "git+https://github.com/codemirror/language.git",
+        "type": "git"
+      },
+      "git_head": "3c9ad8ffee32e158512d252fee9457a0e6469e2e",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@codemirror__language@6.10.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "package": "@codemirror/lint",
+      "version": "6.5.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@codemirror/lint/-/lint-6.5.0.tgz",
+      "archive_sha256": "7752d5adbaef6f263cabc0df75dd5c3a6bb5e4842ca35f6b56f81fc8d96a5b53",
+      "repository": {
+        "url": "git+https://github.com/codemirror/lint.git",
+        "type": "git"
+      },
+      "git_head": "ed7e40363463fed911cd066748bcc58e7368c54c",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@codemirror__lint@6.5.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "package": "@codemirror/state",
+      "version": "6.4.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@codemirror/state/-/state-6.4.1.tgz",
+      "archive_sha256": "bea4defaf786c5fcef813a6ac048a1d14c9baf3e37f4e3ae5c25491524086004",
+      "repository": {
+        "url": "git+https://github.com/codemirror/state.git",
+        "type": "git"
+      },
+      "git_head": "666062a89600db8b0b5c428023f4a54212e2cf66",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@codemirror__state@6.4.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "package": "@codemirror/view",
+      "version": "6.26.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@codemirror/view/-/view-6.26.0.tgz",
+      "archive_sha256": "948196eac8b107f11f4bd612c8efc76f3cdb1e28a90e23b5a7af3ac9c462109e",
+      "repository": {
+        "url": "git+https://github.com/codemirror/view.git",
+        "type": "git"
+      },
+      "git_head": "3ff175a368b6967c0e2fd9cf56b329966d43a103",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@codemirror__view@6.26.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "package": "@codesandbox/sandpack-client",
+      "version": "2.13.2",
+      "declared_license": "Apache-2.0",
+      "source": "https://registry.npmjs.org/@codesandbox/sandpack-client/-/sandpack-client-2.13.2.tgz",
+      "archive_sha256": "086772b06ed03827243442cdaefb0c2fe1e6f35b40f8c7431b32f55ba8eec791",
+      "repository": {
+        "url": "git+https://github.com/codesandbox/sandpack.git",
+        "type": "git"
+      },
+      "git_head": "fbc7cc4de276b697b94169931e9267738b35f6e4",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@codesandbox__sandpack-client@2.13.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "b75c33064bdc1c7f392dc4e42df8329f64332e841f87ccaa1f3954c5eeba5bc1"
+        }
+      ]
+    },
+    {
+      "package": "@codesandbox/sandpack-react",
+      "version": "2.13.5",
+      "declared_license": "Apache-2.0",
+      "source": "https://registry.npmjs.org/@codesandbox/sandpack-react/-/sandpack-react-2.13.5.tgz",
+      "archive_sha256": "c7d4a299d28c99b0a0c742396db671c8c64aa5235db9be5e67a0f788034af33b",
+      "repository": {
+        "url": "git+https://github.com/codesandbox/sandpack.git",
+        "type": "git"
+      },
+      "git_head": "f9017ed270e22920b859820d93e90e4384850c2b",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@codesandbox__sandpack-react@2.13.5/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "b75c33064bdc1c7f392dc4e42df8329f64332e841f87ccaa1f3954c5eeba5bc1"
+        }
+      ]
+    },
+    {
+      "package": "@docsearch/css",
+      "version": "3.6.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@docsearch/css/-/css-3.6.0.tgz",
+      "archive_sha256": "f53e651dfe2d4fd7fc865bf6eb25560381316ed24771d58c4ef4ba656d292b87",
+      "repository": {
+        "url": "https://github.com/algolia/docsearch.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@docsearch/react",
+      "version": "3.6.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@docsearch/react/-/react-3.6.0.tgz",
+      "archive_sha256": "8e8a80ad33ecfacbaf4a8e8d1ef4706e7866a6dc37f87b4b7e2d2b9258eb26f3",
+      "repository": {
+        "url": "https://github.com/algolia/docsearch.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@docusaurus/core",
+      "version": "2.0.0-alpha.56",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@docusaurus/core/-/core-2.0.0-alpha.56.tgz",
+      "archive_sha256": "9b184912529639e2900bf24d2c7ca732a9af570cb32f86f9c4ce2c0b27d3ced9",
+      "repository": {
+        "url": "git+https://github.com/facebook/docusaurus.git",
+        "type": "git"
+      },
+      "git_head": "d8ebe8b2e4072376f7d02b6c61f4b9f72be4d800",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@docusaurus__core@2.0.0-alpha.56/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "package": "@emotion/css",
+      "version": "11.11.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@emotion/css/-/css-11.11.2.tgz",
+      "archive_sha256": "4c530d8bf8b42b6731bdb9890df4237e7450e1c11c256dec7579b6833ed6eac1",
+      "repository": {
+        "url": "git+https://github.com/emotion-js/emotion.git#main",
+        "type": "git"
+      },
+      "git_head": "f3b268f7c52103979402da919c9c0dd3f9e0e189",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@emotion__css@11.11.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "package": "@floating-ui/core",
+      "version": "1.6.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@floating-ui/core/-/core-1.6.0.tgz",
+      "archive_sha256": "f70e6492664d4bfcf99a5766efed8751233881121ecc9696bd0939c17107c1cb",
+      "repository": {
+        "url": "git+https://github.com/floating-ui/floating-ui.git",
+        "type": "git",
+        "directory": "packages/core"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/@floating-ui__core@1.6.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "package": "@floating-ui/dom",
+      "version": "1.6.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@floating-ui/dom/-/dom-1.6.3.tgz",
+      "archive_sha256": "c5dbe6ddb6202a9272743f14de8ec816d897f9e6e574d6ca5be24270e2ae4737",
+      "repository": {
+        "url": "git+https://github.com/floating-ui/floating-ui.git",
+        "type": "git",
+        "directory": "packages/dom"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/@floating-ui__dom@1.6.3/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "package": "@floating-ui/react-dom",
+      "version": "2.0.8",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@floating-ui/react-dom/-/react-dom-2.0.8.tgz",
+      "archive_sha256": "570b6edfff991cafe442ac2fc315bb2909bdbfab02648d7d3e523cd804fa017b",
+      "repository": {
+        "url": "git+https://github.com/floating-ui/floating-ui.git",
+        "type": "git",
+        "directory": "packages/react-dom"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/@floating-ui__react-dom@2.0.8/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "package": "@floating-ui/utils",
+      "version": "0.2.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.1.tgz",
+      "archive_sha256": "f1568a25635ab3f1ae2ac36b3d6912ddb95465b14bf06090d9bc300052bfd90c",
+      "repository": {
+        "url": "git+https://github.com/floating-ui/floating-ui.git",
+        "type": "git",
+        "directory": "packages/utils"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/@floating-ui__utils@0.2.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "package": "@lezer/common",
+      "version": "1.2.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@lezer/common/-/common-1.2.1.tgz",
+      "archive_sha256": "dac196dfdf4e1e4e664e666eec89c9918c2512385c183e2ad3a0abf1b1b97923",
+      "repository": {
+        "url": "git+https://github.com/lezer-parser/common.git",
+        "type": "git"
+      },
+      "git_head": "76f22406bdf1606b2c2f634ae7d588ce4310d197",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@lezer__common@1.2.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "package": "@lezer/css",
+      "version": "1.1.8",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@lezer/css/-/css-1.1.8.tgz",
+      "archive_sha256": "40a190e573ba6669056ab24d48e381deed25e67fd0aa9e04bb3d425def168a83",
+      "repository": {
+        "url": "git+https://github.com/lezer-parser/css.git",
+        "type": "git"
+      },
+      "git_head": "f67f5e388cc4d3bd8de5f6f1ec4cefc8fdf34811",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@lezer__css@1.1.8/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "package": "@lezer/highlight",
+      "version": "1.2.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@lezer/highlight/-/highlight-1.2.0.tgz",
+      "archive_sha256": "4765136d0b728736890cda77eb1c0820f58f870a4a72dd95fe99bedd913ac2e3",
+      "repository": {
+        "url": "git+https://github.com/lezer-parser/highlight.git",
+        "type": "git"
+      },
+      "git_head": "88ff939d5585514b96cdca5c8eaca6deea6ad03c",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@lezer__highlight@1.2.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "package": "@lezer/html",
+      "version": "1.3.9",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@lezer/html/-/html-1.3.9.tgz",
+      "archive_sha256": "6dc13060fbc0c889eca1196b70fd2891932aa004a14d4d5543a0ab05120b0d4a",
+      "repository": {
+        "url": "git+https://github.com/lezer-parser/html.git",
+        "type": "git"
+      },
+      "git_head": "f8ce3066451e51e3af7ab7bc4a89d2f8a230dbf9",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@lezer__html@1.3.9/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "package": "@lezer/javascript",
+      "version": "1.4.13",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@lezer/javascript/-/javascript-1.4.13.tgz",
+      "archive_sha256": "45ad9f5dc5d928b424600d4ba8124bff430b7ceba22e5b137df8cac53cc32143",
+      "repository": {
+        "url": "git+https://github.com/lezer-parser/javascript.git",
+        "type": "git"
+      },
+      "git_head": "e8bbd9d318b2982902efb4267b8fb3836d18d1ff",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@lezer__javascript@1.4.13/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "package": "@lezer/lr",
+      "version": "1.4.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@lezer/lr/-/lr-1.4.0.tgz",
+      "archive_sha256": "69d2ab0cfd4d0e2d486c4f9834199a1ae49ff457caf06ec7e7742d12274c542c",
+      "repository": {
+        "url": "git+https://github.com/lezer-parser/lr.git",
+        "type": "git"
+      },
+      "git_head": "93e730998560618f21171be64f932ff972cda662",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@lezer__lr@1.4.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "package": "@mdx-js/react",
+      "version": "2.3.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@mdx-js/react/-/react-2.3.0.tgz",
+      "archive_sha256": "c3b3df8b5cbf0569082839d5e54b20cbda8c18d5726a7467db456b25b13056db",
+      "repository": {
+        "url": "git+https://github.com/mdx-js/mdx.git",
+        "type": "git",
+        "directory": "packages/react"
+      },
+      "git_head": "bf7deab69996449cb99c2217dff75e65855eb2c1",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@mdx-js__react@2.3.0/license",
+          "archive_path": "package/license",
+          "sha256": "c274d2be30a4def0f9344506f3fe6d15668890a8e6d3e3d6bea732b44af9e124"
+        }
+      ]
+    },
+    {
+      "package": "@next/third-parties",
+      "version": "14.1.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@next/third-parties/-/third-parties-14.1.3.tgz",
+      "archive_sha256": "6da24e02ba7590a959bb4206133b34cba5768cd4d6212c54cbec97f35c68c853",
+      "repository": {
+        "url": "git+https://github.com/vercel/next.js.git",
+        "directory": "packages/third-parties"
+      },
+      "git_head": "fc38ee190c9b7de09ebff13a17ebd948cf580ec3",
+      "notices": []
+    },
+    {
+      "package": "@open-draft/deferred-promise",
+      "version": "2.2.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@open-draft/deferred-promise/-/deferred-promise-2.2.0.tgz",
+      "archive_sha256": "57f8d0cf303951c66dcdab2a10c2fe57194ad4cbb851880c604d4c3e521def2b",
+      "repository": {
+        "url": "git+https://github.com/open-draft/deferred-promise.git",
+        "type": "git"
+      },
+      "git_head": "b30f1b683311030e92fcdd08d2bd6574d652b77f",
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/colors",
+      "version": "3.0.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/colors/-/colors-3.0.0.tgz",
+      "archive_sha256": "f6cec1ff1fcc58a45eeefc25d0e6aa1f1659845dbd198963617a86e43d21f3d1",
+      "repository": null,
+      "git_head": "c4d0e50006c71ec51c4d6ff349062ab261b57e67",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@radix-ui__colors@3.0.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "9c400881b9139571aa7acc3bd6e422a4f05223b4519169fb661298fb44bf228e"
+        }
+      ]
+    },
+    {
+      "package": "@radix-ui/number",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/number/-/number-1.0.1.tgz",
+      "archive_sha256": "6db47e648379d2b2a7dac56b9f983d3b8976b8357103130c2c4dad2dbf5f2c73",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/primitive",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/primitive/-/primitive-1.0.1.tgz",
+      "archive_sha256": "e65acb46f12426fba19a6c814f4a35d5f9524782e4f065bf7072e3616fbdee1a",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-accessible-icon",
+      "version": "1.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-accessible-icon/-/react-accessible-icon-1.0.3.tgz",
+      "archive_sha256": "6d6b6e92dc10b6d14fdcf2112f907c2fa831e4ab59522b4c881bc27197e22962",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-alert-dialog",
+      "version": "1.0.5",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-alert-dialog/-/react-alert-dialog-1.0.5.tgz",
+      "archive_sha256": "218bef6fd2f2f25171ca1b824bbf278e6e596f3c344532dccaeb232c4040e239",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-arrow",
+      "version": "1.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-arrow/-/react-arrow-1.0.3.tgz",
+      "archive_sha256": "14cc2fe0ae1c8294d24da6127ed207b27d78de0eb875a057324f9455c0d6f057",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-aspect-ratio",
+      "version": "1.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-aspect-ratio/-/react-aspect-ratio-1.0.3.tgz",
+      "archive_sha256": "85911fd27ca750a09eebcf7ac354dd234da392e144a7735ca0fa7c1aee1b388d",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-avatar",
+      "version": "1.0.4",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-avatar/-/react-avatar-1.0.4.tgz",
+      "archive_sha256": "344fb88aa136b122bb0db99d429636c256308d7f5c69fc61de5a77526f44da3a",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-checkbox",
+      "version": "1.0.4",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-checkbox/-/react-checkbox-1.0.4.tgz",
+      "archive_sha256": "dcd4126b52336dd90a2a001ff0074a4a8147f9fcd89c386a782b722ca440588e",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-collection",
+      "version": "1.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-collection/-/react-collection-1.0.3.tgz",
+      "archive_sha256": "75b5e1c04137fddee0f5f960ddbc7986f30ea5483ac24dde5b6152e3518551b5",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-compose-refs",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-compose-refs/-/react-compose-refs-1.0.1.tgz",
+      "archive_sha256": "2b804da1c3b0bcb68da9f8073f016a2a132d8724e4b86574aa4008fc03ef7698",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-context",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-context/-/react-context-1.0.1.tgz",
+      "archive_sha256": "bfdbe652ef85e7cdc540bc56f98c7cbfb869a794adfad8ee7944748e4ff2cce3",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-context-menu",
+      "version": "2.1.5",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-context-menu/-/react-context-menu-2.1.5.tgz",
+      "archive_sha256": "42065393020143f65ab261ec13ee9d268fc7d5bfca03dbcd3e8c1f65d2627c23",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-dialog",
+      "version": "1.0.5",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-dialog/-/react-dialog-1.0.5.tgz",
+      "archive_sha256": "5e4e031ff0f6a7e1f1b65af4c908af7f1e55c3e51b2ef075855029bf35e69a08",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-direction",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-direction/-/react-direction-1.0.1.tgz",
+      "archive_sha256": "a2c7144c0e580f8d95b8e2f16256da9d1f4ebab310714ae15a87ff60070717b1",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-dismissable-layer",
+      "version": "1.0.5",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-dismissable-layer/-/react-dismissable-layer-1.0.5.tgz",
+      "archive_sha256": "ba90e04e8bf4c35404b478128ddfe5b2a5a7ad5f5b100573f4f50f935700c2a0",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-dropdown-menu",
+      "version": "2.0.6",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-dropdown-menu/-/react-dropdown-menu-2.0.6.tgz",
+      "archive_sha256": "a111236a32a97a776cfa9cb364bac19ec58b3d2281f500aba4ba6f3721a2aa22",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-focus-guards",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-focus-guards/-/react-focus-guards-1.0.1.tgz",
+      "archive_sha256": "6b1ae1d64a908fe3bddc3376c7ca153642fa3637129f38b6bdc71c5f50b7b1d5",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-focus-scope",
+      "version": "1.0.4",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-focus-scope/-/react-focus-scope-1.0.4.tgz",
+      "archive_sha256": "2c66936c234740734bb8bf41b7460477fb7e3caa9ae13516838880225ef5f45b",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-form",
+      "version": "0.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-form/-/react-form-0.0.3.tgz",
+      "archive_sha256": "f3a0194e9aef6e47474fb9afbe53aaaa95a88b92f7c4ff061d309d6b3f7c4a1d",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-hover-card",
+      "version": "1.0.7",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-hover-card/-/react-hover-card-1.0.7.tgz",
+      "archive_sha256": "c76fde9e3289ef91917de0cb0970acd89ddc2b9ec67d7a4d3dccbe2b541fd980",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-icons",
+      "version": "1.3.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-icons/-/react-icons-1.3.0.tgz",
+      "archive_sha256": "0cb1032978abdff6a70992be43f0d5c9630b3f6c697f191bb0df8f3ef012f814",
+      "repository": null,
+      "git_head": "1d727240d8efe7585570f9bdc25e9c17296b97e9",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@radix-ui__react-icons@1.3.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "package": "@radix-ui/react-id",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-id/-/react-id-1.0.1.tgz",
+      "archive_sha256": "6d446f3d83184535138f3596c47197d79d875c4599f6f7ffc509b3c3193ac84f",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-label",
+      "version": "2.0.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-label/-/react-label-2.0.2.tgz",
+      "archive_sha256": "947a7b1e85f03fcd72244c5fa412e71b283a0fb713c9a35947fe82b131db65c2",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-menu",
+      "version": "2.0.6",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-menu/-/react-menu-2.0.6.tgz",
+      "archive_sha256": "1fbf54146357803dd69d92bb3eb5907fdb966d400b3056e25e366e6672bc8f46",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-popover",
+      "version": "1.0.7",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-popover/-/react-popover-1.0.7.tgz",
+      "archive_sha256": "f367197c9121276298a412702a1df5225d91f4de43b42884ade205c4df25979c",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-popper",
+      "version": "1.1.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-popper/-/react-popper-1.1.3.tgz",
+      "archive_sha256": "ad6590b2e5feeb48426f8d10b3b867e2b51b172ddecf8e4fc63766787f993c2d",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-portal",
+      "version": "1.0.4",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-portal/-/react-portal-1.0.4.tgz",
+      "archive_sha256": "ef2e6bc605443c2a6c068c56633f92c7bc64a2abc3742a1985988865e14be2a2",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-presence",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-presence/-/react-presence-1.0.1.tgz",
+      "archive_sha256": "c3e05fea4ba82a4ed31fd6b9501fa31d63609578b1823d20661e1fcdef05411b",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-primitive",
+      "version": "1.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-primitive/-/react-primitive-1.0.3.tgz",
+      "archive_sha256": "f904c9d595c5faebacce829fa810e2f9c0fa27348db484c4757a4ab8064a135a",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-radio-group",
+      "version": "1.1.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-radio-group/-/react-radio-group-1.1.3.tgz",
+      "archive_sha256": "b24ed9b3886c6342a3f326a9e93c7d2fed9daeeb195e51172b24a86369fac862",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-roving-focus",
+      "version": "1.0.4",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-roving-focus/-/react-roving-focus-1.0.4.tgz",
+      "archive_sha256": "38bd6c55f20a6188b613793e239e10f515f7df5932da3208823fce29cd8fca4b",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-scroll-area",
+      "version": "1.0.5",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-scroll-area/-/react-scroll-area-1.0.5.tgz",
+      "archive_sha256": "6f2e8c1e9d7e6e5e72e61ed1ce4fee0ec4148b988541990ee22674a14e486e8e",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-select",
+      "version": "2.0.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-select/-/react-select-2.0.0.tgz",
+      "archive_sha256": "13006eadfb0efc73d56fb1cd659ecdef434a79fbbc617b4b20bda67a36412f4e",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-separator",
+      "version": "1.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-separator/-/react-separator-1.0.3.tgz",
+      "archive_sha256": "a54f2ca0047a5358e054d37e047a19890aa422a25da2369d08b804c4748e6c53",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-slider",
+      "version": "1.1.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-slider/-/react-slider-1.1.2.tgz",
+      "archive_sha256": "df6ac2744b8d7812225c47eb2820650c9e369a200acc449a48cb9c27b4006e8c",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-slot",
+      "version": "1.0.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.0.2.tgz",
+      "archive_sha256": "cccf104a2417691ab0a69cfc5e5394728247bf99ac58bdef5d10b854c5a17429",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-switch",
+      "version": "1.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-switch/-/react-switch-1.0.3.tgz",
+      "archive_sha256": "fe10d317d00707c17897c7dbe803a0cc79ce887d3a97f7ec413211eaf116cba7",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-tabs",
+      "version": "1.0.4",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-tabs/-/react-tabs-1.0.4.tgz",
+      "archive_sha256": "417d67f51e61bd37861715c6b30ec382bc9608288841bd3dccce439e2c5cb496",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-tooltip",
+      "version": "1.0.7",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-tooltip/-/react-tooltip-1.0.7.tgz",
+      "archive_sha256": "3b27d28f5b9cde80800ebca5cc15d8652540d12f102bf2d3054ae0d271abf1b6",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-use-callback-ref",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-use-callback-ref/-/react-use-callback-ref-1.0.1.tgz",
+      "archive_sha256": "f269e0506cdfa986b5665b05c5c8021ff92259d48dce9f5bfac19297ebbc4297",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-use-controllable-state",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-use-controllable-state/-/react-use-controllable-state-1.0.1.tgz",
+      "archive_sha256": "c8f99c0061d717642dfc1cd8abdf72de841f6e1e55e37cd9b41fdd78e7589d83",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-use-escape-keydown",
+      "version": "1.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-use-escape-keydown/-/react-use-escape-keydown-1.0.3.tgz",
+      "archive_sha256": "f4501942ca113850a82928afd1a33a46541a50cdd08d79353750030746ea75fe",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-use-layout-effect",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-use-layout-effect/-/react-use-layout-effect-1.0.1.tgz",
+      "archive_sha256": "da458010e243845942a4bef3b350ab044561b45da2e6bbdf34abc514463f371b",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-use-previous",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-use-previous/-/react-use-previous-1.0.1.tgz",
+      "archive_sha256": "aa6cf56fe017301059987d40c741d8268c4947f6394f8780965d4e9718f34a87",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-use-rect",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-use-rect/-/react-use-rect-1.0.1.tgz",
+      "archive_sha256": "08d64ce88deb703d54ac3d15d99eceedb154f37cf3c5b469fe0d73916903c96e",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-use-size",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-use-size/-/react-use-size-1.0.1.tgz",
+      "archive_sha256": "d72c35f09c33317fba942969d335efb81be30aa5a5faef4369823ecfd5585ac6",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/react-visually-hidden",
+      "version": "1.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/react-visually-hidden/-/react-visually-hidden-1.0.3.tgz",
+      "archive_sha256": "b719aa5dfad6a930a02720f7c8b55c132e577cf853a7ebd0afc9785a3195b9be",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/rect",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/rect/-/rect-1.0.1.tgz",
+      "archive_sha256": "7899d67eb905658abef7e2e20a0918fe9f2f68e28f739db5dd605633928a186f",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/primitives.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "@radix-ui/themes",
+      "version": "2.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@radix-ui/themes/-/themes-2.0.3.tgz",
+      "archive_sha256": "2aad1af562c550be683de67bf007f864334c6e156eb3b35d4896174f267135eb",
+      "repository": {
+        "url": "git+https://github.com/radix-ui/themes.git",
+        "type": "git"
+      },
+      "git_head": "5e1211bb760cf1c9b1ace0ff46bf6f6497c58314",
+      "notices": []
+    },
+    {
+      "package": "@react-hook/intersection-observer",
+      "version": "3.1.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@react-hook/intersection-observer/-/intersection-observer-3.1.1.tgz",
+      "archive_sha256": "b89283408e29b685be0c4c4b236ececa3fb5aeff52ff695843f42a0f087137ff",
+      "repository": {
+        "url": "https://github.com/jaredLunde/react-hook.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/@react-hook__intersection-observer@3.1.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "231b4cc052f50f739d5a867d6868c4738f6149f70be3cfc430bc15c75466e626"
+        }
+      ]
+    },
+    {
+      "package": "@react-hook/passive-layout-effect",
+      "version": "1.2.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@react-hook/passive-layout-effect/-/passive-layout-effect-1.2.1.tgz",
+      "archive_sha256": "832138250c454a7168be1538660400121416e28b2b8a63ac0a18c4de5cfa69f7",
+      "repository": {
+        "url": "https://github.com/jaredLunde/react-hook.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/@react-hook__passive-layout-effect@1.2.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "231b4cc052f50f739d5a867d6868c4738f6149f70be3cfc430bc15c75466e626"
+        }
+      ]
+    },
+    {
+      "package": "@stitches/core",
+      "version": "1.2.8",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@stitches/core/-/core-1.2.8.tgz",
+      "archive_sha256": "4bd820c93e2cb60ecee56e4e265608945f6fe7ddf21ac680b790f3d255aaacee",
+      "repository": {
+        "url": "git+https://github.com/modulz/stitches.git",
+        "type": "git"
+      },
+      "git_head": "c268db3938e2cf6bdbaa3d30f3ce7b67c0492a41",
+      "notices": []
+    },
+    {
+      "package": "@types/mdx",
+      "version": "2.0.11",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@types/mdx/-/mdx-2.0.11.tgz",
+      "archive_sha256": "0a98cea2f9bffded8f6ea463210952dd6f16a32d0e7fabf0739034934cc36281",
+      "repository": {
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "type": "git",
+        "directory": "types/mdx"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/@types__mdx@2.0.11/mdx/LICENSE",
+          "archive_path": "mdx/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "package": "@types/prismjs",
+      "version": "1.26.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@types/prismjs/-/prismjs-1.26.3.tgz",
+      "archive_sha256": "0c3d27875e79885b8a7d2a574b03fa8e680f61119850dcc66a8450aaa775de8e",
+      "repository": {
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "type": "git",
+        "directory": "types/prismjs"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/@types__prismjs@1.26.3/prismjs/LICENSE",
+          "archive_path": "prismjs/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "package": "@types/prop-types",
+      "version": "15.7.11",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.11.tgz",
+      "archive_sha256": "e53f0a933e6c19d9d7a430c83fb1e75715a51a0482b094fd55b1fd8d8a85c61d",
+      "repository": {
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "type": "git",
+        "directory": "types/prop-types"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/@types__prop-types@15.7.11/prop-types/LICENSE",
+          "archive_path": "prop-types/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "package": "@types/react",
+      "version": "18.2.66",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@types/react/-/react-18.2.66.tgz",
+      "archive_sha256": "97dc54dd00c1cb13a1778edbf7407d164b27116b65f31c264d3133bd94ce67ae",
+      "repository": {
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "type": "git",
+        "directory": "types/react"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/@types__react@18.2.66/react/LICENSE",
+          "archive_path": "react/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "package": "@types/scheduler",
+      "version": "0.16.8",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.8.tgz",
+      "archive_sha256": "583bf2e301f974bb9b24f1ac74e99b852f1d89e68f9b418c918e9068ccdd37a6",
+      "repository": {
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "type": "git",
+        "directory": "types/scheduler"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/@types__scheduler@0.16.8/scheduler/LICENSE",
+          "archive_path": "scheduler/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "package": "algoliasearch",
+      "version": "4.22.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/algoliasearch/-/algoliasearch-4.22.1.tgz",
+      "archive_sha256": "804ee202f9fff9f2c8b9ef4a079ca70ecd33615fdcd4c5d437d397444aafaefc",
+      "repository": {
+        "url": "git://github.com/algolia/algoliasearch-client-javascript.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "anser",
+      "version": "2.1.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/anser/-/anser-2.1.1.tgz",
+      "archive_sha256": "ead5118576202f7a6c1aec4589a9a9fa8e53992b4cd1d0e5fdc7bc3a0e2984f2",
+      "repository": {
+        "url": "git://github.com/IonicaBizau/anser.git",
+        "type": "git"
+      },
+      "git_head": "ac20b53394a933ac9a2364159f49dd6903f08682",
+      "notices": [
+        {
+          "file": "LICENSES/npm/anser@2.1.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "531fcc150062278f755c2fff1307774988f00273e158b751a4f8c2eda9008113"
+        }
+      ]
+    },
+    {
+      "package": "aria-hidden",
+      "version": "1.2.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/aria-hidden/-/aria-hidden-1.2.3.tgz",
+      "archive_sha256": "4f1f6018f5e29e0aba12564fb1c1d6be82ad8265d328a83d036b096f3227793e",
+      "repository": {
+        "url": "git+https://github.com/theKashey/aria-hidden.git",
+        "type": "git"
+      },
+      "git_head": "71bf8c918626d7aad2acff058bd08efecaeb7060",
+      "notices": [
+        {
+          "file": "LICENSES/npm/aria-hidden@1.2.3/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+        }
+      ]
+    },
+    {
+      "package": "asap",
+      "version": "2.0.6",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/asap/-/asap-2.0.6.tgz",
+      "archive_sha256": "5ab440764cf46d8d4783d3f1173c0269e4bf9ebf013ae5a9d4bc0197cd89ccde",
+      "repository": {
+        "url": "git+https://github.com/kriskowal/asap.git",
+        "type": "git"
+      },
+      "git_head": "3e3d99381444379bb0483cb9216caa39ac67bebb",
+      "notices": [
+        {
+          "file": "LICENSES/npm/asap@2.0.6/LICENSE.md",
+          "archive_path": "package/LICENSE.md",
+          "sha256": "e80373b1ed0f33cecc47173b4b0c6afe0d0318b32dbd84116a1a957e3f7f43a8"
+        }
+      ]
+    },
+    {
+      "package": "base64-js",
+      "version": "1.5.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz",
+      "archive_sha256": "b1b7a945b52685269083425216d6597e33d97bf21699d656e92fdb3eb5210a85",
+      "repository": {
+        "url": "git://github.com/beatgammit/base64-js.git",
+        "type": "git"
+      },
+      "git_head": "88957c9943c7e2a0f03cdf73e71d579e433627d3",
+      "notices": [
+        {
+          "file": "LICENSES/npm/base64-js@1.5.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1"
+        }
+      ]
+    },
+    {
+      "package": "buffer",
+      "version": "6.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/buffer/-/buffer-6.0.3.tgz",
+      "archive_sha256": "555b6f49224afcf6b2c5a9aea7cd34a7f443f395b10532bc5580022d57aa51f5",
+      "repository": {
+        "url": "git://github.com/feross/buffer.git",
+        "type": "git"
+      },
+      "git_head": "f52dffd9df0445b93c0c9065c2f8f0f46b2c729a",
+      "notices": [
+        {
+          "file": "LICENSES/npm/buffer@6.0.3/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6"
+        }
+      ]
+    },
+    {
+      "package": "classnames",
+      "version": "2.5.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/classnames/-/classnames-2.5.1.tgz",
+      "archive_sha256": "6c9e10fc21a14499b74bfe1e8e8dd7a6152da02fb575c3ffd3cd71f67390ebf1",
+      "repository": {
+        "url": "git+https://github.com/JedWatson/classnames.git",
+        "type": "git"
+      },
+      "git_head": "2e3683264bab067d13938b5eb03a96391a089cb4",
+      "notices": [
+        {
+          "file": "LICENSES/npm/classnames@2.5.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "0c1c24dcc129cb0c02ee9803cfa7a50061c236a3b59b36a714c27f3ade66d7be"
+        }
+      ]
+    },
+    {
+      "package": "clean-set",
+      "version": "1.1.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/clean-set/-/clean-set-1.1.2.tgz",
+      "archive_sha256": "56c9641ba3edb4434eadbb7df1024bec673ff9bd67160e8b5d4a63c6037437eb",
+      "repository": {
+        "url": "git+https://github.com/fwilkerson/clean-set.git",
+        "type": "git"
+      },
+      "git_head": "2366343c2d49b0ea02714db87b9996f0dbc25cd1",
+      "notices": [
+        {
+          "file": "LICENSES/npm/clean-set@1.1.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "b4cb19195e2b6fbec8807c2e9e6701a39bed6bb10bf50cb82af977fe2f9d3ebc"
+        }
+      ]
+    },
+    {
+      "package": "clipboard",
+      "version": "2.0.6",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/clipboard/-/clipboard-2.0.6.tgz",
+      "archive_sha256": "12b4518308643b17fcea7088c58989e1569d2011d53a655ae9c2aa30623f3119",
+      "repository": {
+        "url": "git+https://github.com/zenorocha/clipboard.js.git",
+        "type": "git"
+      },
+      "git_head": "fddd2aac5f8772c468b36e8607ab9b0704ee73c6",
+      "notices": [
+        {
+          "file": "LICENSES/npm/clipboard@2.0.6/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "a798e7b5fa604117d52d607e05f1cbac3b2fa5da087837f412a1a3c866b4b748"
+        }
+      ]
+    },
+    {
+      "package": "clsx",
+      "version": "2.1.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/clsx/-/clsx-2.1.0.tgz",
+      "archive_sha256": "df83989424bb7f1d1391afa2308fdb66563400d83215be800e2ff4bc01132078",
+      "repository": {
+        "url": "git+https://github.com/lukeed/clsx.git",
+        "type": "git"
+      },
+      "git_head": "a60db12a53aee6a14218a62d8a0624f556b87032",
+      "notices": [
+        {
+          "file": "LICENSES/npm/clsx@2.1.0/license",
+          "archive_path": "package/license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+        }
+      ]
+    },
+    {
+      "package": "compute-scroll-into-view",
+      "version": "3.1.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/compute-scroll-into-view/-/compute-scroll-into-view-3.1.1.tgz",
+      "archive_sha256": "e00a19e29e50d7af70d83d9e3a870cbb428dbb7097407a8a53892146708ac584",
+      "repository": {
+        "url": "git+https://github.com/scroll-into-view/compute-scroll-into-view.git",
+        "type": "git"
+      },
+      "git_head": "16d90f8ac94c585add15d0b7f6d86864c9f0980a",
+      "notices": [
+        {
+          "file": "LICENSES/npm/compute-scroll-into-view@3.1.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "dfe2b2d612c7c1de1f32dcab5969bd68ecac0022a7582ca8cd4594729b9c8664"
+        }
+      ]
+    },
+    {
+      "package": "core-js",
+      "version": "2.6.11",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/core-js/-/core-js-2.6.11.tgz",
+      "archive_sha256": "3e5ae5eee1d4e357235c57fc60a2a0ed3538d5408f56948edfdfbfbf482581c6",
+      "repository": {
+        "url": "git+https://github.com/zloirock/core-js.git",
+        "type": "git"
+      },
+      "git_head": "4cfb0ec4b92e509172d94171426736ab471b25e9",
+      "notices": [
+        {
+          "file": "LICENSES/npm/core-js@2.6.11/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "722e1193901ad1ed4460753dded483d68ca2ad0528c67f86f76abc46b9aa25f5"
+        }
+      ]
+    },
+    {
+      "package": "crelt",
+      "version": "1.0.6",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/crelt/-/crelt-1.0.6.tgz",
+      "archive_sha256": "0670072d6217d7e514925a5a55814ee972efca6f1875c4c23b2e4d1caff83ab1",
+      "repository": {
+        "url": "git+https://github.com/marijnh/crelt.git",
+        "type": "git"
+      },
+      "git_head": "25eabb104d50e160cd4e4acd9eed2eacb32b332b",
+      "notices": [
+        {
+          "file": "LICENSES/npm/crelt@1.0.6/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "23852ebf6aef7fadffc92514b3c5df163a8651f2c3ed0dbb494cb49d93bd5de5"
+        }
+      ]
+    },
+    {
+      "package": "csstype",
+      "version": "3.1.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/csstype/-/csstype-3.1.3.tgz",
+      "archive_sha256": "2f083f7cf2a398f05a624b4efa2b14496c45e77cd2b12a0647e2697567186777",
+      "repository": {
+        "url": "git+https://github.com/frenic/csstype.git",
+        "type": "git"
+      },
+      "git_head": "fb448e21733ac5cb52523d3b678fdbbe1f9b42f2",
+      "notices": [
+        {
+          "file": "LICENSES/npm/csstype@3.1.3/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e"
+        }
+      ]
+    },
+    {
+      "package": "d",
+      "version": "1.0.2",
+      "declared_license": "ISC",
+      "source": "https://registry.npmjs.org/d/-/d-1.0.2.tgz",
+      "archive_sha256": "a48f7b9e98ee8ab9ef1a6aaecbe71879e990fe11e024ff0651ab8a908d65bfd8",
+      "repository": {
+        "url": "git+https://github.com/medikoo/d.git",
+        "type": "git"
+      },
+      "git_head": "b11fe68c318dbb51b817a22a562175b29adf2e1f",
+      "notices": [
+        {
+          "file": "LICENSES/npm/d@1.0.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "77485a12d142fd84ee9f278b42968b2f029c876c8dddca7d0e13fa164ffeed34"
+        }
+      ]
+    },
+    {
+      "package": "delegate",
+      "version": "3.2.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/delegate/-/delegate-3.2.0.tgz",
+      "archive_sha256": "7e0369ceec2aaaf7984534c6a7a2b6ab6478502aec916c7ea502782d022a48fb",
+      "repository": {
+        "url": "git+https://github.com/zenorocha/delegate.git",
+        "type": "git"
+      },
+      "git_head": "1fe374c9693576ebf95c42edeb59ebe146aef58f",
+      "notices": []
+    },
+    {
+      "package": "dequal",
+      "version": "2.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz",
+      "archive_sha256": "941d90d6629878167d10d2a05d8c6df8f8fa13acc826616abb49db63ac6a5c35",
+      "repository": {
+        "url": "git+https://github.com/lukeed/dequal.git",
+        "type": "git"
+      },
+      "git_head": "37d4f27de03fa6264e406cd03288cec8255fca4c",
+      "notices": [
+        {
+          "file": "LICENSES/npm/dequal@2.0.3/license",
+          "archive_path": "package/license",
+          "sha256": "306fa513e39b23a6e8747520de761809d206b99800ef41907b530226574c59ae"
+        }
+      ]
+    },
+    {
+      "package": "detect-node-es",
+      "version": "1.1.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/detect-node-es/-/detect-node-es-1.1.0.tgz",
+      "archive_sha256": "bc0bc6ee6c25bfd3db4e44dbaa210011dc5a1937a381bbbd92ad857bf5183678",
+      "repository": {
+        "url": "git+https://github.com/thekashey/detect-node.git",
+        "type": "git"
+      },
+      "git_head": "a04ac52015a2052b5006a6f81409fa57987335fb",
+      "notices": [
+        {
+          "file": "LICENSES/npm/detect-node-es@1.1.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8"
+        }
+      ]
+    },
+    {
+      "package": "direction",
+      "version": "1.0.4",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/direction/-/direction-1.0.4.tgz",
+      "archive_sha256": "ecbd6b3465f61fc84027f2f74a024fe81556bbb8bb63ae5cba4b3768543c1224",
+      "repository": {
+        "url": "git+https://github.com/wooorm/direction.git",
+        "type": "git"
+      },
+      "git_head": "8543f8aa7730008eed1d3f4dfd045841a5324b6b",
+      "notices": [
+        {
+          "file": "LICENSES/npm/direction@1.0.4/license",
+          "archive_path": "package/license",
+          "sha256": "9966260ba3ea9d6a5f839297dca80ddc99735a34b4ae82811cac7b956d2e3afd"
+        }
+      ]
+    },
+    {
+      "package": "dotenv",
+      "version": "16.4.5",
+      "declared_license": "BSD-2-Clause",
+      "source": "https://registry.npmjs.org/dotenv/-/dotenv-16.4.5.tgz",
+      "archive_sha256": "0ae24e5b77e0346558b024ab2ee87bc4d42e3570147e7af755cf6e8671e96637",
+      "repository": {
+        "url": "git://github.com/motdotla/dotenv.git",
+        "type": "git"
+      },
+      "git_head": "9f3e83352ec6ba912161748a2fd15b07829430e2",
+      "notices": [
+        {
+          "file": "LICENSES/npm/dotenv@16.4.5/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "74b629b24865e1e83c5277ee84590b7937644d6fd959d0c7bdce758676cd2ced"
+        }
+      ]
+    },
+    {
+      "package": "draft-js",
+      "version": "0.11.5",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/draft-js/-/draft-js-0.11.5.tgz",
+      "archive_sha256": "fb09965871691e83158e488d8cf49d102ab7d33f62ff9814fff71fe176fd6a91",
+      "repository": {
+        "url": "git+https://github.com/facebook/draft-js.git",
+        "type": "git"
+      },
+      "git_head": "94f6db8f8801b75924e689d210cf8c102a11d317",
+      "notices": [
+        {
+          "file": "LICENSES/npm/draft-js@0.11.5/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "package": "encoding",
+      "version": "0.1.12",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/encoding/-/encoding-0.1.12.tgz",
+      "archive_sha256": "a7948563d0bce0bfdd6b164b7521239fb20597780b8db08ac9209b5cebd58b7a",
+      "repository": {
+        "url": "git+https://github.com/andris9/encoding.git",
+        "type": "git"
+      },
+      "git_head": "91ae950aaa854a119122c27cdbabd8c5585106f7",
+      "notices": [
+        {
+          "file": "LICENSES/npm/encoding@0.1.12/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "2453d3b90aa23715eec80b25fcda1bebf71052ad41a6694d58a9aa867d103c81"
+        }
+      ]
+    },
+    {
+      "package": "es5-ext",
+      "version": "0.10.64",
+      "declared_license": "ISC",
+      "source": "https://registry.npmjs.org/es5-ext/-/es5-ext-0.10.64.tgz",
+      "archive_sha256": "e8e64fee8cd0ccc432438b38dd8bfdb18b794fe811badcb045f3da633299349f",
+      "repository": {
+        "url": "git+https://github.com/medikoo/es5-ext.git",
+        "type": "git"
+      },
+      "git_head": "f76b03d8c49ce4871f37f428c0e1d3ee6637fcc4",
+      "notices": [
+        {
+          "file": "LICENSES/npm/es5-ext@0.10.64/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "5dc6fe91750695c7a47f9bc200f7bd52f3e81c6854d431f43c34c7e7f8ae8b52"
+        }
+      ]
+    },
+    {
+      "package": "es6-iterator",
+      "version": "2.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/es6-iterator/-/es6-iterator-2.0.3.tgz",
+      "archive_sha256": "cbd6f6ff4de66edb320b8b35c2e455e84b0c6cb12744eaf6cb32bcba5d308f43",
+      "repository": {
+        "url": "git://github.com/medikoo/es6-iterator.git",
+        "type": "git"
+      },
+      "git_head": "ae56bb258cf47c62f9b9a1b4bec29bee0e676fb1",
+      "notices": [
+        {
+          "file": "LICENSES/npm/es6-iterator@2.0.3/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "29c6c58225baf0c91719e5600f7e1302cad616c0fd81c45b02b5e78882b9e2a9"
+        }
+      ]
+    },
+    {
+      "package": "es6-symbol",
+      "version": "3.1.4",
+      "declared_license": "ISC",
+      "source": "https://registry.npmjs.org/es6-symbol/-/es6-symbol-3.1.4.tgz",
+      "archive_sha256": "f93d1eb7e5c6c3fbd74d17e7b04c9e0c69b001c92ef1ba0744f079b2da4b9e40",
+      "repository": {
+        "url": "git+https://github.com/medikoo/es6-symbol.git",
+        "type": "git"
+      },
+      "git_head": "c57f8d88070cec913ff4e3e0ed5192b2330373b2",
+      "notices": [
+        {
+          "file": "LICENSES/npm/es6-symbol@3.1.4/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "77485a12d142fd84ee9f278b42968b2f029c876c8dddca7d0e13fa164ffeed34"
+        }
+      ]
+    },
+    {
+      "package": "escape-carriage",
+      "version": "1.3.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/escape-carriage/-/escape-carriage-1.3.1.tgz",
+      "archive_sha256": "3c7a443b0af808ffb32453226141b01f8afa0d5b9f3b657f3cd9881ca53d1495",
+      "repository": {
+        "url": "git+https://github.com/lgeiger/escape-carriage.git",
+        "type": "git"
+      },
+      "git_head": "910467d9fa99b39398d1955c931714ee3422c4a9",
+      "notices": [
+        {
+          "file": "LICENSES/npm/escape-carriage@1.3.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "9a508cd4122f2dc1cc39f8ab0b6950efbc49fb087a581c7177a4b8c9d5d0d6a1"
+        }
+      ]
+    },
+    {
+      "package": "esniff",
+      "version": "2.0.1",
+      "declared_license": "ISC",
+      "source": "https://registry.npmjs.org/esniff/-/esniff-2.0.1.tgz",
+      "archive_sha256": "1a74e39e5bd3176cf29e7ac641357dbced7a8bf71546b048c63c5260253461c8",
+      "repository": {
+        "url": "git+https://github.com/medikoo/esniff.git",
+        "type": "git"
+      },
+      "git_head": "8498674e0894acc27e606d6f55e732e628107596",
+      "notices": [
+        {
+          "file": "LICENSES/npm/esniff@2.0.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "77485a12d142fd84ee9f278b42968b2f029c876c8dddca7d0e13fa164ffeed34"
+        }
+      ]
+    },
+    {
+      "package": "event-emitter",
+      "version": "0.3.5",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/event-emitter/-/event-emitter-0.3.5.tgz",
+      "archive_sha256": "01285fbf386851ffa16974b3a077a314898c09fc52184ac0d4b45281ec0468b1",
+      "repository": {
+        "url": "git://github.com/medikoo/event-emitter.git",
+        "type": "git"
+      },
+      "git_head": "b951397b8f0d55fc7ae8aea7fa7699e48132a53d",
+      "notices": [
+        {
+          "file": "LICENSES/npm/event-emitter@0.3.5/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "519bbf857c213b95460e438767e9e5600159476e3e87facbbcc19f9b2c7f8886"
+        }
+      ]
+    },
+    {
+      "package": "ext",
+      "version": "1.7.0",
+      "declared_license": "ISC",
+      "source": "https://registry.npmjs.org/ext/-/ext-1.7.0.tgz",
+      "archive_sha256": "81fb698ffc640934d705768061a24f821a66a6db179089f000830e8254601962",
+      "repository": {
+        "url": "git+https://github.com/medikoo/es5-ext.git#ext",
+        "type": "git"
+      },
+      "git_head": "68c26d9918d0d970ca06a0d3912485d73d67e411",
+      "notices": [
+        {
+          "file": "LICENSES/npm/ext@1.7.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "2f81a49be59092e3229ed757730791b7bee7b3394d26e58a4b6ae1829437698b"
+        }
+      ]
+    },
+    {
+      "package": "fast-diff",
+      "version": "1.3.0",
+      "declared_license": "Apache-2.0",
+      "source": "https://registry.npmjs.org/fast-diff/-/fast-diff-1.3.0.tgz",
+      "archive_sha256": "77f602d83366f68f4dfb5dd9ba636933dc0047502da4d48d914d1d361c517d4a",
+      "repository": {
+        "url": "git+https://github.com/jhchen/fast-diff.git",
+        "type": "git"
+      },
+      "git_head": "0e27223f8792083f5a49a193eb1ddbf26125fdb2",
+      "notices": [
+        {
+          "file": "LICENSES/npm/fast-diff@1.3.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "20430d7ea026abdb78e873e59a0817dd7d2921d94acefeafdc3e4e0150a4595d"
+        }
+      ]
+    },
+    {
+      "package": "fbjs",
+      "version": "1.0.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/fbjs/-/fbjs-1.0.0.tgz",
+      "archive_sha256": "2f92f007922ec732d262e33765a5f3c6fc6f11633b89d1eb2a4c15ba8fb66eb9",
+      "repository": {
+        "url": "git+https://github.com/facebook/fbjs.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/fbjs@1.0.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce"
+        }
+      ]
+    },
+    {
+      "package": "fbjs-css-vars",
+      "version": "1.0.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/fbjs-css-vars/-/fbjs-css-vars-1.0.2.tgz",
+      "archive_sha256": "e2a18ce71c9f3520d86c8178e3c73016c3b8d1fbd6b5108e604e8711d0e320de",
+      "repository": {
+        "url": "git+https://github.com/facebook/fbjs.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/fbjs-css-vars@1.0.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce"
+        }
+      ]
+    },
+    {
+      "package": "good-listener",
+      "version": "1.2.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/good-listener/-/good-listener-1.2.2.tgz",
+      "archive_sha256": "9d6844c3b08f24393730dd95ffc0a2360a74a9066d2f3c9c0eb0ee3e74577f75",
+      "repository": {
+        "url": "git+https://github.com/zenorocha/good-listener.git",
+        "type": "git"
+      },
+      "git_head": "74ff6376e7f0b7c5c8d7e4b228fcbf9189f0d21d",
+      "notices": []
+    },
+    {
+      "package": "history",
+      "version": "4.10.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/history/-/history-4.10.1.tgz",
+      "archive_sha256": "287df8e55f2547b5966c71465717cc923252d2da0cdc3b548011e42d64f07a10",
+      "repository": {
+        "url": "git+https://github.com/ReactTraining/history.git",
+        "type": "git"
+      },
+      "git_head": "3f69f9e07b0a739419704cffc3b3563133281548",
+      "notices": [
+        {
+          "file": "LICENSES/npm/history@4.10.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "079b9fe13858745a8faeaf305231a339b63ba13f36b65e6e9eca94d89196c456"
+        }
+      ]
+    },
+    {
+      "package": "iconv-lite",
+      "version": "0.4.24",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz",
+      "archive_sha256": "576c64f2098ed44c3d5e48d7a9dc65512700c1d6a969a71a74d474da8e734635",
+      "repository": {
+        "url": "git://github.com/ashtuchkin/iconv-lite.git",
+        "type": "git"
+      },
+      "git_head": "efbbb0937ca8dda1c14e0b69958b9d6f20771f7a",
+      "notices": [
+        {
+          "file": "LICENSES/npm/iconv-lite@0.4.24/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "ac779f7314c74f232ef847ea86e714abe25cf6eeb5cc97b69451b74e2af6492d"
+        }
+      ]
+    },
+    {
+      "package": "ieee754",
+      "version": "1.2.1",
+      "declared_license": "BSD-3-Clause",
+      "source": "https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz",
+      "archive_sha256": "8ef14b9b397e339db89db97881fb714f49319d8f0eb1275901f45567b28f9dac",
+      "repository": {
+        "url": "git://github.com/feross/ieee754.git",
+        "type": "git"
+      },
+      "git_head": "b60d148be9cad718f9ff007c211c2427cdc180a4",
+      "notices": [
+        {
+          "file": "LICENSES/npm/ieee754@1.2.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "18d45466ba3253deae04667e267a91ea8de8548f18c1125264d1c9db28194cc1"
+        }
+      ]
+    },
+    {
+      "package": "intersection-observer",
+      "version": "0.10.0",
+      "declared_license": "W3C-20150513",
+      "source": "https://registry.npmjs.org/intersection-observer/-/intersection-observer-0.10.0.tgz",
+      "archive_sha256": "bcb0887711f3077bd538ce67c0b5c4d70a44dbb24b743bf56cac44b27ef10fd2",
+      "repository": {
+        "url": "git+ssh://git@github.com/w3c/IntersectionObserver.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "invariant",
+      "version": "2.2.4",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz",
+      "archive_sha256": "68ca08de61805e195cb73d33803b433469bd5c8006166067a4734c9005effa81",
+      "repository": {
+        "url": "git+https://github.com/zertosh/invariant.git",
+        "type": "git"
+      },
+      "git_head": "ce95a9badeee1c97daff1bca0d1f6cec5dda4fe8",
+      "notices": [
+        {
+          "file": "LICENSES/npm/invariant@2.2.4/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce"
+        }
+      ]
+    },
+    {
+      "package": "is-hotkey",
+      "version": "0.2.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/is-hotkey/-/is-hotkey-0.2.0.tgz",
+      "archive_sha256": "09743f5ddb5534a76a8ccd581a5b997a8ad806e1d883ce7e3f474f5c5def9d1d",
+      "repository": {
+        "url": "git://github.com/ianstormtaylor/is-hotkey.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/is-hotkey@0.2.0/License.md",
+          "archive_path": "package/License.md",
+          "sha256": "0f644bc01d85e4b1958bdfe5a851704bd886404c78188d4d6fba43dc8293bc91"
+        }
+      ]
+    },
+    {
+      "package": "is-stream",
+      "version": "1.1.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/is-stream/-/is-stream-1.1.0.tgz",
+      "archive_sha256": "9dd833c75e16693641970a1c2c0aa6dd5f5da392424e23494ed9ba20311c381f",
+      "repository": {
+        "url": "git+https://github.com/sindresorhus/is-stream.git",
+        "type": "git"
+      },
+      "git_head": "e21d73f1028c189d16150cea52641059b0936310",
+      "notices": [
+        {
+          "file": "LICENSES/npm/is-stream@1.1.0/license",
+          "archive_path": "package/license",
+          "sha256": "6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c"
+        }
+      ]
+    },
+    {
+      "package": "is-url",
+      "version": "1.2.4",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/is-url/-/is-url-1.2.4.tgz",
+      "archive_sha256": "405c35f4f482de299df33c8d0169f454f77e92be69cd8a6521c64977bf2398f9",
+      "repository": {
+        "url": "git+https://github.com/segmentio/is-url.git",
+        "type": "git"
+      },
+      "git_head": "d20482833e861b9a0c5bb3712dfe232efa75c87c",
+      "notices": [
+        {
+          "file": "LICENSES/npm/is-url@1.2.4/LICENSE-MIT",
+          "archive_path": "package/LICENSE-MIT",
+          "sha256": "80957b522b0ea4ce24290953d74d818220c804d1f42cad02b8d7da1c12ce1fc1"
+        }
+      ]
+    },
+    {
+      "package": "isarray",
+      "version": "0.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz",
+      "archive_sha256": "3e8444020696800aed92a09d4c52602adc76140a39b6c8e94fe7c89cf70a9f0a",
+      "repository": {
+        "url": "git://github.com/juliangruber/isarray.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "isomorphic-fetch",
+      "version": "2.2.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz",
+      "archive_sha256": "63c8f4a0b07158aeeefb8a809d74665d62a7a8f5019534b39bd778eeb8e38059",
+      "repository": {
+        "url": "git+https://github.com/matthew-andrews/isomorphic-fetch.git",
+        "type": "git"
+      },
+      "git_head": "43437dc5b381e391b73522d71cea23fc72675154",
+      "notices": [
+        {
+          "file": "LICENSES/npm/isomorphic-fetch@2.2.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "4db62091452bb75599fe174df10e9cbaa645df1f09fe1e182a3ae8f0a63d379e"
+        }
+      ]
+    },
+    {
+      "package": "js-tokens",
+      "version": "4.0.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",
+      "archive_sha256": "d884c7a2d8adb5568c1272d92b4f9c62707f4226cf9e7b22e7b957c7361e3c53",
+      "repository": {
+        "url": "git+https://github.com/lydell/js-tokens.git",
+        "type": "git"
+      },
+      "git_head": "0eb6e9daee32160ab0fca979b6dc91a1991b720c",
+      "notices": [
+        {
+          "file": "LICENSES/npm/js-tokens@4.0.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "2213d91c606205c71eb051a199478cdc2adde945893404d7f1421436dd6d5cc1"
+        }
+      ]
+    },
+    {
+      "package": "lodash-es",
+      "version": "4.17.21",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.21.tgz",
+      "archive_sha256": "777598ac703f02b403ef678cd11bce2150ad788f35c774ea7c9cc241a892cb7b",
+      "repository": {
+        "url": "git+https://github.com/lodash/lodash.git",
+        "type": "git"
+      },
+      "git_head": "11eb817cdfacf56c02d7005cbe520ffbeb0fe59a",
+      "notices": [
+        {
+          "file": "LICENSES/npm/lodash-es@4.17.21/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+        }
+      ]
+    },
+    {
+      "package": "lodash.clonedeep",
+      "version": "4.5.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz",
+      "archive_sha256": "cd3630dddc6fcb73e1bd27fce6972b2d20aa0ecadb001c523174648efbfe0312",
+      "repository": {
+        "url": "git+https://github.com/lodash/lodash.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/lodash.clonedeep@4.5.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272"
+        }
+      ]
+    },
+    {
+      "package": "lodash.isequal",
+      "version": "4.5.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/lodash.isequal/-/lodash.isequal-4.5.0.tgz",
+      "archive_sha256": "a3b534a55485caad0c28ce56779eb4faea13d3c23a55691eaedca6a0b9834278",
+      "repository": {
+        "url": "git+https://github.com/lodash/lodash.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/lodash.isequal@4.5.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "e159c6d48c989185448658f276375bfb2300362ec6d4ae5525a2d49c4bcb947d"
+        }
+      ]
+    },
+    {
+      "package": "loose-envify",
+      "version": "1.4.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz",
+      "archive_sha256": "1218830a93538a4f730d530138e945ea6a65b45e099ee7a9ea538a05141babdc",
+      "repository": {
+        "url": "git://github.com/zertosh/loose-envify.git",
+        "type": "git"
+      },
+      "git_head": "a8fdd02e3a435195f526053882d64537d627b3e6",
+      "notices": [
+        {
+          "file": "LICENSES/npm/loose-envify@1.4.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "4eb7543b08d955a6d23fcc224601d43ff566e775be918805e26210d7f6eb4893"
+        }
+      ]
+    },
+    {
+      "package": "lz-string",
+      "version": "1.5.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/lz-string/-/lz-string-1.5.0.tgz",
+      "archive_sha256": "ad640cf79fc54bc8035a66edd33974f1334db9ba079c8b845f13e5d54c5e011b",
+      "repository": {
+        "url": "git+https://github.com/pieroxy/lz-string.git",
+        "type": "git"
+      },
+      "git_head": "4a94308c1e684fb98866f7ba1288f3db6d9f8801",
+      "notices": [
+        {
+          "file": "LICENSES/npm/lz-string@1.5.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "433fc9dfe659dbfb1e91eed8351f13651e97bfa3ac6d03394c3d63f61d4bbc80"
+        }
+      ]
+    },
+    {
+      "package": "mime-db",
+      "version": "1.52.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz",
+      "archive_sha256": "b8e70bb4d52acd5d0d1ed848c0e6e3c903a533aa500acffbe003f011b18f9e3b",
+      "repository": {
+        "url": "git+https://github.com/jshttp/mime-db.git",
+        "type": "git"
+      },
+      "git_head": "ebb6bf92ea39d3168a50942295d5edfdcdce641a",
+      "notices": [
+        {
+          "file": "LICENSES/npm/mime-db@1.52.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "cc1dfd4dafa27271e8212cd3b274eeb3f262e40a6fdab36ddc3f9696f706f58b"
+        }
+      ]
+    },
+    {
+      "package": "mini-create-react-context",
+      "version": "0.4.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/mini-create-react-context/-/mini-create-react-context-0.4.0.tgz",
+      "archive_sha256": "0be33ae1b393fa6aac01ae0ceff5a4025879a8946989284f191d944cc384cb5b",
+      "repository": {
+        "url": "git+https://github.com/StringEpsilon/mini-create-react-context.git",
+        "type": "git"
+      },
+      "git_head": "0e3e6e64e79390a40ed672b63bba4f7fe96ffc45",
+      "notices": [
+        {
+          "file": "LICENSES/npm/mini-create-react-context@0.4.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "7db99d052f19a19586a529097b1b50141b796fa3329250794dc76b7374cb1003"
+        }
+      ]
+    },
+    {
+      "package": "next-tick",
+      "version": "1.1.0",
+      "declared_license": "ISC",
+      "source": "https://registry.npmjs.org/next-tick/-/next-tick-1.1.0.tgz",
+      "archive_sha256": "f29d4d707449588c7200d1d4d05286fd3b8c0f63ad2e595f9bcd011c8d0ed755",
+      "repository": {
+        "url": "git://github.com/medikoo/next-tick.git",
+        "type": "git"
+      },
+      "git_head": "ce6c733a67f82ea84ba8f30fc853217da80154e3",
+      "notices": [
+        {
+          "file": "LICENSES/npm/next-tick@1.1.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "d61b7b0b7ef23fe17a4cf996c50362ba842725e9b1a0686792a9c16894a6d5c0"
+        }
+      ]
+    },
+    {
+      "package": "node-fetch",
+      "version": "1.7.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.3.tgz",
+      "archive_sha256": "d89cdf134dc5ffcbba8b4cb825eb934119de7d6137c5a07b0b76afee1667e664",
+      "repository": {
+        "url": "git+https://github.com/bitinn/node-fetch.git",
+        "type": "git"
+      },
+      "git_head": "16f33bf76f06afb58307a652ceb48f597e48a095",
+      "notices": [
+        {
+          "file": "LICENSES/npm/node-fetch@1.7.3/LICENSE.md",
+          "archive_path": "package/LICENSE.md",
+          "sha256": "84eaa985e1ef71b8c630e8aba73404c219ff425c6fdb45c62e998b58d4fbdc8e"
+        }
+      ]
+    },
+    {
+      "package": "outvariant",
+      "version": "1.4.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/outvariant/-/outvariant-1.4.0.tgz",
+      "archive_sha256": "c93fb58097b0ee6b15248cb7e63166c6f92c424d488785055f7889dbdf4627ed",
+      "repository": {
+        "url": "https://github.com/open-draft/outvariant",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/outvariant@1.4.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "d06a69cefbdd9135436ff8e36ea5c32f07fc27c629063aa411f811efe7c30359"
+        }
+      ]
+    },
+    {
+      "package": "parchment",
+      "version": "3.0.0",
+      "declared_license": "BSD-3-Clause",
+      "source": "https://registry.npmjs.org/parchment/-/parchment-3.0.0.tgz",
+      "archive_sha256": "04e0f5c80e9debd7de0221e866e810411e10abf4855c44b68c5a3954b98e414b",
+      "repository": {
+        "url": "git+https://github.com/quilljs/parchment.git",
+        "type": "git"
+      },
+      "git_head": "3d0b71c95c056a3fd595e7a22f7ecd221f104268",
+      "notices": [
+        {
+          "file": "LICENSES/npm/parchment@3.0.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "34cdf2002459c0373913285283c9147dd8537c66f1e56e1e8746c713280ca55d"
+        }
+      ]
+    },
+    {
+      "package": "path-to-regexp",
+      "version": "1.8.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-1.8.0.tgz",
+      "archive_sha256": "124f702ef45b640b54b174bbc9ca93480c0b1a6b455d1e6f3d8fa060c2cff434",
+      "repository": {
+        "url": "git+https://github.com/pillarjs/path-to-regexp.git",
+        "type": "git"
+      },
+      "git_head": "79a5dcf5f2a79a99fbaaccae20cd922a745e0f83",
+      "notices": [
+        {
+          "file": "LICENSES/npm/path-to-regexp@1.8.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+        }
+      ]
+    },
+    {
+      "package": "prism-react-renderer",
+      "version": "2.3.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/prism-react-renderer/-/prism-react-renderer-2.3.1.tgz",
+      "archive_sha256": "1a3abb98f9ce86f210f627214a7f37f7c5b9673966a569e85deef86118b71e57",
+      "repository": {
+        "url": "git+https://github.com/FormidableLabs/prism-react-renderer.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/prism-react-renderer@2.3.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "12d2ceccc901a7e7db59c1d3451e3847aa21300d5a564582dc1f9125b4cfbd56"
+        }
+      ]
+    },
+    {
+      "package": "prismjs",
+      "version": "1.20.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/prismjs/-/prismjs-1.20.0.tgz",
+      "archive_sha256": "3dac65bbd031dfaaa85832ad2c85cbe2f1864e4370aa59b156bbdd993cd79a03",
+      "repository": {
+        "url": "git+https://github.com/LeaVerou/prism.git",
+        "type": "git"
+      },
+      "git_head": "81670053da263b0fe814d58de66213a43f439b98",
+      "notices": [
+        {
+          "file": "LICENSES/npm/prismjs@1.20.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "2b947f0901a7ffcf08a89957da9783c0e9c6e72cb6ce8e959f501ab5409e4d2b"
+        }
+      ]
+    },
+    {
+      "package": "prismjs",
+      "version": "1.29.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/prismjs/-/prismjs-1.29.0.tgz",
+      "archive_sha256": "e3b4e4286835f6f01a2cfaf8d0545542dd3da9dcc904fd134d4aface3aef499c",
+      "repository": {
+        "url": "git+https://github.com/PrismJS/prism.git",
+        "type": "git"
+      },
+      "git_head": "59e5a3471377057de1f401ba38337aca27b80e03",
+      "notices": [
+        {
+          "file": "LICENSES/npm/prismjs@1.29.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "2b947f0901a7ffcf08a89957da9783c0e9c6e72cb6ce8e959f501ab5409e4d2b"
+        }
+      ]
+    },
+    {
+      "package": "promise",
+      "version": "7.3.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/promise/-/promise-7.3.1.tgz",
+      "archive_sha256": "790680173dadd4007f44875aeb9fd65ae3b08e4c63465a93d9e72c984a5f61e4",
+      "repository": {
+        "url": "git+https://github.com/then/promise.git",
+        "type": "git"
+      },
+      "git_head": "cebfa6049cc08843f428c6fc92dde918f8687e6d",
+      "notices": [
+        {
+          "file": "LICENSES/npm/promise@7.3.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "5e733eb92ed0c571da3f27c5da203e0a9f975b4f96e7692c9fa3660ca54820ec"
+        }
+      ]
+    },
+    {
+      "package": "prop-types",
+      "version": "15.7.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz",
+      "archive_sha256": "f7904f9e8bfc54965b7fc717ba718ed9dbf6beb88303d896de0a7a9b329b8375",
+      "repository": {
+        "url": "https://github.com/facebook/prop-types.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/prop-types@15.7.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce"
+        }
+      ]
+    },
+    {
+      "package": "prop-types",
+      "version": "15.8.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz",
+      "archive_sha256": "1c739eb05d8a462c286a4e9dd02f2ce5485c6fa3529244e9ff9b13a3671aa557",
+      "repository": {
+        "url": "git+https://github.com/facebook/prop-types.git",
+        "type": "git"
+      },
+      "git_head": "70330a4430ba74467b41b8b4aa8c97a4814327a9",
+      "notices": [
+        {
+          "file": "LICENSES/npm/prop-types@15.8.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce"
+        }
+      ]
+    },
+    {
+      "package": "quill-delta",
+      "version": "5.1.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/quill-delta/-/quill-delta-5.1.0.tgz",
+      "archive_sha256": "9ec64339f54297f2decdc17abc14fdd86cd5be393dc172c4c93879d9b8ba6289",
+      "repository": {
+        "url": "git+https://github.com/quilljs/delta.git",
+        "type": "git"
+      },
+      "git_head": "9b98644d3e9707fc6c8383dace49c40e851e20dc",
+      "notices": [
+        {
+          "file": "LICENSES/npm/quill-delta@5.1.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "2a61fd00f6f3b446a049b71531eba0b3575096249c1a841e2e6b8fe7fa979455"
+        }
+      ]
+    },
+    {
+      "package": "react-devtools-inline",
+      "version": "4.4.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-devtools-inline/-/react-devtools-inline-4.4.0.tgz",
+      "archive_sha256": "9ff545a05a4e16d6ceaa0a9ea2e2b5b96f94021eaae4686f59f4bd0858ca5cfd",
+      "repository": {
+        "url": "git+https://github.com/facebook/react.git",
+        "type": "git",
+        "directory": "packages/react-devtools-inline"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "react-fast-compare",
+      "version": "2.0.4",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-2.0.4.tgz",
+      "archive_sha256": "3c1957618140feb9e7607cdefc5d4d9a0d51561b3d0edb7470fd83936a7dd4e2",
+      "repository": {
+        "url": "git+https://github.com/FormidableLabs/react-fast-compare.git",
+        "type": "git"
+      },
+      "git_head": "443b956f01a71bdbcd0e1769fc489caf203a26a3",
+      "notices": [
+        {
+          "file": "LICENSES/npm/react-fast-compare@2.0.4/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "1e187eec147d04bcbb3b7aef9f3b0ea82228961fa7d390d3efb9e57751dbe0cb"
+        }
+      ]
+    },
+    {
+      "package": "react-fast-compare",
+      "version": "3.2.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-3.2.2.tgz",
+      "archive_sha256": "ef24ecbec9fd5ad0006d39b7992be9f574b769b94fdfff7a8c4bd0d5f9a3c9af",
+      "repository": {
+        "url": "git+https://github.com/FormidableLabs/react-fast-compare.git",
+        "type": "git"
+      },
+      "git_head": "c306521de14d24169077ae1859be373ff21a8818",
+      "notices": [
+        {
+          "file": "LICENSES/npm/react-fast-compare@3.2.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "1e187eec147d04bcbb3b7aef9f3b0ea82228961fa7d390d3efb9e57751dbe0cb"
+        }
+      ]
+    },
+    {
+      "package": "react-helmet",
+      "version": "6.0.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-helmet/-/react-helmet-6.0.0.tgz",
+      "archive_sha256": "a11dc51c13c090f71c003cb3c118cfe75ecf6f9b4c3aba5c4948896284388e94",
+      "repository": {
+        "url": "git+https://github.com/nfl/react-helmet.git",
+        "type": "git"
+      },
+      "git_head": "c17725a078676f877c55ba5b043b68c2f0488baf",
+      "notices": [
+        {
+          "file": "LICENSES/npm/react-helmet@6.0.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "ed71a63927f17eb590d9494d3618c8067b709d6fa88d1e03e1631f837f939119"
+        }
+      ]
+    },
+    {
+      "package": "react-helmet",
+      "version": "6.1.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-helmet/-/react-helmet-6.1.0.tgz",
+      "archive_sha256": "8dec931eb7c22a23f108908e4056208631ba394e4497bcab163bb3e4fa4a5d32",
+      "repository": {
+        "url": "git+https://github.com/nfl/react-helmet.git",
+        "type": "git"
+      },
+      "git_head": "131fb16a48ae68f05c9ce0111d8511786db890f4",
+      "notices": [
+        {
+          "file": "LICENSES/npm/react-helmet@6.1.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "ed71a63927f17eb590d9494d3618c8067b709d6fa88d1e03e1631f837f939119"
+        }
+      ]
+    },
+    {
+      "package": "react-is",
+      "version": "17.0.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz",
+      "archive_sha256": "9b1850c05b4fc08e9b814a201281a103a7651ac46500dce7b6bedd0865963eb1",
+      "repository": {
+        "url": "git+https://github.com/facebook/react.git",
+        "type": "git",
+        "directory": "packages/react-is"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/react-is@17.0.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "package": "react-loadable",
+      "version": "5.5.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-loadable/-/react-loadable-5.5.0.tgz",
+      "archive_sha256": "c1e4948a8adafa938f815b658f3f65bdb6371d42102003fb566fea714415bdc0",
+      "repository": {
+        "url": "git+https://github.com/thejameskyle/react-loadable.git",
+        "type": "git"
+      },
+      "git_head": "2cad6a6be55c94ab2b393b75dcf20c6a4b570479",
+      "notices": [
+        {
+          "file": "LICENSES/npm/react-loadable@5.5.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "a1660aae883a787b80f68f1c34a0e87ed6bf6a87c32e3ea22e0566d16076ea24"
+        }
+      ]
+    },
+    {
+      "package": "react-remove-scroll",
+      "version": "2.5.5",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-remove-scroll/-/react-remove-scroll-2.5.5.tgz",
+      "archive_sha256": "95b07cfbf330224872121851975a87cc2210fa81143e00183ed9ad018a662d48",
+      "repository": {
+        "url": "git+https://github.com/theKashey/react-remove-scroll.git",
+        "type": "git"
+      },
+      "git_head": "437e976305aa3e3160608fc658a76b1ed5acb46b",
+      "notices": [
+        {
+          "file": "LICENSES/npm/react-remove-scroll@2.5.5/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+        }
+      ]
+    },
+    {
+      "package": "react-remove-scroll-bar",
+      "version": "2.3.6",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.6.tgz",
+      "archive_sha256": "5b0c43a9f4c06db9a17a2397501c281b5461f14d6c610cecdf776ab61846ea55",
+      "repository": {
+        "url": "git+https://github.com/theKashey/react-remove-scroll-bar.git",
+        "type": "git"
+      },
+      "git_head": "e77dbb6614a03e0626fd823ded327dcbab9e12be",
+      "notices": []
+    },
+    {
+      "package": "react-router",
+      "version": "5.2.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-router/-/react-router-5.2.0.tgz",
+      "archive_sha256": "cb178fb9e031a85ff68ed0db85f6db9036b78e05f6822f17b52a4a55d702ac0c",
+      "repository": {
+        "url": "git+https://github.com/ReactTraining/react-router.git",
+        "type": "git"
+      },
+      "git_head": "21a62e55c0d6196002bd4ab5b3350514976928cf",
+      "notices": [
+        {
+          "file": "LICENSES/npm/react-router@5.2.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "079b9fe13858745a8faeaf305231a339b63ba13f36b65e6e9eca94d89196c456"
+        }
+      ]
+    },
+    {
+      "package": "react-router-config",
+      "version": "5.1.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-router-config/-/react-router-config-5.1.1.tgz",
+      "archive_sha256": "74186785ebbc4b7478148e90afd861bc3e42b238c0f29d55527e5c14c4ffd0d5",
+      "repository": {
+        "url": "git+https://github.com/ReactTraining/react-router.git",
+        "type": "git"
+      },
+      "git_head": "fbb6358dd7f47eedd55d0b63e0725ac335d28bde",
+      "notices": [
+        {
+          "file": "LICENSES/npm/react-router-config@5.1.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "079b9fe13858745a8faeaf305231a339b63ba13f36b65e6e9eca94d89196c456"
+        }
+      ]
+    },
+    {
+      "package": "react-router-dom",
+      "version": "5.2.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-router-dom/-/react-router-dom-5.2.0.tgz",
+      "archive_sha256": "db44d5b8f3d6842d2a7ede89339df3749a47a1be0d9f53b9de2781b76f72f457",
+      "repository": {
+        "url": "git+https://github.com/ReactTraining/react-router.git",
+        "type": "git"
+      },
+      "git_head": "21a62e55c0d6196002bd4ab5b3350514976928cf",
+      "notices": [
+        {
+          "file": "LICENSES/npm/react-router-dom@5.2.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "079b9fe13858745a8faeaf305231a339b63ba13f36b65e6e9eca94d89196c456"
+        }
+      ]
+    },
+    {
+      "package": "react-side-effect",
+      "version": "2.1.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-side-effect/-/react-side-effect-2.1.0.tgz",
+      "archive_sha256": "55598bee40ef52d75b3f09a2e44b7894886673899ee4fa711b060ae115975871",
+      "repository": {
+        "url": "git+https://github.com/gaearon/react-side-effect.git",
+        "type": "git"
+      },
+      "git_head": "21e922877c3266410d8acda3cc16b28d2492e6da",
+      "notices": [
+        {
+          "file": "LICENSES/npm/react-side-effect@2.1.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "65a1f00f35ea469048896fbfec3c5faed7d3fe7c7e0be2a0478470b59d9e1439"
+        }
+      ]
+    },
+    {
+      "package": "react-side-effect",
+      "version": "2.1.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-side-effect/-/react-side-effect-2.1.2.tgz",
+      "archive_sha256": "aaf153c6d91d682180faa0f277a63f7e16c23946f21024adc5bdeff73abc864a",
+      "repository": {
+        "url": "git+https://github.com/gaearon/react-side-effect.git",
+        "type": "git"
+      },
+      "git_head": "e17202b58de7921390bfeb71c36d1e0b31e84535",
+      "notices": [
+        {
+          "file": "LICENSES/npm/react-side-effect@2.1.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "65a1f00f35ea469048896fbfec3c5faed7d3fe7c7e0be2a0478470b59d9e1439"
+        }
+      ]
+    },
+    {
+      "package": "react-style-singleton",
+      "version": "2.2.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.2.1.tgz",
+      "archive_sha256": "6b1d43261d09fb477923bce4346e6ce4f45efa67cb9bdbda819037f1146eaafd",
+      "repository": "",
+      "git_head": "847cf75f8e2e799b5518df8cc6a1b5b59f85fd6c",
+      "notices": []
+    },
+    {
+      "package": "regenerator-runtime",
+      "version": "0.13.5",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.5.tgz",
+      "archive_sha256": "4004caf19419db34b95c41af1fa23b5009d7468fc0e3417fd34edb214a0d24c4",
+      "repository": {
+        "url": "https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/regenerator-runtime@0.13.5/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "51887a3d47051ac2fce1210562e5b9fe0830a8a8fabeb272c2d586eeb18a05fd"
+        }
+      ]
+    },
+    {
+      "package": "regenerator-runtime",
+      "version": "0.14.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz",
+      "archive_sha256": "7e8df38fb205ed668cb38d9d9b154ba3ea14786b0480c21f26f3a95b90497c20",
+      "repository": {
+        "url": "git+https://github.com/facebook/regenerator.git#main",
+        "type": "git"
+      },
+      "git_head": "6be1e6295ce1577142c44863175d5180d91f8f00",
+      "notices": [
+        {
+          "file": "LICENSES/npm/regenerator-runtime@0.14.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "51887a3d47051ac2fce1210562e5b9fe0830a8a8fabeb272c2d586eeb18a05fd"
+        }
+      ]
+    },
+    {
+      "package": "resolve-pathname",
+      "version": "3.0.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/resolve-pathname/-/resolve-pathname-3.0.0.tgz",
+      "archive_sha256": "f1d8397229b327c043dd792dd8f5305c7396818dd9415c41633b0d8c7fccddf0",
+      "repository": {
+        "url": "git+https://github.com/mjackson/resolve-pathname.git",
+        "type": "git"
+      },
+      "git_head": "31eacda9c78a1c217e96d4cd63772eebbc2e52e7",
+      "notices": [
+        {
+          "file": "LICENSES/npm/resolve-pathname@3.0.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "e0dca6c79586466b5df4c3b31766391152dc4074978fd3c68fe10da744d0f114"
+        }
+      ]
+    },
+    {
+      "package": "safer-buffer",
+      "version": "2.1.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
+      "archive_sha256": "78812f65ae3b98071ce1c9bacbe0666f4220d0b2753c2a11530eb27df440a3b3",
+      "repository": {
+        "url": "git+https://github.com/ChALkeR/safer-buffer.git",
+        "type": "git"
+      },
+      "git_head": "e8ac214944eda30e1e6c6b7d7e7f6a21cf7dce7c",
+      "notices": [
+        {
+          "file": "LICENSES/npm/safer-buffer@2.1.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "4bc935e71be198c67ddf3c2b5fddb195f6edc182bfc155a96a6db61b44b494b9"
+        }
+      ]
+    },
+    {
+      "package": "scroll-into-view-if-needed",
+      "version": "3.1.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/scroll-into-view-if-needed/-/scroll-into-view-if-needed-3.1.0.tgz",
+      "archive_sha256": "ba78930926ae9e66475976204fd4ded1f5bc607b3093fe5f71d938bf7859c69b",
+      "repository": {
+        "url": "git+https://github.com/scroll-into-view/scroll-into-view-if-needed.git",
+        "type": "git"
+      },
+      "git_head": "8ac397fc9119014eae13069615b16ef4e45b3d9f",
+      "notices": [
+        {
+          "file": "LICENSES/npm/scroll-into-view-if-needed@3.1.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "62b9f69bb4ccf131e7e4cc8ce6ec5b4acf3d9848f0ac73c3c2f285d716ff1b5c"
+        }
+      ]
+    },
+    {
+      "package": "select",
+      "version": "1.1.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/select/-/select-1.1.2.tgz",
+      "archive_sha256": "669bf87efbe97c919d31ba02b837575ce8e1011cd793c9fbc667cb975e993595",
+      "repository": {
+        "url": "git+https://github.com/zenorocha/select.git",
+        "type": "git"
+      },
+      "git_head": "53e4a21d674cdfb09026e0474d95dc3779e7ff4a",
+      "notices": []
+    },
+    {
+      "package": "setimmediate",
+      "version": "1.0.5",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz",
+      "archive_sha256": "5cb9fc22698364ed42c02d6aa3dc50ffeafa68452ae84699672e3dfd74922c9e",
+      "repository": {
+        "url": "git+https://github.com/yuzujs/setImmediate.git",
+        "type": "git"
+      },
+      "git_head": "f1ccbfdf09cb93aadf77c4aa749ea554503b9234",
+      "notices": [
+        {
+          "file": "LICENSES/npm/setimmediate@1.0.5/LICENSE.txt",
+          "archive_path": "package/LICENSE.txt",
+          "sha256": "c4b4ad3a5746f1f5249a6dd90396ec519264e1bb02e01e48a6522c48a3a97cb4"
+        }
+      ]
+    },
+    {
+      "package": "slugify",
+      "version": "1.6.6",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/slugify/-/slugify-1.6.6.tgz",
+      "archive_sha256": "3adbaac6daeae595154217bda3836aa7e4292b5b103cc17955192fa9cd24732f",
+      "repository": {
+        "url": "git+https://github.com/simov/slugify.git",
+        "type": "git"
+      },
+      "git_head": "daab9285fa8869c4b999f4ef50f0e3ca5b7a2129",
+      "notices": [
+        {
+          "file": "LICENSES/npm/slugify@1.6.6/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "8df3c23e3dfffa0d3d41c59fae5741ea3e2c50eb19c52a5d8912a68fdba554c2"
+        }
+      ]
+    },
+    {
+      "package": "static-browser-server",
+      "version": "1.0.3",
+      "declared_license": "Apache-2.0",
+      "source": "https://registry.npmjs.org/static-browser-server/-/static-browser-server-1.0.3.tgz",
+      "archive_sha256": "9a06bbe37903c69b0f24e0d904e27f21192cecff9d04e1011c66890e475d2057",
+      "repository": {
+        "url": "git+https://github.com/codesandbox/static-browser-server.git",
+        "type": "git"
+      },
+      "git_head": "8b49725a29917d79d072dc641b4b83ada8dc0cd1",
+      "notices": []
+    },
+    {
+      "package": "strict-event-emitter",
+      "version": "0.4.6",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/strict-event-emitter/-/strict-event-emitter-0.4.6.tgz",
+      "archive_sha256": "b56dde024115e0d03bb162176c406680d54c061877170bea927d0042336d7dc9",
+      "repository": {
+        "url": "git@github.com:open-draft/strict-event-emitter.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": []
+    },
+    {
+      "package": "style-mod",
+      "version": "4.1.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/style-mod/-/style-mod-4.1.2.tgz",
+      "archive_sha256": "294c6c5b4a78cb56c40865eff59a82990218263057e66b36083a4f5f7fc8062b",
+      "repository": {
+        "url": "git+https://github.com/marijnh/style-mod.git",
+        "type": "git"
+      },
+      "git_head": "df361346fa21a57e8440248b5ad8304db829e3c4",
+      "notices": [
+        {
+          "file": "LICENSES/npm/style-mod@4.1.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "cb4474e26547397169061d3586c00022cda5330a1b64fa13e872319f3b63aff1"
+        }
+      ]
+    },
+    {
+      "package": "third-party-capital",
+      "version": "1.0.20",
+      "declared_license": "ISC",
+      "source": "https://registry.npmjs.org/third-party-capital/-/third-party-capital-1.0.20.tgz",
+      "archive_sha256": "a69570c28abb986bd829a705e57778c022655df317357b2ec15a328fad478a59",
+      "repository": {
+        "url": "git+https://github.com/housseindjirdeh/third-party-capital.git",
+        "type": "git"
+      },
+      "git_head": "d460c18eebba065cf803b14a29e9e8cd86a09d79",
+      "notices": [
+        {
+          "file": "LICENSES/npm/third-party-capital@1.0.20/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+        }
+      ]
+    },
+    {
+      "package": "tiny-emitter",
+      "version": "2.1.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/tiny-emitter/-/tiny-emitter-2.1.0.tgz",
+      "archive_sha256": "538c1ea30c1ec068d85c679bb900f3407dcbc0cf65ff0191c4ccba47dc01713a",
+      "repository": {
+        "url": "git+https://github.com/scottcorgan/tiny-emitter.git",
+        "type": "git"
+      },
+      "git_head": "a6026cc94da5d2d164104dd30586eee6bb4fb29c",
+      "notices": [
+        {
+          "file": "LICENSES/npm/tiny-emitter@2.1.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "aada4c7da6a5be46beadf9d4f40d7dba9e222e57180d46289b2bb9112e65daae"
+        }
+      ]
+    },
+    {
+      "package": "tiny-invariant",
+      "version": "1.1.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/tiny-invariant/-/tiny-invariant-1.1.0.tgz",
+      "archive_sha256": "a606cd58b9b17168cfe1484f40363131f3ac16bb06f2114420fb07542e217b91",
+      "repository": {
+        "url": "git+https://github.com/alexreardon/tiny-invariant.git",
+        "type": "git"
+      },
+      "git_head": "8ca9f5b0785ef80fdae4ed77f6b93cf6587c24d7",
+      "notices": [
+        {
+          "file": "LICENSES/npm/tiny-invariant@1.1.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "b1c501095de70182748cb8e8d97ac5577701a4ef3b755ba30d59fd87b24bdb0f"
+        }
+      ]
+    },
+    {
+      "package": "tiny-invariant",
+      "version": "1.3.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/tiny-invariant/-/tiny-invariant-1.3.1.tgz",
+      "archive_sha256": "7cd3c94696a9d442f4618ec53f4d0df9ef24cd2b47521e2df21ac448d4439982",
+      "repository": {
+        "url": "git+https://github.com/alexreardon/tiny-invariant.git",
+        "type": "git"
+      },
+      "git_head": "294d45ae70eab1b4b0dabe6adc666afda40ce77f",
+      "notices": [
+        {
+          "file": "LICENSES/npm/tiny-invariant@1.3.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "b1c501095de70182748cb8e8d97ac5577701a4ef3b755ba30d59fd87b24bdb0f"
+        }
+      ]
+    },
+    {
+      "package": "tiny-warning",
+      "version": "1.0.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/tiny-warning/-/tiny-warning-1.0.3.tgz",
+      "archive_sha256": "51f193637b8ca30f000431e18c59a50702b64f92b51ceb5a0742b5d665fb69b2",
+      "repository": {
+        "url": "https://github.com/alexreardon/tiny-warning.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/tiny-warning@1.0.3/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "b1c501095de70182748cb8e8d97ac5577701a4ef3b755ba30d59fd87b24bdb0f"
+        }
+      ]
+    },
+    {
+      "package": "tslib",
+      "version": "2.6.2",
+      "declared_license": "0BSD",
+      "source": "https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz",
+      "archive_sha256": "6001e6acf1472b79a2a5044f852f282781270511b45a900850bbceac1ba8d9e2",
+      "repository": {
+        "url": "git+https://github.com/Microsoft/tslib.git",
+        "type": "git"
+      },
+      "git_head": "49ac8dc364f9d053674f9f67ac78d426e451eaa2",
+      "notices": [
+        {
+          "file": "LICENSES/npm/tslib@2.6.2/LICENSE.txt",
+          "archive_path": "package/LICENSE.txt",
+          "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751"
+        }
+      ]
+    },
+    {
+      "package": "type",
+      "version": "2.7.2",
+      "declared_license": "ISC",
+      "source": "https://registry.npmjs.org/type/-/type-2.7.2.tgz",
+      "archive_sha256": "9c6ec5eed8656d09541c83d4282a623df0bc67efceff05821b6ab6abb6c5c485",
+      "repository": {
+        "url": "git+https://github.com/medikoo/type.git",
+        "type": "git"
+      },
+      "git_head": "7ed65a6ae49f366e809b1b4aa55bc195cbf54382",
+      "notices": [
+        {
+          "file": "LICENSES/npm/type@2.7.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "d1eb1c381d2c4bd0aafc8dcf39734b5edb782ae476d157ad60bbb1f4085a662a"
+        }
+      ]
+    },
+    {
+      "package": "use-callback-ref",
+      "version": "1.3.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/use-callback-ref/-/use-callback-ref-1.3.1.tgz",
+      "archive_sha256": "361f1c2635d3004d3f23c31262c3f641d9e056655893c35bb2c534a2c0e2b981",
+      "repository": {
+        "url": "git+https://github.com/theKashey/use-callback-ref.git",
+        "type": "git"
+      },
+      "git_head": "365ee2b67c32eee84ce2b5c2bb68ea569f84b3cd",
+      "notices": [
+        {
+          "file": "LICENSES/npm/use-callback-ref@1.3.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+        }
+      ]
+    },
+    {
+      "package": "use-sidecar",
+      "version": "1.1.2",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/use-sidecar/-/use-sidecar-1.1.2.tgz",
+      "archive_sha256": "f1de0891a6d387aca8708827711140d1499606f7bad5570b52fe47f85bff24d5",
+      "repository": {
+        "url": "git+https://github.com/theKashey/use-sidecar.git",
+        "type": "git"
+      },
+      "git_head": "d48b1454c4632368cca22f186fdd9470cd7ec76d",
+      "notices": [
+        {
+          "file": "LICENSES/npm/use-sidecar@1.1.2/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+        }
+      ]
+    },
+    {
+      "package": "value-equal",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/value-equal/-/value-equal-1.0.1.tgz",
+      "archive_sha256": "fdfa2001c6849be69297d4be7a401185b60fc706a1d0d8da9225d1fc0acbe88b",
+      "repository": {
+        "url": "git+https://github.com/mjackson/value-equal.git",
+        "type": "git"
+      },
+      "git_head": "67d95a33c7d2d60a90560ff9614f1b6196dca731",
+      "notices": [
+        {
+          "file": "LICENSES/npm/value-equal@1.0.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "e0dca6c79586466b5df4c3b31766391152dc4074978fd3c68fe10da744d0f114"
+        }
+      ]
+    },
+    {
+      "package": "w3c-keyname",
+      "version": "2.2.8",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/w3c-keyname/-/w3c-keyname-2.2.8.tgz",
+      "archive_sha256": "05d21484026d1f2dd842c843181e391e66d60f1d5dff292d562c3f40302dab36",
+      "repository": {
+        "url": "git+https://github.com/marijnh/w3c-keyname.git",
+        "type": "git"
+      },
+      "git_head": "5ea93b04bb62230c7de4165e3a9b5c840f05cd44",
+      "notices": [
+        {
+          "file": "LICENSES/npm/w3c-keyname@2.2.8/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884"
+        }
+      ]
+    },
+    {
+      "package": "whatwg-fetch",
+      "version": "3.0.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz",
+      "archive_sha256": "5f6a28744b23f5495e4cac0999d7e8649205f767acc101789bf7d96d79b12a88",
+      "repository": {
+        "url": "git+https://github.com/github/fetch.git",
+        "type": "git"
+      },
+      "git_head": "cc84bc284bd2d8eeddaf1c6a68e02e5329482f97",
+      "notices": [
+        {
+          "file": "LICENSES/npm/whatwg-fetch@3.0.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "05a4adff1d99954f18ed2ef89d47b4567cdba599635ddbe9393a95b9d48b2643"
+        }
+      ]
+    }
+  ]
+}

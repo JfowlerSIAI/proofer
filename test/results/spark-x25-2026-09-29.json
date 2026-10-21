@@ -1,0 +1,1487 @@
+{
+  "date": "2026-09-29",
+  "hardware": "NVIDIA GeForce RTX 4090 24 GB; Linux; Node v20.19.4",
+  "runtime": "Ollama 0.34.3",
+  "runtime_release": "https://github.com/ollama/ollama/releases/tag/v0.34.3",
+  "runtime_archive_sha256": "e83a089fd0cd2f79ee2933cca2085846a2065f497adbc6467c402177c68423f9",
+  "background_sha256": "08029bff936028500a61f9d9a4485cf53916cc64149eb5bcf01d438c57c7a9ea",
+  "benchmark_sha256": "784be237cb5f263ade6b1db771f430c2ce4e840dd869b00180b79b8621b3f2f2",
+  "benchmark": {
+    "records": 1590,
+    "clean": 732,
+    "error": 858,
+    "sealed": 610,
+    "dev": 980,
+    "multi_sentence_filter_exclusions_not_applied": 166
+  },
+  "request": {
+    "concurrency": 1,
+    "deadline_ms": 4750,
+    "think": false,
+    "format": "json",
+    "num_ctx": 2048,
+    "num_predict": 512,
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "top_k": 20,
+    "repeat_penalty": 1,
+    "trigger": "idle",
+    "frozen_hostname": "discord.com"
+  },
+  "arms": [
+    {
+      "name": "Current Proofer",
+      "artifact_prefix": "baseline",
+      "model": "proofer:v1-q4",
+      "digest": "8cc152b0cac4e3e2644141b725ada66b5cd7b643870118df6c766406601482c0",
+      "bytes": 1674464650,
+      "quantization": "Q4_K_M",
+      "suites": {
+        "core": {
+          "total": 105,
+          "pass": 89,
+          "partial": 0,
+          "fail": 16,
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 13,
+            "BAD_CORRECTION": 3,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 3
+          },
+          "byCategory": {
+            "typo": {
+              "PASS": 15,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 15
+            },
+            "word-boundary": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 6,
+              "total": 10
+            },
+            "missing-letter": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "extra-letter": {
+              "PASS": 7,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 7
+            },
+            "duplicate": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 8
+            },
+            "wrong-word": {
+              "PASS": 8,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 10
+            },
+            "transposed": {
+              "PASS": 7,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 7
+            },
+            "missing-word": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 6
+            },
+            "extra-word": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 5
+            },
+            "mixed": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 7
+            },
+            "clean": {
+              "PASS": 20,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 20
+            }
+          },
+          "latency": {
+            "count": 105,
+            "medianMs": 68,
+            "p95Ms": 156,
+            "meanMs": 74,
+            "minMs": 61,
+            "maxMs": 172,
+            "totalMs": 7817,
+            "genTokensPerSec": 374.5,
+            "promptTokensPerSec": 42905.8,
+            "evalTokensTotal": 1416,
+            "promptTokensTotal": 40335,
+            "maxLoadMs": 1
+          }
+        },
+        "holdout": {
+          "total": 55,
+          "pass": 50,
+          "partial": 0,
+          "fail": 5,
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 4,
+            "BAD_CORRECTION": 1,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 1
+          },
+          "byCategory": {
+            "typo": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "word-boundary": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 6
+            },
+            "wrong-word-clean": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 2
+            },
+            "missing-letter": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 6
+            },
+            "duplicate": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 4
+            },
+            "wrong-word": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 5
+            },
+            "missing-word": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 4
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 5
+            },
+            "clean": {
+              "PASS": 13,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 13
+            }
+          },
+          "latency": {
+            "count": 55,
+            "medianMs": 71,
+            "p95Ms": 79,
+            "meanMs": 74,
+            "minMs": 62,
+            "maxMs": 155,
+            "totalMs": 4057,
+            "genTokensPerSec": 370.5,
+            "promptTokensPerSec": 43420,
+            "evalTokensTotal": 776,
+            "promptTokensTotal": 21161,
+            "maxLoadMs": 1
+          }
+        },
+        "drift": {
+          "total": 40,
+          "pass": 28,
+          "drift": 0,
+          "unfixed": 12,
+          "manually_reviewed_meaning_changes": 0,
+          "manually_reviewed_partial_corrections": 0
+        }
+      },
+      "frozen": {
+        "n": 1590,
+        "bins": {
+          "all": {
+            "n": 1590,
+            "clean": 732,
+            "error": 858,
+            "cleanChanged": 96,
+            "errorChanged": 642,
+            "knownCorrection": 441,
+            "knownBenign": 45,
+            "pending": 252,
+            "refused": 121,
+            "malformed": 0
+          },
+          "chat-irc": {
+            "n": 397,
+            "clean": 131,
+            "error": 266,
+            "cleanChanged": 25,
+            "errorChanged": 203,
+            "knownCorrection": 109,
+            "knownBenign": 9,
+            "pending": 110,
+            "refused": 44,
+            "malformed": 0
+          },
+          "dev": {
+            "n": 980,
+            "clean": 461,
+            "error": 519,
+            "cleanChanged": 60,
+            "errorChanged": 387,
+            "knownCorrection": 264,
+            "knownBenign": 26,
+            "pending": 157,
+            "refused": 76,
+            "malformed": 0
+          },
+          "sealed": {
+            "n": 610,
+            "clean": 271,
+            "error": 339,
+            "cleanChanged": 36,
+            "errorChanged": 255,
+            "knownCorrection": 177,
+            "knownBenign": 19,
+            "pending": 95,
+            "refused": 45,
+            "malformed": 0
+          },
+          "chat-owner": {
+            "n": 480,
+            "clean": 238,
+            "error": 242,
+            "cleanChanged": 34,
+            "errorChanged": 182,
+            "knownCorrection": 141,
+            "knownBenign": 21,
+            "pending": 54,
+            "refused": 34,
+            "malformed": 0
+          },
+          "email-workplace": {
+            "n": 395,
+            "clean": 189,
+            "error": 206,
+            "cleanChanged": 21,
+            "errorChanged": 159,
+            "knownCorrection": 116,
+            "knownBenign": 8,
+            "pending": 56,
+            "refused": 27,
+            "malformed": 0
+          },
+          "forum-comments": {
+            "n": 318,
+            "clean": 174,
+            "error": 144,
+            "cleanChanged": 16,
+            "errorChanged": 98,
+            "knownCorrection": 75,
+            "knownBenign": 7,
+            "pending": 32,
+            "refused": 16,
+            "malformed": 0
+          }
+        },
+        "classes": {
+          "clean-untouched": 603,
+          "safe-correction": 441,
+          "benign-edit": 45,
+          "pending-adjudication": 252,
+          "refused": 121,
+          "missed": 128
+        },
+        "latency_ms": {
+          "median": 138.61809899999935,
+          "p95": 291.0087790000107,
+          "mean": 156.81562337798755,
+          "max": 788.008685000008
+        },
+        "retries": 90,
+        "salvaged": 18,
+        "thinkingOutputs": 0,
+        "outcomes": {
+          "no-change": 731,
+          "applied": 738,
+          "word-substituted": 37,
+          "capital-added-to-non-word": 24,
+          "meaning-word-changed": 14,
+          "contraction-expanded": 3,
+          "negation-changed": 4,
+          "protected-token": 23,
+          "capital-removed": 2,
+          "content-reordered": 1,
+          "sanitizer-would-change": 5,
+          "low-overlap": 2,
+          "sentence-split-fragment": 1,
+          "leading-word-added": 1,
+          "terminator-changed": 1,
+          "sentence-count": 1,
+          "typography-changed": 2
+        }
+      }
+    },
+    {
+      "name": "Spark 1.7B BF16",
+      "artifact_prefix": "spark-1.7b",
+      "model": "SparkLLM/Spark-X2.5-1.7B",
+      "digest": "42a27a0c9d968fc20667eb406c538d86eb7c7abcf2708a1f8b6f8ee8d24e1948",
+      "bytes": 3420932059,
+      "quantization": "BF16",
+      "suites": {
+        "core": {
+          "total": 105,
+          "pass": 85,
+          "partial": 0,
+          "fail": 20,
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 19,
+            "BAD_CORRECTION": 1,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 3
+          },
+          "byCategory": {
+            "typo": {
+              "PASS": 15,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 15
+            },
+            "word-boundary": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 7,
+              "total": 10
+            },
+            "missing-letter": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "extra-letter": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 7
+            },
+            "duplicate": {
+              "PASS": 7,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 8
+            },
+            "wrong-word": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 4,
+              "total": 10
+            },
+            "transposed": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 7
+            },
+            "missing-word": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 6
+            },
+            "extra-word": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 5
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 7
+            },
+            "clean": {
+              "PASS": 20,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 20
+            }
+          },
+          "latency": {
+            "count": 105,
+            "medianMs": 110,
+            "p95Ms": 309,
+            "meanMs": 187,
+            "minMs": 100,
+            "maxMs": 2410,
+            "totalMs": 19642,
+            "genTokensPerSec": 222.2,
+            "promptTokensPerSec": 4835.9,
+            "evalTokensTotal": 1416,
+            "promptTokensTotal": 38761,
+            "maxLoadMs": 1126
+          }
+        },
+        "holdout": {
+          "total": 55,
+          "pass": 48,
+          "partial": 0,
+          "fail": 7,
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 6,
+            "BAD_CORRECTION": 1,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 1
+          },
+          "byCategory": {
+            "typo": {
+              "PASS": 9,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 10
+            },
+            "word-boundary": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 6
+            },
+            "wrong-word-clean": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 2
+            },
+            "missing-letter": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 6
+            },
+            "duplicate": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 4
+            },
+            "wrong-word": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 5
+            },
+            "missing-word": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 4
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 5
+            },
+            "clean": {
+              "PASS": 13,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 13
+            }
+          },
+          "latency": {
+            "count": 55,
+            "medianMs": 119,
+            "p95Ms": 342,
+            "meanMs": 174,
+            "minMs": 104,
+            "maxMs": 1376,
+            "totalMs": 9571,
+            "genTokensPerSec": 212.6,
+            "promptTokensPerSec": 7342.3,
+            "evalTokensTotal": 774,
+            "promptTokensTotal": 20338,
+            "maxLoadMs": 1103
+          }
+        },
+        "drift": {
+          "total": 40,
+          "pass": 26,
+          "drift": 0,
+          "unfixed": 14,
+          "manually_reviewed_meaning_changes": 0,
+          "manually_reviewed_partial_corrections": 0
+        }
+      },
+      "frozen": {
+        "n": 1590,
+        "bins": {
+          "all": {
+            "n": 1590,
+            "clean": 732,
+            "error": 858,
+            "cleanChanged": 145,
+            "errorChanged": 569,
+            "knownCorrection": 296,
+            "knownBenign": 40,
+            "pending": 378,
+            "refused": 182,
+            "malformed": 0
+          },
+          "chat-irc": {
+            "n": 397,
+            "clean": 131,
+            "error": 266,
+            "cleanChanged": 48,
+            "errorChanged": 179,
+            "knownCorrection": 54,
+            "knownBenign": 6,
+            "pending": 167,
+            "refused": 65,
+            "malformed": 0
+          },
+          "dev": {
+            "n": 980,
+            "clean": 461,
+            "error": 519,
+            "cleanChanged": 94,
+            "errorChanged": 349,
+            "knownCorrection": 171,
+            "knownBenign": 24,
+            "pending": 248,
+            "refused": 114,
+            "malformed": 0
+          },
+          "sealed": {
+            "n": 610,
+            "clean": 271,
+            "error": 339,
+            "cleanChanged": 51,
+            "errorChanged": 220,
+            "knownCorrection": 125,
+            "knownBenign": 16,
+            "pending": 130,
+            "refused": 68,
+            "malformed": 0
+          },
+          "chat-owner": {
+            "n": 480,
+            "clean": 238,
+            "error": 242,
+            "cleanChanged": 23,
+            "errorChanged": 158,
+            "knownCorrection": 108,
+            "knownBenign": 9,
+            "pending": 64,
+            "refused": 41,
+            "malformed": 0
+          },
+          "email-workplace": {
+            "n": 395,
+            "clean": 189,
+            "error": 206,
+            "cleanChanged": 46,
+            "errorChanged": 149,
+            "knownCorrection": 82,
+            "knownBenign": 13,
+            "pending": 100,
+            "refused": 51,
+            "malformed": 0
+          },
+          "forum-comments": {
+            "n": 318,
+            "clean": 174,
+            "error": 144,
+            "cleanChanged": 28,
+            "errorChanged": 83,
+            "knownCorrection": 52,
+            "knownBenign": 12,
+            "pending": 47,
+            "refused": 25,
+            "malformed": 0
+          }
+        },
+        "classes": {
+          "pending-adjudication": 378,
+          "clean-untouched": 522,
+          "safe-correction": 296,
+          "refused": 182,
+          "missed": 172,
+          "benign-edit": 40
+        },
+        "latency_ms": {
+          "median": 206.3139010000159,
+          "p95": 524.108476999998,
+          "mean": 252.15462373081752,
+          "max": 2921.670703999989
+        },
+        "retries": 149,
+        "salvaged": 52,
+        "thinkingOutputs": 0,
+        "outcomes": {
+          "applied": 714,
+          "no-change": 694,
+          "word-substituted": 54,
+          "sanitizer-would-change": 7,
+          "capital-added-to-non-word": 34,
+          "protected-token": 46,
+          "sentence-boundary-moved": 4,
+          "negation-changed": 7,
+          "capital-removed": 4,
+          "meaning-word-changed": 7,
+          "low-overlap": 3,
+          "content-reordered": 2,
+          "length-band": 3,
+          "terminator-changed": 1,
+          "leading-word-added": 3,
+          "sentence-split-fragment": 1,
+          "truncated": 1,
+          "contraction-expanded": 1,
+          "too-many-changes": 1,
+          "sentence-count": 1,
+          "typography-changed": 2
+        }
+      }
+    },
+    {
+      "name": "Spark 4B BF16",
+      "artifact_prefix": "spark-4b",
+      "model": "SparkLLM/Spark-X2.5-4B",
+      "digest": "2d6194f978ca54fe825eeaf535123d2c0535978f5035762110cfb4b2583b528f",
+      "bytes": 8229920507,
+      "quantization": "BF16",
+      "suites": {
+        "core": {
+          "total": 105,
+          "pass": 90,
+          "partial": 0,
+          "fail": 15,
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 15,
+            "BAD_CORRECTION": 0,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 3
+          },
+          "byCategory": {
+            "typo": {
+              "PASS": 15,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 15
+            },
+            "word-boundary": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 5,
+              "total": 10
+            },
+            "missing-letter": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "extra-letter": {
+              "PASS": 7,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 7
+            },
+            "duplicate": {
+              "PASS": 7,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 8
+            },
+            "wrong-word": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 4,
+              "total": 10
+            },
+            "transposed": {
+              "PASS": 7,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 7
+            },
+            "missing-word": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 6
+            },
+            "extra-word": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 5
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 7
+            },
+            "clean": {
+              "PASS": 20,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 20
+            }
+          },
+          "latency": {
+            "count": 105,
+            "medianMs": 225,
+            "p95Ms": 541,
+            "meanMs": 255,
+            "minMs": 204,
+            "maxMs": 585,
+            "totalMs": 26810,
+            "genTokensPerSec": 106.8,
+            "promptTokensPerSec": 4940.7,
+            "evalTokensTotal": 1414,
+            "promptTokensTotal": 38761,
+            "maxLoadMs": 2
+          }
+        },
+        "holdout": {
+          "total": 55,
+          "pass": 51,
+          "partial": 0,
+          "fail": 4,
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 4,
+            "BAD_CORRECTION": 0,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 0
+          },
+          "byCategory": {
+            "typo": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "word-boundary": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 6
+            },
+            "wrong-word-clean": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 2
+            },
+            "missing-letter": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 6
+            },
+            "duplicate": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 4
+            },
+            "wrong-word": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 5
+            },
+            "missing-word": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 4
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 5
+            },
+            "clean": {
+              "PASS": 13,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 13
+            }
+          },
+          "latency": {
+            "count": 55,
+            "medianMs": 235,
+            "p95Ms": 543,
+            "meanMs": 254,
+            "minMs": 205,
+            "maxMs": 596,
+            "totalMs": 13949,
+            "genTokensPerSec": 106.3,
+            "promptTokensPerSec": 5017.2,
+            "evalTokensTotal": 775,
+            "promptTokensTotal": 20338,
+            "maxLoadMs": 2
+          }
+        },
+        "drift": {
+          "total": 40,
+          "pass": 29,
+          "drift": 1,
+          "unfixed": 10,
+          "manually_reviewed_meaning_changes": 1,
+          "manually_reviewed_partial_corrections": 0
+        }
+      },
+      "frozen": {
+        "n": 1590,
+        "bins": {
+          "all": {
+            "n": 1590,
+            "clean": 732,
+            "error": 858,
+            "cleanChanged": 191,
+            "errorChanged": 622,
+            "knownCorrection": 349,
+            "knownBenign": 72,
+            "pending": 392,
+            "refused": 260,
+            "malformed": 0
+          },
+          "chat-irc": {
+            "n": 397,
+            "clean": 131,
+            "error": 266,
+            "cleanChanged": 34,
+            "errorChanged": 178,
+            "knownCorrection": 74,
+            "knownBenign": 8,
+            "pending": 130,
+            "refused": 101,
+            "malformed": 0
+          },
+          "dev": {
+            "n": 980,
+            "clean": 461,
+            "error": 519,
+            "cleanChanged": 115,
+            "errorChanged": 378,
+            "knownCorrection": 212,
+            "knownBenign": 45,
+            "pending": 236,
+            "refused": 167,
+            "malformed": 0
+          },
+          "sealed": {
+            "n": 610,
+            "clean": 271,
+            "error": 339,
+            "cleanChanged": 76,
+            "errorChanged": 244,
+            "knownCorrection": 137,
+            "knownBenign": 27,
+            "pending": 156,
+            "refused": 93,
+            "malformed": 0
+          },
+          "chat-owner": {
+            "n": 480,
+            "clean": 238,
+            "error": 242,
+            "cleanChanged": 65,
+            "errorChanged": 180,
+            "knownCorrection": 114,
+            "knownBenign": 30,
+            "pending": 101,
+            "refused": 59,
+            "malformed": 0
+          },
+          "email-workplace": {
+            "n": 395,
+            "clean": 189,
+            "error": 206,
+            "cleanChanged": 48,
+            "errorChanged": 166,
+            "knownCorrection": 101,
+            "knownBenign": 20,
+            "pending": 93,
+            "refused": 52,
+            "malformed": 0
+          },
+          "forum-comments": {
+            "n": 318,
+            "clean": 174,
+            "error": 144,
+            "cleanChanged": 44,
+            "errorChanged": 98,
+            "knownCorrection": 60,
+            "knownBenign": 14,
+            "pending": 68,
+            "refused": 48,
+            "malformed": 0
+          }
+        },
+        "classes": {
+          "pending-adjudication": 392,
+          "clean-untouched": 438,
+          "safe-correction": 349,
+          "refused": 260,
+          "benign-edit": 72,
+          "missed": 79
+        },
+        "latency_ms": {
+          "median": 481.19638400000986,
+          "p95": 1218.5309899999993,
+          "mean": 584.4017063320758,
+          "max": 3510.6166139999405
+        },
+        "retries": 205,
+        "salvaged": 70,
+        "thinkingOutputs": 0,
+        "outcomes": {
+          "applied": 813,
+          "no-change": 517,
+          "protected-token": 66,
+          "word-substituted": 61,
+          "capital-added-to-non-word": 70,
+          "capital-removed": 14,
+          "meaning-word-changed": 9,
+          "low-overlap": 4,
+          "sentence-split-fragment": 3,
+          "negation-changed": 4,
+          "sanitizer-would-change": 8,
+          "sentence-count": 2,
+          "content-reordered": 3,
+          "contraction-expanded": 3,
+          "terminator-changed": 2,
+          "sentence-boundary-moved": 2,
+          "length-band": 4,
+          "leading-word-added": 1,
+          "closer-added": 1,
+          "typography-changed": 3
+        }
+      }
+    },
+    {
+      "name": "Spark 1.7B Q4_K_M",
+      "artifact_prefix": "spark-1.7b-q4",
+      "model": "spark-eval-1.7b:q4_k_m",
+      "digest": "d89d71ff7019a47f17b3652d16f9bede3144270c61250ee6209212d9f2148c4a",
+      "bytes": 1107457977,
+      "quantization": "Q4_K_M",
+      "suites": {
+        "core": {
+          "total": 105,
+          "pass": 85,
+          "partial": 0,
+          "fail": 20,
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 17,
+            "BAD_CORRECTION": 3,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 3
+          },
+          "byCategory": {
+            "typo": {
+              "PASS": 15,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 15
+            },
+            "word-boundary": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 8,
+              "total": 10
+            },
+            "missing-letter": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "extra-letter": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 7
+            },
+            "duplicate": {
+              "PASS": 8,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 8
+            },
+            "wrong-word": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 4,
+              "total": 10
+            },
+            "transposed": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 7
+            },
+            "missing-word": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 6
+            },
+            "extra-word": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 5
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 7
+            },
+            "clean": {
+              "PASS": 20,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 20
+            }
+          },
+          "latency": {
+            "count": 105,
+            "medianMs": 75,
+            "p95Ms": 182,
+            "meanMs": 84,
+            "minMs": 66,
+            "maxMs": 201,
+            "totalMs": 8805,
+            "genTokensPerSec": 440,
+            "promptTokensPerSec": 19689.9,
+            "evalTokensTotal": 1414,
+            "promptTokensTotal": 38761,
+            "maxLoadMs": 2
+          }
+        },
+        "holdout": {
+          "total": 55,
+          "pass": 49,
+          "partial": 0,
+          "fail": 6,
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 6,
+            "BAD_CORRECTION": 0,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 1
+          },
+          "byCategory": {
+            "typo": {
+              "PASS": 9,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 10
+            },
+            "word-boundary": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 6
+            },
+            "wrong-word-clean": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 2
+            },
+            "missing-letter": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 6
+            },
+            "duplicate": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 4
+            },
+            "wrong-word": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 3,
+              "total": 5
+            },
+            "missing-word": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 1,
+              "total": 4
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 5
+            },
+            "clean": {
+              "PASS": 13,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 13
+            }
+          },
+          "latency": {
+            "count": 55,
+            "medianMs": 78,
+            "p95Ms": 161,
+            "meanMs": 84,
+            "minMs": 69,
+            "maxMs": 187,
+            "totalMs": 4626,
+            "genTokensPerSec": 428.7,
+            "promptTokensPerSec": 19413.4,
+            "evalTokensTotal": 775,
+            "promptTokensTotal": 20338,
+            "maxLoadMs": 2
+          }
+        },
+        "drift": {
+          "total": 40,
+          "pass": 26,
+          "drift": 2,
+          "unfixed": 12,
+          "manually_reviewed_meaning_changes": 0,
+          "manually_reviewed_partial_corrections": 2
+        }
+      },
+      "screen": {
+        "gates": {
+          "core_at_least_baseline": false,
+          "holdout_at_least_baseline": false,
+          "no_new_meaning_drift": false,
+          "no_more_false_positives": true
+        },
+        "passed": false
+      }
+    },
+    {
+      "name": "Spark 4B Q4_K_M",
+      "artifact_prefix": "spark-4b-q4",
+      "model": "spark-eval-4b:q4_k_m",
+      "digest": "80e08f7dd33382a8555e83e26c5d6ad6ed265187ad64458d1e0aa7b0d19bdd00",
+      "bytes": 2600224473,
+      "quantization": "Q4_K_M",
+      "suites": {
+        "core": {
+          "total": 105,
+          "pass": 89,
+          "partial": 0,
+          "fail": 16,
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 15,
+            "BAD_CORRECTION": 1,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 3
+          },
+          "byCategory": {
+            "typo": {
+              "PASS": 15,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 15
+            },
+            "word-boundary": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 6,
+              "total": 10
+            },
+            "missing-letter": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "extra-letter": {
+              "PASS": 7,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 7
+            },
+            "duplicate": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 8
+            },
+            "wrong-word": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 4,
+              "total": 10
+            },
+            "transposed": {
+              "PASS": 7,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 7
+            },
+            "missing-word": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 6
+            },
+            "extra-word": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 5
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 7
+            },
+            "clean": {
+              "PASS": 20,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 20
+            }
+          },
+          "latency": {
+            "count": 105,
+            "medianMs": 147,
+            "p95Ms": 372,
+            "meanMs": 165,
+            "minMs": 124,
+            "maxMs": 406,
+            "totalMs": 17369,
+            "genTokensPerSec": 240.8,
+            "promptTokensPerSec": 5613.9,
+            "evalTokensTotal": 1418,
+            "promptTokensTotal": 38761,
+            "maxLoadMs": 1
+          }
+        },
+        "holdout": {
+          "total": 55,
+          "pass": 51,
+          "partial": 0,
+          "fail": 4,
+          "antiPatterns": {
+            "FALSE_POSITIVE": 0,
+            "MISSED_ERROR": 4,
+            "BAD_CORRECTION": 0,
+            "CONTRACT_FAIL": 0,
+            "CONTRACTION_STYLE": 0
+          },
+          "byCategory": {
+            "typo": {
+              "PASS": 10,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 10
+            },
+            "word-boundary": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 6
+            },
+            "wrong-word-clean": {
+              "PASS": 2,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 2
+            },
+            "missing-letter": {
+              "PASS": 6,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 6
+            },
+            "duplicate": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 4
+            },
+            "wrong-word": {
+              "PASS": 3,
+              "PARTIAL": 0,
+              "FAIL": 2,
+              "total": 5
+            },
+            "missing-word": {
+              "PASS": 4,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 4
+            },
+            "mixed": {
+              "PASS": 5,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 5
+            },
+            "clean": {
+              "PASS": 13,
+              "PARTIAL": 0,
+              "FAIL": 0,
+              "total": 13
+            }
+          },
+          "latency": {
+            "count": 55,
+            "medianMs": 136,
+            "p95Ms": 212,
+            "meanMs": 147,
+            "minMs": 125,
+            "maxMs": 361,
+            "totalMs": 8082,
+            "genTokensPerSec": 239,
+            "promptTokensPerSec": 7014.5,
+            "evalTokensTotal": 774,
+            "promptTokensTotal": 20338,
+            "maxLoadMs": 2
+          }
+        },
+        "drift": {
+          "total": 40,
+          "pass": 29,
+          "drift": 2,
+          "unfixed": 9,
+          "manually_reviewed_meaning_changes": 1,
+          "manually_reviewed_partial_corrections": 1
+        }
+      },
+      "screen": {
+        "gates": {
+          "core_at_least_baseline": true,
+          "holdout_at_least_baseline": true,
+          "no_new_meaning_drift": false,
+          "no_more_false_positives": true
+        },
+        "passed": false
+      }
+    }
+  ],
+  "runtime_probe": [
+    {
+      "version": "0.32.12",
+      "digest": "8cc152b0cac4e3e2644141b725ada66b5cd7b643870118df6c766406601482c0",
+      "n": 60,
+      "median_wall_ms": 198.7593399999996,
+      "median_total_ms": 197.765142,
+      "median_eval_ms": 34.231,
+      "median_prompt_ms": 9.222,
+      "residency": {
+        "models": [
+          {
+            "name": "proofer:v1-q4",
+            "model": "proofer:v1-q4",
+            "size": 1776707173,
+            "digest": "8cc152b0cac4e3e2644141b725ada66b5cd7b643870118df6c766406601482c0",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "lfm2",
+              "families": [
+                "lfm2"
+              ],
+              "parameter_size": "2.7B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-09-29T22:35:35.963199197-07:00",
+            "size_vram": 1776707173,
+            "context_length": 2048
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.34.3",
+      "digest": "8cc152b0cac4e3e2644141b725ada66b5cd7b643870118df6c766406601482c0",
+      "n": 60,
+      "median_wall_ms": 68.03738300000259,
+      "median_total_ms": 67.04529,
+      "median_eval_ms": 35.999,
+      "median_prompt_ms": 8.745,
+      "residency": {
+        "models": [
+          {
+            "name": "proofer:v1-q4",
+            "model": "proofer:v1-q4",
+            "size": 1776707173,
+            "digest": "8cc152b0cac4e3e2644141b725ada66b5cd7b643870118df6c766406601482c0",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "lfm2",
+              "families": [
+                "lfm2"
+              ],
+              "parameter_size": "2.7B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-09-29T22:35:41.425305279-07:00",
+            "size_vram": 1776707173,
+            "context_length": 2048
+          }
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "Single quality run per configuration; no sampling or prompt tuning.",
+    "Frozen outputs are only matched against preexisting acceptable labels; novel edits are not fully adjudicated.",
+    "Clean-label edits include optional style and are not damage counts.",
+    "Q4 arms received the 200-case core/holdout/drift screen and five contextual smoke cases, not the full frozen benchmark.",
+    "The drift probe flags partial fixes as DRIFT; manual review separates these from actual meaning changes.",
+    "No CPU/laptop or fine-tuning evaluation; browser segmentation and editor delivery are outside this engine benchmark."
+  ]
+}

@@ -1,0 +1,956 @@
+{
+  "retrieved": "2026-10-21",
+  "notices": [
+    {
+      "package": "@algolia/autocomplete-core",
+      "version": "1.9.3",
+      "source": "https://raw.githubusercontent.com/algolia/autocomplete/v1.9.3/LICENSE",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__autocomplete-core@1.9.3/UPSTREAM-LICENSE.txt",
+      "sha256": "1e605499213e06118cc81abc00b32bbb33ead185d9b0e190f2662588e8806f02"
+    },
+    {
+      "package": "@algolia/autocomplete-plugin-algolia-insights",
+      "version": "1.9.3",
+      "source": "https://raw.githubusercontent.com/algolia/autocomplete/v1.9.3/LICENSE",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__autocomplete-plugin-algolia-insights@1.9.3/UPSTREAM-LICENSE.txt",
+      "sha256": "1e605499213e06118cc81abc00b32bbb33ead185d9b0e190f2662588e8806f02"
+    },
+    {
+      "package": "@algolia/autocomplete-preset-algolia",
+      "version": "1.9.3",
+      "source": "https://raw.githubusercontent.com/algolia/autocomplete/v1.9.3/LICENSE",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__autocomplete-preset-algolia@1.9.3/UPSTREAM-LICENSE.txt",
+      "sha256": "1e605499213e06118cc81abc00b32bbb33ead185d9b0e190f2662588e8806f02"
+    },
+    {
+      "package": "@algolia/autocomplete-shared",
+      "version": "1.9.3",
+      "source": "https://raw.githubusercontent.com/algolia/autocomplete/v1.9.3/LICENSE",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__autocomplete-shared@1.9.3/UPSTREAM-LICENSE.txt",
+      "sha256": "1e605499213e06118cc81abc00b32bbb33ead185d9b0e190f2662588e8806f02"
+    },
+    {
+      "package": "@algolia/cache-browser-local-storage",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__cache-browser-local-storage@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@algolia/cache-common",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-js/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__cache-common@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@algolia/cache-in-memory",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__cache-in-memory@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@algolia/client-account",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__client-account@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@algolia/client-analytics",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__client-analytics@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@algolia/client-common",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__client-common@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@algolia/client-personalization",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__client-personalization@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@algolia/client-search",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__client-search@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@algolia/logger-common",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-js/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__logger-common@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@algolia/logger-console",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__logger-console@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@algolia/requester-browser-xhr",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__requester-browser-xhr@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@algolia/requester-common",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-js/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__requester-common@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@algolia/requester-node-http",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__requester-node-http@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@algolia/transporter",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@algolia__transporter@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "@docsearch/css",
+      "version": "3.6.0",
+      "source": "https://raw.githubusercontent.com/algolia/docsearch/v3.6.0/LICENSE",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@docsearch__css@3.6.0/UPSTREAM-LICENSE.txt",
+      "sha256": "1e605499213e06118cc81abc00b32bbb33ead185d9b0e190f2662588e8806f02"
+    },
+    {
+      "package": "@docsearch/react",
+      "version": "3.6.0",
+      "source": "https://raw.githubusercontent.com/algolia/docsearch/v3.6.0/LICENSE",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@docsearch__react@3.6.0/UPSTREAM-LICENSE.txt",
+      "sha256": "1e605499213e06118cc81abc00b32bbb33ead185d9b0e190f2662588e8806f02"
+    },
+    {
+      "package": "@next/third-parties",
+      "version": "14.1.3",
+      "source": "https://raw.githubusercontent.com/vercel/next.js/fc38ee190c9b7de09ebff13a17ebd948cf580ec3/license.md",
+      "source_revision_kind": "npm gitHead",
+      "file": "LICENSES/npm/@next__third-parties@14.1.3/UPSTREAM-LICENSE.txt",
+      "sha256": "e4f76a7a19ef2989dd79339bd3abf8afcf1d6f065e5a10c76c19415ffd727eb3"
+    },
+    {
+      "package": "@open-draft/deferred-promise",
+      "version": "2.2.0",
+      "source": "https://registry.npmjs.org/@open-draft/deferred-promise/2.2.0",
+      "metadata_sha256": "11629b539d361afffd0f84f340a15da656eedf59fb846fba3c6c0e1298f750ab",
+      "method": "Published MIT declaration and author attribution; standard declared license text supplied",
+      "upstream_metadata": {
+        "name": "@open-draft/deferred-promise",
+        "version": "2.2.0",
+        "license": "MIT",
+        "author": {
+          "name": "Artem Zakharchenko"
+        },
+        "repository": {
+          "url": "git+https://github.com/open-draft/deferred-promise.git",
+          "type": "git"
+        }
+      },
+      "file": "LICENSES/npm/@open-draft__deferred-promise@2.2.0/UPSTREAM-LICENSE.txt",
+      "sha256": "012f2b842246e00e99f06bc2eb2b4a5bcaff7417d5c2b36792d4f84703fc0b53"
+    },
+    {
+      "package": "@radix-ui/number",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__number@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/primitive",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__primitive@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-accessible-icon",
+      "version": "1.0.3",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-accessible-icon@1.0.3/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-alert-dialog",
+      "version": "1.0.5",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-alert-dialog@1.0.5/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-arrow",
+      "version": "1.0.3",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-arrow@1.0.3/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-aspect-ratio",
+      "version": "1.0.3",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-aspect-ratio@1.0.3/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-avatar",
+      "version": "1.0.4",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-avatar@1.0.4/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-checkbox",
+      "version": "1.0.4",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-checkbox@1.0.4/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-collection",
+      "version": "1.0.3",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-collection@1.0.3/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-compose-refs",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-compose-refs@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-context",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-context@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-context-menu",
+      "version": "2.1.5",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-context-menu@2.1.5/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-dialog",
+      "version": "1.0.5",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-dialog@1.0.5/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-direction",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-direction@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-dismissable-layer",
+      "version": "1.0.5",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-dismissable-layer@1.0.5/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-dropdown-menu",
+      "version": "2.0.6",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-dropdown-menu@2.0.6/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-focus-guards",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-focus-guards@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-focus-scope",
+      "version": "1.0.4",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-focus-scope@1.0.4/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-form",
+      "version": "0.0.3",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-form@0.0.3/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-hover-card",
+      "version": "1.0.7",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-hover-card@1.0.7/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-id",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-id@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-label",
+      "version": "2.0.2",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-label@2.0.2/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-menu",
+      "version": "2.0.6",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-menu@2.0.6/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-popover",
+      "version": "1.0.7",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-popover@1.0.7/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-popper",
+      "version": "1.1.3",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-popper@1.1.3/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-portal",
+      "version": "1.0.4",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-portal@1.0.4/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-presence",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-presence@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-primitive",
+      "version": "1.0.3",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-primitive@1.0.3/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-radio-group",
+      "version": "1.1.3",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-radio-group@1.1.3/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-roving-focus",
+      "version": "1.0.4",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-roving-focus@1.0.4/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-scroll-area",
+      "version": "1.0.5",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-scroll-area@1.0.5/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-select",
+      "version": "2.0.0",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-select@2.0.0/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-separator",
+      "version": "1.0.3",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-separator@1.0.3/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-slider",
+      "version": "1.1.2",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-slider@1.1.2/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-slot",
+      "version": "1.0.2",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-slot@1.0.2/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-switch",
+      "version": "1.0.3",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-switch@1.0.3/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-tabs",
+      "version": "1.0.4",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-tabs@1.0.4/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-tooltip",
+      "version": "1.0.7",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-tooltip@1.0.7/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-use-callback-ref",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-use-callback-ref@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-use-controllable-state",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-use-controllable-state@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-use-escape-keydown",
+      "version": "1.0.3",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-use-escape-keydown@1.0.3/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-use-layout-effect",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-use-layout-effect@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-use-previous",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-use-previous@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-use-rect",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-use-rect@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-use-size",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-use-size@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-visually-hidden",
+      "version": "1.0.3",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-visually-hidden@1.0.3/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/rect",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__rect@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/themes",
+      "version": "2.0.3",
+      "source": "https://raw.githubusercontent.com/radix-ui/themes/5e1211bb760cf1c9b1ace0ff46bf6f6497c58314/LICENSE",
+      "source_revision_kind": "npm gitHead",
+      "file": "LICENSES/npm/@radix-ui__themes@2.0.3/UPSTREAM-LICENSE.txt",
+      "sha256": "89e4ae7d91c640c6e8a3ca90ba578d799eb2491b766ed65e0725ba36499d56ba"
+    },
+    {
+      "package": "@stitches/core",
+      "version": "1.2.8",
+      "source": "https://raw.githubusercontent.com/modulz/stitches/c268db3938e2cf6bdbaa3d30f3ce7b67c0492a41/LICENSE.md",
+      "source_revision_kind": "npm gitHead",
+      "file": "LICENSES/npm/@stitches__core@1.2.8/UPSTREAM-LICENSE.txt",
+      "sha256": "ea48daa7b5303f761fa0219535ab95b5684e5a012c110cd0e1488950c6f848d0"
+    },
+    {
+      "package": "algoliasearch",
+      "version": "4.22.1",
+      "source": "https://raw.githubusercontent.com/algolia/algoliasearch-client-javascript/4.22.1/LICENSE.md",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/algoliasearch@4.22.1/UPSTREAM-LICENSE.txt",
+      "sha256": "fae263d1cabaf10840c67f1da49ab57f99ad341b11025eb906d9a930479e4289"
+    },
+    {
+      "package": "delegate",
+      "version": "3.2.0",
+      "source": "https://registry.npmjs.org/delegate/3.2.0",
+      "metadata_sha256": "307a8a878c882a74f9f5a906d959d8447d115d068e03c0446ce2e1e4e2fdee14",
+      "method": "Published MIT declaration and author attribution; standard declared license text supplied",
+      "upstream_metadata": {
+        "name": "delegate",
+        "version": "3.2.0",
+        "license": "MIT",
+        "repository": {
+          "url": "git+https://github.com/zenorocha/delegate.git",
+          "type": "git"
+        }
+      },
+      "file": "LICENSES/npm/delegate@3.2.0/UPSTREAM-LICENSE.txt",
+      "sha256": "05a8797124cfebf30da956702c689bae48dd872d297393efcb2fa57432a7fc39"
+    },
+    {
+      "package": "good-listener",
+      "version": "1.2.2",
+      "source": "https://registry.npmjs.org/good-listener/1.2.2",
+      "metadata_sha256": "471a7c54e73882fc86c63fc30e496d22d582cd6c24dfb828ee50e61f2dcef3db",
+      "method": "Published MIT declaration and author attribution; standard declared license text supplied",
+      "upstream_metadata": {
+        "name": "good-listener",
+        "version": "1.2.2",
+        "license": "MIT",
+        "repository": {
+          "url": "git+https://github.com/zenorocha/good-listener.git",
+          "type": "git"
+        }
+      },
+      "file": "LICENSES/npm/good-listener@1.2.2/UPSTREAM-LICENSE.txt",
+      "sha256": "ec1bac2b5de8ba2fa529bcb7ba88e03b342b50da710aa1a077a686d33ed35859"
+    },
+    {
+      "package": "intersection-observer",
+      "version": "0.10.0",
+      "source": "https://raw.githubusercontent.com/w3c/IntersectionObserver/main/LICENSE.md",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/intersection-observer@0.10.0/UPSTREAM-LICENSE.txt",
+      "sha256": "7aeb3acf108717fd0f68ada2eebeaaec46dcdd239b4c5e7b4b8e6ea8861acfdd"
+    },
+    {
+      "package": "isarray",
+      "version": "0.0.1",
+      "source": "https://raw.githubusercontent.com/juliangruber/isarray/master/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/isarray@0.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14"
+    },
+    {
+      "package": "react-devtools-inline",
+      "version": "4.4.0",
+      "source": "https://raw.githubusercontent.com/facebook/react/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/react-devtools-inline@4.4.0/UPSTREAM-LICENSE.txt",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "package": "react-remove-scroll-bar",
+      "version": "2.3.6",
+      "source": "https://raw.githubusercontent.com/theKashey/react-remove-scroll-bar/8ca9ba5ea52de03308fe8ced94f7b159a44d28ff/LICENSE",
+      "source_revision_kind": "repository tree object",
+      "file": "LICENSES/npm/react-remove-scroll-bar@2.3.6/UPSTREAM-LICENSE.txt",
+      "sha256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84"
+    },
+    {
+      "package": "react-style-singleton",
+      "version": "2.2.1",
+      "source": "https://raw.githubusercontent.com/theKashey/react-style-singleton/0855d4b3478326fda30efff7e0511540be7f57e8/LICENSE",
+      "source_revision_kind": "repository tree object",
+      "file": "LICENSES/npm/react-style-singleton@2.2.1/UPSTREAM-LICENSE.txt",
+      "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+    },
+    {
+      "package": "select",
+      "version": "1.1.2",
+      "source": "https://registry.npmjs.org/select/1.1.2",
+      "metadata_sha256": "0cecefd82f6c4238bfba9da55e9e5a6d8d2d1283ded4163903c3ab6f9752d4cc",
+      "method": "Published MIT declaration and author attribution; standard declared license text supplied",
+      "upstream_metadata": {
+        "name": "select",
+        "version": "1.1.2",
+        "license": "MIT",
+        "repository": {
+          "url": "git+https://github.com/zenorocha/select.git",
+          "type": "git"
+        }
+      },
+      "file": "LICENSES/npm/select@1.1.2/UPSTREAM-LICENSE.txt",
+      "sha256": "add4f2e6f0b165202b1093b3bfd02d824f473d8edb5e0aa9ea380dafc976bd6b"
+    },
+    {
+      "package": "static-browser-server",
+      "version": "1.0.3",
+      "source": "https://registry.npmjs.org/static-browser-server/1.0.3",
+      "metadata_sha256": "ef14b2114df839b58678e70357ce8db6bfedcb592e79d8381032eef9bcc7cff5",
+      "method": "Published Apache-2.0 declaration and author attribution; standard declared license text supplied",
+      "upstream_metadata": {
+        "name": "static-browser-server",
+        "version": "1.0.3",
+        "license": "Apache-2.0",
+        "author": {
+          "name": "Jasper De Moor",
+          "email": "jasperdemoor@gmail.com"
+        },
+        "repository": {
+          "url": "git+https://github.com/codesandbox/static-browser-server.git",
+          "type": "git"
+        }
+      },
+      "file": "LICENSES/npm/static-browser-server@1.0.3/UPSTREAM-LICENSE.txt",
+      "sha256": "eabbabe92d11ac9ffa0e56a4ed699ea03a5a5e53df64faf8a2686387768baafd"
+    },
+    {
+      "package": "strict-event-emitter",
+      "version": "0.4.6",
+      "source": "https://registry.npmjs.org/strict-event-emitter/0.4.6",
+      "metadata_sha256": "2618b60da145413863c4d5960ffd9f44cb30f6c917f51838d9b62a3f2f7e3bc0",
+      "method": "Published MIT declaration and author attribution; standard declared license text supplied",
+      "upstream_metadata": {
+        "name": "strict-event-emitter",
+        "version": "0.4.6",
+        "license": "MIT",
+        "author": {
+          "name": "Artem Zakharchenko",
+          "email": "kettanaito@gmail.com"
+        },
+        "repository": {
+          "url": "git@github.com:open-draft/strict-event-emitter.git",
+          "type": "git"
+        }
+      },
+      "file": "LICENSES/npm/strict-event-emitter@0.4.6/UPSTREAM-LICENSE.txt",
+      "sha256": "50f1a3e6628d56c4cf8b6ce34a8a486b1d79ca71e4267764d187748519b9fc3d"
+    },
+    {
+      "package": "@excalidraw/excalidraw",
+      "version": "0.18.1",
+      "source": "https://raw.githubusercontent.com/excalidraw/excalidraw/v0.18.1/LICENSE",
+      "source_revision_kind": "version tag",
+      "file": "LICENSES/npm/@excalidraw__excalidraw@0.18.1/UPSTREAM-LICENSE.txt",
+      "sha256": "1352d204fdb90d5e482c13139d848bc2c9300a9a7de358a0a558a23e72d0d8be"
+    },
+    {
+      "package": "@radix-ui/primitive",
+      "version": "1.0.0",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__primitive@1.0.0/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-compose-refs",
+      "version": "1.0.0",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-compose-refs@1.0.0/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-context",
+      "version": "1.0.0",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-context@1.0.0/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-slot",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-slot@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-primitive",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-primitive@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-use-callback-ref",
+      "version": "1.0.0",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-use-callback-ref@1.0.0/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-use-escape-keydown",
+      "version": "1.1.0",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/704069ee4c40c3b6f342c104dff5ad873ee39c43/LICENSE",
+      "source_revision_kind": "npm gitHead",
+      "file": "LICENSES/npm/@radix-ui__react-use-escape-keydown@1.1.0/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-dismissable-layer",
+      "version": "1.1.5",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/e1bdb77ea2445407b239558f2902c2e1950586fe/LICENSE",
+      "source_revision_kind": "npm gitHead",
+      "file": "LICENSES/npm/@radix-ui__react-dismissable-layer@1.1.5/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-focus-guards",
+      "version": "1.1.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/157415ed1f34c53b5afbf53a047895ed6a7f957f/LICENSE",
+      "source_revision_kind": "npm gitHead",
+      "file": "LICENSES/npm/@radix-ui__react-focus-guards@1.1.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-focus-scope",
+      "version": "1.1.2",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/e1bdb77ea2445407b239558f2902c2e1950586fe/LICENSE",
+      "source_revision_kind": "npm gitHead",
+      "file": "LICENSES/npm/@radix-ui__react-focus-scope@1.1.2/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-use-layout-effect",
+      "version": "1.0.0",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-use-layout-effect@1.0.0/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-id",
+      "version": "1.0.0",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-id@1.0.0/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-arrow",
+      "version": "1.1.2",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/e1bdb77ea2445407b239558f2902c2e1950586fe/LICENSE",
+      "source_revision_kind": "npm gitHead",
+      "file": "LICENSES/npm/@radix-ui__react-arrow@1.1.2/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-use-size",
+      "version": "1.1.0",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/704069ee4c40c3b6f342c104dff5ad873ee39c43/LICENSE",
+      "source_revision_kind": "npm gitHead",
+      "file": "LICENSES/npm/@radix-ui__react-use-size@1.1.0/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-popper",
+      "version": "1.2.2",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/e1bdb77ea2445407b239558f2902c2e1950586fe/LICENSE",
+      "source_revision_kind": "npm gitHead",
+      "file": "LICENSES/npm/@radix-ui__react-popper@1.2.2/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-portal",
+      "version": "1.1.4",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/e1bdb77ea2445407b239558f2902c2e1950586fe/LICENSE",
+      "source_revision_kind": "npm gitHead",
+      "file": "LICENSES/npm/@radix-ui__react-portal@1.1.4/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-presence",
+      "version": "1.0.0",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-presence@1.0.0/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-use-controllable-state",
+      "version": "1.0.0",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-use-controllable-state@1.0.0/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "react-remove-scroll-bar",
+      "version": "2.3.8",
+      "source": "https://raw.githubusercontent.com/theKashey/react-remove-scroll-bar/8ca9ba5ea52de03308fe8ced94f7b159a44d28ff/LICENSE",
+      "source_revision_kind": "repository tree object",
+      "file": "LICENSES/npm/react-remove-scroll-bar@2.3.8/UPSTREAM-LICENSE.txt",
+      "sha256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84"
+    },
+    {
+      "package": "@radix-ui/react-popover",
+      "version": "1.1.6",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/e1bdb77ea2445407b239558f2902c2e1950586fe/LICENSE",
+      "source_revision_kind": "npm gitHead",
+      "file": "LICENSES/npm/@radix-ui__react-popover@1.1.6/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-collection",
+      "version": "1.0.1",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-collection@1.0.1/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-direction",
+      "version": "1.0.0",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-direction@1.0.0/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-roving-focus",
+      "version": "1.0.2",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-roving-focus@1.0.2/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "@radix-ui/react-tabs",
+      "version": "1.0.2",
+      "source": "https://raw.githubusercontent.com/radix-ui/primitives/main/LICENSE",
+      "source_revision_kind": "repository default branch notice",
+      "file": "LICENSES/npm/@radix-ui__react-tabs@1.0.2/UPSTREAM-LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "package": "slate",
+      "version": "0.132.0",
+      "source": "https://raw.githubusercontent.com/ianstormtaylor/slate/14bed4c4e4f3bbc1dd617d453374d962d0c21f21/License.md",
+      "source_revision_kind": "repository tree object",
+      "file": "LICENSES/npm/slate@0.132.0/UPSTREAM-LICENSE.txt",
+      "sha256": "519c180a1c7b62ae33d2beb749abd57dda92eddada65eb81daca7686fa1fef40"
+    },
+    {
+      "package": "slate-react",
+      "version": "0.132.0",
+      "source": "https://raw.githubusercontent.com/ianstormtaylor/slate/14bed4c4e4f3bbc1dd617d453374d962d0c21f21/License.md",
+      "source_revision_kind": "repository tree object",
+      "file": "LICENSES/npm/slate-react@0.132.0/UPSTREAM-LICENSE.txt",
+      "sha256": "519c180a1c7b62ae33d2beb749abd57dda92eddada65eb81daca7686fa1fef40"
+    },
+    {
+      "package": "slate-dom",
+      "version": "0.132.0",
+      "source": "https://raw.githubusercontent.com/ianstormtaylor/slate/14bed4c4e4f3bbc1dd617d453374d962d0c21f21/License.md",
+      "source_revision_kind": "repository tree object",
+      "file": "LICENSES/npm/slate-dom@0.132.0/UPSTREAM-LICENSE.txt",
+      "sha256": "519c180a1c7b62ae33d2beb749abd57dda92eddada65eb81daca7686fa1fef40"
+    }
+  ]
+}

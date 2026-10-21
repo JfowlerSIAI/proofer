@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proofer Interaction Test</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 20px auto; padding: 20px; }
+    textarea { width: 100%; height: 60px; font-size: 16px; padding: 8px; margin-bottom: 12px; }
+    .ce { border: 1px solid #ccc; padding: 8px; min-height: 40px; font-size: 16px; margin-bottom: 12px; }
+    input[type="text"] { width: 100%; font-size: 16px; padding: 8px; margin-bottom: 12px; }
+    h3 { margin: 8px 0 4px; }
+  </style>
+</head>
+<body>
+  <h2>Proofer Interaction Test Page</h2>
+
+  <h3>Textarea</h3>
+  <textarea id="ta">The quick brown fox jumps over the lazy dog. This sentance has a spelling eror in it.</textarea>
+
+  <h3>Contenteditable</h3>
+  <div id="ce" class="ce" contenteditable="true">The quick brown fox jumps over the lazy dog. This sentance has a spelling eror in it.</div>
+
+  <h3>Input</h3>
+  <input id="inp" type="text" value="The quick brown fox jumpd over the lazy dog." />
+
+  <h3>Nested contenteditable (like Gmail)</h3>
+  <div id="ce-outer" contenteditable="true" class="ce">
+    <div id="ce-inner">The quick brown fox jumps over the lazy dog. This sentance has a spelling eror in it.</div>
+  </div>
+
+  <h3>Empty textarea</h3>
+  <textarea id="ta-empty"></textarea>
+
+  <h3>Short text</h3>
+  <textarea id="ta-short">Hi</textarea>
+
+  <h3>Long textarea</h3>
+  <textarea id="ta-long">When we started planing the projcet we did not realy know how long it would take to finish all of the diferent peices. The team has been working veyr hard over the last few months and we have made alot of progress on the main goals. There are still a few things that need to be fixxed before we can ship it to the customers, but I am confidant that we will get there soon enough if we keep up this pace.</textarea>
+
+  <h3>Form with submit</h3>
+  <form id="test-form" onsubmit="document.getElementById('form-status').textContent = 'SUBMITTED'; return false;">
+    <textarea id="ta-form">The quick brown fox jumpd over the lazy dog.</textarea>
+    <div id="form-status"></div>
+  </form>
+</body>
+</html>

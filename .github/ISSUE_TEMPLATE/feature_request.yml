@@ -1,0 +1,27 @@
+name: Feature request
+description: Explain a problem and propose a focused improvement.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For a substantial feature or new editor integration, discuss the problem here before implementing it.
+        Use made-up examples and do not include private writing or exported proofreading logs. Review and support are best-effort.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the current limitation and who it affects.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe what someone using Proofer should be able to do.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or additional context
+      description: Mention workarounds or related issues, if useful.

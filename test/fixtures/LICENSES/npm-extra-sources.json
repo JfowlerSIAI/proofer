@@ -1,0 +1,1871 @@
+{
+  "retrieved": "2026-10-21",
+  "method": "Read-only extraction of license/notice files from exact-version upstream npm distributions. No packages installed or executed.",
+  "packages": [
+    {
+      "package": "next",
+      "version": "14.2.35",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/next/-/next-14.2.35.tgz",
+      "archive_sha256": "b11ea5c2a2b9e75783b49992a4c06bd7035048a4ea1598764bbe00bb0ebc8132",
+      "repository": {
+        "url": "git+https://github.com/vercel/next.js.git",
+        "type": "git"
+      },
+      "git_head": "7b940d9ce96faddb9f92ff40f5e35c34ace04eb2",
+      "notices": [
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/@babel/runtime/LICENSE",
+          "archive_path": "package/dist/compiled/@babel/runtime/LICENSE",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/@mswjs/interceptors/ClientRequest/LICENSE",
+          "archive_path": "package/dist/compiled/@mswjs/interceptors/ClientRequest/LICENSE",
+          "sha256": "bb3a5cb8fb224f632970e31425348f556f7a83b165d5384ea5e142575f5c412e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/@napi-rs/triples/LICENSE",
+          "archive_path": "package/dist/compiled/@napi-rs/triples/LICENSE",
+          "sha256": "7b34e99bc43641767fded49f7f03563ffd50c689b1f3b0d50700b4727bc4ae24"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/@opentelemetry/api/LICENSE",
+          "archive_path": "package/dist/compiled/@opentelemetry/api/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/@vercel/nft/LICENSE",
+          "archive_path": "package/dist/compiled/@vercel/nft/LICENSE",
+          "sha256": "0b31f3a6ab66b272b7de451df39835f310a309a06b1a8aafb3a2fdab20adc166"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/@vercel/og/LICENSE",
+          "archive_path": "package/dist/compiled/@vercel/og/LICENSE",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/@vercel/og/satori/LICENSE",
+          "archive_path": "package/dist/compiled/@vercel/og/satori/LICENSE",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/acorn/LICENSE",
+          "archive_path": "package/dist/compiled/acorn/LICENSE",
+          "sha256": "76a876cf886ff9be2a8b5e2e86514fed06223c8c9f0c1e9ee9606e93841e00b7"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/anser/LICENSE",
+          "archive_path": "package/dist/compiled/anser/LICENSE",
+          "sha256": "6d2abc90a426cf65bbf84f7cedf9487f7ff86a3daf0e130b335a45c112f040d0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/assert/LICENSE",
+          "archive_path": "package/dist/compiled/assert/LICENSE",
+          "sha256": "6239c6144c31e58cf925c34483606969c555574d64ffa96518ab5d7f45c75d43"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/babel/LICENSE",
+          "archive_path": "package/dist/compiled/babel/LICENSE",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/browserify-zlib/LICENSE",
+          "archive_path": "package/dist/compiled/browserify-zlib/LICENSE",
+          "sha256": "ddd770379e07bf0574dfaa4485be80a23b3248b36d09f33ec79276c09b829daf"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/browserslist/LICENSE",
+          "archive_path": "package/dist/compiled/browserslist/LICENSE",
+          "sha256": "f25bf9bf3ae8984bcd43bf7fb8f78e7eec8d577081fb8d0989cfa7c67ecebb8e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/buffer/LICENSE",
+          "archive_path": "package/dist/compiled/buffer/LICENSE",
+          "sha256": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/bytes/LICENSE",
+          "archive_path": "package/dist/compiled/bytes/LICENSE",
+          "sha256": "e3b44af066615de2ea48d18d852d0762f18c0b2efcea714fa48a6f729d405b85"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/ci-info/LICENSE",
+          "archive_path": "package/dist/compiled/ci-info/LICENSE",
+          "sha256": "25bd22427e27b0d3f1c3da2670bb44b622bcced22ebdf4777d5488ac129370a1"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/cli-select/LICENSE",
+          "archive_path": "package/dist/compiled/cli-select/LICENSE",
+          "sha256": "a8e260b5b60eb27746ff2c5967489e6878c5a6ba99400cbec84c89a9b49a46ca"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/commander/LICENSE",
+          "archive_path": "package/dist/compiled/commander/LICENSE",
+          "sha256": "04512a63dce4d2d506ad612dc0bd7681ccf6e3655f7b6eaef7dfac8323d1ec0b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/comment-json/LICENSE",
+          "archive_path": "package/dist/compiled/comment-json/LICENSE",
+          "sha256": "9dbd86998d3cdafc1d8c298aea636146568d05d429b81386e60cfce11e6cedb6"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/compression/LICENSE",
+          "archive_path": "package/dist/compiled/compression/LICENSE",
+          "sha256": "23d466b1b134b415b66fa50c6526b4cf3e7b9258554da88d3abb371721e7ce68"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/conf/LICENSE",
+          "archive_path": "package/dist/compiled/conf/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/content-disposition/LICENSE",
+          "archive_path": "package/dist/compiled/content-disposition/LICENSE",
+          "sha256": "bd47ce7b88c7759630d1e2b9fcfa170a0f1fde522be09e13fb1581a79d090400"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/content-type/LICENSE",
+          "archive_path": "package/dist/compiled/content-type/LICENSE",
+          "sha256": "257aed98914108e91a337912727b6a802eef218248507f74b76faffaff517a38"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/cookie/LICENSE",
+          "archive_path": "package/dist/compiled/cookie/LICENSE",
+          "sha256": "c02110eedc16c7114f1a9bdc026c65626ce1d9c7e27fd51a8e0feee8a48a6858"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/cross-spawn/LICENSE",
+          "archive_path": "package/dist/compiled/cross-spawn/LICENSE",
+          "sha256": "aaa78451b6fecd1b9c4594c796c133c0e90cad100372ff8bc6de615e9ef9adf1"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/crypto-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/crypto-browserify/LICENSE",
+          "sha256": "6134c69bc22c8289252e70de3af20bd67071233459055be74d83acfcc4865e7e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/debug/LICENSE",
+          "archive_path": "package/dist/compiled/debug/LICENSE",
+          "sha256": "98c970de440dcfc77471610aec2377c9d9b0db2b3be6d1add524a586e1d7f422"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/devalue/LICENSE",
+          "archive_path": "package/dist/compiled/devalue/LICENSE",
+          "sha256": "e399db7e952e45cae84f1b53d72ba8dbad2daaa7ab8cd1f0ab72fea5ab73b225"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/events/LICENSE",
+          "archive_path": "package/dist/compiled/events/LICENSE",
+          "sha256": "631987b7616a325a5b97566c232418481ddf7dbb5ecadefb991e791876cc2599"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/find-cache-dir/LICENSE",
+          "archive_path": "package/dist/compiled/find-cache-dir/LICENSE",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/find-up/LICENSE",
+          "archive_path": "package/dist/compiled/find-up/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/fresh/LICENSE",
+          "archive_path": "package/dist/compiled/fresh/LICENSE",
+          "sha256": "a0ec0dab16b3666f24950f86d257930ac2ad475557b4bfe245620e0817d8a45d"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/get-orientation/LICENSE",
+          "archive_path": "package/dist/compiled/get-orientation/LICENSE",
+          "sha256": "6584474e64a04bdde7d2862324d896ad10276811a8fa49ac47581cefa30ebfd3"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/glob/LICENSE",
+          "archive_path": "package/dist/compiled/glob/LICENSE",
+          "sha256": "6236fa0b88a4a0cce3dda0367979491b2052b3c8d6b1c10b3668de083e86a7f0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/gzip-size/LICENSE",
+          "archive_path": "package/dist/compiled/gzip-size/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/http-proxy/LICENSE",
+          "archive_path": "package/dist/compiled/http-proxy/LICENSE",
+          "sha256": "589850dfc0a1d39a97c592d618d5772f84aec2b11c6898e020acb985299f3bab"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/https-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/https-browserify/LICENSE",
+          "sha256": "ff151c00207c908581639851dd8504ce4255be0650b2b236edec2aa90342b0cd"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/ignore-loader/LICENSE",
+          "archive_path": "package/dist/compiled/ignore-loader/LICENSE",
+          "sha256": "62ba766e9b50f9b175b0229f4ea03e93730c9180408acec50dd617e9ae1fa059"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/image-size/LICENSE",
+          "archive_path": "package/dist/compiled/image-size/LICENSE",
+          "sha256": "54d0b82d1e7d0bc60a4b48b6172f1a9fa7385cfa8a448d14ad3a638930ef417c"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/is-docker/LICENSE",
+          "archive_path": "package/dist/compiled/is-docker/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/is-wsl/LICENSE",
+          "archive_path": "package/dist/compiled/is-wsl/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/jest-worker/LICENSE",
+          "archive_path": "package/dist/compiled/jest-worker/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/jsonwebtoken/LICENSE",
+          "archive_path": "package/dist/compiled/jsonwebtoken/LICENSE",
+          "sha256": "2144eb6894cb440fde6b2b3aaae3b617c8f1dc9bb19813079dcf62ec6c517042"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/loader-runner/LICENSE",
+          "archive_path": "package/dist/compiled/loader-runner/LICENSE",
+          "sha256": "498d39c83164cf8de195090f5564fc0308ab271344ca2f95484a7f1020952d00"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/loader-utils2/LICENSE",
+          "archive_path": "package/dist/compiled/loader-utils2/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/loader-utils3/LICENSE",
+          "archive_path": "package/dist/compiled/loader-utils3/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/lodash.curry/LICENSE",
+          "archive_path": "package/dist/compiled/lodash.curry/LICENSE",
+          "sha256": "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/lru-cache/LICENSE",
+          "archive_path": "package/dist/compiled/lru-cache/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/mini-css-extract-plugin/LICENSE",
+          "archive_path": "package/dist/compiled/mini-css-extract-plugin/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/nanoid/LICENSE",
+          "archive_path": "package/dist/compiled/nanoid/LICENSE",
+          "sha256": "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/native-url/LICENSE",
+          "archive_path": "package/dist/compiled/native-url/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/neo-async/LICENSE",
+          "archive_path": "package/dist/compiled/neo-async/LICENSE",
+          "sha256": "811238ba7d85f6fe6b820703a32f92705bcf77bc352ddc3476783491c64a129a"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/node-html-parser/LICENSE",
+          "archive_path": "package/dist/compiled/node-html-parser/LICENSE",
+          "sha256": "ea75e9321945b7f0bc4644da1e404ad76ce55e9bc05cae3b2f5f2d973aede83b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/ora/LICENSE",
+          "archive_path": "package/dist/compiled/ora/LICENSE",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/os-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/os-browserify/LICENSE",
+          "sha256": "d25d1d6d28c35cb6f358e2833e405c4e53fec2fa24d156323ddea5cd438d3407"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/p-limit/LICENSE",
+          "archive_path": "package/dist/compiled/p-limit/LICENSE",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/path-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/path-browserify/LICENSE",
+          "sha256": "a22b9d5763f574e5db347c30acc0b33eaf4846767c03d2e27d012e864e79a824"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/picomatch/LICENSE",
+          "archive_path": "package/dist/compiled/picomatch/LICENSE",
+          "sha256": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/platform/LICENSE",
+          "archive_path": "package/dist/compiled/platform/LICENSE",
+          "sha256": "4a161ebed4f1ef933e16ccfa00d86c718703f5d015a9987ea7ce1bb72a43cd22"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/postcss-flexbugs-fixes/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-flexbugs-fixes/LICENSE",
+          "sha256": "f26c92c1c16e78c6b1f7474792f7195b7abc851caccb4a73dcc5b3c31efc7321"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/postcss-modules-extract-imports/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-modules-extract-imports/LICENSE",
+          "sha256": "9e534cfb7f7ae1300e16fe1ee7d203fdfe707dc932429c37246f747c3699ee14"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/postcss-modules-local-by-default/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-modules-local-by-default/LICENSE",
+          "sha256": "dd40f37957ddcb6a6157f40b677d6f43697583f956144fbce25443e35630453e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/postcss-modules-scope/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-modules-scope/LICENSE",
+          "sha256": "7774c8c4a3f750b294b416818062201a404fc2d6c8756d8b89a1688e24b5d5a7"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/postcss-modules-values/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-modules-values/LICENSE",
+          "sha256": "655287aefbf8e292057318c385d77767b1dd9819c87709fd26730b7090efe4d9"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/postcss-safe-parser/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-safe-parser/LICENSE",
+          "sha256": "c4630ac8b89cb317ac5bdd60ac5e4e185eab9bd5151a0c7b3afa41aa83d7ec9b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/postcss-scss/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-scss/LICENSE",
+          "sha256": "c4630ac8b89cb317ac5bdd60ac5e4e185eab9bd5151a0c7b3afa41aa83d7ec9b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/postcss-value-parser/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-value-parser/LICENSE",
+          "sha256": "3687447039151857a6ba378db062172c7f33d4aa70a615c87a43a9c50e990485"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/process/LICENSE",
+          "archive_path": "package/dist/compiled/process/LICENSE",
+          "sha256": "59a400d04c5078579acc27ddd6452c1bdf763f9506e01364700935fbb1a7c91b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/raw-body/LICENSE",
+          "archive_path": "package/dist/compiled/raw-body/LICENSE",
+          "sha256": "c8e6bca7230689d536a3bd7158f66e9c4f89f95d0748743a0370ac229e9023ad"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/react-dom-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/react-dom-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/react-dom/LICENSE",
+          "archive_path": "package/dist/compiled/react-dom/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/react-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/react-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/react-is/LICENSE",
+          "archive_path": "package/dist/compiled/react-is/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/react-refresh/LICENSE",
+          "archive_path": "package/dist/compiled/react-refresh/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/react-server-dom-turbopack-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/react-server-dom-turbopack-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/react-server-dom-turbopack/LICENSE",
+          "archive_path": "package/dist/compiled/react-server-dom-turbopack/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/react-server-dom-webpack-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/react-server-dom-webpack-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/react-server-dom-webpack/LICENSE",
+          "archive_path": "package/dist/compiled/react-server-dom-webpack/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/react/LICENSE",
+          "archive_path": "package/dist/compiled/react/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/regenerator-runtime/LICENSE",
+          "archive_path": "package/dist/compiled/regenerator-runtime/LICENSE",
+          "sha256": "51887a3d47051ac2fce1210562e5b9fe0830a8a8fabeb272c2d586eeb18a05fd"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/sass-loader/LICENSE",
+          "archive_path": "package/dist/compiled/sass-loader/LICENSE",
+          "sha256": "2af12ca8b612a22e6659ae68e0e59ee7ac792718c45524a989b512c49c5f5879"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/scheduler-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/scheduler-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/scheduler/LICENSE",
+          "archive_path": "package/dist/compiled/scheduler/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/schema-utils2/LICENSE",
+          "archive_path": "package/dist/compiled/schema-utils2/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/schema-utils3/LICENSE",
+          "archive_path": "package/dist/compiled/schema-utils3/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/semver/LICENSE",
+          "archive_path": "package/dist/compiled/semver/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/send/LICENSE",
+          "archive_path": "package/dist/compiled/send/LICENSE",
+          "sha256": "8c3a3bc340c55f113097a35647235b8c0a9f0181d024a7ed1d116e202af68a07"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/shell-quote/LICENSE",
+          "archive_path": "package/dist/compiled/shell-quote/LICENSE",
+          "sha256": "8bb16db1b047019e4395965f2cf3611b06c34bf86dc2d0210b3c3f91b53c21fe"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/source-map/LICENSE",
+          "archive_path": "package/dist/compiled/source-map/LICENSE",
+          "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/source-map08/LICENSE",
+          "archive_path": "package/dist/compiled/source-map08/LICENSE",
+          "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/stacktrace-parser/LICENSE",
+          "archive_path": "package/dist/compiled/stacktrace-parser/LICENSE",
+          "sha256": "e1898814043cb5500483d9c8517edda824b352f696d35e5043fcfb537c221531"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/stream-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/stream-browserify/LICENSE",
+          "sha256": "96e5193183476a03da6667d217ce14110191d26ee105338086e94339edf40d5a"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/stream-http/LICENSE",
+          "archive_path": "package/dist/compiled/stream-http/LICENSE",
+          "sha256": "a0e6357a5e8ea65827addeb383e0948a1874d2f46bc7feaf6349b7a376ed6e98"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/string_decoder/LICENSE",
+          "archive_path": "package/dist/compiled/string_decoder/LICENSE",
+          "sha256": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/strip-ansi/LICENSE",
+          "archive_path": "package/dist/compiled/strip-ansi/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/tar/LICENSE",
+          "archive_path": "package/dist/compiled/tar/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/terser/LICENSE",
+          "archive_path": "package/dist/compiled/terser/LICENSE",
+          "sha256": "901d0a7fcaccaae9917d165039c0473c354e5da2e0e94140dde67aad9ffb19da"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/text-table/LICENSE",
+          "archive_path": "package/dist/compiled/text-table/LICENSE",
+          "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/tty-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/tty-browserify/LICENSE",
+          "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/util/LICENSE",
+          "archive_path": "package/dist/compiled/util/LICENSE",
+          "sha256": "6239c6144c31e58cf925c34483606969c555574d64ffa96518ab5d7f45c75d43"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/vm-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/vm-browserify/LICENSE",
+          "sha256": "3a62887f73cd035ac1068bc0127ce94291f7a03843391f56df3520e2ca2037f8"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/watchpack/LICENSE",
+          "archive_path": "package/dist/compiled/watchpack/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/web-vitals-attribution/LICENSE",
+          "archive_path": "package/dist/compiled/web-vitals-attribution/LICENSE",
+          "sha256": "bfdeded4040e05da31ca9b6239dc83bd23fa26ac8db87342a7ca4363f68916ff"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/web-vitals/LICENSE",
+          "archive_path": "package/dist/compiled/web-vitals/LICENSE",
+          "sha256": "bfdeded4040e05da31ca9b6239dc83bd23fa26ac8db87342a7ca4363f68916ff"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/webpack-sources1/LICENSE",
+          "archive_path": "package/dist/compiled/webpack-sources1/LICENSE",
+          "sha256": "214d0ac13edb475ec426df1979d96fd46b443debc466c0fb592e32152ae5a940"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/webpack-sources3/LICENSE",
+          "archive_path": "package/dist/compiled/webpack-sources3/LICENSE",
+          "sha256": "214d0ac13edb475ec426df1979d96fd46b443debc466c0fb592e32152ae5a940"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/webpack/LICENSE",
+          "archive_path": "package/dist/compiled/webpack/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/ws/LICENSE",
+          "archive_path": "package/dist/compiled/ws/LICENSE",
+          "sha256": "dcd0a622a3a2c94fe3aa6238b76363f87df442afe788cbad966afe943ed62281"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/compiled/zod/LICENSE",
+          "archive_path": "package/dist/compiled/zod/LICENSE",
+          "sha256": "0225e7c0a96845a7477cd44d75d3dc9c999f673454efa84b54e218415055eece"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/dist/src/compiled/@ampproject/toolbox-optimizer/LICENSE",
+          "archive_path": "package/dist/src/compiled/@ampproject/toolbox-optimizer/LICENSE",
+          "sha256": "d55f836b1fb57a8a7fbaca7dcc1dfa09778bae2c73e273e8684d6c968942067c"
+        },
+        {
+          "file": "LICENSES/npm/next@14.2.35/license.md",
+          "archive_path": "package/license.md",
+          "sha256": "e4f76a7a19ef2989dd79339bd3abf8afcf1d6f065e5a10c76c19415ffd727eb3"
+        }
+      ]
+    },
+    {
+      "package": "next",
+      "version": "15.5.27",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/next/-/next-15.5.27.tgz",
+      "archive_sha256": "f035c4747adc293b9fadeab9e14cdc1d98606c764a8f78bdcdc18c3cb92aae87",
+      "repository": {
+        "url": "git+https://github.com/vercel/next.js.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/@ampproject/toolbox-optimizer/LICENSE",
+          "archive_path": "package/dist/compiled/@ampproject/toolbox-optimizer/LICENSE",
+          "sha256": "d55f836b1fb57a8a7fbaca7dcc1dfa09778bae2c73e273e8684d6c968942067c"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/@babel/runtime/LICENSE",
+          "archive_path": "package/dist/compiled/@babel/runtime/LICENSE",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/@napi-rs/triples/LICENSE",
+          "archive_path": "package/dist/compiled/@napi-rs/triples/LICENSE",
+          "sha256": "7b34e99bc43641767fded49f7f03563ffd50c689b1f3b0d50700b4727bc4ae24"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/@opentelemetry/api/LICENSE",
+          "archive_path": "package/dist/compiled/@opentelemetry/api/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/@vercel/nft/LICENSE",
+          "archive_path": "package/dist/compiled/@vercel/nft/LICENSE",
+          "sha256": "0b31f3a6ab66b272b7de451df39835f310a309a06b1a8aafb3a2fdab20adc166"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/@vercel/og/LICENSE",
+          "archive_path": "package/dist/compiled/@vercel/og/LICENSE",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/@vercel/og/satori/LICENSE",
+          "archive_path": "package/dist/compiled/@vercel/og/satori/LICENSE",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/acorn/LICENSE",
+          "archive_path": "package/dist/compiled/acorn/LICENSE",
+          "sha256": "76a876cf886ff9be2a8b5e2e86514fed06223c8c9f0c1e9ee9606e93841e00b7"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/anser/LICENSE",
+          "archive_path": "package/dist/compiled/anser/LICENSE",
+          "sha256": "6d2abc90a426cf65bbf84f7cedf9487f7ff86a3daf0e130b335a45c112f040d0"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/assert/LICENSE",
+          "archive_path": "package/dist/compiled/assert/LICENSE",
+          "sha256": "6239c6144c31e58cf925c34483606969c555574d64ffa96518ab5d7f45c75d43"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/babel-code-frame/LICENSE",
+          "archive_path": "package/dist/compiled/babel-code-frame/LICENSE",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/babel/LICENSE",
+          "archive_path": "package/dist/compiled/babel/LICENSE",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/browserify-zlib/LICENSE",
+          "archive_path": "package/dist/compiled/browserify-zlib/LICENSE",
+          "sha256": "ddd770379e07bf0574dfaa4485be80a23b3248b36d09f33ec79276c09b829daf"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/browserslist/LICENSE",
+          "archive_path": "package/dist/compiled/browserslist/LICENSE",
+          "sha256": "f25bf9bf3ae8984bcd43bf7fb8f78e7eec8d577081fb8d0989cfa7c67ecebb8e"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/buffer/LICENSE",
+          "archive_path": "package/dist/compiled/buffer/LICENSE",
+          "sha256": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/busboy/LICENSE",
+          "archive_path": "package/dist/compiled/busboy/LICENSE",
+          "sha256": "d06b5d27bbbbe22c36b1fd88406b1208876e2d37d795f5b8eaed951a459a3111"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/bytes/LICENSE",
+          "archive_path": "package/dist/compiled/bytes/LICENSE",
+          "sha256": "e3b44af066615de2ea48d18d852d0762f18c0b2efcea714fa48a6f729d405b85"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/ci-info/LICENSE",
+          "archive_path": "package/dist/compiled/ci-info/LICENSE",
+          "sha256": "25bd22427e27b0d3f1c3da2670bb44b622bcced22ebdf4777d5488ac129370a1"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/cli-select/LICENSE",
+          "archive_path": "package/dist/compiled/cli-select/LICENSE",
+          "sha256": "a8e260b5b60eb27746ff2c5967489e6878c5a6ba99400cbec84c89a9b49a46ca"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/commander/LICENSE",
+          "archive_path": "package/dist/compiled/commander/LICENSE",
+          "sha256": "04512a63dce4d2d506ad612dc0bd7681ccf6e3655f7b6eaef7dfac8323d1ec0b"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/comment-json/LICENSE",
+          "archive_path": "package/dist/compiled/comment-json/LICENSE",
+          "sha256": "9dbd86998d3cdafc1d8c298aea636146568d05d429b81386e60cfce11e6cedb6"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/compression/LICENSE",
+          "archive_path": "package/dist/compiled/compression/LICENSE",
+          "sha256": "23d466b1b134b415b66fa50c6526b4cf3e7b9258554da88d3abb371721e7ce68"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/conf/LICENSE",
+          "archive_path": "package/dist/compiled/conf/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/content-disposition/LICENSE",
+          "archive_path": "package/dist/compiled/content-disposition/LICENSE",
+          "sha256": "bd47ce7b88c7759630d1e2b9fcfa170a0f1fde522be09e13fb1581a79d090400"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/content-type/LICENSE",
+          "archive_path": "package/dist/compiled/content-type/LICENSE",
+          "sha256": "257aed98914108e91a337912727b6a802eef218248507f74b76faffaff517a38"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/cookie/LICENSE",
+          "archive_path": "package/dist/compiled/cookie/LICENSE",
+          "sha256": "c02110eedc16c7114f1a9bdc026c65626ce1d9c7e27fd51a8e0feee8a48a6858"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/cross-spawn/LICENSE",
+          "archive_path": "package/dist/compiled/cross-spawn/LICENSE",
+          "sha256": "aaa78451b6fecd1b9c4594c796c133c0e90cad100372ff8bc6de615e9ef9adf1"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/crypto-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/crypto-browserify/LICENSE",
+          "sha256": "6134c69bc22c8289252e70de3af20bd67071233459055be74d83acfcc4865e7e"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/debug/LICENSE",
+          "archive_path": "package/dist/compiled/debug/LICENSE",
+          "sha256": "98c970de440dcfc77471610aec2377c9d9b0db2b3be6d1add524a586e1d7f422"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/devalue/LICENSE",
+          "archive_path": "package/dist/compiled/devalue/LICENSE",
+          "sha256": "e399db7e952e45cae84f1b53d72ba8dbad2daaa7ab8cd1f0ab72fea5ab73b225"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/events/LICENSE",
+          "archive_path": "package/dist/compiled/events/LICENSE",
+          "sha256": "631987b7616a325a5b97566c232418481ddf7dbb5ecadefb991e791876cc2599"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/find-up/LICENSE",
+          "archive_path": "package/dist/compiled/find-up/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/fresh/LICENSE",
+          "archive_path": "package/dist/compiled/fresh/LICENSE",
+          "sha256": "a0ec0dab16b3666f24950f86d257930ac2ad475557b4bfe245620e0817d8a45d"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/glob/LICENSE",
+          "archive_path": "package/dist/compiled/glob/LICENSE",
+          "sha256": "6236fa0b88a4a0cce3dda0367979491b2052b3c8d6b1c10b3668de083e86a7f0"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/gzip-size/LICENSE",
+          "archive_path": "package/dist/compiled/gzip-size/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/hash.js/sha256/LICENSE",
+          "archive_path": "package/dist/compiled/hash.js/sha256/LICENSE",
+          "sha256": "7261b3ab93df04c6d8f3398f87275d28f0e87d88cbd0033b788fb50402de03c5"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/http-proxy/LICENSE",
+          "archive_path": "package/dist/compiled/http-proxy/LICENSE",
+          "sha256": "589850dfc0a1d39a97c592d618d5772f84aec2b11c6898e020acb985299f3bab"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/https-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/https-browserify/LICENSE",
+          "sha256": "ff151c00207c908581639851dd8504ce4255be0650b2b236edec2aa90342b0cd"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/ignore-loader/LICENSE",
+          "archive_path": "package/dist/compiled/ignore-loader/LICENSE",
+          "sha256": "62ba766e9b50f9b175b0229f4ea03e93730c9180408acec50dd617e9ae1fa059"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/image-size/LICENSE",
+          "archive_path": "package/dist/compiled/image-size/LICENSE",
+          "sha256": "3109783dad7527b490aabc49c3cb148573c19b41b843e70cf9388a93f3d7fccd"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/is-docker/LICENSE",
+          "archive_path": "package/dist/compiled/is-docker/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/is-wsl/LICENSE",
+          "archive_path": "package/dist/compiled/is-wsl/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/jest-worker/LICENSE",
+          "archive_path": "package/dist/compiled/jest-worker/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/jsonwebtoken/LICENSE",
+          "archive_path": "package/dist/compiled/jsonwebtoken/LICENSE",
+          "sha256": "2144eb6894cb440fde6b2b3aaae3b617c8f1dc9bb19813079dcf62ec6c517042"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/loader-runner/LICENSE",
+          "archive_path": "package/dist/compiled/loader-runner/LICENSE",
+          "sha256": "498d39c83164cf8de195090f5564fc0308ab271344ca2f95484a7f1020952d00"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/loader-utils2/LICENSE",
+          "archive_path": "package/dist/compiled/loader-utils2/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/loader-utils3/LICENSE",
+          "archive_path": "package/dist/compiled/loader-utils3/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/lodash.curry/LICENSE",
+          "archive_path": "package/dist/compiled/lodash.curry/LICENSE",
+          "sha256": "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/lru-cache/LICENSE",
+          "archive_path": "package/dist/compiled/lru-cache/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/mini-css-extract-plugin/LICENSE",
+          "archive_path": "package/dist/compiled/mini-css-extract-plugin/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/nanoid/LICENSE",
+          "archive_path": "package/dist/compiled/nanoid/LICENSE",
+          "sha256": "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/native-url/LICENSE",
+          "archive_path": "package/dist/compiled/native-url/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/neo-async/LICENSE",
+          "archive_path": "package/dist/compiled/neo-async/LICENSE",
+          "sha256": "811238ba7d85f6fe6b820703a32f92705bcf77bc352ddc3476783491c64a129a"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/node-html-parser/LICENSE",
+          "archive_path": "package/dist/compiled/node-html-parser/LICENSE",
+          "sha256": "ea75e9321945b7f0bc4644da1e404ad76ce55e9bc05cae3b2f5f2d973aede83b"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/ora/LICENSE",
+          "archive_path": "package/dist/compiled/ora/LICENSE",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/os-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/os-browserify/LICENSE",
+          "sha256": "d25d1d6d28c35cb6f358e2833e405c4e53fec2fa24d156323ddea5cd438d3407"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/p-limit/LICENSE",
+          "archive_path": "package/dist/compiled/p-limit/LICENSE",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/p-queue/LICENSE",
+          "archive_path": "package/dist/compiled/p-queue/LICENSE",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/path-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/path-browserify/LICENSE",
+          "sha256": "a22b9d5763f574e5db347c30acc0b33eaf4846767c03d2e27d012e864e79a824"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/path-to-regexp/LICENSE",
+          "archive_path": "package/dist/compiled/path-to-regexp/LICENSE",
+          "sha256": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/picomatch/LICENSE",
+          "archive_path": "package/dist/compiled/picomatch/LICENSE",
+          "sha256": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/postcss-flexbugs-fixes/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-flexbugs-fixes/LICENSE",
+          "sha256": "f26c92c1c16e78c6b1f7474792f7195b7abc851caccb4a73dcc5b3c31efc7321"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/postcss-modules-extract-imports/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-modules-extract-imports/LICENSE",
+          "sha256": "9e534cfb7f7ae1300e16fe1ee7d203fdfe707dc932429c37246f747c3699ee14"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/postcss-modules-local-by-default/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-modules-local-by-default/LICENSE",
+          "sha256": "dd40f37957ddcb6a6157f40b677d6f43697583f956144fbce25443e35630453e"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/postcss-modules-scope/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-modules-scope/LICENSE",
+          "sha256": "7774c8c4a3f750b294b416818062201a404fc2d6c8756d8b89a1688e24b5d5a7"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/postcss-modules-values/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-modules-values/LICENSE",
+          "sha256": "655287aefbf8e292057318c385d77767b1dd9819c87709fd26730b7090efe4d9"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/postcss-safe-parser/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-safe-parser/LICENSE",
+          "sha256": "c4630ac8b89cb317ac5bdd60ac5e4e185eab9bd5151a0c7b3afa41aa83d7ec9b"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/postcss-scss/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-scss/LICENSE",
+          "sha256": "c4630ac8b89cb317ac5bdd60ac5e4e185eab9bd5151a0c7b3afa41aa83d7ec9b"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/postcss-value-parser/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-value-parser/LICENSE",
+          "sha256": "3687447039151857a6ba378db062172c7f33d4aa70a615c87a43a9c50e990485"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/process/LICENSE",
+          "archive_path": "package/dist/compiled/process/LICENSE",
+          "sha256": "59a400d04c5078579acc27ddd6452c1bdf763f9506e01364700935fbb1a7c91b"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/raw-body/LICENSE",
+          "archive_path": "package/dist/compiled/raw-body/LICENSE",
+          "sha256": "c8e6bca7230689d536a3bd7158f66e9c4f89f95d0748743a0370ac229e9023ad"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/react-dom-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/react-dom-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/react-dom/LICENSE",
+          "archive_path": "package/dist/compiled/react-dom/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/react-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/react-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/react-is/LICENSE",
+          "archive_path": "package/dist/compiled/react-is/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/react-refresh/LICENSE",
+          "archive_path": "package/dist/compiled/react-refresh/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/react-server-dom-turbopack-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/react-server-dom-turbopack-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/react-server-dom-turbopack/LICENSE",
+          "archive_path": "package/dist/compiled/react-server-dom-turbopack/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/react-server-dom-webpack-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/react-server-dom-webpack-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/react-server-dom-webpack/LICENSE",
+          "archive_path": "package/dist/compiled/react-server-dom-webpack/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/react/LICENSE",
+          "archive_path": "package/dist/compiled/react/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/regenerator-runtime/LICENSE",
+          "archive_path": "package/dist/compiled/regenerator-runtime/LICENSE",
+          "sha256": "51887a3d47051ac2fce1210562e5b9fe0830a8a8fabeb272c2d586eeb18a05fd"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/safe-stable-stringify/LICENSE",
+          "archive_path": "package/dist/compiled/safe-stable-stringify/LICENSE",
+          "sha256": "3a6d6de49d284a36c5d271ef0e62eca1838cc460dd7630e3f2c347c8f5b2232a"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/sass-loader/LICENSE",
+          "archive_path": "package/dist/compiled/sass-loader/LICENSE",
+          "sha256": "2af12ca8b612a22e6659ae68e0e59ee7ac792718c45524a989b512c49c5f5879"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/scheduler-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/scheduler-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/scheduler/LICENSE",
+          "archive_path": "package/dist/compiled/scheduler/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/schema-utils2/LICENSE",
+          "archive_path": "package/dist/compiled/schema-utils2/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/schema-utils3/LICENSE",
+          "archive_path": "package/dist/compiled/schema-utils3/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/semver/LICENSE",
+          "archive_path": "package/dist/compiled/semver/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/send/LICENSE",
+          "archive_path": "package/dist/compiled/send/LICENSE",
+          "sha256": "25a328069fe771f8ed5b6f983ed4b0e6c84b3312ac0f69b28c3d52dc277962c9"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/shell-quote/LICENSE",
+          "archive_path": "package/dist/compiled/shell-quote/LICENSE",
+          "sha256": "8bb16db1b047019e4395965f2cf3611b06c34bf86dc2d0210b3c3f91b53c21fe"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/source-map/LICENSE",
+          "archive_path": "package/dist/compiled/source-map/LICENSE",
+          "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/source-map08/LICENSE",
+          "archive_path": "package/dist/compiled/source-map08/LICENSE",
+          "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/stacktrace-parser/LICENSE",
+          "archive_path": "package/dist/compiled/stacktrace-parser/LICENSE",
+          "sha256": "e1898814043cb5500483d9c8517edda824b352f696d35e5043fcfb537c221531"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/stream-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/stream-browserify/LICENSE",
+          "sha256": "96e5193183476a03da6667d217ce14110191d26ee105338086e94339edf40d5a"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/stream-http/LICENSE",
+          "archive_path": "package/dist/compiled/stream-http/LICENSE",
+          "sha256": "a0e6357a5e8ea65827addeb383e0948a1874d2f46bc7feaf6349b7a376ed6e98"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/string_decoder/LICENSE",
+          "archive_path": "package/dist/compiled/string_decoder/LICENSE",
+          "sha256": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/strip-ansi/LICENSE",
+          "archive_path": "package/dist/compiled/strip-ansi/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/tar/LICENSE",
+          "archive_path": "package/dist/compiled/tar/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/terser/LICENSE",
+          "archive_path": "package/dist/compiled/terser/LICENSE",
+          "sha256": "901d0a7fcaccaae9917d165039c0473c354e5da2e0e94140dde67aad9ffb19da"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/text-table/LICENSE",
+          "archive_path": "package/dist/compiled/text-table/LICENSE",
+          "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/tty-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/tty-browserify/LICENSE",
+          "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/util/LICENSE",
+          "archive_path": "package/dist/compiled/util/LICENSE",
+          "sha256": "6239c6144c31e58cf925c34483606969c555574d64ffa96518ab5d7f45c75d43"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/vm-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/vm-browserify/LICENSE",
+          "sha256": "3a62887f73cd035ac1068bc0127ce94291f7a03843391f56df3520e2ca2037f8"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/watchpack/LICENSE",
+          "archive_path": "package/dist/compiled/watchpack/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/web-vitals-attribution/LICENSE",
+          "archive_path": "package/dist/compiled/web-vitals-attribution/LICENSE",
+          "sha256": "bfdeded4040e05da31ca9b6239dc83bd23fa26ac8db87342a7ca4363f68916ff"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/web-vitals/LICENSE",
+          "archive_path": "package/dist/compiled/web-vitals/LICENSE",
+          "sha256": "bfdeded4040e05da31ca9b6239dc83bd23fa26ac8db87342a7ca4363f68916ff"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/webpack-sources1/LICENSE",
+          "archive_path": "package/dist/compiled/webpack-sources1/LICENSE",
+          "sha256": "214d0ac13edb475ec426df1979d96fd46b443debc466c0fb592e32152ae5a940"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/webpack-sources3/LICENSE",
+          "archive_path": "package/dist/compiled/webpack-sources3/LICENSE",
+          "sha256": "214d0ac13edb475ec426df1979d96fd46b443debc466c0fb592e32152ae5a940"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/webpack/LICENSE",
+          "archive_path": "package/dist/compiled/webpack/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/ws/LICENSE",
+          "archive_path": "package/dist/compiled/ws/LICENSE",
+          "sha256": "dcd0a622a3a2c94fe3aa6238b76363f87df442afe788cbad966afe943ed62281"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/zod-validation-error/LICENSE",
+          "archive_path": "package/dist/compiled/zod-validation-error/LICENSE",
+          "sha256": "03cc9a630489a2544b799548a0e8b134f382fe09fa06dc22b339091b28b8f4a8"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/dist/compiled/zod/LICENSE",
+          "archive_path": "package/dist/compiled/zod/LICENSE",
+          "sha256": "3f1189b28e3866e0d979968d466b78f813f76827cfdca1fbb124cc0a5c8841f8"
+        },
+        {
+          "file": "LICENSES/npm/next@15.5.27/license.md",
+          "archive_path": "package/license.md",
+          "sha256": "ee765244e2d59f5234d474f62e0766fa0c8b99af967fdd4c0cb8dcb0c76ea224"
+        }
+      ]
+    },
+    {
+      "package": "next",
+      "version": "14.1.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/next/-/next-14.1.3.tgz",
+      "archive_sha256": "b682e9c6b6dbd8fa0a2ea19cb09073d1e8cf681dd5a8545cde25bebb05889c96",
+      "repository": {
+        "url": "git+https://github.com/vercel/next.js.git",
+        "type": "git"
+      },
+      "git_head": "fc38ee190c9b7de09ebff13a17ebd948cf580ec3",
+      "notices": [
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/@babel/runtime/LICENSE",
+          "archive_path": "package/dist/compiled/@babel/runtime/LICENSE",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/@mswjs/interceptors/ClientRequest/LICENSE",
+          "archive_path": "package/dist/compiled/@mswjs/interceptors/ClientRequest/LICENSE",
+          "sha256": "bb3a5cb8fb224f632970e31425348f556f7a83b165d5384ea5e142575f5c412e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/@napi-rs/triples/LICENSE",
+          "archive_path": "package/dist/compiled/@napi-rs/triples/LICENSE",
+          "sha256": "7b34e99bc43641767fded49f7f03563ffd50c689b1f3b0d50700b4727bc4ae24"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/@opentelemetry/api/LICENSE",
+          "archive_path": "package/dist/compiled/@opentelemetry/api/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/@vercel/nft/LICENSE",
+          "archive_path": "package/dist/compiled/@vercel/nft/LICENSE",
+          "sha256": "0b31f3a6ab66b272b7de451df39835f310a309a06b1a8aafb3a2fdab20adc166"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/@vercel/og/LICENSE",
+          "archive_path": "package/dist/compiled/@vercel/og/LICENSE",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/@vercel/og/satori/LICENSE",
+          "archive_path": "package/dist/compiled/@vercel/og/satori/LICENSE",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/acorn/LICENSE",
+          "archive_path": "package/dist/compiled/acorn/LICENSE",
+          "sha256": "c2d8184ea9becd063aa40be243e8c6ec2c4f72828fdfe4b0752664ef73e96ed3"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/anser/LICENSE",
+          "archive_path": "package/dist/compiled/anser/LICENSE",
+          "sha256": "6d2abc90a426cf65bbf84f7cedf9487f7ff86a3daf0e130b335a45c112f040d0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/assert/LICENSE",
+          "archive_path": "package/dist/compiled/assert/LICENSE",
+          "sha256": "6239c6144c31e58cf925c34483606969c555574d64ffa96518ab5d7f45c75d43"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/babel/LICENSE",
+          "archive_path": "package/dist/compiled/babel/LICENSE",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/browserify-zlib/LICENSE",
+          "archive_path": "package/dist/compiled/browserify-zlib/LICENSE",
+          "sha256": "ddd770379e07bf0574dfaa4485be80a23b3248b36d09f33ec79276c09b829daf"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/browserslist/LICENSE",
+          "archive_path": "package/dist/compiled/browserslist/LICENSE",
+          "sha256": "f25bf9bf3ae8984bcd43bf7fb8f78e7eec8d577081fb8d0989cfa7c67ecebb8e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/buffer/LICENSE",
+          "archive_path": "package/dist/compiled/buffer/LICENSE",
+          "sha256": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/bytes/LICENSE",
+          "archive_path": "package/dist/compiled/bytes/LICENSE",
+          "sha256": "e3b44af066615de2ea48d18d852d0762f18c0b2efcea714fa48a6f729d405b85"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/ci-info/LICENSE",
+          "archive_path": "package/dist/compiled/ci-info/LICENSE",
+          "sha256": "25bd22427e27b0d3f1c3da2670bb44b622bcced22ebdf4777d5488ac129370a1"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/cli-select/LICENSE",
+          "archive_path": "package/dist/compiled/cli-select/LICENSE",
+          "sha256": "a8e260b5b60eb27746ff2c5967489e6878c5a6ba99400cbec84c89a9b49a46ca"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/comment-json/LICENSE",
+          "archive_path": "package/dist/compiled/comment-json/LICENSE",
+          "sha256": "9dbd86998d3cdafc1d8c298aea636146568d05d429b81386e60cfce11e6cedb6"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/compression/LICENSE",
+          "archive_path": "package/dist/compiled/compression/LICENSE",
+          "sha256": "23d466b1b134b415b66fa50c6526b4cf3e7b9258554da88d3abb371721e7ce68"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/conf/LICENSE",
+          "archive_path": "package/dist/compiled/conf/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/content-disposition/LICENSE",
+          "archive_path": "package/dist/compiled/content-disposition/LICENSE",
+          "sha256": "bd47ce7b88c7759630d1e2b9fcfa170a0f1fde522be09e13fb1581a79d090400"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/content-type/LICENSE",
+          "archive_path": "package/dist/compiled/content-type/LICENSE",
+          "sha256": "257aed98914108e91a337912727b6a802eef218248507f74b76faffaff517a38"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/cookie/LICENSE",
+          "archive_path": "package/dist/compiled/cookie/LICENSE",
+          "sha256": "c02110eedc16c7114f1a9bdc026c65626ce1d9c7e27fd51a8e0feee8a48a6858"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/cross-spawn/LICENSE",
+          "archive_path": "package/dist/compiled/cross-spawn/LICENSE",
+          "sha256": "aaa78451b6fecd1b9c4594c796c133c0e90cad100372ff8bc6de615e9ef9adf1"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/crypto-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/crypto-browserify/LICENSE",
+          "sha256": "6134c69bc22c8289252e70de3af20bd67071233459055be74d83acfcc4865e7e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/debug/LICENSE",
+          "archive_path": "package/dist/compiled/debug/LICENSE",
+          "sha256": "98c970de440dcfc77471610aec2377c9d9b0db2b3be6d1add524a586e1d7f422"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/devalue/LICENSE",
+          "archive_path": "package/dist/compiled/devalue/LICENSE",
+          "sha256": "e399db7e952e45cae84f1b53d72ba8dbad2daaa7ab8cd1f0ab72fea5ab73b225"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/events/LICENSE",
+          "archive_path": "package/dist/compiled/events/LICENSE",
+          "sha256": "631987b7616a325a5b97566c232418481ddf7dbb5ecadefb991e791876cc2599"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/find-cache-dir/LICENSE",
+          "archive_path": "package/dist/compiled/find-cache-dir/LICENSE",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/find-up/LICENSE",
+          "archive_path": "package/dist/compiled/find-up/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/fresh/LICENSE",
+          "archive_path": "package/dist/compiled/fresh/LICENSE",
+          "sha256": "a0ec0dab16b3666f24950f86d257930ac2ad475557b4bfe245620e0817d8a45d"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/get-orientation/LICENSE",
+          "archive_path": "package/dist/compiled/get-orientation/LICENSE",
+          "sha256": "6584474e64a04bdde7d2862324d896ad10276811a8fa49ac47581cefa30ebfd3"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/glob/LICENSE",
+          "archive_path": "package/dist/compiled/glob/LICENSE",
+          "sha256": "6236fa0b88a4a0cce3dda0367979491b2052b3c8d6b1c10b3668de083e86a7f0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/gzip-size/LICENSE",
+          "archive_path": "package/dist/compiled/gzip-size/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/http-proxy/LICENSE",
+          "archive_path": "package/dist/compiled/http-proxy/LICENSE",
+          "sha256": "589850dfc0a1d39a97c592d618d5772f84aec2b11c6898e020acb985299f3bab"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/https-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/https-browserify/LICENSE",
+          "sha256": "ff151c00207c908581639851dd8504ce4255be0650b2b236edec2aa90342b0cd"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/ignore-loader/LICENSE",
+          "archive_path": "package/dist/compiled/ignore-loader/LICENSE",
+          "sha256": "62ba766e9b50f9b175b0229f4ea03e93730c9180408acec50dd617e9ae1fa059"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/image-size/LICENSE",
+          "archive_path": "package/dist/compiled/image-size/LICENSE",
+          "sha256": "54d0b82d1e7d0bc60a4b48b6172f1a9fa7385cfa8a448d14ad3a638930ef417c"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/is-docker/LICENSE",
+          "archive_path": "package/dist/compiled/is-docker/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/is-wsl/LICENSE",
+          "archive_path": "package/dist/compiled/is-wsl/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/jest-worker/LICENSE",
+          "archive_path": "package/dist/compiled/jest-worker/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/jsonwebtoken/LICENSE",
+          "archive_path": "package/dist/compiled/jsonwebtoken/LICENSE",
+          "sha256": "2144eb6894cb440fde6b2b3aaae3b617c8f1dc9bb19813079dcf62ec6c517042"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/loader-runner/LICENSE",
+          "archive_path": "package/dist/compiled/loader-runner/LICENSE",
+          "sha256": "498d39c83164cf8de195090f5564fc0308ab271344ca2f95484a7f1020952d00"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/loader-utils2/LICENSE",
+          "archive_path": "package/dist/compiled/loader-utils2/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/loader-utils3/LICENSE",
+          "archive_path": "package/dist/compiled/loader-utils3/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/lodash.curry/LICENSE",
+          "archive_path": "package/dist/compiled/lodash.curry/LICENSE",
+          "sha256": "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/lru-cache/LICENSE",
+          "archive_path": "package/dist/compiled/lru-cache/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/micromatch/LICENSE",
+          "archive_path": "package/dist/compiled/micromatch/LICENSE",
+          "sha256": "35bdd8a44339719441900fb50fbefc5e2dca1ca662cbaed7a687de842c8b70f2"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/mini-css-extract-plugin/LICENSE",
+          "archive_path": "package/dist/compiled/mini-css-extract-plugin/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/nanoid/LICENSE",
+          "archive_path": "package/dist/compiled/nanoid/LICENSE",
+          "sha256": "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/native-url/LICENSE",
+          "archive_path": "package/dist/compiled/native-url/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/neo-async/LICENSE",
+          "archive_path": "package/dist/compiled/neo-async/LICENSE",
+          "sha256": "811238ba7d85f6fe6b820703a32f92705bcf77bc352ddc3476783491c64a129a"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/node-html-parser/LICENSE",
+          "archive_path": "package/dist/compiled/node-html-parser/LICENSE",
+          "sha256": "ea75e9321945b7f0bc4644da1e404ad76ce55e9bc05cae3b2f5f2d973aede83b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/ora/LICENSE",
+          "archive_path": "package/dist/compiled/ora/LICENSE",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/os-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/os-browserify/LICENSE",
+          "sha256": "d25d1d6d28c35cb6f358e2833e405c4e53fec2fa24d156323ddea5cd438d3407"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/p-limit/LICENSE",
+          "archive_path": "package/dist/compiled/p-limit/LICENSE",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/path-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/path-browserify/LICENSE",
+          "sha256": "a22b9d5763f574e5db347c30acc0b33eaf4846767c03d2e27d012e864e79a824"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/platform/LICENSE",
+          "archive_path": "package/dist/compiled/platform/LICENSE",
+          "sha256": "4a161ebed4f1ef933e16ccfa00d86c718703f5d015a9987ea7ce1bb72a43cd22"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/postcss-flexbugs-fixes/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-flexbugs-fixes/LICENSE",
+          "sha256": "f26c92c1c16e78c6b1f7474792f7195b7abc851caccb4a73dcc5b3c31efc7321"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/postcss-modules-extract-imports/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-modules-extract-imports/LICENSE",
+          "sha256": "9e534cfb7f7ae1300e16fe1ee7d203fdfe707dc932429c37246f747c3699ee14"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/postcss-modules-local-by-default/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-modules-local-by-default/LICENSE",
+          "sha256": "dd40f37957ddcb6a6157f40b677d6f43697583f956144fbce25443e35630453e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/postcss-modules-scope/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-modules-scope/LICENSE",
+          "sha256": "7774c8c4a3f750b294b416818062201a404fc2d6c8756d8b89a1688e24b5d5a7"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/postcss-modules-values/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-modules-values/LICENSE",
+          "sha256": "655287aefbf8e292057318c385d77767b1dd9819c87709fd26730b7090efe4d9"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/postcss-safe-parser/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-safe-parser/LICENSE",
+          "sha256": "c4630ac8b89cb317ac5bdd60ac5e4e185eab9bd5151a0c7b3afa41aa83d7ec9b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/postcss-scss/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-scss/LICENSE",
+          "sha256": "c4630ac8b89cb317ac5bdd60ac5e4e185eab9bd5151a0c7b3afa41aa83d7ec9b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/postcss-value-parser/LICENSE",
+          "archive_path": "package/dist/compiled/postcss-value-parser/LICENSE",
+          "sha256": "3687447039151857a6ba378db062172c7f33d4aa70a615c87a43a9c50e990485"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/process/LICENSE",
+          "archive_path": "package/dist/compiled/process/LICENSE",
+          "sha256": "59a400d04c5078579acc27ddd6452c1bdf763f9506e01364700935fbb1a7c91b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/raw-body/LICENSE",
+          "archive_path": "package/dist/compiled/raw-body/LICENSE",
+          "sha256": "c8e6bca7230689d536a3bd7158f66e9c4f89f95d0748743a0370ac229e9023ad"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/react-dom-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/react-dom-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/react-dom/LICENSE",
+          "archive_path": "package/dist/compiled/react-dom/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/react-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/react-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/react-is/LICENSE",
+          "archive_path": "package/dist/compiled/react-is/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/react-refresh/LICENSE",
+          "archive_path": "package/dist/compiled/react-refresh/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/react-server-dom-turbopack-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/react-server-dom-turbopack-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/react-server-dom-turbopack/LICENSE",
+          "archive_path": "package/dist/compiled/react-server-dom-turbopack/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/react-server-dom-webpack-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/react-server-dom-webpack-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/react-server-dom-webpack/LICENSE",
+          "archive_path": "package/dist/compiled/react-server-dom-webpack/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/react/LICENSE",
+          "archive_path": "package/dist/compiled/react/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/regenerator-runtime/LICENSE",
+          "archive_path": "package/dist/compiled/regenerator-runtime/LICENSE",
+          "sha256": "51887a3d47051ac2fce1210562e5b9fe0830a8a8fabeb272c2d586eeb18a05fd"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/sass-loader/LICENSE",
+          "archive_path": "package/dist/compiled/sass-loader/LICENSE",
+          "sha256": "2af12ca8b612a22e6659ae68e0e59ee7ac792718c45524a989b512c49c5f5879"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/scheduler-experimental/LICENSE",
+          "archive_path": "package/dist/compiled/scheduler-experimental/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/scheduler/LICENSE",
+          "archive_path": "package/dist/compiled/scheduler/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/schema-utils2/LICENSE",
+          "archive_path": "package/dist/compiled/schema-utils2/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/schema-utils3/LICENSE",
+          "archive_path": "package/dist/compiled/schema-utils3/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/semver/LICENSE",
+          "archive_path": "package/dist/compiled/semver/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/send/LICENSE",
+          "archive_path": "package/dist/compiled/send/LICENSE",
+          "sha256": "8c3a3bc340c55f113097a35647235b8c0a9f0181d024a7ed1d116e202af68a07"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/shell-quote/LICENSE",
+          "archive_path": "package/dist/compiled/shell-quote/LICENSE",
+          "sha256": "8bb16db1b047019e4395965f2cf3611b06c34bf86dc2d0210b3c3f91b53c21fe"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/source-map/LICENSE",
+          "archive_path": "package/dist/compiled/source-map/LICENSE",
+          "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/stacktrace-parser/LICENSE",
+          "archive_path": "package/dist/compiled/stacktrace-parser/LICENSE",
+          "sha256": "e1898814043cb5500483d9c8517edda824b352f696d35e5043fcfb537c221531"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/stream-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/stream-browserify/LICENSE",
+          "sha256": "96e5193183476a03da6667d217ce14110191d26ee105338086e94339edf40d5a"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/stream-http/LICENSE",
+          "archive_path": "package/dist/compiled/stream-http/LICENSE",
+          "sha256": "a0e6357a5e8ea65827addeb383e0948a1874d2f46bc7feaf6349b7a376ed6e98"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/string_decoder/LICENSE",
+          "archive_path": "package/dist/compiled/string_decoder/LICENSE",
+          "sha256": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/strip-ansi/LICENSE",
+          "archive_path": "package/dist/compiled/strip-ansi/LICENSE",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/tar/LICENSE",
+          "archive_path": "package/dist/compiled/tar/LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/terser/LICENSE",
+          "archive_path": "package/dist/compiled/terser/LICENSE",
+          "sha256": "c6e0ce7b3c173ac432878e2120d0fd8693050fa1225a7910d5edde5d5a082dcb"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/text-table/LICENSE",
+          "archive_path": "package/dist/compiled/text-table/LICENSE",
+          "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/tty-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/tty-browserify/LICENSE",
+          "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/util/LICENSE",
+          "archive_path": "package/dist/compiled/util/LICENSE",
+          "sha256": "6239c6144c31e58cf925c34483606969c555574d64ffa96518ab5d7f45c75d43"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/vm-browserify/LICENSE",
+          "archive_path": "package/dist/compiled/vm-browserify/LICENSE",
+          "sha256": "3a62887f73cd035ac1068bc0127ce94291f7a03843391f56df3520e2ca2037f8"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/watchpack/LICENSE",
+          "archive_path": "package/dist/compiled/watchpack/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/web-vitals-attribution/LICENSE",
+          "archive_path": "package/dist/compiled/web-vitals-attribution/LICENSE",
+          "sha256": "bfdeded4040e05da31ca9b6239dc83bd23fa26ac8db87342a7ca4363f68916ff"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/web-vitals/LICENSE",
+          "archive_path": "package/dist/compiled/web-vitals/LICENSE",
+          "sha256": "bfdeded4040e05da31ca9b6239dc83bd23fa26ac8db87342a7ca4363f68916ff"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/webpack-sources1/LICENSE",
+          "archive_path": "package/dist/compiled/webpack-sources1/LICENSE",
+          "sha256": "214d0ac13edb475ec426df1979d96fd46b443debc466c0fb592e32152ae5a940"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/webpack-sources3/LICENSE",
+          "archive_path": "package/dist/compiled/webpack-sources3/LICENSE",
+          "sha256": "214d0ac13edb475ec426df1979d96fd46b443debc466c0fb592e32152ae5a940"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/webpack/LICENSE",
+          "archive_path": "package/dist/compiled/webpack/LICENSE",
+          "sha256": "9068a8782d2fb4c6e432cfa25334efa56f722822180570802bf86e71b6003b1e"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/ws/LICENSE",
+          "archive_path": "package/dist/compiled/ws/LICENSE",
+          "sha256": "dcd0a622a3a2c94fe3aa6238b76363f87df442afe788cbad966afe943ed62281"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/compiled/zod/LICENSE",
+          "archive_path": "package/dist/compiled/zod/LICENSE",
+          "sha256": "0225e7c0a96845a7477cd44d75d3dc9c999f673454efa84b54e218415055eece"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/dist/src/compiled/@ampproject/toolbox-optimizer/LICENSE",
+          "archive_path": "package/dist/src/compiled/@ampproject/toolbox-optimizer/LICENSE",
+          "sha256": "d55f836b1fb57a8a7fbaca7dcc1dfa09778bae2c73e273e8684d6c968942067c"
+        },
+        {
+          "file": "LICENSES/npm/next@14.1.3/license.md",
+          "archive_path": "package/license.md",
+          "sha256": "e4f76a7a19ef2989dd79339bd3abf8afcf1d6f065e5a10c76c19415ffd727eb3"
+        }
+      ]
+    },
+    {
+      "package": "katex",
+      "version": "0.16.27",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/katex/-/katex-0.16.27.tgz",
+      "archive_sha256": "058e0026c75c773435122cb5788b1d0958c5f75f32f6df3d9c823f60c6b72992",
+      "repository": {
+        "url": "git+https://github.com/KaTeX/KaTeX.git",
+        "type": "git"
+      },
+      "git_head": "cc5eee50117495051bbd2646d32bd304b8fbe100",
+      "notices": [
+        {
+          "file": "LICENSES/npm/katex@0.16.27/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3"
+        }
+      ]
+    },
+    {
+      "package": "slate",
+      "version": "0.132.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/slate/-/slate-0.132.0.tgz",
+      "archive_sha256": "fad7d5d2eec84af8f1c6ba19d69e9ba1a989b58328fde2f4f2c1d811c4af01b9",
+      "repository": {
+        "url": "git://github.com/ianstormtaylor/slate.git",
+        "type": "git"
+      },
+      "git_head": "14bed4c4e4f3bbc1dd617d453374d962d0c21f21",
+      "notices": []
+    },
+    {
+      "package": "slate-react",
+      "version": "0.132.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/slate-react/-/slate-react-0.132.0.tgz",
+      "archive_sha256": "892c026f657364e0f34a5a1d3b6509e7884a12772c3c4f6593b1b3d66d4143c6",
+      "repository": {
+        "url": "git://github.com/ianstormtaylor/slate.git",
+        "type": "git"
+      },
+      "git_head": "14bed4c4e4f3bbc1dd617d453374d962d0c21f21",
+      "notices": []
+    },
+    {
+      "package": "slate-dom",
+      "version": "0.132.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/slate-dom/-/slate-dom-0.132.0.tgz",
+      "archive_sha256": "026831409457848d548f750b4060e1045b2a9cee061123ec794e154475b8c8fa",
+      "repository": {
+        "url": "git://github.com/ianstormtaylor/slate.git",
+        "type": "git"
+      },
+      "git_head": "14bed4c4e4f3bbc1dd617d453374d962d0c21f21",
+      "notices": []
+    },
+    {
+      "package": "ua-parser-js",
+      "version": "0.7.21",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.21.tgz",
+      "archive_sha256": "0b57d6013fe5ce2cfe2691e794b6a6f369c1cdfb35817870faeb4161d7bf6ae8",
+      "repository": {
+        "url": "git+https://github.com/faisalman/ua-parser-js.git",
+        "type": "git"
+      },
+      "git_head": "31a0460b607ab426ec56ae98b107b5446d9d6c7d",
+      "notices": [
+        {
+          "file": "LICENSES/npm/ua-parser-js@0.7.21/license.md",
+          "archive_path": "package/license.md",
+          "sha256": "c427692fb89dcb92bb0cc0905a650f986a7736e4ef90f9e5356a4dfdcf243b9e"
+        }
+      ]
+    },
+    {
+      "package": "object-assign",
+      "version": "4.1.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
+      "archive_sha256": "782d726a263ba7b26cced612af97b80035516df4b0cd788524e7b2cebc4e29ed",
+      "repository": {
+        "url": "git+https://github.com/sindresorhus/object-assign.git",
+        "type": "git"
+      },
+      "git_head": "a89774b252c91612203876984bbd6addbe3b5a0e",
+      "notices": [
+        {
+          "file": "LICENSES/npm/object-assign@4.1.1/license",
+          "archive_path": "package/license",
+          "sha256": "6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c"
+        }
+      ]
+    },
+    {
+      "package": "nprogress",
+      "version": "0.2.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz",
+      "archive_sha256": "b65579e92b1ce917c925d27f44310fc7da02864e6d3faaf9e374e297c95d98ec",
+      "repository": {
+        "url": "https://github.com/rstacruz/nprogress.git",
+        "type": "git"
+      },
+      "git_head": "05e12c0bc6a3cf7460c38acec7371877abd5087e",
+      "notices": [
+        {
+          "file": "LICENSES/npm/nprogress@0.2.0/License.md",
+          "archive_path": "package/License.md",
+          "sha256": "d90e3b520a248648dcb9aad1a1c932aa33bf8ea09fbb1965d3ca6a2bfcc4fd0a"
+        }
+      ]
+    },
+    {
+      "package": "classnames",
+      "version": "2.2.6",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/classnames/-/classnames-2.2.6.tgz",
+      "archive_sha256": "c62acfbae541ca647319d57965b58aa94da3d29806dc394cb9da778a112ccd7e",
+      "repository": {
+        "url": "git+https://github.com/JedWatson/classnames.git",
+        "type": "git"
+      },
+      "git_head": "30bd487050de10a016ed2abfd6e602619d166ddc",
+      "notices": [
+        {
+          "file": "LICENSES/npm/classnames@2.2.6/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "ab07a82131ec6ba27884b9533c95c4d8354edbbb38c9c24736e65874eddf10b4"
+        }
+      ]
+    },
+    {
+      "package": "immutable",
+      "version": "3.7.6",
+      "declared_license": "BSD-3-Clause",
+      "source": "https://registry.npmjs.org/immutable/-/immutable-3.7.6.tgz",
+      "archive_sha256": "1f7b569bc9cb75c3a3fb403759f606c810a5dbebfbc3335c66c3df6204f2f46a",
+      "repository": {
+        "url": "git://github.com/facebook/immutable-js.git",
+        "type": "git"
+      },
+      "git_head": "67afd399e339c059ca4181a84c16c0a843a4d5a5",
+      "notices": [
+        {
+          "file": "LICENSES/npm/immutable@3.7.6/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "39a96b14915c9e8693e0cc2ffcff21317cd80186c6e945c7613d77e3640afc25"
+        }
+      ]
+    }
+  ]
+}

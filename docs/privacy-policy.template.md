@@ -1,0 +1,117 @@
+# Proofer privacy policy
+
+Last updated: 21 October 2026
+
+## The short version
+
+Proofer sends text only to Ollama running on your computer. It has no cloud
+proofreading service or automatic log upload. **Keep a log is on by default:**
+it records checked sentences locally. You can switch the log off, save it to
+a file, or delete it at any time. The website you are writing on still handles
+your text normally, and setup downloads software and the model from the internet.
+
+## What Proofer does with your text
+
+When you finish a sentence in a text box, Proofer sends that sentence — with up
+to 2,500 characters of the text before it, as context — to **Ollama running on
+your own computer** (`localhost`), which runs Proofer's proofreading engine and
+answers with a correction. This local request also includes the current frame's
+hostname and, when available, up to 80 characters of a nearby section heading.
+The extension only connects to Ollama on this computer; it has no server of its own.
+
+## What Proofer keeps on your computer
+
+With "Keep a log" on (it is on by default), Proofer stores in your browser's
+local storage, for each sentence it checks:
+
+- the sentence, and up to 400 characters of the text before it
+- the website it was typed on (the site's address, such as `mail.example.com`)
+- what the engine proposed, including corrections Proofer chose not to make
+- what happened next: whether the correction was kept, taken back with Escape,
+  or edited by you (and, if you edited it, the edited sentence)
+- timings, and which version of Proofer's prompt and engine answered
+
+It also keeps counters that hold no text (for example, how often it skipped a
+sentence and why) and the result of its speed check (timings and version
+numbers, no text).
+
+**How long:** up to the newest 5,000 sentence records. Older sentence records
+are deleted as new ones arrive, and earlier if the browser's storage fills up
+(the toolbar menu says when that has happened). There is no time-based expiry.
+Existing installations upgraded from the removed manual-rewrite feature may
+also retain up to 2,000 older manual records. Those remain available for export
+until you choose **Clear** or remove the extension; new proofreading does not
+replace them.
+
+**Deleting it:** open Proofer's toolbar menu and choose **Clear**. That deletes
+every entry from this computer at once. Files you saved earlier with Export are
+yours and are not affected. Removing the extension deletes its storage too.
+
+**Switching it off:** untick **Keep a log** in the toolbar menu. Proofer still
+corrects; no new sentence text is recorded. Settings, counters and setup results
+remain available.
+
+Switching Proofer off for a site stops new proofreading and sentence recording
+on that site. It does not delete records already stored; use **Clear** for that.
+
+## Downloading the proofreading engine
+
+Setup asks Ollama to download Proofer's proofreading engine (about 1.7 GB) from
+ollama.com. That download is made by Ollama, under Ollama's own terms; Proofer
+sends nothing of yours with it. Setup then runs a speed check on made-up
+sentences, on your computer.
+
+## Exporting and sharing for support
+
+**Export log** saves a file on your computer. It sends nothing and grants no
+permission to use the file. The export includes checked sentences, preceding
+text, sites, proposed changes and later edits. It can contain sensitive
+information about you and other people.
+
+Keep exports private. For a bug report, use a small made-up example first.
+Do not post a writing log in a public issue or send a complete log unsolicited.
+If a log is needed for support, contact {{maintainerName}} at
+[{{maintainerEmail}}](mailto:{{maintainerEmail}}) first. Review the file and
+remove personal, confidential and other people's text before sharing only the
+part needed to investigate the issue.
+
+Sharing for support does not authorize model training or upload to an AI
+service. Support material is used only to investigate the issue and is kept
+only as long as needed for that purpose. You can request its deletion at the
+contact address below. A future training donation would require a separate,
+explicit agreement describing the intended use; this public build does not
+invite training donations.
+
+This policy describes the public build's support workflow. It does not expand
+or replace any separate agreement for material donated before this policy.
+
+## Test reports
+
+**Save test report** in setup saves a file with the speed check's timings,
+version numbers and what the browser can tell about the hardware (the operating
+system, the number of processor cores, the graphics chip). It holds nothing you
+typed, no websites and no file paths. It is sent only if you send it.
+
+## Permissions, and why
+
+- **Read and change data on all websites** — Proofer has to see the text box you
+  are typing in and write the correction into it, on whatever site you write on,
+  including editors inside frames.
+- **Connect to `localhost`** — to reach Ollama on your own computer, and nothing
+  else.
+- **Storage** — the settings and the local log described above.
+- **Declarative network rules** — one rule that lets Ollama accept Proofer's own
+  requests (Ollama refuses browser extensions by default). It applies only to
+  Proofer's requests to Ollama on this computer.
+- **The current tab** (when you click Proofer's toolbar button) — so the menu
+  can say whether Proofer is running on the page in front of you.
+
+## Use limits
+
+Text processed by the extension is used for proofreading and the local records
+described above. Material shared for support is used to investigate the issue.
+It is not sold, used for advertising, or used for credit or lending decisions.
+
+## Contact
+
+{{maintainerName}} — [{{maintainerEmail}}](mailto:{{maintainerEmail}})

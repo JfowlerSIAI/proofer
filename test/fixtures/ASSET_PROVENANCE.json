@@ -1,0 +1,1957 @@
+{
+  "reviewed": "2026-10-21",
+  "scope": "Vendored editor fixtures, not the extension runtime. Package and font inventories under LICENSES supplement each site license. Captured URL paths may omit original query strings; content hashes identify the exact bytes.",
+  "sites": {
+    "slatejs.org": {
+      "url": "https://www.slatejs.org",
+      "captured": "2026-08-25",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    "slatejs.org-2026-10-09": {
+      "url": "https://www.slatejs.org",
+      "captured": "2026-10-09",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    "quilljs.com": {
+      "url": "https://quilljs.com",
+      "captured": "2026-08-14",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    "playground.lexical.dev": {
+      "url": "https://playground.lexical.dev",
+      "captured": "2026-08-14",
+      "license_files": [
+        "LICENSES/lexical.txt",
+        "LICENSES/react-19.2.5.txt"
+      ]
+    },
+    "draftjs.org": {
+      "url": "https://draftjs.org",
+      "captured": "2026-08-25",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    "prosemirror.net": {
+      "url": "https://prosemirror.net",
+      "captured": "2026-08-14",
+      "license_files": [
+        "LICENSES/prosemirror-website.txt",
+        "LICENSES/prosemirror.txt"
+      ]
+    },
+    "trix-editor.org": {
+      "url": "https://trix-editor.org",
+      "captured": "2026-08-25",
+      "license_files": [
+        "LICENSES/trix-2.1.19.txt",
+        "LICENSES/dompurify-3.4.2.txt"
+      ]
+    }
+  },
+  "assets": [
+    {
+      "file": "slatejs.org/_external/fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNa.woff",
+      "sha256": "fd84f88b497040d4f7d5e8c9f8635aef8d3e706c0fa52e2b6facf14eee87e522",
+      "kind": "captured upstream asset",
+      "source": "https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNa.woff",
+      "license_files": [
+        "LICENSES/fonts/MaterialIcons-Apache-2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_external/fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2",
+      "sha256": "4a4dbc62fa335e411b94a532be091c58c0c0c4fa731339f11722577d3cf6443b",
+      "kind": "captured upstream asset",
+      "source": "https://fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2",
+      "license_files": [
+        "LICENSES/fonts/MaterialIcons-Apache-2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/check-lists.json",
+      "sha256": "ebc6f87902847513198200a853bff552c46cb1ede74a51d08284a50701f5c2e2",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/check-lists.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/code-highlighting.json",
+      "sha256": "542719d46ef420b41b9a91f1aa42acf4b42b4c5e5d8688a0e527a06877756f81",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/code-highlighting.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/custom-placeholder.json",
+      "sha256": "bce5a535039ee25fd0aff67f4a73bd747d2e4e907e099fe8818ce56ceafce53f",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/custom-placeholder.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/decorations-async.json",
+      "sha256": "a86eb931d787b18c1af796e0fc2ac6d6f5272f98195a5ecd812e1d6bb624bde4",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/decorations-async.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/editable-voids.json",
+      "sha256": "95f0d162d78ab266b21af8b88566fb043b21eed4da4fa875492813bd4a9b079a",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/editable-voids.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/embeds.json",
+      "sha256": "7c2fbe5202e7c6da8ba02c5d736374f404107909642180798c728261d79ab0e0",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/embeds.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/forced-layout.json",
+      "sha256": "9bacf2757b21ad592c75a45ea3676c30a46f7ac5d67b13b6ca9dc2fb1cd1ceeb",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/forced-layout.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/hovering-toolbar.json",
+      "sha256": "e427167efe640c5601961df5feecdf73e51ebc4dfbdde0a0671bf1cb04f6e85f",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/hovering-toolbar.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/huge-document.json",
+      "sha256": "4baadce0f85d3a37bdcd8958bab06cc8a8e3a9938abc1bad5ccb0b09a4312942",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/huge-document.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/iframe.json",
+      "sha256": "83407b364637fb696e07fec45d4e4e2115bd1b59398725fef11832b3609c95b2",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/iframe.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/images.json",
+      "sha256": "e25413bf08859cc556b623c3d2b8c7ea471f02200733a516896398a75cce088a",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/images.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/inlines.json",
+      "sha256": "d182250d667653efb8fdd73632fd181e7f8de189d388cc6d43c6eaadac0d6762",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/inlines.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/markdown-preview.json",
+      "sha256": "6c9cc57d06111f0bde30142073a953146542e19139750c489dcfc8b8746a5b79",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/markdown-preview.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/markdown-shortcuts.json",
+      "sha256": "92952567eb900bcaa7b941a5bca2165abd54d8cb409546f4a5d2160c3a22e503",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/markdown-shortcuts.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/mentions.json",
+      "sha256": "cbce82a91befbfd92c1ff693ef7f9e63b5279a9a5ab06a84d732202d16f36841",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/mentions.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/paste-html.json",
+      "sha256": "4ff44b11f38f548b770c9c9fc654c267b942f7df4312b824842f1f0ee07f13d5",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/paste-html.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/plaintext.json",
+      "sha256": "3c4ee4a7f2dc90dd5ff9a724245f0c58ab691aa90cf0dd68e09cf71cc98665f9",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/plaintext.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/read-only.json",
+      "sha256": "721c70130e55638e979f69377808b37532e2b1644179c6d5ca9066f4807e32c6",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/read-only.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/richtext.json",
+      "sha256": "61f25b8218c95fb4f940df36cee9209fcb266505c7624143cca5c6b0061e58c4",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/richtext.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/search-highlighting.json",
+      "sha256": "376f68c53763ecd83929d306ab63dc8873f045ccc0c4c010e0af918943790a46",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/3dCeb8NLi7F0NNZ8qwnk-/examples/search-highlighting.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/3dCeb8NLi7F0NNZ8qwnk-/_buildManifest.js",
+      "sha256": "659b4f69bc38881d320d222483642fa222617303d82523fac7b90251d36a2c4a",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/3dCeb8NLi7F0NNZ8qwnk-/_buildManifest.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/3dCeb8NLi7F0NNZ8qwnk-/_ssgManifest.js",
+      "sha256": "0d1d781675a3e5ca6b25e454d81e5065f99100c7a7de6d3073401ac50910d109",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/3dCeb8NLi7F0NNZ8qwnk-/_ssgManifest.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/chunks/194.18bdbbc6c0a9e37e.js",
+      "sha256": "66d49a6d599f948b82774173673dc240e252244644cfde6ddabaabfc390b3a73",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/194.18bdbbc6c0a9e37e.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/chunks/517.8b86af959fa36e54.js",
+      "sha256": "a670edff46e7a8e8a752cf4558ebb9fc9cfbccc67141a211c31417c8d7b7aa91",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/517.8b86af959fa36e54.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/chunks/658.259538af7e806846.js",
+      "sha256": "958501af17b7ebf7399d65736f2fec91307e5389ad9c0e1f5971d29f1ba19a0c",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/658.259538af7e806846.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/chunks/framework-a4f5b6a7f6788536.js",
+      "sha256": "49e24bf9908245d4ed093b064e67e5ffeb03765a32b76bbaea229e6beedd77ce",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/framework-a4f5b6a7f6788536.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/chunks/main-b0ba292714ef3ee4.js",
+      "sha256": "751fe6eb5958a7ecb3d24c8035a50d53f4e2893ca544d4fa4cdfb5ed483627c9",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/main-b0ba292714ef3ee4.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/chunks/pages/_app-75006e8fa9d090ea.js",
+      "sha256": "1496b7be5320c3b146f8eff0dd56dbf5b660c8d26b49e72a1cf456dd4da27685",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/pages/_app-75006e8fa9d090ea.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/chunks/pages/examples/[example]-02e7b484adbd5c3d.js",
+      "sha256": "d5fbf80fd0aacd6f088db206d03bb01ba21a5e9fa9f0047c137a19250673cb9f",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/pages/examples/[example]-02e7b484adbd5c3d.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/chunks/webpack-0577e0153ddbaa9a.js",
+      "sha256": "1812b9bc86c35b900515fa8a728a65861b89d7462bc13ec4f5fce37f3176ef79",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/webpack-0577e0153ddbaa9a.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/css/321fc3c43b953ff3.css",
+      "sha256": "dffa8eaa7dd935f370ef66fbd437fbba045d93e9abe5860e6af0cbdd6dfbd28c",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/css/321fc3c43b953ff3.css",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/media/02743a8d10a3d186-s.p.woff2",
+      "sha256": "9f06741ff731c4555398df16ce523ee8fd24dfd9dfd2ff2a6c9d63239cf0e9f7",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/media/02743a8d10a3d186-s.p.woff2",
+      "license_files": [
+        "LICENSES/fonts/Roboto-OFL.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/media/1a634e73dfeff02c-s.p.woff2",
+      "sha256": "cdd53dc5576a79f35cf280dfbd9c1cb2a5dd2f0ede30afba9b9ccdc7fe12e7d0",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/media/1a634e73dfeff02c-s.p.woff2",
+      "license_files": [
+        "LICENSES/fonts/Roboto-OFL.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/media/1e41be92c43b3255-s.p.woff2",
+      "sha256": "0a44e0bb6ba5c8537e8814c148ef7755f1bce12112361231f595ecc584a18d7a",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/media/1e41be92c43b3255-s.p.woff2",
+      "license_files": [
+        "LICENSES/fonts/Roboto-OFL.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_next/static/media/c9a21b8e54ee94b6-s.p.woff2",
+      "sha256": "e9f07da0193462efe80d281f293260116439d265ec1ce4c49d921378d97e2ac6",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/media/c9a21b8e54ee94b6-s.p.woff2",
+      "license_files": [
+        "LICENSES/fonts/Roboto-OFL.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org/_types.json",
+      "sha256": "5915c312aa58efd69bd7ef64f8c9768b0383eb72a7ee7cdbaf125fcdfeffc4ed",
+      "kind": "generated content-type inventory",
+      "source": "test/fixtures/capture.mjs",
+      "license_files": []
+    },
+    {
+      "file": "slatejs.org/examples/richtext",
+      "sha256": "a4c2bbf7d710f652523877698a734ed13b162c017c9fc895e26d8e368aa0056d",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/examples/richtext",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ],
+      "original_capture_sha256": "03295cd1993df79d181a78d4139221568f4a9499c0a6e3de67fc0122ddb1b838",
+      "modifications": "See THIRD_PARTY_NOTICES.md, public-source adjustments (2026-10-21)."
+    },
+    {
+      "file": "slatejs.org/favicon.ico",
+      "sha256": "3080b79ef1b3bffd6be8686013c69a1ade369de5ee663e82e1ffc512d07875c1",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/favicon.ico",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ],
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/ianstormtaylor/slate/a114ed3e1413457b1b323668ca297e9c7f818dd9/site/public/favicon.ico"
+      ]
+    },
+    {
+      "file": "slatejs.org/index.css",
+      "sha256": "079047ed68642d3ceb7bf1eb67460a45f1e1fa0a314d36b55186813c7e9852d6",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/index.css",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/check-lists.json",
+      "sha256": "ebc6f87902847513198200a853bff552c46cb1ede74a51d08284a50701f5c2e2",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/check-lists.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/code-highlighting.json",
+      "sha256": "542719d46ef420b41b9a91f1aa42acf4b42b4c5e5d8688a0e527a06877756f81",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/code-highlighting.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/custom-placeholder.json",
+      "sha256": "bce5a535039ee25fd0aff67f4a73bd747d2e4e907e099fe8818ce56ceafce53f",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/custom-placeholder.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/decorations-async.json",
+      "sha256": "a86eb931d787b18c1af796e0fc2ac6d6f5272f98195a5ecd812e1d6bb624bde4",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/decorations-async.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/editable-voids.json",
+      "sha256": "95f0d162d78ab266b21af8b88566fb043b21eed4da4fa875492813bd4a9b079a",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/editable-voids.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/embeds.json",
+      "sha256": "7c2fbe5202e7c6da8ba02c5d736374f404107909642180798c728261d79ab0e0",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/embeds.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/forced-layout.json",
+      "sha256": "9bacf2757b21ad592c75a45ea3676c30a46f7ac5d67b13b6ca9dc2fb1cd1ceeb",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/forced-layout.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/hovering-toolbar.json",
+      "sha256": "e427167efe640c5601961df5feecdf73e51ebc4dfbdde0a0671bf1cb04f6e85f",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/hovering-toolbar.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/huge-document.json",
+      "sha256": "4baadce0f85d3a37bdcd8958bab06cc8a8e3a9938abc1bad5ccb0b09a4312942",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/huge-document.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/iframe.json",
+      "sha256": "83407b364637fb696e07fec45d4e4e2115bd1b59398725fef11832b3609c95b2",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/iframe.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/images.json",
+      "sha256": "e25413bf08859cc556b623c3d2b8c7ea471f02200733a516896398a75cce088a",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/images.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/inlines.json",
+      "sha256": "d182250d667653efb8fdd73632fd181e7f8de189d388cc6d43c6eaadac0d6762",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/inlines.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/markdown-preview.json",
+      "sha256": "6c9cc57d06111f0bde30142073a953146542e19139750c489dcfc8b8746a5b79",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/markdown-preview.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/markdown-shortcuts.json",
+      "sha256": "92952567eb900bcaa7b941a5bca2165abd54d8cb409546f4a5d2160c3a22e503",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/markdown-shortcuts.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/mentions.json",
+      "sha256": "cbce82a91befbfd92c1ff693ef7f9e63b5279a9a5ab06a84d732202d16f36841",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/mentions.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/paste-html.json",
+      "sha256": "4ff44b11f38f548b770c9c9fc654c267b942f7df4312b824842f1f0ee07f13d5",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/paste-html.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/plaintext.json",
+      "sha256": "3c4ee4a7f2dc90dd5ff9a724245f0c58ab691aa90cf0dd68e09cf71cc98665f9",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/plaintext.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/read-only.json",
+      "sha256": "721c70130e55638e979f69377808b37532e2b1644179c6d5ca9066f4807e32c6",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/read-only.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/richtext.json",
+      "sha256": "61f25b8218c95fb4f940df36cee9209fcb266505c7624143cca5c6b0061e58c4",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/richtext.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/search-highlighting.json",
+      "sha256": "376f68c53763ecd83929d306ab63dc8873f045ccc0c4c010e0af918943790a46",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/data/tsAE1mpvWW79X1Ug5Z89V/examples/search-highlighting.json",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/chunks/237.641cb6ff7894d086.js",
+      "sha256": "da9c953d6334aa07df247820f071e51aabbbf4d82dc2132527a928d144b9e2c9",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/237.641cb6ff7894d086.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/chunks/435.ff7def5328269970.js",
+      "sha256": "f0bfd17368ca0ddfe27382f3339f2119443f4058a77afb353e70885fb8a18f6d",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/435.ff7def5328269970.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/chunks/776.ddb7c5b6b06be274.js",
+      "sha256": "ab8adab1d6d60e1ecd9db76a5422c190b3c695468ef96326d718c7e8306d2b29",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/776.ddb7c5b6b06be274.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/chunks/framework-653799fb6b8b4baa.js",
+      "sha256": "1c9038153954300aeedbf991765b214cb4f3073e582ed7079b784531fdaadf5a",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/framework-653799fb6b8b4baa.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/chunks/main-0ce7fbc191bec2dd.js",
+      "sha256": "ade70485d7cb6e2fe8fd17fb050b800e39ff5579a0aa252915befd2af64f35b6",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/main-0ce7fbc191bec2dd.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/chunks/pages/_app-48b43c1b8bed92f1.js",
+      "sha256": "bc1d581da0ebf754c9bdc274eb880e884d408f78216bf830fdf4df1af6ceccf0",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/pages/_app-48b43c1b8bed92f1.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/chunks/pages/examples/[example]-5f3d68f06a9674ed.js",
+      "sha256": "6182a57042603f2654038ab09df25c9c1ded790c173a246b19edc792a5b73ffb",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/pages/examples/[example]-5f3d68f06a9674ed.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/chunks/webpack-327f9f53a25cd7bc.js",
+      "sha256": "c2a41184ce9dc3d0c5f3c0bfbf928d1050b1d528550b3f56590500f3fcab88d4",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/chunks/webpack-327f9f53a25cd7bc.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/css/31a88bcb217702dd.css",
+      "sha256": "0e229e5261ec948a536dbe486912fe042a9fb109637d52639d1e95630cde58dc",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/css/31a88bcb217702dd.css",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/media/material-icons-latin-400-normal.59322316.woff2",
+      "sha256": "8265f64786397d6b832d1ca0aafdf149ad84e72759fffa9f7272e91a0fb015d1",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/media/material-icons-latin-400-normal.59322316.woff2",
+      "license_files": [
+        "LICENSES/fonts/MaterialIcons-Apache-2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/media/roboto-latin-400-italic.9940f8ce.woff2",
+      "sha256": "5d0e978b6560631da2504e1612e91ee1ff959c04adae245eb320ac90cad2ba2f",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/media/roboto-latin-400-italic.9940f8ce.woff2",
+      "license_files": [
+        "LICENSES/fonts/Roboto-OFL.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/media/roboto-latin-400-normal.5bafb11d.woff2",
+      "sha256": "425c0713a8176f92273d378599c7eac57de7fafabd4bd0ed457b70eb8f80d371",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/media/roboto-latin-400-normal.5bafb11d.woff2",
+      "license_files": [
+        "LICENSES/fonts/Roboto-OFL.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/media/roboto-latin-700-normal.9ebed39b.woff2",
+      "sha256": "b9d66d1708156f765ada51939bc24ed259dafa69eb631b36e443680fe9e15879",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/media/roboto-latin-700-normal.9ebed39b.woff2",
+      "license_files": [
+        "LICENSES/fonts/Roboto-OFL.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/tsAE1mpvWW79X1Ug5Z89V/_buildManifest.js",
+      "sha256": "134c4bcf3ca2687b30ed15cb66bff343078331d4f63a36bbac8582e43517c7b2",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/tsAE1mpvWW79X1Ug5Z89V/_buildManifest.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/tsAE1mpvWW79X1Ug5Z89V/_ssgManifest.js",
+      "sha256": "0d1d781675a3e5ca6b25e454d81e5065f99100c7a7de6d3073401ac50910d109",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/_next/static/tsAE1mpvWW79X1Ug5Z89V/_ssgManifest.js",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_types.json",
+      "sha256": "2e091581e961df76f223b4163f85ce22e9f7e9fb66043cfb54fe210345a06ad0",
+      "kind": "generated content-type inventory",
+      "source": "test/fixtures/capture.mjs",
+      "license_files": []
+    },
+    {
+      "file": "slatejs.org-2026-10-09/examples/richtext",
+      "sha256": "d311d8b9ad432db2610738cc6a9a74857960ecba6478924e6a00503437a4b0e1",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/examples/richtext",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ],
+      "original_capture_sha256": "dec63d05fe69e739b326c74e9c40fc598dbcd31956f576d10dea7e2d83b6b993",
+      "modifications": "See THIRD_PARTY_NOTICES.md, public-source adjustments (2026-10-21)."
+    },
+    {
+      "file": "slatejs.org-2026-10-09/favicon.ico",
+      "sha256": "3080b79ef1b3bffd6be8686013c69a1ade369de5ee663e82e1ffc512d07875c1",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/favicon.ico",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ],
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/ianstormtaylor/slate/a114ed3e1413457b1b323668ca297e9c7f818dd9/site/public/favicon.ico"
+      ]
+    },
+    {
+      "file": "slatejs.org-2026-10-09/index.css",
+      "sha256": "c24af9ea6cd8c9e147fe2cae0e5bb4e2fd9bc53e7f57fe67261e2980d247b453",
+      "kind": "captured upstream asset",
+      "source": "https://www.slatejs.org/index.css",
+      "license_files": [
+        "LICENSES/slate.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/ajax.googleapis.com/ajax/libs/webfont/1/webfont.js",
+      "sha256": "81016ac6be850b72df5d4faa0c3cec8e2c1b0ba0045712144a6766adfad40bee",
+      "kind": "captured upstream asset",
+      "source": "https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css",
+      "sha256": "40e49153fadaf4072dc9790805b888075e3868305db6f5c170d73739336e5ff4",
+      "kind": "captured upstream asset",
+      "source": "https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/cdn.jsdelivr.net/npm/@docsearch/css@3",
+      "sha256": "7b6452499869b20c972e15301cb51f567afc3ba73859611dd578e86a2bb99675",
+      "kind": "captured upstream asset",
+      "source": "https://cdn.jsdelivr.net/npm/@docsearch/css@3",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/cdn.jsdelivr.net/npm/katex@0.16.9/dist/fonts/KaTeX_Main-Regular.woff2",
+      "sha256": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+      "kind": "captured upstream asset",
+      "source": "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/fonts/KaTeX_Main-Regular.woff2",
+      "license_files": [
+        "LICENSES/fonts/KaTeX-Fonts-OFL.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/cdn.jsdelivr.net/npm/katex@0.16.9/dist/fonts/KaTeX_Math-Italic.woff2",
+      "sha256": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+      "kind": "captured upstream asset",
+      "source": "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/fonts/KaTeX_Math-Italic.woff2",
+      "license_files": [
+        "LICENSES/fonts/KaTeX-Fonts-OFL.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css",
+      "sha256": "505d5f829022bb7b4f24dfee0aa1141cd7bba67afe411d1240335f820960b5c3",
+      "kind": "captured upstream asset",
+      "source": "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js",
+      "sha256": "dc84b296ec3e884de093158f760fd9d45b6c7abe58b5381557f4e138f46a58ae",
+      "kind": "captured upstream asset",
+      "source": "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.bubble.css",
+      "sha256": "aecf8dff9eaa4ea0cd68041366fbbe2ab98c7e84f5ee43906bb3073bfb03646b",
+      "kind": "captured upstream asset",
+      "source": "https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.bubble.css",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js",
+      "sha256": "f6157c72ac9b3f51cdead426335688a027b12405d9d6a4daadd38a676b2d7ff2",
+      "kind": "captured upstream asset",
+      "source": "https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js.LICENSE.txt",
+      "sha256": "7b1938804d68d96764233d0a148a7501f39e547e6ae2dead4b16836e9b8d123c",
+      "kind": "restored upstream license sidecar",
+      "source": "https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js.LICENSE.txt",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css",
+      "sha256": "1c7948cd13aa92fac6390319bc1e5e461823da171519d3a768db56164f871636",
+      "kind": "captured upstream asset",
+      "source": "https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js",
+      "sha256": "837a6fa5b0c736b52bbde2b2b6190f305da3fc9ed41681db5321507057b5c846",
+      "kind": "captured upstream asset",
+      "source": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css",
+      "sha256": "4237ffca7ce6aadb438c457e0a675b125c534bbdda5b87f41f3a1495603bcc9b",
+      "kind": "captured upstream asset",
+      "source": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/fonts.googleapis.com/css",
+      "sha256": "7eedda215cf56032bf3ffe7aa323d49cf7af0918e15e46cccb17d10e0c3f46fd",
+      "kind": "captured upstream asset",
+      "source": "https://fonts.googleapis.com/css",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/inconsolata/v36/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WR32kQ.woff",
+      "sha256": "1b337b9e7a0eb9a0a83cf2d67d4eea477083c8250897927e723de616c26d9416",
+      "kind": "captured upstream asset",
+      "source": "https://fonts.gstatic.com/s/inconsolata/v36/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WR32kQ.woff",
+      "license_files": [
+        "LICENSES/fonts/Inconsolata-OFL.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/inconsolata/v36/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WR32kXWdycuJDA.woff",
+      "sha256": "46896c89f87cb1c7f915feafaf925a192be09072412f87c1aadf16f7cdb96c2e",
+      "kind": "captured upstream asset",
+      "source": "https://fonts.gstatic.com/s/inconsolata/v36/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WR32kXWdycuJDA.woff",
+      "license_files": [
+        "LICENSES/fonts/Inconsolata-OFL.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/inconsolata/v36/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WRL2kXWdycuJDETf.woff",
+      "sha256": "f1fa200369d44e05df56b9c6a6ea9695237a7b367c37192d0ba607402c9d930b",
+      "kind": "captured upstream asset",
+      "source": "https://fonts.gstatic.com/s/inconsolata/v36/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WRL2kXWdycuJDETf.woff",
+      "license_files": [
+        "LICENSES/fonts/Inconsolata-OFL.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/inconsolata/v36/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WRP2kXWdycuJDETf.woff",
+      "sha256": "d71b95604a5f7ea2d5861a51ad1df4cd170f663228560df777afad5427845be7",
+      "kind": "captured upstream asset",
+      "source": "https://fonts.gstatic.com/s/inconsolata/v36/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WRP2kXWdycuJDETf.woff",
+      "license_files": [
+        "LICENSES/fonts/Inconsolata-OFL.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/inconsolata/v37/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WR32lw.woff2",
+      "sha256": "9d5a0480d2bd3e43b124bf8f36782c8fc079f9f8b023c672bff67e9ceffc236b",
+      "kind": "captured upstream asset",
+      "source": "https://fonts.gstatic.com/s/inconsolata/v37/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WR32lw.woff2",
+      "license_files": [
+        "LICENSES/fonts/Inconsolata-OFL.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rj.woff2",
+      "sha256": "484e9925bb3045e88a8eec1103ab125e6dbe486172fb56b06fe6751c8b570839",
+      "kind": "captured upstream asset",
+      "source": "https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rj.woff2",
+      "license_files": [
+        "LICENSES/fonts/RobotoSlab-Apache-2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/slabo27px/v16/mFT0WbgBwKPR_Z4hGN2qgx8D1Q.woff2",
+      "sha256": "203f1d656b169225c2a85f3c3b46618c82b779b55def9df73aea7ae8c7d594d7",
+      "kind": "captured upstream asset",
+      "source": "https://fonts.gstatic.com/s/slabo27px/v16/mFT0WbgBwKPR_Z4hGN2qgx8D1Q.woff2",
+      "license_files": [
+        "LICENSES/fonts/Slabo27px-OFL.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/ubuntumono/v19/KFOjCneDtsqEr0keqCMhbCc6CsQ.woff2",
+      "sha256": "afc6d2fb4f49b53ee31b13c23607739d5f2a42dba2f9f72f70144bd3b5b1a8e6",
+      "kind": "captured upstream asset",
+      "source": "https://fonts.gstatic.com/s/ubuntumono/v19/KFOjCneDtsqEr0keqCMhbCc6CsQ.woff2",
+      "license_files": [
+        "LICENSES/fonts/UbuntuMono-UFL.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/data/8WqcrSYOI33oGPUq3rUFV/docs/quickstart.json",
+      "sha256": "3f799ed4ed4c5dafb5e3eadbf342bd76284d33b9d9f27994cd27576e59cc2abb",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/data/8WqcrSYOI33oGPUq3rUFV/docs/quickstart.json",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/data/8WqcrSYOI33oGPUq3rUFV/playground/snow.json",
+      "sha256": "6393b0bb6c06b48287080def0c2d6cc349023e0227ef65ef4538028c7210e120",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/data/8WqcrSYOI33oGPUq3rUFV/playground/snow.json",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/8WqcrSYOI33oGPUq3rUFV/_buildManifest.js",
+      "sha256": "198c460b7a1b278b19934635f6cbe42dbfb37e5d45fbf2ac86631e98526d6dd9",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/8WqcrSYOI33oGPUq3rUFV/_buildManifest.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/8WqcrSYOI33oGPUq3rUFV/_ssgManifest.js",
+      "sha256": "78c176323e7ef8f71e9d6573066ab8051ce80a59e7dc399d5a6739080da1d8e0",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/8WqcrSYOI33oGPUq3rUFV/_ssgManifest.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/155-2b016fee85912c4f.js",
+      "sha256": "46f9c1c2242db4d700b75d9b4c236ddff263d94b851fc4b773f314bb0e737b81",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/155-2b016fee85912c4f.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/388-6a43a7c3dceff1b9.js",
+      "sha256": "4ad2e32fa179120da9cb4bed2aa167e4bdc088b480444519414d9690252130f9",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/388-6a43a7c3dceff1b9.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/609-f276da1915d6ea06.js",
+      "sha256": "ada764c930f5c81e5568d40c1e2b753e3f4f70665d10c291e865a433551d485d",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/609-f276da1915d6ea06.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/613-71e278ceb56adb53.js",
+      "sha256": "bfd70a7208942d5fc0629022604476c0456bc1495854479afbd3c47fbdc357e4",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/613-71e278ceb56adb53.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/6afe1883-c56bf2382b6a5303.js",
+      "sha256": "ec57316b6b188573c3a4e9072bbb683023e5684ab7283c6825106c45aea6a44e",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/6afe1883-c56bf2382b6a5303.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/7dae1ac5-4d3769d258682fb5.js",
+      "sha256": "6e295c445c9f8e494a2017f09086f8a362bb147bf5ed4346a65fcfb87cc8c6d6",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/7dae1ac5-4d3769d258682fb5.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/838-09b3c48828a95844.js",
+      "sha256": "e8bc555115c4d7f57acd664b1293f631dc637e606d487f24318187765e78d0c1",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/838-09b3c48828a95844.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/876-c6c3c34c9f715987.js",
+      "sha256": "4833d6b7decc9d0ca71ae934778cd3cfbc32c17de3d2f2f0f6e9f77daf93454e",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/876-c6c3c34c9f715987.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/dccc8973-7350a73628e82520.js",
+      "sha256": "f110821c141acafc79d5c06757880d0c6c8c4b8b0baeba79c36113ad13fbf663",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/dccc8973-7350a73628e82520.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/framework-98741467467a0898.js",
+      "sha256": "d7e8ec9a1fd27b533c969e6cfc94ba9accdb668411ea8b28df00c8c6550441ce",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/framework-98741467467a0898.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/main-66e1abc7181ed0b9.js",
+      "sha256": "e6ceea674e883740b9e64029fe2c665cba8e8ce16f5f30bd2d1e3abe7ba94fe6",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/main-66e1abc7181ed0b9.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/pages/_app-1c4d0c63eca175b9.js",
+      "sha256": "1796b421676aa4a7e2a727a4f9d99676397125ea67ab08ec80af132f9d08a6ca",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/pages/_app-1c4d0c63eca175b9.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/pages/docs/[...id]-be59103a64b360c8.js",
+      "sha256": "523f8534bd93d8d0da4c967e9ba7bc0cdb17874319bccde64adb978b831c84e1",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/pages/docs/[...id]-be59103a64b360c8.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/pages/index-9407ece9be6ccf77.js",
+      "sha256": "81a94439acecac48fa2e8751ca1734c279d8fbb883e4889834b2f1796bf64f1f",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/pages/index-9407ece9be6ccf77.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/pages/playground/[...id]-fe99193767791673.js",
+      "sha256": "aed205a8ca7e85074b8b2b6cc7e89e989ee441066fb53d46c19fd2e9faeb53dc",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/pages/playground/[...id]-fe99193767791673.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/chunks/webpack-6aa21d16cc89bae8.js",
+      "sha256": "9703296fc025767d1e4e445326a4c944140c4129a71ad4154c913af4c9db7c26",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/chunks/webpack-6aa21d16cc89bae8.js",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/css/027095364e531e3c.css",
+      "sha256": "272934ffc0203eacdbda463d425a7d63a89a2fe8f6aabbcc0a97446aa96352fb",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/css/027095364e531e3c.css",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/css/7ba604dd6bbd2af3.css",
+      "sha256": "09dfa1abff5d89853272a5a6f7a97f1ec84ca49b8585d27a8262937905cc0b27",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/css/7ba604dd6bbd2af3.css",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ],
+      "original_capture_sha256": "65cebc2486bae99102eeeaa08c5f8cd77d021fb4d9fc129d9d334c44699eb917",
+      "modifications": "See THIRD_PARTY_NOTICES.md, public-source adjustments (2026-10-21)."
+    },
+    {
+      "file": "quilljs.com/_next/static/css/c09cdd9f5d30a095.css",
+      "sha256": "a69e3f67b9533c5e155dfbfec965a8334d8e3b51d6552e21d41f5fed7afbf93d",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/css/c09cdd9f5d30a095.css",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_next/static/css/d01b2f11f179f7e2.css",
+      "sha256": "6930fbc84e8bfb2c2ddf0fdb2fd30ef9575cef778b00eee14098b554f7049edb",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/_next/static/css/d01b2f11f179f7e2.css",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ]
+    },
+    {
+      "file": "quilljs.com/_types.json",
+      "sha256": "5fc95278ed32ee1423e6a8b987744c9068b468847fe4c6f10a56be3d3ff16742",
+      "kind": "generated content-type inventory",
+      "source": "test/fixtures/capture.mjs",
+      "license_files": [],
+      "original_capture_sha256": "7d5191a2a35c60f80c33aab3f6af9c21e3ef228f7692407904737165c9402128",
+      "modifications": "See THIRD_PARTY_NOTICES.md, public-source adjustments (2026-10-21)."
+    },
+    {
+      "file": "quilljs.com/assets/images/favicon.ico",
+      "sha256": "477a66645c4a287e28437286cf9b38832abd681e0e1152e584de59bba24b089e",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/assets/images/favicon.ico",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ],
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/slab/quill/522fd7ee0682498516df7389bacb6f7eb6e92b77/packages/website/public/assets/images/favicon.ico"
+      ]
+    },
+    {
+      "file": "quilljs.com/index.html",
+      "sha256": "a7545936c1f399239bd571adc6f466767a1df01fa01ab980114600bb70a92659",
+      "kind": "captured upstream asset",
+      "source": "https://quilljs.com/",
+      "license_files": [
+        "LICENSES/quill-2.0.3.txt",
+        "LICENSES/react-18.2.0.txt"
+      ],
+      "original_capture_sha256": "042e14c9d18d2fef01e1fb9fa1fc1b63e0395096433ae45be8d63c850f7f01e4",
+      "modifications": "See THIRD_PARTY_NOTICES.md, public-source adjustments (2026-10-21)."
+    },
+    {
+      "file": "playground.lexical.dev/_external/fonts.googleapis.com/css",
+      "sha256": "b03749a0eb390ee0237220e0fa18c35b43613015740315a0f93415207263ca40",
+      "kind": "captured upstream asset",
+      "source": "https://fonts.googleapis.com/css",
+      "license_files": [
+        "LICENSES/lexical.txt",
+        "LICENSES/react-19.2.5.txt"
+      ]
+    },
+    {
+      "file": "playground.lexical.dev/_types.json",
+      "sha256": "255af508615f85850e7411af45a523795cf3f916b40d02d21e6a0ea3a5126e2f",
+      "kind": "generated content-type inventory",
+      "source": "test/fixtures/capture.mjs",
+      "license_files": []
+    },
+    {
+      "file": "playground.lexical.dev/_vercel/insights/script.js",
+      "sha256": "d54571947cffeaf43d1ea227f05aee07221a581d5173c895cbf57601e2457f26",
+      "kind": "Proofer-authored inert analytics replacement",
+      "source": null,
+      "license_files": [],
+      "original_capture_sha256": "79bf638dd4acdeb9b80c5a4009a3e1986968d615e9557dcf23d91b5e8ad158d8",
+      "modifications": "See THIRD_PARTY_NOTICES.md, public-source adjustments (2026-10-21)."
+    },
+    {
+      "file": "playground.lexical.dev/_vercel/speed-insights/script.js",
+      "sha256": "d54571947cffeaf43d1ea227f05aee07221a581d5173c895cbf57601e2457f26",
+      "kind": "Proofer-authored inert analytics replacement",
+      "source": null,
+      "license_files": [],
+      "original_capture_sha256": "c703720710415599d2f0b3f31fbfda63e34d6d19e730bada78b9b92197564f5b",
+      "modifications": "See THIRD_PARTY_NOTICES.md, public-source adjustments (2026-10-21)."
+    },
+    {
+      "file": "playground.lexical.dev/assets/LexicalComposerContext.dev-D0rl1IDz.js",
+      "sha256": "3ca987bb318c6241d0f2cdd500a75802d4e7c67f4a29717063fdfd471e4616b1",
+      "kind": "captured upstream asset",
+      "source": "https://playground.lexical.dev/assets/LexicalComposerContext.dev-D0rl1IDz.js",
+      "license_files": [
+        "LICENSES/lexical.txt",
+        "LICENSES/react-19.2.5.txt"
+      ]
+    },
+    {
+      "file": "playground.lexical.dev/assets/LexicalExtension.dev-ClAWAUDx.js",
+      "sha256": "6c580c1c96b1636cd2db8e54e1803bffb46aaba5d562113e990b010e69e250ce",
+      "kind": "captured upstream asset",
+      "source": "https://playground.lexical.dev/assets/LexicalExtension.dev-ClAWAUDx.js",
+      "license_files": [
+        "LICENSES/lexical.txt",
+        "LICENSES/react-19.2.5.txt"
+      ]
+    },
+    {
+      "file": "playground.lexical.dev/assets/chunk-B4lejLz5.js",
+      "sha256": "5ba8308dca45f3f78b83d0c99e29e5ef60e4086b48b60c6ea14fab4112a9f571",
+      "kind": "captured upstream asset",
+      "source": "https://playground.lexical.dev/assets/chunk-B4lejLz5.js",
+      "license_files": [
+        "LICENSES/lexical.txt",
+        "LICENSES/react-19.2.5.txt"
+      ]
+    },
+    {
+      "file": "playground.lexical.dev/assets/directory-open-4ed118d0-CF7kkI7c.js",
+      "sha256": "df85779ad4abc2869a9d903559730210d29e3c6bf1b37de7494a56e1dd82f385",
+      "kind": "captured upstream asset",
+      "source": "https://playground.lexical.dev/assets/directory-open-4ed118d0-CF7kkI7c.js",
+      "license_files": [
+        "LICENSES/lexical.txt",
+        "LICENSES/react-19.2.5.txt"
+      ]
+    },
+    {
+      "file": "playground.lexical.dev/assets/favicon-32x32-QbsTyw2e.png",
+      "sha256": "baafaf5e9e60d9a6608ad6548275896c3620f6b58b85ddea8166558958a46ebc",
+      "kind": "captured upstream asset",
+      "source": "https://playground.lexical.dev/assets/favicon-32x32-QbsTyw2e.png",
+      "license_files": [
+        "LICENSES/lexical.txt",
+        "LICENSES/react-19.2.5.txt"
+      ],
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/facebook/lexical/4f385cd03afae05fc72d114e3ebea0c7fcfa1040/packages/lexical-playground/favicon-32x32.png"
+      ]
+    },
+    {
+      "file": "playground.lexical.dev/assets/file-open-002ab408-B9WI2Pta.js",
+      "sha256": "f3ac7f62c5ea2fee452b1da083a57acc17fc5cbca80ef3cdc296d4414dcea1cc",
+      "kind": "captured upstream asset",
+      "source": "https://playground.lexical.dev/assets/file-open-002ab408-B9WI2Pta.js",
+      "license_files": [
+        "LICENSES/lexical.txt",
+        "LICENSES/react-19.2.5.txt"
+      ]
+    },
+    {
+      "file": "playground.lexical.dev/assets/file-save-745eba88-CO2ghbb6.js",
+      "sha256": "7c689e9f008e6256ad39103e5712162f2b63707dc0c099a3f46b1220fa228d05",
+      "kind": "captured upstream asset",
+      "source": "https://playground.lexical.dev/assets/file-save-745eba88-CO2ghbb6.js",
+      "license_files": [
+        "LICENSES/lexical.txt",
+        "LICENSES/react-19.2.5.txt"
+      ]
+    },
+    {
+      "file": "playground.lexical.dev/assets/jsx-runtime-BIjMMerj.js",
+      "sha256": "1846ff8d55a9a5643646ea57b3b223eb6024db05ef91ed07453377f54c1320fb",
+      "kind": "captured upstream asset",
+      "source": "https://playground.lexical.dev/assets/jsx-runtime-BIjMMerj.js",
+      "license_files": [
+        "LICENSES/lexical.txt",
+        "LICENSES/react-19.2.5.txt"
+      ]
+    },
+    {
+      "file": "playground.lexical.dev/assets/main-Bj_plY_c.css",
+      "sha256": "fa730786be2d53e1eaf9b613f4acc48e59e073016af1ed0a0ba7f8f20b0927c6",
+      "kind": "captured upstream asset",
+      "source": "https://playground.lexical.dev/assets/main-Bj_plY_c.css",
+      "license_files": [
+        "LICENSES/lexical.txt",
+        "LICENSES/react-19.2.5.txt"
+      ]
+    },
+    {
+      "file": "playground.lexical.dev/assets/main-C-WPfaQ3.js",
+      "sha256": "86c29fd5e964e077b27c5f06c20d81eb83f91154aabdb66714382f83df20e0d8",
+      "kind": "captured upstream asset",
+      "source": "https://playground.lexical.dev/assets/main-C-WPfaQ3.js",
+      "license_files": [
+        "LICENSES/lexical.txt",
+        "LICENSES/react-19.2.5.txt"
+      ],
+      "original_capture_sha256": "36ba4016280c60dfb6dd4ac7a41311d0c4704a21a316702b9d2eabd3c6ec067f",
+      "modifications": "See THIRD_PARTY_NOTICES.md, public-source adjustments (2026-10-21)."
+    },
+    {
+      "file": "playground.lexical.dev/index.html",
+      "sha256": "57d3509b26d45d886c3212281e7b32682a9b18fe0d6025e3d2cb954a93292fcc",
+      "kind": "captured upstream asset",
+      "source": "https://playground.lexical.dev/",
+      "license_files": [
+        "LICENSES/lexical.txt",
+        "LICENSES/react-19.2.5.txt"
+      ],
+      "original_capture_sha256": "195adf90532af3c482f82421a5c2e35acbe2beddee371b5672642ee254628e5c",
+      "modifications": "See THIRD_PARTY_NOTICES.md, public-source adjustments (2026-10-21)."
+    },
+    {
+      "file": "draftjs.org/1.3cc846be.js",
+      "sha256": "51bb85d5b836911cb35086db8f1153a9f5d6e7d4a33208bf51c5fe123e2959d2",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/1.3cc846be.js",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/1.3cc846be.js.LICENSE.txt",
+      "sha256": "41199a7ebbe60c7f649be2f55b99109be354f6a2dcf19381d117365160e832c2",
+      "kind": "restored upstream license sidecar",
+      "source": "https://draftjs.org/1.3cc846be.js.LICENSE.txt",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/17896441.5416295f.js",
+      "sha256": "f0eb1580c7f3ed4ba439953813a8bff552ae21ce4d344b186ee6961976fdba28",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/17896441.5416295f.js",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/2.678e52b2.js",
+      "sha256": "9d03be389fe89c21950e00f41924df491da80f2f803f2eed828e049aa669f556",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/2.678e52b2.js",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/20ac7829.1a6f6ca7.js",
+      "sha256": "b10d35ce75bae3f640a5160f1648ac4df10c326977a1383286a86818bbe134d5",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/20ac7829.1a6f6ca7.js",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/41.b3782273.js",
+      "sha256": "0f84898a8431a5f4c847b29fa042b0574d8c5468827cc288f3e7a3c404f635f5",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/41.b3782273.js",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/41.b3782273.js.LICENSE.txt",
+      "sha256": "749f91c43d5197798c6a4ca8d86fa394ec85567777333d794dd9386236b94176",
+      "kind": "restored upstream license sidecar",
+      "source": "https://draftjs.org/41.b3782273.js.LICENSE.txt",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/63d4bdf9.c2ad5456.js",
+      "sha256": "fd6516f2dc0ccab43f1748b05b5c0fcef19615551d7fb4c11c6b285fb8ff5873",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/63d4bdf9.c2ad5456.js",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/_external/fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "sha256": "20b535fa80c8189e3b87d1803038389960203a886d502bc2ef1857affc2f38d2",
+      "kind": "captured upstream asset",
+      "source": "https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "license_files": [
+        "LICENSES/fonts/Roboto-OFL.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/_types.json",
+      "sha256": "87a99a93b32589ccb066b5dda86ecd906b498f98d4baa499d3ebed184f11674c",
+      "kind": "generated content-type inventory",
+      "source": "test/fixtures/capture.mjs",
+      "license_files": []
+    },
+    {
+      "file": "draftjs.org/ac822fb8.a80ad086.js",
+      "sha256": "7e97717e56fbe6608aab2b65df1adb871f01e9116545922f41d22db787e0e5bb",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/ac822fb8.a80ad086.js",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/c4f5d8e4.d06ce6b9.js",
+      "sha256": "2c495e2be5336e2c72188a15d437e3c10d26c92993637210377e92fe416336d3",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/c4f5d8e4.d06ce6b9.js",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/img/demo.gif",
+      "sha256": "7b33acf0b9df9a54328df3a236f64b1a87a1909a952566bb5219f36e0d3a3d0e",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/img/demo.gif",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ],
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/facebookarchive/draft-js/afdb5c3177c13fd26cb0abbdc439488f3e21b73b/website/static/img/demo.gif"
+      ]
+    },
+    {
+      "file": "draftjs.org/img/draftjs-logo.ico",
+      "sha256": "c460b0625f95a3c04c14e8db21087355a776f82a351cc9baec28a94e3e407108",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/img/draftjs-logo.ico",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ],
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/facebookarchive/draft-js/afdb5c3177c13fd26cb0abbdc439488f3e21b73b/website/static/img/draftjs-logo.ico"
+      ]
+    },
+    {
+      "file": "draftjs.org/img/draftjs-logo.svg",
+      "sha256": "e1c8131461f4a38151eff42e32d647cf0467696bf3cebbf758fec06b72587916",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/img/draftjs-logo.svg",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ],
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/facebookarchive/draft-js/afdb5c3177c13fd26cb0abbdc439488f3e21b73b/website/static/img/draftjs-logo.svg"
+      ]
+    },
+    {
+      "file": "draftjs.org/img/oss_logo.png",
+      "sha256": "34e63e03d85f186b30eb4025a397f6f415cd116c6aa3b32ecc83c62936895320",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/img/oss_logo.png",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ],
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/facebookarchive/draft-js/afdb5c3177c13fd26cb0abbdc439488f3e21b73b/website/static/img/oss_logo.png"
+      ]
+    },
+    {
+      "file": "draftjs.org/index.html",
+      "sha256": "677d6de991dd2fbcfd8d2704b79e8ab0fd81fde7dcff6a7468d3e69c3c803e2a",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ],
+      "original_capture_sha256": "394a3de3ba21c9a0cd3df6653314b820622735f1853750ee764814d6f49f3675",
+      "modifications": "See THIRD_PARTY_NOTICES.md, public-source adjustments (2026-10-21)."
+    },
+    {
+      "file": "draftjs.org/main.833711ea.js",
+      "sha256": "5ce01fdf80fc28d2bea9902010195a58c19db0133e424ef467837e3233685e8f",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/main.833711ea.js",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/main.833711ea.js.LICENSE.txt",
+      "sha256": "c0bf8466ea5e5c33602a48929e84002206790146a90a4d4253cfe7756dcf9a33",
+      "kind": "restored upstream license sidecar",
+      "source": "https://draftjs.org/main.833711ea.js.LICENSE.txt",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/opensearch.xml",
+      "sha256": "c49a8a5076e756b9b821f079ac7c982652b3d9023bfa236cb12c70d352e3d6bd",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/opensearch.xml",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/runtime~main.9567b8fd.js",
+      "sha256": "6bf181722bca33540401b0b4f602c87c01ade0e1a45c619ca79748ad214f7cde",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/runtime~main.9567b8fd.js",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/styles.5a79b54d.js",
+      "sha256": "cb6b6b06f6f853112384aae2140edc7d3171757e52370d2016f5be20b77a3633",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/styles.5a79b54d.js",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "draftjs.org/styles.defc0682.css",
+      "sha256": "354acbc4d87b802d49591293622d31bcdea774b861209c9d76c53bba2b1509f0",
+      "kind": "captured upstream asset",
+      "source": "https://draftjs.org/styles.defc0682.css",
+      "license_files": [
+        "LICENSES/draft-js.txt",
+        "LICENSES/react-16.13.1.txt"
+      ]
+    },
+    {
+      "file": "prosemirror.net/_types.json",
+      "sha256": "78e325c868f0e30693ba1f8698ac7c001fb80077bd78e3978d8c7b2cc22ec610",
+      "kind": "generated content-type inventory",
+      "source": "test/fixtures/capture.mjs",
+      "license_files": []
+    },
+    {
+      "file": "prosemirror.net/css/editor.css",
+      "sha256": "d246abdf7a529cf398883772a2b06e93bc4a1aa6dbb8352f9bf227b9434df553",
+      "kind": "captured upstream asset",
+      "source": "https://prosemirror.net/css/editor.css",
+      "license_files": [
+        "LICENSES/prosemirror-website.txt",
+        "LICENSES/prosemirror.txt"
+      ]
+    },
+    {
+      "file": "prosemirror.net/css/font/merriweather_bold.woff2",
+      "sha256": "07e334eddf236ee2f6be8fa32322665ae78e19b3eee4717acba565ec5fab6a9d",
+      "kind": "captured upstream asset",
+      "source": "https://prosemirror.net/css/font/merriweather_bold.woff2",
+      "license_files": [
+        "LICENSES/fonts/Merriweather-OFL.txt"
+      ]
+    },
+    {
+      "file": "prosemirror.net/css/font/source_sans.woff2",
+      "sha256": "599d93e0748728edc6bd55a82a52bff61196b149d566a67d4ed86d55d9c520aa",
+      "kind": "captured upstream asset",
+      "source": "https://prosemirror.net/css/font/source_sans.woff2",
+      "license_files": [
+        "LICENSES/fonts/SourceSansPro-OFL.txt"
+      ]
+    },
+    {
+      "file": "prosemirror.net/css/font/source_sans_italic.woff2",
+      "sha256": "1a95badc08844af1a5d383f47734d6966d1333bcaad50176a2c67e6a5ea8a9f9",
+      "kind": "captured upstream asset",
+      "source": "https://prosemirror.net/css/font/source_sans_italic.woff2",
+      "license_files": [
+        "LICENSES/fonts/SourceSansPro-OFL.txt"
+      ]
+    },
+    {
+      "file": "prosemirror.net/css/font/source_sans_semibold.woff2",
+      "sha256": "0b1dd42ccd2f5da83fa717b15fdd9f91879436b84a15d95340fc7ed5c2bc0269",
+      "kind": "captured upstream asset",
+      "source": "https://prosemirror.net/css/font/source_sans_semibold.woff2",
+      "license_files": [
+        "LICENSES/fonts/SourceSansPro-OFL.txt"
+      ]
+    },
+    {
+      "file": "prosemirror.net/css/site.css",
+      "sha256": "debfb0f87ebc4d9b9e9af97c3914537176afcb009fee5e9ff0548d0fc8465214",
+      "kind": "captured upstream asset",
+      "source": "https://prosemirror.net/css/site.css",
+      "license_files": [
+        "LICENSES/prosemirror-website.txt",
+        "LICENSES/prosemirror.txt"
+      ]
+    },
+    {
+      "file": "prosemirror.net/examples/basic/example.js",
+      "sha256": "0799bdad84ff66a6f130b9151749f698110c17ac872204dcb87ba42e0fe6fc3b",
+      "kind": "captured upstream asset",
+      "source": "https://prosemirror.net/examples/basic/example.js",
+      "license_files": [
+        "LICENSES/prosemirror-website.txt",
+        "LICENSES/prosemirror.txt"
+      ]
+    },
+    {
+      "file": "prosemirror.net/examples/basic/index.html",
+      "sha256": "313546ecf5a7cc71852e511069edb03783cce10305cb6523414e4b61bb991dc0",
+      "kind": "captured upstream asset",
+      "source": "https://prosemirror.net/examples/basic/",
+      "license_files": [
+        "LICENSES/prosemirror-website.txt",
+        "LICENSES/prosemirror.txt"
+      ],
+      "original_capture_sha256": "5254fce818c1bc703903c56f7c8626993f9d19123b473a79972e743d18c9372a",
+      "modifications": "See THIRD_PARTY_NOTICES.md, public-source adjustments (2026-10-21)."
+    },
+    {
+      "file": "prosemirror.net/examples/prosemirror.js",
+      "sha256": "022950cb447e35d5931875b6d080a010074e433befed109977120475dd84da28",
+      "kind": "captured upstream asset",
+      "source": "https://prosemirror.net/examples/prosemirror.js",
+      "license_files": [
+        "LICENSES/prosemirror-website.txt",
+        "LICENSES/prosemirror.txt"
+      ]
+    },
+    {
+      "file": "prosemirror.net/favicon.ico",
+      "sha256": "3c03c1ce9ae229482543a026861f206844d5ecd969759186bad3a01e4e5a9dd7",
+      "kind": "captured upstream asset",
+      "source": "https://prosemirror.net/favicon.ico",
+      "license_files": [
+        "LICENSES/prosemirror-website.txt",
+        "LICENSES/prosemirror.txt"
+      ],
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/ProseMirror/website/a16b4ece45f135e5f001ab59d25f2d43c25974e1/public/favicon.ico"
+      ]
+    },
+    {
+      "file": "prosemirror.net/img/smiley.png",
+      "sha256": "c1c8604ee0189b623a2e6cf26cb6b66e447c6e03d7b6fc54f5210e067606444d",
+      "kind": "captured upstream asset",
+      "source": "https://prosemirror.net/img/smiley.png",
+      "license_files": [
+        "LICENSES/prosemirror-website.txt",
+        "LICENSES/prosemirror.txt"
+      ],
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/ProseMirror/website/a16b4ece45f135e5f001ab59d25f2d43c25974e1/public/img/smiley.png"
+      ]
+    },
+    {
+      "file": "trix-editor.org/_external/unpkg.com/trix@2.1.19/dist/trix.css",
+      "sha256": "7a35d25d0204a594f9f89a6fef18f74321ee2dae3970da3ac11e22c4305536ac",
+      "kind": "captured upstream asset",
+      "source": "https://unpkg.com/trix@2.1.19/dist/trix.css",
+      "license_files": [
+        "LICENSES/trix-2.1.19.txt",
+        "LICENSES/dompurify-3.4.2.txt"
+      ]
+    },
+    {
+      "file": "trix-editor.org/_external/unpkg.com/trix@2.1.19/dist/trix.umd.min.js",
+      "sha256": "5dcaa7c434ae9f3cf1a53651ea74bfad10cd6423c72cb86a8694969aaff67e51",
+      "kind": "captured upstream asset",
+      "source": "https://unpkg.com/trix@2.1.19/dist/trix.umd.min.js",
+      "license_files": [
+        "LICENSES/trix-2.1.19.txt",
+        "LICENSES/dompurify-3.4.2.txt"
+      ]
+    },
+    {
+      "file": "trix-editor.org/_types.json",
+      "sha256": "f1ad795ff76455bfe89ca9d0fe019cd5264ba36022d4d8bb4bf1c0e4348f68b0",
+      "kind": "generated content-type inventory",
+      "source": "test/fixtures/trix-page.mjs",
+      "license_files": [],
+      "original_capture_sha256": "aaf2b5857585699f526d75ba2fd4ccd609a84d4c6d62173408b60ce6e9085c0d",
+      "modifications": "See THIRD_PARTY_NOTICES.md, public-source adjustments (2026-10-21)."
+    },
+    {
+      "file": "trix-editor.org/index.html",
+      "sha256": "e01ee8a89f3bc6dd4b908e3e41c49cd627852b249d78c16c698ef5659b6b6477",
+      "kind": "Proofer-authored offline editor harness",
+      "source": "test/fixtures/trix-page.mjs",
+      "license_files": [],
+      "original_capture_sha256": "82f06a706c8acff9582cf4d584fe1223da03c8c96e489d75c98ad496e31b4e82",
+      "modifications": "See THIRD_PARTY_NOTICES.md, public-source adjustments (2026-10-21)."
+    }
+  ],
+  "removed": [
+    {
+      "file": "trix-editor.org/js/attachments.js",
+      "original_capture_sha256": "fb747438309a6c3a1b8c3f118eb8b9bbd2c2dcbcde7c5dc7ff090547e444c389",
+      "reason": "Trix website wrapper or artwork replaced by a locally authored real-editor harness"
+    },
+    {
+      "file": "trix-editor.org/images/favicon.ico",
+      "original_capture_sha256": "6d7b97d025cab8e7c9de44f178e1281ce150d989e048eda07380a770d90969ec",
+      "reason": "Trix website wrapper or artwork replaced by a locally authored real-editor harness"
+    },
+    {
+      "file": "trix-editor.org/images/octocat.svg",
+      "original_capture_sha256": "ef7f617723042719426f1a5725aa18a13e5a02e0fc2f6fff5a87aca6f3613872",
+      "reason": "Trix website wrapper or artwork replaced by a locally authored real-editor harness"
+    },
+    {
+      "file": "trix-editor.org/images/rainbow.svg",
+      "original_capture_sha256": "cef212f92cdcbd702f20e0927e69781b712f22afc48b4eda1f475549a89026dc",
+      "reason": "Trix website wrapper or artwork replaced by a locally authored real-editor harness"
+    },
+    {
+      "file": "trix-editor.org/css/main.css",
+      "original_capture_sha256": "b54d6a4c5c2a3b851fb52e5d8fc6fa21a1a61433ba37b01176020f39021782e1",
+      "reason": "Trix website wrapper or artwork replaced by a locally authored real-editor harness"
+    },
+    {
+      "file": "trix-editor.org/images/attachments/rained-on.png",
+      "original_capture_sha256": "0fa0fedb23c313487988147bf98c11b5688f37e10ab67184e75863effde18b0a",
+      "reason": "Trix website wrapper or artwork replaced by a locally authored real-editor harness"
+    },
+    {
+      "file": "trix-editor.org/images/attachments/plan-01.png",
+      "original_capture_sha256": "76f72b9d772f7ae2dfe9869636f9d8283471bbb2bd6a269daadfb469cecc2484",
+      "reason": "Trix website wrapper or artwork replaced by a locally authored real-editor harness"
+    },
+    {
+      "file": "trix-editor.org/images/attachments/plan-02.png",
+      "original_capture_sha256": "da65afbec08952ffa426f907c0c37732e813b210aec960de1e3cb68c22ffa6ee",
+      "reason": "Trix website wrapper or artwork replaced by a locally authored real-editor harness"
+    },
+    {
+      "file": "quilljs.com/assets/fonts/sofia-pro-bold.woff2",
+      "original_capture_sha256": "1ac0250bb58c640eaffe838ac1f656866bbf0596345532c2d38320cddeebc229",
+      "reason": "Commercial Quill webfont without an established redistribution grant"
+    },
+    {
+      "file": "quilljs.com/assets/fonts/sailec-light.woff2",
+      "original_capture_sha256": "8e23fca1e414cbc6b08386de0cc28d5d0076c181e265f654e51956e58c6ddb53",
+      "reason": "Commercial Quill webfont without an established redistribution grant"
+    },
+    {
+      "file": "quilljs.com/assets/fonts/sailec-bold.woff2",
+      "original_capture_sha256": "b0ae0cb1c3b880f8899b41fbf5804dc57810469b6d11a7062ebc81fe7bc6e096",
+      "reason": "Commercial Quill webfont without an established redistribution grant"
+    },
+    {
+      "file": "quilljs.com/assets/fonts/sofia-pro.woff2",
+      "original_capture_sha256": "7e976449e312a735c5e41076a550ea584c746048ca5116a7e6e6264ced1b2837",
+      "reason": "Commercial Quill webfont without an established redistribution grant"
+    }
+  ]
+}

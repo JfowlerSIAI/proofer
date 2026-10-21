@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a reproducible problem using synthetic text.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report security concerns privately using the [security policy](https://github.com/JfowlerSIAI/proofer/blob/main/SECURITY.md).
+        Do not attach exported proofreading logs, credentials or private writing. Use made-up text in examples and review screenshots and setup reports before sharing them.
+  - type: input
+    id: proofer_version
+    attributes:
+      label: Proofer version or commit
+      placeholder: For example, 0.2.0 or a commit hash
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: For example, Chrome 145 or Brave 1.86
+    validations:
+      required: true
+  - type: input
+    id: operating_system
+    attributes:
+      label: Operating system and version
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include a minimal example using made-up text and the editor type, if known.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Include the Ollama version when relevant and only sanitized screenshots or setup reports.

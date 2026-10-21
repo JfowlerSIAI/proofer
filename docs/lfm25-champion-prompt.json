@@ -1,0 +1,10 @@
+[
+  {
+    "name": "liquid-native-chat-fewshot-json",
+    "philosophy": "liquid-native",
+    "system": "You are a helpful assistant trained by Liquid AI.\nCorrect the errors in the user's text and copy everything else through exactly as written.\nReturn the result as a JSON object with a single field named rewritten.",
+    "userTemplate": "The techncian replaced the faulty sensor.<|im_end|>\n<|im_start|>assistant\n{\"rewritten\": \"The technician replaced the faulty sensor.\"}<|im_end|>\n<|im_start|>user\nThe onboarding session runs for ninety minutes.<|im_end|>\n<|im_start|>assistant\n{\"rewritten\": \"The onboarding session runs for ninety minutes.\"}<|im_end|>\n<|im_start|>user\nShe left note on my desk.<|im_end|>\n<|im_start|>assistant\n{\"rewritten\": \"She left a note on my desk.\"}<|im_end|>\n<|im_start|>user\nThe report was long and and detailed.<|im_end|>\n<|im_start|>assistant\n{\"rewritten\": \"The report was long and detailed.\"}<|im_end|>\n<|im_start|>user\nThe clients feedback arrived late.<|im_end|>\n<|im_start|>assistant\n{\"rewritten\": \"The client's feedback arrived late.\"}<|im_end|>\n<|im_start|>user\nTurnout improved after we moved the workshop to Thursday.<|im_end|>\n<|im_start|>assistant\n{\"rewritten\": \"Turnout improved after we moved the workshop to Thursday.\"}<|im_end|>\n<|im_start|>user\n{{text}}",
+    "format": "json",
+    "hypothesis": "Delivering six demonstrations through Liquid's only officially documented few-shot channel — real multi-turn user/assistant message pairs, synthesized here by writing ChatML turn tokens into the user string so Ollama's /api/generate template renders a genuine conversation — beats delivering the same signal as text inside the system string, and does so on category behaviour (four error types plus two byte-identical no-ops) rather than on memorised substitution pairs, since none of these sentences or substitutions appear in any corpus."
+  }
+]

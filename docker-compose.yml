@@ -1,0 +1,29 @@
+services:
+  ollama:
+    # Pinned by digest, and never below background.js's OLLAMA_MIN_VERSION: the
+    # setup page refuses an older engine. This said 0.18.2 until 2026-10-01, so
+    # the documented quick start installed an Ollama setup rejected as too old.
+    # 0.34.3 is the measured, recommended engine (68 vs 199 ms warm on 0.32.12,
+    # the same model; test/results/ollama-0.34.3-2026-10-01.json).
+    image: ollama/ollama:0.34.3@sha256:7ab595e4ead391f6818c7215297781282babe0701f6d9a9f8862ac591360a58b
+    ports:
+      - "127.0.0.1:11434:11434"
+    # Proofer uses its own scoped Origin rule; keep Ollama's default allowlist.
+    volumes:
+      - ollama:/root/.ollama
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:11434/api/version >/dev/null || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 20
+    # Uncomment the following for GPU acceleration (requires nvidia-container-toolkit):
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+volumes:
+  ollama:

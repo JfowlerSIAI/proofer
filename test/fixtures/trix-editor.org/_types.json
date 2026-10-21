@@ -1,0 +1,5 @@
+{
+ "index.html": "text/html; charset=utf-8",
+ "_external/unpkg.com/trix@2.1.19/dist/trix.css": "text/css; charset=utf-8",
+ "_external/unpkg.com/trix@2.1.19/dist/trix.umd.min.js": "text/javascript; charset=utf-8"
+}

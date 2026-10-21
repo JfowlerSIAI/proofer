@@ -1,0 +1,102 @@
+# Deterministic source checks and real-browser checks against local fixtures.
+# Dependency/browser downloads occur before network isolation. The browser job
+# then runs in a network namespace with loopback only; a failed isolation
+# preflight is fatal. Real model quality and OS installation use separate checks.
+name: no-network battery
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: no-network-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PROOFER_OLLAMA_URL: http://127.0.0.1:1
+  PROOFER_SEED: '1'
+
+jobs:
+  source-only:
+    name: source-only (Node ${{ matrix.node }}, no browser, no npm)
+    strategy:
+      matrix:
+        node: [22, 24]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version: ${{ matrix.node }}
+      # Deliberately no npm install: these suites use local files and Node
+      # builtins. Some tests bind loopback ports. Unlike the browser job, their
+      # network boundary is supported by inspection, not a namespace.
+      - name: Source regression battery
+        run: node tools/test.mjs source
+
+  browser:
+    name: browser (headless Chrome, loopback)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: test/package-lock.json
+      - name: Use quarantine-capable npm
+        run: npm install --global npm@11.12.1 --ignore-scripts --no-audit --no-fund
+      - name: Install locked test dependencies
+        working-directory: test
+        run: npm ci
+      # Lifecycle scripts are disabled in test/.npmrc. This explicit command
+      # downloads the browser selected by the locked Puppeteer version.
+      - name: Install Chrome for Testing
+        working-directory: test
+        run: npx --no-install puppeteer browsers install chrome
+      - name: Pin the browser
+        working-directory: test
+        run: |
+          CHROME="$(node -e "import('puppeteer').then(async p => console.log(await p.default.executablePath()))")"
+          if [ ! -x "$CHROME" ]; then
+            echo "::error::Chrome for Testing is missing at ${CHROME}."
+            exit 1
+          fi
+          echo "PROOFER_CHROME=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+      # Ubuntu's AppArmor setting can prohibit unprivileged namespaces. This
+      # affects this disposable hosted runner only. The next step always proves
+      # that isolation works; it never falls back to an unisolated browser run.
+      - name: Allow unprivileged user namespaces
+        run: |
+          KEY=kernel.apparmor_restrict_unprivileged_userns
+          if [ -e "/proc/sys/${KEY//.//}" ]; then
+            sudo sysctl -w "${KEY}=0" || true
+          fi
+      - name: Verify loopback works and outbound traffic is denied
+        run: |
+          if ! unshare -rn true 2>/dev/null; then
+            echo "::error::Unprivileged network namespaces are unavailable."
+            exit 1
+          fi
+          if unshare -rn sh -c 'ip link set lo up && getent hosts example.com' >/dev/null 2>&1; then
+            echo "::error::DNS resolved inside the supposedly isolated namespace."
+            exit 1
+          fi
+          unshare -rn sh -c 'ip link set lo up && ip -o addr show lo | grep -q 127.0.0.1'
+      - name: Offline browser battery
+        run: unshare -rn sh -c 'ip link set lo up && node tools/test.mjs browser'
+      - name: Upload diagnostics
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: no-network-diagnostics-${{ github.run_id }}
+          path: test/results/*.json
+          if-no-files-found: ignore
+          retention-days: 7

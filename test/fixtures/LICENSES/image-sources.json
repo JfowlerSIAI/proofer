@@ -1,0 +1,95 @@
+{
+  "verified": "2026-10-21",
+  "assets": [
+    {
+      "file": "slatejs.org/favicon.ico",
+      "sha256": "3080b79ef1b3bffd6be8686013c69a1ade369de5ee663e82e1ffc512d07875c1",
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/ianstormtaylor/slate/a114ed3e1413457b1b323668ca297e9c7f818dd9/site/public/favicon.ico"
+      ],
+      "repository": "ianstormtaylor/slate",
+      "source_tree_sha": "a114ed3e1413457b1b323668ca297e9c7f818dd9"
+    },
+    {
+      "file": "draftjs.org/img/demo.gif",
+      "sha256": "7b33acf0b9df9a54328df3a236f64b1a87a1909a952566bb5219f36e0d3a3d0e",
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/facebookarchive/draft-js/afdb5c3177c13fd26cb0abbdc439488f3e21b73b/website/static/img/demo.gif"
+      ],
+      "repository": "facebookarchive/draft-js",
+      "source_tree_sha": "afdb5c3177c13fd26cb0abbdc439488f3e21b73b"
+    },
+    {
+      "file": "draftjs.org/img/oss_logo.png",
+      "sha256": "34e63e03d85f186b30eb4025a397f6f415cd116c6aa3b32ecc83c62936895320",
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/facebookarchive/draft-js/afdb5c3177c13fd26cb0abbdc439488f3e21b73b/website/static/img/oss_logo.png"
+      ],
+      "repository": "facebookarchive/draft-js",
+      "source_tree_sha": "afdb5c3177c13fd26cb0abbdc439488f3e21b73b"
+    },
+    {
+      "file": "draftjs.org/img/draftjs-logo.ico",
+      "sha256": "c460b0625f95a3c04c14e8db21087355a776f82a351cc9baec28a94e3e407108",
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/facebookarchive/draft-js/afdb5c3177c13fd26cb0abbdc439488f3e21b73b/website/static/img/draftjs-logo.ico"
+      ],
+      "repository": "facebookarchive/draft-js",
+      "source_tree_sha": "afdb5c3177c13fd26cb0abbdc439488f3e21b73b"
+    },
+    {
+      "file": "draftjs.org/img/draftjs-logo.svg",
+      "sha256": "e1c8131461f4a38151eff42e32d647cf0467696bf3cebbf758fec06b72587916",
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/facebookarchive/draft-js/afdb5c3177c13fd26cb0abbdc439488f3e21b73b/website/static/img/draftjs-logo.svg"
+      ],
+      "repository": "facebookarchive/draft-js",
+      "source_tree_sha": "afdb5c3177c13fd26cb0abbdc439488f3e21b73b"
+    },
+    {
+      "file": "prosemirror.net/favicon.ico",
+      "sha256": "3c03c1ce9ae229482543a026861f206844d5ecd969759186bad3a01e4e5a9dd7",
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/ProseMirror/website/a16b4ece45f135e5f001ab59d25f2d43c25974e1/public/favicon.ico"
+      ],
+      "repository": "ProseMirror/website",
+      "source_tree_sha": "a16b4ece45f135e5f001ab59d25f2d43c25974e1"
+    },
+    {
+      "file": "prosemirror.net/img/smiley.png",
+      "sha256": "c1c8604ee0189b623a2e6cf26cb6b66e447c6e03d7b6fc54f5210e067606444d",
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/ProseMirror/website/a16b4ece45f135e5f001ab59d25f2d43c25974e1/public/img/smiley.png"
+      ],
+      "repository": "ProseMirror/website",
+      "source_tree_sha": "a16b4ece45f135e5f001ab59d25f2d43c25974e1"
+    },
+    {
+      "file": "quilljs.com/assets/images/favicon.ico",
+      "sha256": "477a66645c4a287e28437286cf9b38832abd681e0e1152e584de59bba24b089e",
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/slab/quill/522fd7ee0682498516df7389bacb6f7eb6e92b77/packages/website/public/assets/images/favicon.ico"
+      ],
+      "repository": "slab/quill",
+      "source_tree_sha": "522fd7ee0682498516df7389bacb6f7eb6e92b77"
+    },
+    {
+      "file": "playground.lexical.dev/assets/favicon-32x32-QbsTyw2e.png",
+      "sha256": "baafaf5e9e60d9a6608ad6548275896c3620f6b58b85ddea8166558958a46ebc",
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/facebook/lexical/4f385cd03afae05fc72d114e3ebea0c7fcfa1040/packages/lexical-playground/favicon-32x32.png"
+      ],
+      "repository": "facebook/lexical",
+      "source_tree_sha": "4f385cd03afae05fc72d114e3ebea0c7fcfa1040"
+    },
+    {
+      "file": "slatejs.org-2026-10-09/favicon.ico",
+      "sha256": "3080b79ef1b3bffd6be8686013c69a1ade369de5ee663e82e1ffc512d07875c1",
+      "matching_source_urls": [
+        "https://raw.githubusercontent.com/ianstormtaylor/slate/a114ed3e1413457b1b323668ca297e9c7f818dd9/site/public/favicon.ico"
+      ],
+      "repository": "ianstormtaylor/slate",
+      "source_tree_sha": "a114ed3e1413457b1b323668ca297e9c7f818dd9"
+    }
+  ]
+}

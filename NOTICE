@@ -1,0 +1,10 @@
+Proofer
+Copyright 2026 Jay Fowler
+
+Proofer was created by Jay Fowler. Original development was recorded under
+the contributor identities JfowlerSIAI, philo47, and edhendel.
+
+Proofer's original code is licensed under the Apache License, Version 2.0.
+The bundled dictionary data and other third-party materials retain their
+own licenses. See data/THIRD_PARTY_NOTICES.md in the extension package and
+THIRD_PARTY_NOTICES.md in the source distribution.

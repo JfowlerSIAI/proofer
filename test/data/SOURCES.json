@@ -1,0 +1,41 @@
+{
+  "fetched": "2026-08-14T07:13:41.124Z",
+  "sources": {
+    "confusion_sets.txt": {
+      "repo": "languagetool-org/languagetool",
+      "commit": "b4b4ae90f8af5ce17c1bf06df5461b7476aaa66a",
+      "path": "languagetool-language-modules/en/src/main/resources/org/languagetool/resource/en/confusion_sets.txt",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/b4b4ae90f8af5ce17c1bf06df5461b7476aaa66a/languagetool-language-modules/en/src/main/resources/org/languagetool/resource/en/confusion_sets.txt",
+      "sha256_upstream": "2d4affcb4a6c94311f90412c9634108822cf7598066303a68e00be329c18eda4",
+      "license": "LGPL-2.1-or-later"
+    },
+    "cmudict-subset.txt": {
+      "repo": "cmusphinx/cmudict",
+      "commit": "74790861f652b15e4ac49015a90074ad62a27690",
+      "path": "cmudict.dict",
+      "url": "https://raw.githubusercontent.com/cmusphinx/cmudict/74790861f652b15e4ac49015a90074ad62a27690/cmudict.dict",
+      "sha256_upstream": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+      "sha256_subset": "e187d2c550ab388cb5089b15102215098b00595129071864e1e1755f6f9b1501",
+      "license": "BSD-2-clause",
+      "note": "vendored file is a subset plus a licence header, so only sha256_upstream identifies the snapshot"
+    },
+    "cmudict-LICENSE.txt": {
+      "repo": "cmusphinx/cmudict",
+      "commit": "74790861f652b15e4ac49015a90074ad62a27690",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/cmusphinx/cmudict/74790861f652b15e4ac49015a90074ad62a27690/LICENSE",
+      "sha256_upstream": "bd4ce8e44170a5f9f481310ca85c51de3c4f851a65e679b40e603b143bd3542a",
+      "license": "BSD-2-clause",
+      "note": "reproduced in full at the top of cmudict-subset.txt as well, because CMU's terms require the notices to travel with a source redistribution"
+    },
+    "data/COPYING.LGPL-2.1 (shipped)": {
+      "repo": "languagetool-org/languagetool",
+      "commit": "b4b4ae90f8af5ce17c1bf06df5461b7476aaa66a",
+      "path": "COPYING.txt",
+      "url": "https://raw.githubusercontent.com/languagetool-org/languagetool/b4b4ae90f8af5ce17c1bf06df5461b7476aaa66a/COPYING.txt",
+      "sha256_upstream": "95a62130965bddc821631fcec03abe97246f9130f11a8be6f47579f8bc016fc8",
+      "license": "LGPL-2.1",
+      "note": "SHIPS in the extension; the licence copy that must accompany data/confusables-en.txt"
+    }
+  }
+}

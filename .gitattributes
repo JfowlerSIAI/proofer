@@ -1,0 +1,3 @@
+*.txt text eol=lf
+# Fixture provenance hashes cover upstream bytes, including original newlines.
+test/fixtures/** -text

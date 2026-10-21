@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Proofer — sentence mode playground</title>
+    <style>
+      body { font: 15px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+             margin: 32px auto; max-width: 760px; padding: 0 16px; color: #111; }
+      h1 { font-size: 20px; margin: 0 0 4px; }
+      p.sub { color: #555; margin: 0 0 20px; }
+      textarea { width: 100%; box-sizing: border-box; padding: 10px;
+                 font: 15px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace;
+                 border: 1px solid #bbb; border-radius: 6px; }
+      .field { margin: 18px 0 26px; }
+      label { display: block; font-weight: 600; margin-bottom: 4px; }
+      .hint { color: #666; font-size: 13px; margin: 4px 0 0; }
+      code { background: #f2f2f2; padding: 1px 4px; border-radius: 3px; }
+      .ce { border: 1px solid #bbb; border-radius: 6px; padding: 10px; min-height: 72px;
+            font: 15px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; }
+      .note { background: #fffbe6; border: 1px solid #f0e0a0; border-radius: 6px;
+              padding: 10px 12px; margin: 20px 0; font-size: 14px; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #1b1f24; color: #e6e6e6; }
+        textarea, .ce { background: #0f1419; color: #e6e6e6; border-color: #444; }
+        p.sub, .hint { color: #9aa4b2; }
+        code { background: #2a2f36; }
+        .note { background: #2b2718; border-color: #5a4f2a; }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Proofer — sentence mode playground</h1>
+    <p class="sub">
+      Boxes 1–5 are plain <code>&lt;textarea&gt;</code> elements; 6 and 7 are
+      <code>contenteditable</code>, which is what Discord and most chat apps
+      use. Serve this over http (see below) — consent is keyed to an origin,
+      and <code>file://</code> does not have one.
+    </p>
+
+    <div class="note">
+      Enable it for this origin first: click the Proofer toolbar icon, tick
+      <strong>Enable sentence mode</strong>, <strong>Use it on this site</strong>,
+      and <strong>Apply without asking</strong> for silent edits. Save, then
+      reload this page.
+    </div>
+
+    <div class="field">
+      <label for="a">1. Type this, including the mistakes</label>
+      <textarea id="a" rows="5" spellcheck="false"></textarea>
+      <p class="hint">
+        <code>The techncian arrived early. We recieved the invoice yesterday. The results was better than expected.</code><br />
+        Each sentence is corrected about three characters into the next one —
+        so keep typing, and watch behind the cursor.
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="b">2. Things it should refuse to touch</label>
+      <textarea id="b" rows="5" spellcheck="false"></textarea>
+      <p class="hint">
+        <code>The __init__ method take three arguments. Revenue was $1,200 in Q3 and it were rising. I do agree with the proposal.</code><br />
+        The identifier and the number must survive exactly; the last sentence
+        must never gain a "don't".
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="c">3. Paste, don't type</label>
+      <textarea id="c" rows="4" spellcheck="false"></textarea>
+      <p class="hint">Pasted text is never proofread. Nothing should happen here at all.</p>
+    </div>
+
+    <div class="field">
+      <label for="d">4. A capped field (maxlength 60)</label>
+      <textarea id="d" rows="3" maxlength="60" spellcheck="false"></textarea>
+      <p class="hint">
+        A correction that would not fit is refused rather than truncated —
+        type <code>The techncian arrived early. Then we</code> and it should
+        stay exactly as typed once you approach the cap.
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="e">5. Not English (lang="fr") — should never fire</label>
+      <textarea id="e" rows="3" lang="fr" spellcheck="false"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="f">6. A rich text box (like Discord's)</label>
+      <div id="f" contenteditable="true" class="ce"></div>
+      <p class="hint">
+        Type the sentence from box 1. A rich box always <strong>offers</strong>
+        rather than writing silently, so you should get the highlight and an
+        <em>Apply</em> chip — this is what Discord will do.
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="g">7. Rich text it must refuse to touch</label>
+      <div id="g" contenteditable="true" class="ce">The <b>techncian</b> arrived early. Then we shipped</div>
+      <p class="hint">
+        The bold word makes this sentence unsafe to replace wholesale, so
+        nothing should happen. Same for a sentence containing an emoji image
+        or an @mention. Type a few characters at the end to trigger it.
+      </p>
+    </div>
+  </body>
+</html>

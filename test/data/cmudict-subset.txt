@@ -1,0 +1,1474 @@
+;;; CMU Pronouncing Dictionary -- SUBSET, redistributed under its own licence.
+;;;
+;;; Upstream: https://github.com/cmusphinx/cmudict
+;;; Commit:   74790861f652b15e4ac49015a90074ad62a27690
+;;; Cut down by test/build-confusables.mjs to the words confusion_sets.txt
+;;; mentions. Build-time input only; none of it ships in the extension.
+;;;
+;;; Copyright (C) 1993-2015 Carnegie Mellon University. All rights reserved.
+;;;
+;;; Redistribution and use in source and binary forms, with or without
+;;; modification, are permitted provided that the following conditions
+;;; are met:
+;;;
+;;; 1. Redistributions of source code must retain the above copyright
+;;;    notice, this list of conditions and the following disclaimer.
+;;;    The contents of this file are deemed to be source code.
+;;;
+;;; 2. Redistributions in binary form must reproduce the above copyright
+;;;    notice, this list of conditions and the following disclaimer in
+;;;    the documentation and/or other materials provided with the
+;;;    distribution.
+;;;
+;;; This work was supported in part by funding from the Defense Advanced
+;;; Research Projects Agency, the Office of Naval Research and the National
+;;; Science Foundation of the United States of America, and by member
+;;; companies of the Carnegie Mellon Sphinx Speech Consortium. We acknowledge
+;;; the contributions of many volunteers to the expansion and improvement of
+;;; this dictionary.
+;;;
+;;; THIS SOFTWARE IS PROVIDED BY CARNEGIE MELLON UNIVERSITY ``AS IS'' AND
+;;; ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+;;; THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+;;; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL CARNEGIE MELLON UNIVERSITY
+;;; NOR ITS EMPLOYEES BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+;;; SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+;;; LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+;;; DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+;;; THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+;;; (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+;;; OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+;;;
+;;;
+able EY1 B AH0 L
+abstruse AH0 B S T R UW1 S
+accede AE0 K S IY1 D
+accept AE0 K S EH1 P T
+accept(2) AH0 K S EH1 P T
+acclamation AE2 K L AH0 M EY1 SH AH0 N
+acclimation AE2 K L AH0 M EY1 SH AH0 N
+acts AE1 K T S
+acts(2) AE1 K S
+adapting AH0 D AE1 P T IH0 NG
+addition AH0 D IH1 SH AH0 N
+additions AH0 D IH1 SH AH0 N Z
+adds AE1 D Z
+adolescence AE2 D AH0 L EH1 S AH0 N S
+adolescence(2) AE2 D OW0 L EH1 S AH0 N S
+adolescents AE2 D AH0 L EH1 S AH0 N T S
+adolescents(2) AE2 D OW0 L EH1 S AH0 N T S
+adopting AH0 D AA1 P T IH0 NG
+ads AE1 D Z
+adverse AE0 D V ER1 S
+adverse(2) AE1 D V ER2 S
+adverse(3) AH0 D V ER1 S
+advice AE0 D V AY1 S
+advice(2) AH0 D V AY1 S
+advise AE0 D V AY1 Z
+advise(2) AH0 D V AY1 Z
+affect AH0 F EH1 K T
+affects AH0 F EH1 K T S
+affluence AE1 F L UW0 AH0 N S
+aisle AY1 L
+aisle(2) AY1 AH0 L
+aisles AY1 L Z
+aisles(2) AY1 AH0 L Z
+allowed AH0 L AW1 D
+allude AH0 L UW1 D
+alludes AH0 L UW1 D Z
+allusion AH0 L UW1 ZH AH0 N
+allusions AH0 L UW1 ZH AH0 N Z
+aloud AH0 L AW1 D
+altar AO1 L T ER0
+altars AO1 L T ER0 Z
+alter AO1 L T ER0
+alters AO1 L T ER0 Z
+alumni AH0 L AH1 M N AY2
+alumnus AH0 L AH1 M N AH0 S
+and AH0 N D
+and(2) AE1 N D
+anecdote AE1 N AH0 K D OW2 T
+anti AE1 N T IY2
+anti(2) AE1 N T AY2
+antidote AE1 N T IH0 D OW2 T
+antidote(2) AE1 N IH0 D OW2 T
+apatite AE1 P AH0 T AY2 T
+appendices AH0 P EH1 N D IH0 S IY2 Z
+appendix AH0 P EH1 N D IH0 K S
+appetite AE1 P AH0 T AY2 T
+appraise AH0 P R EY1 Z
+apprise AH0 P R AY1 Z
+arrant AE1 R AH0 N T
+artesian AA2 R T IY1 ZH AH0 N
+artisanal AA2 R T IH1 Z AH0 N AH0 L
+as AE1 Z
+as(2) EH1 Z
+ascent AH0 S EH1 N T
+aspect AE1 S P EH2 K T
+aspects AE1 S P EH2 K T S
+assent AH0 S EH1 N T
+at AE1 T
+ate EY1 T
+auntie AE1 N T IY0
+auntie(2) AO1 N T IY0
+aural AO1 R AH0 L
+averse AH0 V ER1 S
+avid AE1 V AH0 D
+avid(2) AE1 V IH0 D
+avoid AH0 V OY1 D
+aw AO1
+awe AA1
+awe(2) AO1
+ax AE1 K S
+axes AE1 K S IH2 Z
+axes(2) AE1 K S IY2 Z
+axis AE1 K S AH0 S
+bacteria B AE0 K T IH1 R IY0 AH0
+bacterium B AE0 K T IH1 R IY0 AH0 M
+bad B AE1 D
+bade B EY1 D
+bail B EY1 L
+baize B EY1 Z
+bale B EY1 L
+balled B AO1 L D
+ballet B AE0 L EY1
+ballets B AE0 L EY1 Z
+ballot B AE1 L AH0 T
+ballots B AE1 L AH0 T S
+bard B AA1 R D
+bare B EH1 R
+barely B EH1 R L IY0
+barley B AA1 R L IY0
+baron B AE1 R AH0 N
+baron(2) B EH1 R AH0 N
+barred B AA1 R D
+barren B AE1 R AH0 N
+barren(2) B EH1 R AH0 N
+basal B EY1 S AH0 L
+base B EY1 S
+based B EY1 S T
+basil B AE1 Z AH0 L
+bass B AE1 S
+bass(2) B EY1 S
+baste B EY1 S T
+baud B AO1 D
+bawd B AO1 D
+bawled B AO1 L D
+bayed B EY1 D
+bays B EY1 Z
+bazaar B AH0 Z AA1 R
+be B IY1
+be(2) B IY0
+bean B IY1 N
+bear B EH1 R
+beau B OW1
+bed B EH1 D
+bedding B EH1 D IH0 NG
+bee B IY1
+been B IH1 N
+been(2) B AH0 N
+been(3) B IH0 N
+begin B IH0 G IH1 N
+being B IY1 IH0 NG
+belief B IH0 L IY1 F
+beliefs B IH0 L IY1 F S
+believe B IH0 L IY1 V
+believes B IH0 L IY1 V Z
+bellow B EH1 L OW0
+below B IH0 L OW1
+below(2) B IY0 L OW1
+benefactor B EH1 N AH0 F AE2 K T ER0
+beneficiary B EH2 N AH0 F IH1 SH IY0 EH2 R IY0
+berth B ER1 TH
+berths B ER1 TH S
+berths(2) B ER1 DH Z
+best B EH1 S T
+bets B EH1 T S
+betting B EH1 T IH0 NG
+bidder B IH1 D ER0
+bidders B IH1 D ER0 Z
+billed B IH1 L D
+bin B IH1 N
+birth B ER1 TH
+births B ER1 TH S
+bite B AY1 T
+bites B AY1 T S
+bitter B IH1 T ER0
+bitters B IH1 T ER0 Z
+bizarre B AH0 Z AA1 R
+bizarre(2) B IH0 Z AA1 R
+blew B L UW1
+bloc B L AA1 K
+block B L AA1 K
+blocks B L AA1 K S
+blocs B L AA1 K S
+blue B L UW1
+blunt B L AH1 N T
+board B AO1 R D
+boated B OW1 T IH0 D
+boating B OW1 T IH0 NG
+bode B OW1 D
+bodily B AA1 D AH0 L IY0
+bond B AA1 N D
+bonds B AA1 N D Z
+booties B UW1 T IY0 Z
+bored B AO1 R D
+borrow B AA1 R OW2
+borrows B AA1 R OW0 Z
+bough B AW1
+bounce B AW1 N S
+bound B AW1 N D
+bounds B AW1 N D Z
+bow B AW1
+bow(2) B OW1
+bowed B AW1 D
+bowed(2) B OW1 D
+bows B AW1 Z
+bows(2) B OW1 Z
+braid B R EY1 D
+braise B R EY1 Z
+brake B R EY1 K
+brakes B R EY1 K S
+breach B R IY1 CH
+breaches B R IY1 CH IH0 Z
+bread B R EH1 D
+break B R EY1 K
+breaks B R EY1 K S
+breath B R EH1 TH
+breathe B R IY1 DH
+breathes B R IY1 DH Z
+breaths B R EH1 TH S
+bred B R EH1 D
+breech B R IY1 CH
+breeches B R IY1 CH IH0 Z
+brewed B R UW1 D
+brews B R UW1 Z
+bridal B R AY1 D AH0 L
+bridle B R AY1 D AH0 L
+brood B R UW1 D
+brows B R AW1 Z
+browse B R AW1 Z
+bruise B R UW1 Z
+brunt B R AH1 N T
+brute B R UW1 T
+build B IH1 L D
+bullet B UH1 L AH0 T
+bused B AH1 S T
+bussed B AH1 S T
+bust B AH1 S T
+but B AH1 T
+buy B AY1
+by B AY1
+bye B AY1
+byte B AY1 T
+bytes B AY1 T S
+cached K AE1 SH T
+caller K AO1 L ER0
+callers K AO1 L ER0 Z
+capital K AE1 P AH0 T AH0 L
+capital(2) K AE1 P IH0 T AH0 L
+capitol K AE1 P IH0 T AH0 L
+carat K EH1 R AH0 T
+carpal K AA1 R P AH0 L
+case K EY1 S
+cases K EY1 S AH0 Z
+cases(2) K EY1 S IH0 Z
+cashed K AE1 SH T
+cast K AE1 S T
+caste K AE1 S T
+caught K AA1 T
+caught(2) K AO1 T
+cause K AA1 Z
+cause(2) K AO1 Z
+causes K AA1 Z AH0 Z
+causes(2) K AO1 Z IH0 Z
+cease S IY1 S
+ceases S IY1 S IH0 Z
+cede S IY1 D
+cedes S IY1 D Z
+celebrate S EH1 L AH0 B R EY2 T
+celebrates S EH1 L AH0 B R EY2 T S
+celery S EH1 L ER0 IY0
+celibate S EH1 L IH0 B AH0 T
+cell S EH1 L
+cellar S EH1 L ER0
+cells S EH1 L Z
+censer S EH1 N S ER0
+censor S EH1 N S ER0
+censors S EH1 N S ER0 Z
+censure S EH1 N SH ER0
+census S EH1 N S AH0 S
+cent S EH1 N T
+cereal S IH1 R IY0 AH0 L
+cereals S IH1 R IY0 AH0 L Z
+chard CH AA1 R D
+charred CH AA1 R D
+chased CH EY1 S T
+chaste CH EY1 S T
+chicago SH AH0 K AA1 G OW2
+chicano CH IH0 K AA1 N OW0
+choral K AO1 R AH0 L
+chord K AO1 R D
+chords K AO1 R D Z
+citing S AY1 T IH0 NG
+clack K L AE1 K
+clamber K L AE1 M B ER0
+clamor K L AE1 M ER0
+click K L IH1 K
+climactic K L AY0 M AE1 K T IH0 K
+climatic K L AY0 M AE1 T IH0 K
+climb K L AY1 M
+climbs K L AY1 M Z
+climes K L AY1 M Z
+clique K L IY1 K
+close K L OW1 S
+close(2) K L OW1 Z
+clothes K L OW1 DH Z
+clothes(2) K L OW1 Z
+clue K L UW1
+coal K OW1 L
+coarse K AO1 R S
+coat K OW1 T
+coats K OW1 T S
+coax K OW1 K S
+coco K OW1 K OW2
+cocoa K OW1 K OW0
+coffer K AO1 F ER0
+coif K W AA1 F
+cokes K OW1 K S
+cole K OW1 L
+collaborate K AH0 L AE1 B ER0 EY2 T
+collar K AA1 L ER0
+collars K AA1 L ER0 Z
+coma K OW1 M AH0
+comber K OW1 M ER0
+comma K AA1 M AH0
+compete K AH0 M P IY1 T
+competes K AH0 M P IY1 T S
+complacent K AH0 M P L EY1 S AH0 N T
+complacently K AH0 M P L EY1 S AH0 N T L IY0
+complain K AH0 M P L EY1 N
+complains K AH0 M P L EY1 N Z
+complaint K AH0 M P L EY1 N T
+complaints K AH0 M P L EY1 N T S
+complaisant K AH0 M P L EY1 S AH0 N T
+complement K AA1 M P L AH0 M AH0 N T
+complete K AH0 M P L IY1 T
+completes K AH0 M P L IY1 T S
+compliment K AA1 M P L AH0 M EH0 N T
+con K AA1 N
+conch K AA1 N CH
+conch(2) K AA1 NG K
+conjecture K AH0 N JH EH1 K CH ER0
+conjecture(2) K AH0 N JH EH1 K SH ER0
+conk K AA1 NG K
+conscience K AA1 N SH AH0 N S
+conscious K AA1 N SH AH0 S
+coo K UW1
+coos K UW1 S
+copes K OW1 P S
+cor K AO1 R
+coral K AO1 R AH0 L
+cord K AO1 R D
+cords K AO1 R D Z
+core K AO1 R
+corroborate K ER0 AA1 B ER0 EY2 T
+corroborates K ER0 AO1 B ER0 EY2 T S
+cot K AA1 T
+cote K OW1 T
+cotes K OW1 T S
+coup K UW1
+coups K UW1 Z
+coups(2) K UW1
+course K AO1 R S
+court K AO1 R T
+cousin K AH1 Z AH0 N
+cousins K AH1 Z AH0 N Z
+coward K AW1 ER0 D
+coyer K OY1 ER0
+craft K R AE1 F T
+crate K R EY1 T
+crates K R EY1 T S
+create K R IY0 EY1 T
+creates K R IY0 EY1 T S
+crewel K R UW1 AH0 L
+crews K R UW1 Z
+crises K R AY1 S IY0 Z
+crisis K R AY1 S AH0 S
+crochet K R OW0 SH EY1
+cruel K R UW1 AH0 L
+cruel(2) K R UW1 L
+cruise K R UW1 Z
+cue K Y UW1
+cued K Y UW1 D
+dairy D EH1 R IY0
+dam D AE1 M
+damn D AE1 M
+dear D IH1 R
+deceased D IH0 S IY1 S T
+decent D IY1 S AH0 N T
+deductible D IH0 D AH1 K T AH0 B AH0 L
+deer D IH1 R
+defamation D EH2 F AH0 M EY1 SH AH0 N
+defiantly D IH0 F AY1 AH0 N T L IY0
+definitely D EH1 F AH0 N AH0 T L IY0
+deformation D IY2 F AO0 R M EY1 SH AH0 N
+defuse D IH0 F Y UW1 Z
+demur D IH0 M ER1
+demure D IH0 M Y UH1 R
+descent D IH0 S EH1 N T
+desert D EH1 Z ER0 T
+desert(2) D IH0 Z ER1 T
+dessert D IH0 Z ER1 T
+deviant D IY1 V IY0 AH0 N T
+deviants D IY1 V IY0 AH0 N T S
+deviate D IY1 V IY0 EY2 T
+deviates D IY1 V IY0 EY2 T S
+device D IH0 V AY1 S
+devise D IH0 V AY1 Z
+devise(2) D IH0 V AY1 S
+dhows D AW1 Z
+diagnoses D AY2 AH0 G N OW1 S IY0 Z
+diagnosis D AY2 AH0 G N OW1 S AH0 S
+dialogue D AY1 AH0 L AO2 G
+diary D AY1 ER0 IY0
+diary(2) D AY1 R IY0
+die D AY1
+died D AY1 D
+dies D AY1 Z
+diffuse D IH0 F Y UW1 S
+diffuse(2) D IH0 F Y UW1 Z
+diffuses D IH0 F Y UW1 Z AH0 Z
+dire D AY1 R
+dire(2) D AY1 ER0
+discreet D IH0 S K R IY1 T
+discrete D IH0 S K R IY1 T
+discuss D IH0 S K AH1 S
+discussed D IH0 S K AH1 S T
+diseased D IH0 Z IY1 Z D
+disgust D IH0 S G AH1 S T
+disinterested D IH0 S IH1 N T R IH0 S T IH0 D
+disinterested(2) D IH0 S IH1 N R IH0 S T IH0 D
+dissent D IH0 S EH1 N T
+do D UW1
+does D AH1 Z
+does(2) D IH0 Z
+dos D AO1 S
+dos(2) D OW1 S
+dose D OW1 S
+dozed D OW1 Z D
+dragged D R AE1 G D
+drug D R AH1 G
+dual D UW1 AH0 L
+dual(2) D UW1 L
+duel D UW1 AH0 L
+dues D UW1 Z
+dye D AY1
+dyed D AY1 D
+dyer D AY1 ER0
+dyes D AY1 Z
+ear IY1 R
+ear(2) IH1 R
+earn ER1 N
+earns ER1 N Z
+ears IH1 R Z
+ears(2) IY1 R Z
+eat IY1 T
+eats IY1 T S
+edition AH0 D IH1 SH AH0 N
+edition(2) IH0 D IH1 SH AH0 N
+editions IH0 D IH1 SH AH0 N Z
+effect IH0 F EH1 K T
+effect(2) IY1 F EH0 K T
+effect(3) AH0 F EH1 K T
+effects IH0 F EH1 K T S
+effects(2) IY1 F EH0 K T S
+effluence EH1 F L UW0 AH0 N S
+eight EY1 T
+either IY1 DH ER0
+either(2) AY1 DH ER0
+elicit IH0 L IH1 S IH0 T
+elude IH0 L UW1 D
+eludes IH0 L UW1 D Z
+em EH1 M
+eminent EH1 M AH0 N AH0 N T
+emit IH0 M IH1 T
+emits IH0 M IH1 T S
+emitting IH0 M IH1 T IH0 NG
+emphases EH1 M F AH0 S IY2 Z
+emphasis EH1 M F AH0 S AH0 S
+emphasis(2) EH1 M F AH0 S IH0 S
+end EH1 N D
+endemic EH0 N D EH1 M IH0 K
+ensured EH0 N SH UH1 R D
+ensured(2) IH0 N SH UH1 R D
+entomology EH2 N T AH0 M AA1 L AH0 JH IY0
+envelop IH0 N V EH1 L AH0 P
+envelope EH1 N V AH0 L OW2 P
+envelopes EH1 N V AH0 L OW2 P S
+envelops IH0 N V EH1 L AH0 P S
+epic EH1 P IH0 K
+epics EH1 P IH0 K S
+epidemic EH2 P AH0 D EH1 M IH0 K
+epidemic(2) EH2 P IH0 D EH1 M IH0 K
+epitaph EH1 P AH0 T AE2 F
+epithet EH1 P AH0 TH EH2 T
+epoch EH1 P AH0 K
+epoch(2) IY1 P AH0 K
+epochs EH1 P AH0 K S
+epochs(2) IY1 P AH0 K S
+ere EH1 R
+errant EH1 R AH0 N T
+ether IY1 TH ER0
+etymology EH2 T AH0 M AA1 L AH0 JH IY0
+etymology(2) EH2 T IH0 M AA1 L AH0 JH IY0
+exact IH0 G Z AE1 K T
+exceed IH0 K S IY1 D
+except IH0 K S EH1 P T
+existing IH0 G Z IH1 S T IH0 NG
+exiting EH1 G Z IH0 T IH0 NG
+expect IH0 K S P EH1 K T
+expects IH0 K S P EH1 K T S
+expects(2) IH0 K S P EH1 K S
+extend IH0 K S T EH1 N D
+extent IH0 K S T EH1 N T
+extract EH1 K S T R AE2 K T
+extract(2) IH0 K S T R AE1 K T
+fain F EY1 N
+fair F EH1 R
+fairs F EH1 R Z
+fairy F EH1 R IY0
+fare F EH1 R
+fares F EH1 R Z
+farther F AA1 R DH ER0
+fast F AE1 S T
+father F AA1 DH ER0
+fats F AE1 T S
+fazed F EY1 Z D
+feat F IY1 T
+fee F IY1
+feel F IY1 L
+feels F IY1 L Z
+fees F IY1 Z
+feet F IY1 T
+feign F EY1 N
+fermenting F ER0 M EH1 N T IH0 NG
+ferry F EH1 R IY0
+feted F EY1 T IH0 D
+fetid F EH1 T AH0 D
+field F IY1 L D
+fill F IH1 L
+filled F IH1 L D
+find F AY1 N D
+finds F AY1 N D Z
+fine F AY1 N
+fine(2) F IH1 N AH0 # org, irish
+fines F AY1 N Z
+fir F ER1
+firs F ER1 Z
+first F ER1 S T
+fiscal F IH1 S K AH0 L
+fist F IH1 S T
+five F AY1 V
+fives F AY1 V Z
+flea F L IY1
+fleas F L IY1 Z
+flecks F L EH1 K S
+flee F L IY1
+flees F L IY1 Z
+flew F L UW1
+flex F L EH1 K S
+flocks F L AA1 K S
+flour F L AW1 ER0
+flour(2) F L AW1 R
+flower F L AW1 ER0
+flu F L UW1
+foe F OW1
+fomenting F OW1 M EH0 N T IH0 NG
+foot F UH1 T
+for F AO1 R
+for(2) F ER0
+for(3) F R ER0
+foreword F AO1 R W ER2 D
+form F AO1 R M
+forth F AO1 R TH
+forward F AO1 R W ER0 D
+foul F AW1 L
+four F AO1 R
+fourth F AO1 R TH
+fowl F AW1 L
+fraud F R AO1 D
+fraught F R AO1 T
+free F R IY1
+freeze F R IY1 Z
+frieze F R IY1 Z
+from F R AH1 M
+full F UH1 L
+fur F ER1
+furs F ER1 Z
+gait G EY1 T
+gate G EY1 T
+geese G IY1 S
+gild G IH1 L D
+give G IH1 V
+gives G IH1 V Z
+gnawed N AO1 D
+gnu N UW1
+god G AA1 D
+gods G AA1 D Z
+good G UH1 D
+good(2) G IH0 D
+goods G UH1 D Z
+goose G UW1 S
+gored G AO1 R D
+gourd G AO1 R D
+grade G R EY1 D
+graft G R AE1 F T
+grays G R EY1 Z
+graze G R EY1 Z
+guessed G EH1 S T
+guest G EH1 S T
+guise G AY1 Z
+guys G AY1 Z
+had HH AE1 D
+hail HH EY1 L
+hair HH EH1 R
+hairs HH EH1 R Z
+hale HH EY1 L
+half HH AE1 F
+halve HH AE1 V
+halves HH AE1 V Z
+hare HH EH1 R
+hares HH EH1 R Z
+hat HH AE1 T
+have HH AE1 V
+haves HH AE1 V Z
+he HH IY1
+heal HH IY1 L
+hear HH IY1 R
+heard HH ER1 D
+hears HH IY1 R Z
+heart HH AA1 R T
+hearts HH AA1 R T S
+heel HH IY1 L
+heir EH1 R
+herd HH ER1 D
+here HH IY1 R
+heroin HH EH1 R OW0 AH0 N
+heroine HH EH1 R OW0 AH0 N
+hew HH Y UW1
+hews HH Y UW1 Z
+hide HH AY1 D
+higher HH AY1 ER0
+him HH IH1 M
+him(2) IH0 M
+hire HH AY1 ER0
+hire(2) HH AY1 R
+hoard HH AO1 R D
+hoping HH OW1 P IH0 NG
+hopping HH AA1 P IH0 NG
+horde HH AO1 R D
+hostel HH AA1 S T AH0 L
+hostels HH AA1 S T AH0 L Z
+hostile HH AA1 S T AH0 L
+hostile(2) HH AA0 S T AY1 L
+hours AW1 ER0 Z
+hours(2) AW1 R Z
+hue HH Y UW1
+hues HH Y UW1 Z
+hymn HH IH1 M
+if IH1 F
+if(2) IH0 F
+illicit IH2 L IH1 S AH0 T
+illiterate IH2 L IH1 T ER0 AH0 T
+illusion IH2 L UW1 ZH AH0 N
+illusions IH2 L UW1 ZH AH0 N Z
+imminent IH1 M AH0 N AH0 N T
+imply IH2 M P L AY1
+improved IH2 M P R UW1 V D
+improvised IH1 M P R AH0 V AY2 Z D
+in IH0 N
+in(2) IH1 N
+inc IH1 NG K
+incites IH2 N S AY1 T S
+infer IH2 N F ER1
+ink IH1 NG K
+inn IH1 N
+inns IH1 N Z
+ins IH1 N Z
+ins(2) AY1 EH1 N EH1 S
+insights IH1 N S AY2 T S
+insured IH2 N SH UH1 R D
+isle AY1 L
+isles AY1 L Z
+juggler JH AH1 G AH0 L ER0
+juggler(2) JH AH1 G L ER0
+jugular JH UW1 G Y AH0 L ER0
+just JH AH1 S T
+just(2) JH IH0 S T
+juts JH AH1 T S
+khan K AA1 N
+kind K AY1 N D
+kinds K AY1 N D Z
+kinds(2) K AY1 N Z
+king K IH1 NG
+kings K IH1 NG Z
+knead N IY1 D
+knew N UW1
+knew(2) N Y UW1
+knight N AY1 T
+know N OW1
+known N OW1 N
+knows N OW1 Z
+kraft K R AE1 F T
+lacks L AE1 K S
+land L AE1 N D
+lands L AE1 N D Z
+laps L AE1 P S
+lapse L AE1 P S
+lax L AE1 K S
+lead L EH1 D
+lead(2) L IY1 D
+lean L IY1 N
+leans L IY1 N Z
+leased L IY1 S T
+least L IY1 S T
+leave L IY1 V
+leaves L IY1 V Z
+led L EH1 D
+lees L IY1 Z
+left L EH1 F T
+lend L EH1 N D
+lends L EH1 N D Z
+lens L EH1 N Z
+less L EH1 S
+lessen L EH1 S AH0 N
+lesson L EH1 S AH0 N
+liable L AY1 AH0 B AH0 L
+liar L AY1 ER0
+libel L AY1 B AH0 L
+lichen L AY1 K AH0 N
+lichens L AY1 K AH0 N Z
+lien L IY1 N
+liens L IY1 N Z
+lieu L UW1
+lieu(2) L Y UW1
+life L AY1 F
+liken L AY1 K AH0 N
+likens L AY1 K AH0 N Z
+limb L IH1 M
+limbs L IH1 M Z
+limn L IH1 M
+links L IH1 NG K S
+literal L IH1 T ER0 AH0 L
+littoral L IH1 T ER0 AH0 L
+live L AY1 V
+live(2) L IH1 V
+lives L IH1 V Z
+lives(2) L AY1 V Z
+lo L OW1
+loan L OW1 N
+loch L AA1 K
+lock L AA1 K
+locks L AA1 K S
+lode L OW1 D
+lone L OW1 N
+loo L UW1
+loos L UW1 Z
+loose L UW1 S
+loot L UW1 T
+lose L UW1 Z
+low L OW1
+lox L AA1 K S
+lox(2) L AH1 K S
+lumbar L AH1 M B AA2 R
+lumber L AH1 M B ER0
+lute L UW1 T
+lynx L IH1 NG K S
+lyre L AY1 R
+mach M AA1 K
+made M EY1 D
+maid M EY1 D
+mail M EY1 L
+maize M EY1 Z
+male M EY1 L
+man M AE1 N
+manner M AE1 N ER0
+manners M AE1 N ER0 Z
+manor M AE1 N ER0
+manors M AE1 N ER0 Z
+marital M EH1 R AH0 T AH0 L
+marry M EH1 R IY0
+martial M AA1 R SH AH0 L
+massed M AE1 S T
+mast M AE1 S T
+matrices M EY1 T R IH0 S IH0 Z
+matrix M EY1 T R IH0 K S
+maze M EY1 Z
+median M IY1 D IY0 AH0 N
+medium M IY1 D IY0 AH0 M
+memoranda M EH2 M ER0 AE1 N D AH0
+memorandum M EH2 M ER0 AE1 N D AH0 M
+men M EH1 N
+merry M EH1 R IY0
+mi M IY1
+mice M AY1 S
+might M AY1 T
+militate M IH1 L IH0 T EY2 T
+mince M IH1 N S
+minces M IH1 N S IH0 Z
+mind M AY1 N D
+minding M AY1 N D IH0 NG
+minds M AY1 N D Z
+mined M AY1 N D
+mines M AY1 N Z
+mining M AY1 N IH0 NG
+mints M IH1 N T S
+minuet M IH0 N Y UW2 EH1 T
+minute M IH1 N AH0 T
+minute(2) M AY0 N UW1 T
+minute(3) M AY0 N Y UW1 T
+minutes M IH1 N AH0 T S
+missed M IH1 S T
+mist M IH1 S T
+mite M AY1 T
+mitigate M IH1 T AH0 G EY2 T
+mitigates M IH1 T AH0 G EY2 T S
+mock M AA1 K
+mode M OW1 D
+mood M UW1 D
+moral M AO1 R AH0 L
+morale M ER0 AE1 L
+morales M ER0 AE1 L Z
+morales(2) M AO0 R AE1 L EH0 S
+morals M AO1 R AH0 L Z
+morel M ER0 EH1 L
+morn M AO1 R N
+morning M AO1 R N IH0 NG
+most M OW1 S T
+most(2) M OW1 S
+mourn M AO1 R N
+mourning M AO1 R N IH0 NG
+mouse M AW1 S
+mow M OW1
+mowed M OW1 D
+mule M Y UW1 L
+must M AH1 S T
+mustard M AH1 S T ER0 D
+mustered M AH1 S T ER0 D
+my M AY1
+nays N EY1 Z
+near N IH1 R
+neat N IY1 T
+need N IY1 D
+needs N IY1 D Z
+new N UW1
+new(2) N Y UW1
+news N UW1 Z
+news(2) N Y UW1 Z
+nice N AY1 S
+nice(2) N IY1 S
+night N AY1 T
+nit N IH1 T
+no N OW1
+nod N AA1 D
+noes N OW1 Z
+none N AH1 N
+nose N OW1 Z
+not N AA1 T
+note N OW1 T
+now N AW1
+nun N AH1 N
+nut N AH1 T
+oar AO1 R
+oases OW0 EY1 S IY0 Z
+oasis OW0 EY1 S IH0 S
+obtuse AA0 B T UW1 S
+of AH1 V
+oh OW1
+ohs OW1 Z
+omit OW0 M IH1 T
+omits OW0 M IH1 T S
+omitting OW0 M IH1 T IH0 NG
+on AA1 N
+on(2) AO1 N
+one W AH1 N
+oohs UW1 Z
+ooze UW1 Z
+or AO1 R
+or(2) ER0
+oral AO1 R AH0 L
+ore AO1 R
+ours AW1 ER0 Z
+ours(2) AA1 R Z
+ours(3) AW1 R Z
+out AW1 T
+outs AW1 T S
+overdo OW1 V ER0 D UW1
+overdue OW1 V ER0 D UW1
+overhead OW1 V ER0 HH EH1 D
+overheard OW1 V ER0 HH ER1 D
+owe OW1
+owes OW1 Z
+own OW1 N
+packed P AE1 K T
+pact P AE1 K T
+pail P EY1 L
+pails P EY1 L Z
+pairs P EH1 R Z
+palate P AE1 L AH0 T
+palate(2) P AE1 L IH0 T
+pale P EY1 L
+pales P EY1 L Z
+palette P AE1 L AH0 T
+pare P EH1 R
+pares P EH1 R Z
+passed P AE1 S T
+past P AE1 S T
+patience P EY1 SH AH0 N S
+patients P EY1 SH AH0 N T S
+patients(2) P EY1 SH AH0 N Z
+pea P IY1
+peace P IY1 S
+peak P IY1 K
+peaked P IY1 K T
+peal P IY1 L
+pear P EH1 R
+pears P EH1 R Z
+pee P IY1
+peek P IY1 K
+peeked P IY1 K T
+peeks P IY1 K S
+peel P IY1 L
+peeled P IY1 L D
+peels P IY1 L Z
+peers P IH1 R Z
+perquisites P ER1 K W AH0 Z IH0 T S
+perquisites(2) P ER1 K W IH0 Z IH0 T S
+phased F EY1 Z D
+phrase F R EY1 Z
+physical F IH1 Z IH0 K AH0 L
+picnic P IH1 K N IH2 K
+piece P IY1 S
+pieced P IY1 S T
+piers P IH1 R Z
+pique P IY1 K
+piqued P IY1 K T
+placed P L EY1 S T
+places P L EY1 S AH0 Z
+places(2) P L EY1 S IH0 Z
+plain P L EY1 N
+plains P L EY1 N Z
+plan P L AE1 N
+plane P L EY1 N
+planed P L EY1 N D
+planes P L EY1 N Z
+planned P L AE1 N D
+plans P L AE1 N Z
+plant P L AE1 N T
+plants P L AE1 N T S
+pleaded P L IY1 D IH0 D
+pleas P L IY1 Z
+please P L IY1 Z
+pointed P OY1 N T IH0 D
+pointed(2) P OY1 N AH0 D
+pointer P OY1 N T ER0
+pole P OW1 L
+poll P OW1 L
+polled P OW1 L D
+pool P UW1 L
+pooling P UW1 L IH0 NG
+pools P UW1 L Z
+populace P AA1 P Y AH0 L AH0 S
+populous P AA1 P Y AH0 L AH0 S
+pore P AO1 R
+pores P AO1 R Z
+port P AO1 R T
+portable P AO1 R T AH0 B AH0 L
+portables P AO1 R T AH0 B AH0 L Z
+portrait P AO1 R T R AH0 T
+portraits P AO1 R T R AH0 T S
+portray P AO0 R T R EY1
+portrays P AO0 R T R EY1 Z
+post P OW1 S T
+potable P OW1 T AH0 B AH0 L
+pour P AO1 R
+pours P AO1 R Z
+praised P R EY1 Z D
+pray P R EY1
+prayed P R EY1 D
+prays P R EY1 Z
+precede P R IH0 S IY1 D
+preceded P R IH0 S IY1 D IH0 D
+preceded(2) P R IY0 S IY1 D IH0 D
+precedence P R EH1 S AH0 D AH0 N S
+precedents P R EH1 S AH0 D AH0 N T S
+precedents(2) P R EH1 S AH0 D EH2 N T S
+precedes P R IH0 S IY1 D Z
+preceding P R IY0 S IY1 D IH0 NG
+prerequisites P R IY0 R EH1 K W AH0 Z AH0 T S
+presence P R EH1 Z AH0 N S
+presents P R EH1 Z AH0 N T S
+presents(2) P R IY0 Z EH1 N T S
+prey P R EY1
+preyed P R EY1 D
+preys P R EY1 Z
+prince P R IH1 N S
+principal P R IH1 N S AH0 P AH0 L
+principals P R IH1 N S AH0 P AH0 L Z
+principle P R IH1 N S AH0 P AH0 L
+principles P R IH1 N S AH0 P AH0 L Z
+prints P R IH1 N T S
+proceed P R AH0 S IY1 D
+proceed(2) P R OW0 S IY1 D
+proceed(3) P ER0 S IY1 D
+proceeded P R AH0 S IY1 D IH0 D
+proceeded(2) P R OW0 S IY1 D IH0 D
+proceeding P R AH0 S IY1 D IH0 NG
+proceeding(2) P R OW0 S IY1 D IH0 NG
+proceeds P R AH0 S IY1 D Z
+proceeds(2) P R OW0 S IY1 D Z
+profit P R AA1 F AH0 T
+profit(2) P R AA1 F IH0 T
+profits P R AA1 F IH0 T S
+proof P R UW1 F
+prophet P R AA1 F AH0 T
+prophets P R AA1 F AH0 T S
+prostate P R AA1 S T EY2 T
+prostrate P R AA1 S T R EY0 T
+prove P R UW1 V
+psi S AY1
+pull P UH1 L
+pulling P UH1 L IH0 NG
+pulls P UH1 L Z
+purse P ER1 S
+pursue P ER0 S UW1
+put P UH1 T
+quaff K W AA1 F
+queue K Y UW1
+quiet K W AY1 AH0 T
+quit K W IH1 T
+quite K W AY1 T
+racking R AE1 K IH0 NG
+raise R EY1 Z
+rampant R AE1 M P AH0 N T
+rampart R AE1 M P AA2 R T
+rap R AE1 P
+raps R AE1 P S
+rapt R AE1 P T
+ray R EY1
+rays R EY1 Z
+re R EY1
+re(2) R IY1
+reach R IY1 CH
+reaches R IY1 CH AH0 Z
+reaches(2) R IY1 CH IH0 Z
+read R EH1 D
+read(2) R IY1 D
+reads R IY1 D Z
+real R IY1 L
+recede R IH0 S IY1 D
+red R EH1 D
+reeds R IY1 D Z
+reek R IY1 K
+reel R IY1 L
+reseed R IY0 S IY1 D
+respect R IH0 S P EH1 K T
+respect(2) R IY0 S P EH1 K T
+respects R IH0 S P EH1 K T S
+respects(2) R IY0 S P EH1 K T S
+respects(3) R AH0 S P EH1 K S
+respects(4) R IY0 S P EH1 K S
+rested R EH1 S T AH0 D
+rested(2) R EH1 S T IH0 D
+review R IY2 V Y UW1
+revue R IH0 V Y UW1
+rich R IH1 CH
+riches R IH1 CH AH0 Z
+riches(2) R IH1 CH IH0 Z
+right R AY1 T
+rights R AY1 T S
+rigor R IH1 G ER0
+rigors R IH1 G ER0 Z
+ringing R IH1 NG IH0 NG
+rite R AY1 T
+rites R AY1 T S
+role R OW1 L
+roles R OW1 L Z
+roll R OW1 L
+rolls R OW1 L Z
+root R UW1 T
+rooted R UW1 T AH0 D
+rooted(2) R UW1 T IH0 D
+rose R OW1 Z
+rot R AA1 T
+rote R OW1 T
+route R UW1 T
+route(2) R AW1 T
+routed R UW1 T IH0 D
+routed(2) R AW1 T IH0 D
+roux R UW1
+rows R OW1 Z
+rude R UW1 D
+rue R UW1
+sacks S AE1 K S
+sacred S EY1 K R AH0 D
+sacred(2) S EY1 K R IH0 D
+sail S EY1 L
+sails S EY1 L Z
+salary S AE1 L ER0 IY0
+sale S EY1 L
+sales S EY1 L Z
+same S EY1 M
+sand S AE1 N D
+sands S AE1 N D Z
+sane S EY1 N
+saner S EY1 N ER0
+sank S AE1 NG K
+sat S AE1 T
+sate S EY1 T
+saver S EY1 V ER0
+savers S EY1 V ER0 Z
+savor S EY1 V ER0
+savors S EY1 V ER0 Z
+sawed S AO1 D
+sax S AE1 K S
+scared S K EH1 R D
+scene S IY1 N
+scent S EH1 N T
+sea S IY1
+seamen S IY1 M AH0 N
+seas S IY1 Z
+seat S IY1 T
+seats S IY1 T S
+sects S EH1 K T S
+see S IY1
+seed S IY1 D
+seeds S IY1 D Z
+seen S IY1 N
+sees S IY1 Z
+seize S IY1 Z
+seizes S IY1 Z IH0 Z
+sell S EH1 L
+seller S EH1 L ER0
+sells S EH1 L Z
+semen S IY1 M AH0 N
+sense S EH1 N S
+senses S EH1 N S IH0 Z
+sensor S EH1 N S ER0
+sensors S EH1 N S ER0 Z
+sent S EH1 N T
+serge S ER1 JH
+serial S IH1 R IY2 AH0 L
+serials S IH1 R IY0 AH0 L Z
+servers S ER1 V ER0 Z
+serves S ER1 V Z
+set S EH1 T
+sets S EH1 T S
+sever S EH1 V ER0
+severe S AH0 V IH1 R
+sex S EH1 K S
+shall SH AE1 L
+shear SH IH1 R
+sheer SH IH1 R
+shell SH EH1 L
+show SH OW1
+showed SH OW1 D
+shown SH OW1 N
+shows SH OW1 Z
+sic S IH1 K
+sick S IH1 K
+sigh S AY1
+sight S AY1 T
+sighting S AY1 T IH0 NG
+sign S AY1 N
+since S IH1 N S
+sine S AY1 N
+sing S IH1 NG
+sink S IH1 NG K
+sire S AY1 ER0
+site S AY1 T
+slay S L EY1
+sleigh S L EY1
+slew S L UW1
+slit S L IH1 T
+slitting S L IH1 T IH0 NG
+slough S L AH1 F
+soar S AO1 R
+soared S AO1 R D
+soars S AO1 R Z
+sod S AA1 D
+sole S OW1 L
+some S AH1 M
+son S AH1 N
+sonny S AH1 N IY0
+sons S AH1 N Z
+soot S UH1 T
+sore S AO1 R
+sores S AO1 R Z
+soul S OW1 L
+sour S AW1 ER0
+sour(2) S AW1 R
+sow S AW1
+sow(2) S OW1
+sowed S AW1 D
+sowed(2) S OW1 D
+sown S OW1 N
+spilt S P IH1 L T
+split S P L IH1 T
+splitting S P L IH1 T IH0 NG
+spoor S P UH1 R
+spore S P AO1 R
+spores S P AO1 R Z
+stair S T EH1 R
+stairs S T EH1 R Z
+stake S T EY1 K
+stand S T AE1 N D
+stands S T AE1 N D Z
+stare S T EH1 R
+stared S T EH1 R D
+stares S T EH1 R Z
+staring S T EH1 R IH0 NG
+starred S T AA1 R D
+starring S T AA1 R IH0 NG
+start S T AA1 R T
+starts S T AA1 R T S
+stat S T AE1 T
+state S T EY1 T
+stationary S T EY1 SH AH0 N EH2 R IY0
+stationery S T EY1 SH AH0 N EH2 R IY0
+stats S T AE1 T S
+steak S T EY1 K
+steal S T IY1 L
+steel S T IY1 L
+step S T EH1 P
+steppe S T EH1 P
+straight S T R EY1 T
+strait S T R EY1 T
+subside S AH0 B S AY1 D
+subsided S AH0 B S AY1 D IH0 D
+subsides S AH0 B S AY1 D Z
+subsidize S AH1 B S IH0 D AY2 Z
+subsidized S AH1 B S IH0 D AY2 Z D
+subsidizes S AH1 B S IH0 D AY2 Z IH0 Z
+sue S UW1
+suede S W EY1 D
+suit S UW1 T
+suite S W IY1 T
+sum S AH1 M
+sun S AH1 N
+sunny S AH1 N IY0
+suns S AH1 N Z
+sure SH UH1 R
+surge S ER1 JH
+swayed S W EY1 D
+sweet S W IY1 T
+sword S AO1 R D
+tails T EY1 L Z
+taking T EY1 K IH0 NG
+tales T EY1 L Z
+talking T AO1 K IH0 NG
+taper T EY1 P ER0
+tapers T EY1 P ER0 Z
+taught T AO1 T
+taunt T AO1 N T
+taut T AO1 T
+teaming T IY1 M IH0 NG
+tear T EH1 R
+tear(2) T IH1 R
+teas T IY1 Z
+tease T IY1 Z
+teeming T IY1 M IH0 NG
+tees T IY1 Z
+teeth T IY1 TH
+tense T EH1 N S
+tents T EH1 N T S
+the DH AH0
+the(2) DH AH1
+the(3) DH IY0
+them DH EH1 M
+them(2) DH AH0 M
+then DH EH1 N
+theses TH IY1 S IY0 Z
+thesis TH IY1 S AH0 S
+they DH EY1
+thin TH IH1 N
+thing TH IH1 NG
+things TH IH1 NG Z
+think TH IH1 NG K
+thinks TH IH1 NG K S
+thins TH IH1 N Z
+this DH IH1 S
+this(2) DH IH0 S
+thought TH AO1 T
+threw TH R UW1
+throes TH R OW1 Z
+throne TH R OW1 N
+through TH R UW1
+throw TH R OW1
+thrown TH R OW1 N
+throws TH R OW1 Z
+ti T IY1
+ticks T IH1 K S
+tics T IH1 K S
+tide T AY1 D
+tied T AY1 D
+tier T IY1 R
+tiered T IY1 R D
+tightens T AY1 T AH0 N Z
+timber T IH1 M B ER0
+timbre T IH1 M B ER0
+tired T AY1 ER0 D
+titans T AY1 T AH0 N Z
+to T UW1
+to(2) T IH0
+to(3) T AH0
+toad T OW1 D
+toe T OW1
+toed T OW1 D
+toll T OW1 L
+tool T UW1 L
+tooth T UW1 TH
+tow T OW1
+towed T OW1 D
+toxin T AA1 K S AH0 N
+toxins T AA1 K S AH0 N Z
+tracked T R AE1 K T
+tract T R AE1 K T
+tray T R EY1
+trays T R EY1 Z
+trey T R EY1
+tried T R AY1 D
+uninterested AH0 N IH1 N T R AH0 S T IH0 D
+urn ER1 N
+using Y UW1 Z IH0 NG
+vague V EY1 G
+vain V EY1 N
+vale V EY1 L
+vane V EY1 N
+vantage V AE1 N T AH0 JH
+vantage(2) V AE1 N T IH0 JH
+vary V EH1 R IY0
+vase V EY1 S
+vase(2) V AA1 Z
+veil V EY1 L
+vein V EY1 N
+verses V ER1 S AH0 Z
+verses(2) V ER1 S IH0 Z
+versus V ER1 S AH0 S
+versus(2) V ER1 S AH0 Z
+very V EH1 R IY0
+vial V AY1 AH0 L
+vicious V IH1 SH AH0 S
+vile V AY1 L
+vintage V IH1 N T IH0 JH
+viscous V IH1 S K AH0 S
+vogue V OW1 G
+wade W EY1 D
+wades W EY1 D Z
+waist W EY1 S T
+waists W EY1 S T S
+waited W EY1 T IH0 D
+waive W EY1 V
+waives W EY1 V Z
+wand W AA1 N D
+wander W AA1 N D ER0
+wandered W AA1 N D ER0 D
+wandering W AA1 N D ER0 IH0 NG
+wanders W AA1 N D ER0 Z
+want W AA1 N T
+want(2) W AO1 N T
+war W AO1 R
+warm W AO1 R M
+warming W AO1 R M IH0 NG
+warms W AO1 R M Z
+warn W AO1 R N
+warning W AO1 R N IH0 NG
+warns W AO1 R N Z
+warship W AO1 R SH IH2 P
+wary W EH1 R IY0
+was W AA1 Z
+was(2) W AH0 Z
+waste W EY1 S T
+wastes W EY1 S T S
+watt W AA1 T
+wave W EY1 V
+waves W EY1 V Z
+wax W AE1 K S
+way W EY1
+we W IY1
+weak W IY1 K
+weather W EH1 DH ER0
+wee W IY1
+week W IY1 K
+weigh W EY1
+weighed W EY1 D
+weighted W EY1 T IH0 D
+weights W EY1 T S
+weld W EH1 L D
+were W ER1
+what W AH1 T
+what(2) HH W AH1 T
+wheeled W IY1 L D
+wheeled(2) HH W IY1 L D
+where W EH1 R
+where(2) HH W EH1 R
+wherry W EH1 R IY0
+wherry(2) HH W EH1 R IY0
+whether W EH1 DH ER0
+whether(2) HH W EH1 DH ER0
+whey W EY1
+whey(2) HH W EY1
+which W IH1 CH
+which(2) HH W IH1 CH
+while W AY1 L
+while(2) HH W AY1 L
+whit W IH1 T
+whit(2) HH W IH1 T
+whole HH OW1 L
+widow W IH1 D OW0
+wield W IY1 L D
+wild W AY1 L D
+window W IH1 N D OW0
+wit W IH1 T
+witch W IH1 CH
+with W IH1 DH
+with(2) W IH1 TH
+with(3) W IH0 TH
+with(4) W IH0 DH
+woman W UH1 M AH0 N
+women W IH1 M AH0 N
+won W AH1 N
+won(2) W AA1 N
+wonder W AH1 N D ER0
+wondered W AH1 N D ER0 D
+wondering W AH1 N D ER0 IH0 NG
+wonders W AH1 N D ER0 Z
+word W ER1 D
+wore W AO1 R
+worn W AO1 R N
+worse W ER1 S
+worship W ER1 SH AH0 P
+worship(2) W ER1 SH IH0 P
+worth W ER1 TH
+wracking R AE1 K IH0 NG
+wrap R AE1 P
+wrapped R AE1 P T
+wraps R AE1 P S
+wreak R IY1 K
+wreaked R IY1 K T
+wrested R EH1 S T IH0 D
+wright R AY1 T
+wring R IH1 NG
+wringing R IH1 NG IH0 NG
+write R AY1 T
+writes R AY1 T S
+wrong R AO1 NG
+wrongs R AO1 NG Z
+wrote R OW1 T
+wrought R AO1 T
+yoke Y OW1 K
+yolk Y OW1 K
+you Y UW1
+your Y AO1 R
+your(2) Y UH1 R

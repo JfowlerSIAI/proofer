@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security reports
+    url: https://github.com/JfowlerSIAI/proofer/blob/main/SECURITY.md
+    about: Report vulnerabilities privately; read the security policy before sending details.
+  - name: Support
+    url: https://github.com/JfowlerSIAI/proofer/blob/main/docs/privacy-policy.md#contact
+    about: Contact the maintainer for best-effort support. Do not send writing logs or private text.

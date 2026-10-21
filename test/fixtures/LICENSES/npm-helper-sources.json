@@ -1,0 +1,101 @@
+{
+  "retrieved": "2026-10-21",
+  "method": "Read-only extraction of license/notice files from exact-version upstream npm distributions. No packages installed or executed.",
+  "packages": [
+    {
+      "package": "eventemitter3",
+      "version": "5.0.1",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/eventemitter3/-/eventemitter3-5.0.1.tgz",
+      "archive_sha256": "3188d3a05772c99cf0ccf44f6cd8530bcbaf02ce0addcc47c33f26daff0f952c",
+      "repository": {
+        "url": "git://github.com/primus/eventemitter3.git",
+        "type": "git"
+      },
+      "git_head": "a650549176ded0d0dcc52e27b03ae5669d7dcd7c",
+      "notices": [
+        {
+          "file": "LICENSES/npm/eventemitter3@5.0.1/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "3aecc12b1cb28832b5f65ab64291de96568c3f236a74d646281b4491f7bcadbf"
+        }
+      ]
+    },
+    {
+      "package": "docsearch.js",
+      "version": "2.6.3",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/docsearch.js/-/docsearch.js-2.6.3.tgz",
+      "archive_sha256": "0b2e82a69b533d36cd7eec5abd2634c99ad78859f26a4d00c778ef25ca49bae4",
+      "repository": {
+        "url": "git+https://github.com/algolia/docsearch.git",
+        "type": "git"
+      },
+      "git_head": "e079df85583ba1f3f4d83b594a8955c241d9aa26",
+      "notices": [
+        {
+          "file": "LICENSES/npm/docsearch.js@2.6.3/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "5348ce0a75fe1b5ba8e71db108f9798da52d95f274ddca4105529514c5736170"
+        }
+      ]
+    },
+    {
+      "package": "@juggle/resize-observer",
+      "version": "3.4.0",
+      "declared_license": "Apache-2.0",
+      "source": "https://registry.npmjs.org/@juggle/resize-observer/-/resize-observer-3.4.0.tgz",
+      "archive_sha256": "a32a22847dbbe80e53b635b7dfadb5207a524785e6dbb8dff82bd195ae7dccd1",
+      "repository": {
+        "url": "git+ssh://git@github.com/juggle/resize-observer.git",
+        "type": "git"
+      },
+      "git_head": "6cdfddfb700180034bff0eb36bf38db87533cff0",
+      "notices": [
+        {
+          "file": "LICENSES/npm/@juggle__resize-observer@3.4.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "293c905e2ec4f6c30c4684592898fd24215ac735f0601b07b158d1588c8a5af7"
+        }
+      ]
+    },
+    {
+      "package": "is-plain-object",
+      "version": "5.0.0",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/is-plain-object/-/is-plain-object-5.0.0.tgz",
+      "archive_sha256": "405ffdac90b988722906f2c25e627331c8ac952201c5e2eefab1c61f22d25bd3",
+      "repository": {
+        "url": "https://github.com/jonschlinkert/is-plain-object.git",
+        "type": "git"
+      },
+      "git_head": null,
+      "notices": [
+        {
+          "file": "LICENSES/npm/is-plain-object@5.0.0/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "4cd903859549d4b20b571041f96dfae1136ed079c476126268f9d7cc1b611150"
+        }
+      ]
+    },
+    {
+      "package": "lodash",
+      "version": "4.17.21",
+      "declared_license": "MIT",
+      "source": "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz",
+      "archive_sha256": "6a087ac9e5702a0c9d60fbcd48696012646ec8df1491dea472b150e79fcaf804",
+      "repository": {
+        "url": "git+https://github.com/lodash/lodash.git",
+        "type": "git"
+      },
+      "git_head": "c6e281b878b315c7a10d90f9c2af4cdb112d9625",
+      "notices": [
+        {
+          "file": "LICENSES/npm/lodash@4.17.21/LICENSE",
+          "archive_path": "package/LICENSE",
+          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+        }
+      ]
+    }
+  ]
+}

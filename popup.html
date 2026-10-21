@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proofer</title>
+    <style>
+      :root { color-scheme: light dark; }
+      body { font: 13px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 12px; width: 320px; }
+      h1 { font-size: 14px; margin: 0 0 10px; }
+      .row { display: flex; align-items: center; justify-content: space-between; margin: 8px 0; gap: 10px; }
+      label { user-select: none; }
+      input[type="text"] { width: 190px; }
+    .activate { border: 1px solid #bfdbfe; background: #eff6ff; border-radius: 6px;
+                padding: 8px 10px; margin: 8px 0; }
+    .activate-lead { margin: 0 0 4px; font-weight: 600; }
+    .activate-actions { display: flex; gap: 6px; margin: 8px 0 4px; }
+    .activate-actions button { flex: 1; }
+    .activate-actions .primary { font-weight: 600; }
+    .activate-note { margin: 4px 0 0; }
+      .actions { display: flex; gap: 8px; margin-top: 10px; }
+      button { padding: 6px 10px; }
+      .status { margin-top: 8px; min-height: 16px; color: #444; word-break: break-word; }
+      .status.error { color: #b00020; }
+      .origin { font-size: 12px; color: #666; margin-bottom: 8px; }
+      .section { border-top: 1px solid #e5e7eb; margin-top: 12px; padding-top: 8px; }
+      .section h2 { font-size: 13px; margin: 0 0 6px; font-weight: 600; }
+      .hint { font-size: 11px; color: #666; margin: 2px 0 6px; line-height: 1.4; }
+      .log-stats { font-size: 11px; color: #666; margin-top: 6px; min-height: 14px; }
+      /* The keep rate says how many survived; this says what kind they were. */
+      /* The outcome distribution. 14px is the plan's height; the strip is a
+         flex row and each segment's flexGrow is its share, so no width
+         arithmetic is done in JS and a rounding residue cannot appear. */
+      .bar { display: flex; height: 14px; width: 100%; margin: 6px 0 4px;
+             border-radius: 3px; overflow: hidden; background: #e5e7eb; }
+      .bar:empty { display: none; }
+      .bar-seg { display: flex; align-items: center; justify-content: center;
+                 min-width: 2px; font-size: 10px; line-height: 1; color: #fff;
+                 overflow: hidden; }
+      /* One column, not two. Two fits more in the popup and the sub-rows make
+         it unreadable -- a bucket's detail lands under the wrong parent and the
+         eye has to jump back. */
+      .bar-key { font-size: 11px; color: #666; }
+      .bar-key:empty { display: none; }
+      .bar-key-row { display: flex; align-items: baseline; gap: 5px; }
+      .bar-key-icon { width: 10px; text-align: center; flex: none; }
+      .bar-key-label { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis;
+                       white-space: nowrap; }
+      .bar-key-count { flex: none; font-variant-numeric: tabular-nums; }
+      /* A zero category keeps its row. "Nothing was lost" and "we are not
+         counting what is lost" must not look the same. */
+      .bar-key-row-zero { opacity: 0.45; }
+      .bar-key-row-sub { padding-left: 15px; color: #999; }
+      .recent { margin-top: 8px; max-height: 320px; overflow-y: auto; }
+      .recent-row { border: 1px solid #e5e7eb; border-radius: 6px; padding: 8px;
+                    margin-bottom: 6px; }
+      .recent-head { display: flex; justify-content: space-between; gap: 8px;
+                     font-size: 10px; color: #888; margin-bottom: 5px; }
+      .recent-before, .recent-after { font-size: 11px; line-height: 1.45;
+                     word-break: break-word; padding-left: 8px;
+                     border-left: 2px solid transparent; }
+      .recent-before { color: #b91c1c; border-left-color: #fca5a5; }
+      .recent-after { color: #15803d; border-left-color: #86efac; margin-top: 3px; }
+      .recent-copy { margin-top: 6px; font-size: 10px; padding: 2px 6px; }
+      .badge { font-size: 10px; font-weight: 400; color: #92400e; background: #fef3c7; border-radius: 3px; padding: 1px 4px; vertical-align: middle; }
+      .actions-sm { display: flex; gap: 6px; margin-top: 6px; }
+      .actions-sm button { padding: 4px 8px; font-size: 12px; }
+      .status-line { font-size: 11px; line-height: 1.4; margin: 6px 0; padding: 5px 7px;
+                     border-radius: 4px; background: #f3f4f6; color: #374151; }
+      .status-line.ok { background: #ecfdf5; color: #065f46; }
+      .status-line.warn { background: #fffbeb; color: #92400e; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #1f2937; color: #e5e7eb; }
+        .status { color: #9ca3af; }
+        .status.error { color: #f87171; }
+        .origin { color: #9ca3af; }
+        .section { border-top-color: #374151; }
+        .hint, .log-stats { color: #9ca3af; }
+        .activate { background: #0b243f; border-color: #1e3a5f; }
+        .bar { background: #334155; }
+        .bar-key { color: #94a3b8; }
+        .bar-key-row-sub { color: #64748b; }
+        .recent-row { border-color: #374151; }
+        .recent-head { color: #9ca3af; }
+        .recent-before { color: #fca5a5; border-left-color: #7f1d1d; }
+        .recent-after { color: #86efac; border-left-color: #14532d; }
+        .status-line { background: #374151; color: #d1d5db; }
+        .status-line.ok { background: #064e3b; color: #a7f3d0; }
+        .status-line.warn { background: #78350f; color: #fde68a; }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Proofer</h1>
+    <div class="origin" id="originText">Site: (loading)</div>
+
+    <!-- The first line names what stops Proofer working, with the one button
+         that fixes it or opens setup. Hidden when all is well. -->
+    <div class="status-line warn" id="setupLine" style="display:none">
+      <span id="setupLineText"></span>
+      <div class="actions-sm"><button id="openSetup">Open setup</button></div>
+    </div>
+    <div class="status" id="status"></div>
+
+    <div class="section">
+      <h2>Correct as you type</h2>
+      <p class="hint">
+        Proofreads each sentence as you finish it, using the text before it
+        for context. English multiline text boxes, plus the rich editors the write has
+        been measured against: Slate, ProseMirror, Quill, Lexical, Draft and
+        Trix. Anywhere else it refuses, and says so below.
+      </p>
+
+      <!-- The one place the write permission is granted (settings v5): there
+           is no suggestion mode any more, so switching Proofer on IS the
+           consent to silent corrections. The scope is stated here rather than
+           in a tooltip, because a permission the user did not read is not one
+           they gave. -->
+      <div id="sentenceActivate" class="activate" style="display:none">
+        <p class="activate-lead">Proofer is not correcting anything yet.</p>
+        <p class="hint">
+          Turn it on and, as you finish each sentence, Proofer writes its
+          correction straight into the field and flashes the changed words
+          green. <b>Escape</b> takes a correction back, and <b>Recent changes</b>
+          below lists what it did. It works on every site except ones you switch
+          off, and runs on your computer — nothing you type is sent anywhere.
+        </p>
+        <p class="hint">
+          It also keeps a log on this computer of the sentences it checks, so
+          its work can be reviewed — see Recording below.
+        </p>
+        <!-- Until this computer has passed the speed check, the one action is
+             setup: Turn on is refused without it (the worker checks too). -->
+        <p class="hint" id="activateNeedsSetup" style="display:none">
+          First, a one-time setup on this computer: a download and a short
+          speed check.
+        </p>
+        <div class="activate-actions">
+          <button id="activateOn" class="primary">Turn on</button>
+          <button id="activateSetup" class="primary" style="display:none">Open setup</button>
+        </div>
+      </div>
+
+      <div id="sentenceOn" class="row" style="display:none">
+        <span>Proofer is on.</span>
+        <button id="turnOff">Turn off</button>
+      </div>
+      <div class="row">
+        <label for="sentenceModeSite">Use Proofer on this site</label>
+        <input id="sentenceModeSite" type="checkbox" />
+      </div>
+      <p class="hint" id="sentenceSites"></p>
+      <!-- Where sentence mode says what it is actually doing on this page. A
+           curated allowlist of editors is defensible; one that never says it
+           refused is indistinguishable from a broken extension. -->
+      <p class="status-line" id="sentenceWhere">Checking this page…</p>
+      <div class="actions-sm">
+        <button id="sentenceEnableAllSites">Turn on everywhere</button>
+      </div>
+      <div class="log-stats" id="sentenceStats"></div>
+      <div class="bar" id="sentenceBar"></div>
+      <div class="bar-key" id="sentenceBarKey"></div>
+    </div>
+
+    <!-- The receipt for the silent path. Loaded on demand, so the ordinary
+         "open the popup and change a setting" case never pulls recorded prose
+         into this page. Read-only by design: Copy, never Restore. -->
+    <div class="section">
+      <h2>Recent changes</h2>
+      <p class="hint">
+        Recent Proofer writes that changed a text field, newest first. Each
+        receipt explains what the editor did; a misplaced write shows the
+        proposed replacement. Corrections refused by a guard are not shown.
+      </p>
+      <div class="actions-sm">
+        <button id="recentBtn">Show recent changes</button>
+      </div>
+      <div class="recent" id="recentChanges" style="display:none"></div>
+    </div>
+
+    <div class="section">
+      <h2>Recording</h2>
+      <p class="hint">
+        Proofer keeps a log on this computer of the sentences it checks —
+        including ones it didn't change — up to 400 characters of the text
+        before each, the site, what Proofer proposed (including corrections
+        it chose not to make), and any edits you make to its corrections.
+        Nothing is sent anywhere. <b>Export</b> saves it as a file you can
+        choose to send; <b>Clear</b> deletes it from this computer (files you
+        already exported are yours and are not touched).
+      </p>
+      <div class="row">
+        <label for="recordAll">Keep a log</label>
+        <input id="recordAll" type="checkbox" />
+      </div>
+      <div class="log-stats" id="logStats"></div>
+      <p class="status-line warn" id="logEvicted" style="display:none"></p>
+      <div class="actions-sm">
+        <button id="exportLogBtn">Export</button>
+        <button id="clearLogBtn">Clear</button>
+      </div>
+    </div>
+
+    <!-- Nothing here needs changing for Proofer to work: the
+         address is for an Ollama on a custom port. -->
+    <details class="section" id="advanced">
+      <summary>Advanced</summary>
+      <div class="row">
+        <label for="ollamaUrl">Ollama address</label>
+        <input id="ollamaUrl" type="text" spellcheck="false" />
+      </div>
+      <!-- No model choice: Proofer runs the one model it
+           pins, by tag and digest. This line says whether it is installed. -->
+      <div class="row">
+        <span>Proofreading engine</span>
+        <span id="engineLine" class="hint">checking…</span>
+      </div>
+      <div class="actions">
+        <button id="saveBtn">Save</button>
+        <button id="testBtn">Test connection</button>
+        <button id="retestBtn">Open setup</button>
+      </div>
+    </details>
+
+    <script src="maintainer.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

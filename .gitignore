@@ -1,0 +1,53 @@
+# No trailing slash: an agent worktree gets its deps by SYMLINKING this path at
+# the main checkout, and a trailing-slash pattern does not match a symlink, so
+# the link itself was stageable and got committed once.
+test/node_modules
+
+# Test output is regenerable and noisy, with exceptions: a result that is the
+# EVIDENCE for a claim made in the docs ships, because a quoted number nobody can
+# check is an assertion. The repeat study backs the headline model comparison in
+# TESTING.md; the editor-bench files back the paired old/new reproduction and the
+# ad-hoc characterisation in §19, one of which (parent) cannot be regenerated at
+# all once the pre-refactor probe is gone from the working tree.
+# (Directory itself must not be excluded, or the negations below cannot match.)
+test/results/*
+!test/results/README.md
+!test/results/repeat-study.tsv
+!test/results/spark-x25-2026-09-29.json
+!test/results/spark-x25-finetune-2026-10-01.json
+!test/results/spark-x25-4b-finetune-2026-10-01.json
+!test/results/ollama-0.34.3-2026-10-01.json
+!test/results/editor-bench-paired-parent.json
+!test/results/editor-bench-paired-refactor.json
+!test/results/editor-bench-paired-postaudit.json
+!test/results/editor-bench-adhoc-codemirror.json
+
+# Harvested interaction logs and the cases built from them. This is text the
+# user actually typed into real sites -- it must never reach a remote by
+# accident. Anything from here that belongs in a suite gets copied in by hand,
+# after reading it.
+test/harvested/
+*.jsonl
+
+CLAUDE.md
+
+# Build output of tools/package.mjs -- a copy of tracked files, rebuilt on demand.
+/dist/
+
+# Local developer Gmail credentials belong outside the checkout.
+.env
+.env.*
+**/oauth-client.json
+**/gmail-token.json
+**/token.json
+**/credentials.json
+
+# Python bytecode and local virtual environments.
+__pycache__/
+*.py[cod]
+.venv/
+
+# Private planning and review archives are excluded from the public source.
+audit/
+docs/plans/
+docs/history/

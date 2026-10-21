@@ -1,0 +1,175 @@
+# Manually verify packaged setup against the pinned model on hosted Windows
+# and macOS runners. Downloads Ollama and the model. A correct too-slow verdict
+# passes on these CPU-only runners; a wrong answer or operational failure does
+# not. Installer dialogs and usability still need the human acceptance check.
+# Start with: gh workflow run os-install.yml --ref main -f os=both
+
+name: OS install check (Windows, macOS)
+
+on:
+  workflow_dispatch:
+    inputs:
+      os:
+        description: Which operating systems to check
+        type: choice
+        options: [both, windows, macos]
+        default: both
+
+permissions:
+  contents: read
+
+concurrency:
+  group: os-install-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  OLLAMA_VERSION: '0.34.3'
+
+jobs:
+  install-check:
+    name: install check (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ${{ fromJSON(inputs.os == 'windows' && '["windows-latest"]' || inputs.os == 'macos' && '["macos-latest"]' || '["windows-latest", "macos-latest"]') }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: test/package-lock.json
+
+      - name: Use quarantine-capable npm
+        run: npm install --global npm@11.12.1 --ignore-scripts --no-audit --no-fund
+
+      # test/.npmrc sets ignore-scripts=true, so this installs no browser; the
+      # next step does, explicitly.
+      - name: Install test dependencies
+        working-directory: test
+        run: npm ci
+
+      - name: Install Chrome for Testing
+        working-directory: test
+        run: npx --no-install puppeteer browsers install chrome
+
+      # Pinned so test/lib/chrome.mjs cannot fall back to a branded Chrome
+      # (>= 137 ignores --load-extension without saying so) if the install
+      # above ever produced nothing. Same reasoning as no-network.yml.
+      - name: Pin the browser
+        working-directory: test
+        run: |
+          CHROME="$(node -e "import('puppeteer').then(async p => console.log(await p.default.executablePath()))")"
+          if ! node -e "process.exit(require('fs').existsSync(process.argv[1]) ? 0 : 1)" "$CHROME"; then
+            echo "::error::Chrome for Testing is missing at ${CHROME}. The install step above did not produce a browser."
+            exit 1
+          fi
+          echo "PROOFER_CHROME=$CHROME" >> "$GITHUB_ENV"
+          echo "Chrome for Testing: $CHROME"
+
+      - name: Install Ollama ${{ env.OLLAMA_VERSION }} from its release assets
+        run: |
+          set -euo pipefail
+          case "$RUNNER_OS" in
+            Windows) ASSET=ollama-windows-amd64.zip; PINNED=306ce9e81e3491d147f558e60d7a389499f244d10f71859c6e4e899241d1b4ae ;;
+            macOS)   ASSET=ollama-darwin.tgz;        PINNED=2c45865f94bce0d4d1d2567603dd2fdacaf375585220a175aa4800105193d36e ;;
+            *) echo "::error::No Ollama asset is pinned for $RUNNER_OS."; exit 1 ;;
+          esac
+          RT="$RUNNER_TEMP"
+          if command -v cygpath >/dev/null 2>&1; then RT="$(cygpath -u "$RUNNER_TEMP")"; fi
+          DL="$RT/ollama-dl"; DEST="$RT/ollama"
+          mkdir -p "$DL" "$DEST"
+          BASE="https://github.com/ollama/ollama/releases/download/v${OLLAMA_VERSION}"
+          curl -fsSL --retry 3 --retry-delay 5 -o "$DL/sha256sum.txt" "$BASE/sha256sum.txt"
+          curl -fsSL --retry 3 --retry-delay 5 -o "$DL/$ASSET" "$BASE/$ASSET"
+          sha256() { if command -v sha256sum >/dev/null 2>&1; then sha256sum "$1" | cut -d' ' -f1; else shasum -a 256 "$1" | cut -d' ' -f1; fi; }
+          LISTED="$(awk -v f="./$ASSET" '$2 == f { print $1 }' "$DL/sha256sum.txt" | tr -d '\r')"
+          GOT="$(sha256 "$DL/$ASSET")"
+          echo "pinned here:      $PINNED"
+          echo "release lists:    ${LISTED:-<absent>}"
+          echo "downloaded file:  $GOT"
+          if [ "$LISTED" != "$PINNED" ]; then
+            echo "::error::The release's sha256sum.txt does not list $ASSET with the pinned SHA-256. Do not re-pin without finding out why."
+            exit 1
+          fi
+          if [ "$GOT" != "$PINNED" ]; then
+            echo "::error::$ASSET does not match its pinned SHA-256."
+            exit 1
+          fi
+          case "$RUNNER_OS" in
+            Windows)
+              # Windows' own tar.exe (bsdtar) reads zip; Git Bash's GNU tar does not.
+              SYS="$(cygpath -S)"
+              if [ -x "$SYS/tar.exe" ]; then (cd "$DEST" && "$SYS/tar.exe" -xf "$(cygpath -w "$DL/$ASSET")")
+              elif command -v unzip >/dev/null 2>&1; then unzip -q "$DL/$ASSET" -d "$DEST"
+              else 7z x -y -o"$DEST" "$DL/$ASSET"; fi
+              NAME=ollama.exe ;;
+            macOS)
+              tar -xzf "$DL/$ASSET" -C "$DEST"
+              NAME=ollama ;;
+          esac
+          # The shallowest file of that name: the binary, not anything under lib/.
+          BIN="$(find "$DEST" -type f -name "$NAME" | awk '{ print gsub("/", "/"), $0 }' | sort -n | head -n 1 | cut -d' ' -f2-)"
+          if [ -z "$BIN" ]; then echo "::error::No $NAME in $ASSET."; find "$DEST" -maxdepth 3 | head -50; exit 1; fi
+          chmod +x "$BIN" || true
+          echo "OLLAMA_BIN=$BIN" >> "$GITHUB_ENV"
+          echo "Ollama binary: $BIN"
+          rm -f "$DL/$ASSET"
+
+      - name: Build the extension package
+        run: node tools/package.mjs
+
+      # Ollama is started here, not in a step of its own, because a background
+      # process is not guaranteed to outlive its step on Windows. The model
+      # store starts EMPTY, so the engine is setup's own download.
+      - name: Run the install check
+        env:
+          OLLAMA_HOST: 127.0.0.1:11434
+          OLLAMA_MODELS: ${{ runner.temp }}/ollama-models
+          PROOFER_INSTALL_CHECK_OUT: ${{ runner.temp }}/os-install-check
+        run: |
+          set -uo pipefail
+          RT="$RUNNER_TEMP"
+          if command -v cygpath >/dev/null 2>&1; then RT="$(cygpath -u "$RUNNER_TEMP")"; fi
+          OUT="$RT/os-install-check"
+          mkdir -p "$OUT" "$RT/ollama-models"
+          "$OLLAMA_BIN" serve > "$OUT/ollama-server.log" 2>&1 &
+          SRV=$!
+          V=""
+          for i in $(seq 1 60); do
+            V="$(curl -fsS http://127.0.0.1:11434/api/version 2>/dev/null || true)"
+            [ -n "$V" ] && break
+            sleep 1
+          done
+          echo "Ollama answers: ${V:-nothing}"
+          case "$V" in
+            *"\"$OLLAMA_VERSION\""*) ;;
+            *) echo "::error::Ollama did not come up as $OLLAMA_VERSION on 127.0.0.1:11434."; tail -n 40 "$OUT/ollama-server.log"; kill "$SRV" 2>/dev/null; exit 1 ;;
+          esac
+          # GitHub runs this as `bash -eo pipefail`: a bare failing command would
+          # end the step here, before Ollama is stopped and its log printed.
+          rc=0
+          node test/os-install-check.mjs || rc=$?
+          kill "$SRV" 2>/dev/null || true
+          sleep 2
+          echo "--- ollama server log (tail) ---"
+          tail -n 40 "$OUT/ollama-server.log" || true
+          exit $rc
+
+      # Always, and above all on failure: the summary, the stored verdict, the
+      # test report (no typed text, checked), every setup screen reached, and
+      # the Ollama server log.
+      - name: Upload the artifacts
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: os-install-check-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/os-install-check
+          if-no-files-found: warn
+          retention-days: 14

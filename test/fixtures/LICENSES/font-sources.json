@@ -1,0 +1,275 @@
+{
+  "verified": "2026-10-21",
+  "method": "Font name-table fields read with system FreeType; IDs 0=copyright, 1=family, 5=version, 13=license description, 14=license URL. Font bytes are unmodified.",
+  "fonts": [
+    {
+      "file": "slatejs.org/_next/static/media/1e41be92c43b3255-s.p.woff2",
+      "sha256": "0a44e0bb6ba5c8537e8814c148ef7755f1bce12112361231f595ecc584a18d7a",
+      "embedded_name_table": {
+        "0": "Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto-classic)",
+        "1": "Roboto",
+        "5": "Version 3.015; 2026",
+        "14": "https://openfontlicense.org"
+      },
+      "license_file": "LICENSES/fonts/Roboto-OFL.txt"
+    },
+    {
+      "file": "slatejs.org/_next/static/media/02743a8d10a3d186-s.p.woff2",
+      "sha256": "9f06741ff731c4555398df16ce523ee8fd24dfd9dfd2ff2a6c9d63239cf0e9f7",
+      "embedded_name_table": {
+        "0": "Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto-classic)",
+        "1": "Roboto",
+        "5": "Version 3.015; 2026",
+        "14": "https://openfontlicense.org"
+      },
+      "license_file": "LICENSES/fonts/Roboto-OFL.txt"
+    },
+    {
+      "file": "slatejs.org/_next/static/media/1a634e73dfeff02c-s.p.woff2",
+      "sha256": "cdd53dc5576a79f35cf280dfbd9c1cb2a5dd2f0ede30afba9b9ccdc7fe12e7d0",
+      "embedded_name_table": {
+        "0": "Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto-classic)",
+        "1": "Roboto",
+        "5": "Version 3.015; 2026",
+        "14": "https://openfontlicense.org"
+      },
+      "license_file": "LICENSES/fonts/Roboto-OFL.txt"
+    },
+    {
+      "file": "slatejs.org/_next/static/media/c9a21b8e54ee94b6-s.p.woff2",
+      "sha256": "e9f07da0193462efe80d281f293260116439d265ec1ce4c49d921378d97e2ac6",
+      "embedded_name_table": {
+        "0": "Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto-classic)",
+        "1": "Roboto",
+        "5": "Version 3.015; 2026",
+        "14": "https://openfontlicense.org"
+      },
+      "license_file": "LICENSES/fonts/Roboto-OFL.txt"
+    },
+    {
+      "file": "slatejs.org/_external/fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNa.woff",
+      "sha256": "fd84f88b497040d4f7d5e8c9f8635aef8d3e706c0fa52e2b6facf14eee87e522",
+      "embedded_name_table": {
+        "0": "Copyright 2018 Google, Inc. All Rights Reserved.",
+        "1": "Material Icons",
+        "5": "Version 1.017"
+      },
+      "license_file": "LICENSES/fonts/MaterialIcons-Apache-2.0.txt"
+    },
+    {
+      "file": "slatejs.org/_external/fonts.gstatic.com/s/materialicons/v145/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2",
+      "sha256": "4a4dbc62fa335e411b94a532be091c58c0c0c4fa731339f11722577d3cf6443b",
+      "embedded_name_table": {
+        "0": "Copyright 2018 Google, Inc. All Rights Reserved.",
+        "1": "Material Icons",
+        "5": "Version 1.017"
+      },
+      "license_file": "LICENSES/fonts/MaterialIcons-Apache-2.0.txt"
+    },
+    {
+      "file": "prosemirror.net/css/font/source_sans_semibold.woff2",
+      "sha256": "0b1dd42ccd2f5da83fa717b15fdd9f91879436b84a15d95340fc7ed5c2bc0269",
+      "embedded_name_table": {
+        "1": "Source Sans Pro Semibold",
+        "5": "Version 1.050;PS Version 1.000;hotconv 1.0.70;makeotf.lib2.5.5900",
+        "14": "http://www.adobe.com/type/legal.html"
+      },
+      "license_file": "LICENSES/fonts/SourceSansPro-OFL.txt"
+    },
+    {
+      "file": "prosemirror.net/css/font/source_sans.woff2",
+      "sha256": "599d93e0748728edc6bd55a82a52bff61196b149d566a67d4ed86d55d9c520aa",
+      "embedded_name_table": {
+        "1": "Source Sans Pro",
+        "5": "Version 1.050;PS Version 1.000;hotconv 1.0.70;makeotf.lib2.5.5900",
+        "14": "http://www.adobe.com/type/legal.html"
+      },
+      "license_file": "LICENSES/fonts/SourceSansPro-OFL.txt"
+    },
+    {
+      "file": "prosemirror.net/css/font/source_sans_italic.woff2",
+      "sha256": "1a95badc08844af1a5d383f47734d6966d1333bcaad50176a2c67e6a5ea8a9f9",
+      "embedded_name_table": {
+        "1": "Source Sans Pro",
+        "5": "Version 1.050;PS Version 1.000;hotconv 1.0.70;makeotf.lib2.5.5900",
+        "14": "http://www.adobe.com/type/legal.html"
+      },
+      "license_file": "LICENSES/fonts/SourceSansPro-OFL.txt"
+    },
+    {
+      "file": "prosemirror.net/css/font/merriweather_bold.woff2",
+      "sha256": "07e334eddf236ee2f6be8fa32322665ae78e19b3eee4717acba565ec5fab6a9d",
+      "embedded_name_table": {
+        "1": "Merriweather",
+        "5": "Version 1.584; ttfautohint (v1.5) -l 6 -r 36 -G 0 -x 10 -H 350 -D latn -f cyrl -w \"\" -X \"\"",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "license_file": "LICENSES/fonts/Merriweather-OFL.txt"
+    },
+    {
+      "file": "draftjs.org/_external/fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "sha256": "20b535fa80c8189e3b87d1803038389960203a886d502bc2ef1857affc2f38d2",
+      "embedded_name_table": {
+        "0": "Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto-classic)",
+        "1": "Roboto",
+        "5": "Version 3.009; 2024",
+        "14": "https://openfontlicense.org"
+      },
+      "license_file": "LICENSES/fonts/Roboto-OFL.txt"
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/media/roboto-latin-400-italic.9940f8ce.woff2",
+      "sha256": "5d0e978b6560631da2504e1612e91ee1ff959c04adae245eb320ac90cad2ba2f",
+      "embedded_name_table": {
+        "0": "Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto-classic)",
+        "1": "Roboto",
+        "5": "Version 3.015; 2026",
+        "14": "https://openfontlicense.org"
+      },
+      "license_file": "LICENSES/fonts/Roboto-OFL.txt"
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/media/roboto-latin-400-normal.5bafb11d.woff2",
+      "sha256": "425c0713a8176f92273d378599c7eac57de7fafabd4bd0ed457b70eb8f80d371",
+      "embedded_name_table": {
+        "0": "Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto-classic)",
+        "1": "Roboto",
+        "5": "Version 3.015; 2026",
+        "14": "https://openfontlicense.org"
+      },
+      "license_file": "LICENSES/fonts/Roboto-OFL.txt"
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/media/material-icons-latin-400-normal.59322316.woff2",
+      "sha256": "8265f64786397d6b832d1ca0aafdf149ad84e72759fffa9f7272e91a0fb015d1",
+      "embedded_name_table": {
+        "0": "Copyright 2018 Google, Inc. All Rights Reserved.",
+        "1": "Material Icons",
+        "5": "Version 1.017"
+      },
+      "license_file": "LICENSES/fonts/MaterialIcons-Apache-2.0.txt"
+    },
+    {
+      "file": "slatejs.org-2026-10-09/_next/static/media/roboto-latin-700-normal.9ebed39b.woff2",
+      "sha256": "b9d66d1708156f765ada51939bc24ed259dafa69eb631b36e443680fe9e15879",
+      "embedded_name_table": {
+        "0": "Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto-classic)",
+        "1": "Roboto",
+        "5": "Version 3.015; 2026",
+        "14": "https://openfontlicense.org"
+      },
+      "license_file": "LICENSES/fonts/Roboto-OFL.txt"
+    },
+    {
+      "file": "quilljs.com/_external/cdn.jsdelivr.net/npm/katex@0.16.9/dist/fonts/KaTeX_Math-Italic.woff2",
+      "sha256": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+      "embedded_name_table": {
+        "0": "Copyright (c) 2009-2010 Design Science, Inc.\nCopyright (c) 2014-2018 Khan Academy",
+        "1": "KaTeX_Math",
+        "5": "Version 1.1; ttfautohint (v1.8.3)",
+        "13": "Copyright (c) 2009-2010, Design Science, Inc. (<www.mathjax.org>)\nCopyright (c) 2014-2018 Khan Academy (<www.khanacademy.org>),\nwith Reserved Font Name KaTeX_Math.\n\nThis Font Software is licensed under the SIL Open Font License, Version 1.1.\nThis license available with a FAQ at:\nhttp://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "license_file": "LICENSES/fonts/KaTeX-Fonts-OFL.txt"
+    },
+    {
+      "file": "quilljs.com/_external/cdn.jsdelivr.net/npm/katex@0.16.9/dist/fonts/KaTeX_Main-Regular.woff2",
+      "sha256": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+      "embedded_name_table": {
+        "0": "Copyright (c) 2009-2010 Design Science, Inc.\nCopyright (c) 2014-2018 Khan Academy",
+        "1": "KaTeX_Main",
+        "5": "Version 1.1; ttfautohint (v1.8.3)",
+        "13": "Copyright (c) 2009-2010, Design Science, Inc. (<www.mathjax.org>)\nCopyright (c) 2014-2018 Khan Academy (<www.khanacademy.org>),\nwith Reserved Font Name KaTeX_Main.\n\nThis Font Software is licensed under the SIL Open Font License, Version 1.1.\nThis license available with a FAQ at:\nhttp://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "license_file": "LICENSES/fonts/KaTeX-Fonts-OFL.txt"
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/slabo27px/v16/mFT0WbgBwKPR_Z4hGN2qgx8D1Q.woff2",
+      "sha256": "203f1d656b169225c2a85f3c3b46618c82b779b55def9df73aea7ae8c7d594d7",
+      "embedded_name_table": {
+        "0": "Copyright (c) 2013, Tiro Typeworks Ltd (www.tiro.com).",
+        "1": "Slabo 27px",
+        "5": "Version 1.02 Build 003a",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "license_file": "LICENSES/fonts/Slabo27px-OFL.txt"
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/ubuntumono/v19/KFOjCneDtsqEr0keqCMhbCc6CsQ.woff2",
+      "sha256": "afc6d2fb4f49b53ee31b13c23607739d5f2a42dba2f9f72f70144bd3b5b1a8e6",
+      "embedded_name_table": {
+        "0": "Copyright 2011 Canonical Ltd.  Licensed under the Ubuntu Font Licence 1.0",
+        "1": "Ubuntu Mono",
+        "5": "Version 0.80"
+      },
+      "license_file": "LICENSES/fonts/UbuntuMono-UFL.txt"
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/inconsolata/v37/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WR32lw.woff2",
+      "sha256": "9d5a0480d2bd3e43b124bf8f36782c8fc079f9f8b023c672bff67e9ceffc236b",
+      "embedded_name_table": {
+        "0": "Copyright 2006 The Inconsolata Project Authors (https://github.com/cyrealtype/Inconsolata)",
+        "1": "Inconsolata",
+        "5": "Version 3.001",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "license_file": "LICENSES/fonts/Inconsolata-OFL.txt"
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/inconsolata/v36/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WRL2kXWdycuJDETf.woff",
+      "sha256": "f1fa200369d44e05df56b9c6a6ea9695237a7b367c37192d0ba607402c9d930b",
+      "embedded_name_table": {
+        "0": "Copyright 2006 The Inconsolata Project Authors (https://github.com/cyrealtype/Inconsolata)",
+        "1": "Inconsolata",
+        "5": "Version 3.001",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "license_file": "LICENSES/fonts/Inconsolata-OFL.txt"
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/inconsolata/v36/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WRP2kXWdycuJDETf.woff",
+      "sha256": "d71b95604a5f7ea2d5861a51ad1df4cd170f663228560df777afad5427845be7",
+      "embedded_name_table": {
+        "0": "Copyright 2006 The Inconsolata Project Authors (https://github.com/cyrealtype/Inconsolata)",
+        "1": "Inconsolata",
+        "5": "Version 3.001",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "license_file": "LICENSES/fonts/Inconsolata-OFL.txt"
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/inconsolata/v36/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WR32kQ.woff",
+      "sha256": "1b337b9e7a0eb9a0a83cf2d67d4eea477083c8250897927e723de616c26d9416",
+      "embedded_name_table": {
+        "0": "Copyright 2006 The Inconsolata Project Authors (https://github.com/cyrealtype/Inconsolata)",
+        "1": "Inconsolata",
+        "5": "Version 3.001",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "license_file": "LICENSES/fonts/Inconsolata-OFL.txt"
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/inconsolata/v36/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8WR32kXWdycuJDA.woff",
+      "sha256": "46896c89f87cb1c7f915feafaf925a192be09072412f87c1aadf16f7cdb96c2e",
+      "embedded_name_table": {
+        "0": "Copyright 2006 The Inconsolata Project Authors (https://github.com/cyrealtype/Inconsolata)",
+        "1": "Inconsolata",
+        "5": "Version 3.001",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "license_file": "LICENSES/fonts/Inconsolata-OFL.txt"
+    },
+    {
+      "file": "quilljs.com/_external/fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rj.woff2",
+      "sha256": "484e9925bb3045e88a8eec1103ab125e6dbe486172fb56b06fe6751c8b570839",
+      "embedded_name_table": {
+        "0": "Copyright 2018 The Roboto Slab Project Authors (https://github.com/googlefonts/robotoslab)",
+        "1": "Roboto Slab",
+        "5": "Version 2.002",
+        "14": "http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      "license_file": "LICENSES/fonts/RobotoSlab-Apache-2.0.txt"
+    }
+  ]
+}
