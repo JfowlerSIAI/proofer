@@ -2160,10 +2160,14 @@ default Origin allowlist; only the scoped extension rule grants Proofer access.
 
 ## Testing architecture
 
-There is no single aggregate test command, and test/package.json deliberately
-does not define a working npm test script. Maintainers choose suites according
-to the changed boundary; [test/TESTING.md](test/TESTING.md) is the command
-matrix.
+`tools/test.mjs` runs the deterministic suites in three groups: `source`
+(Node only; `npm test` from `test/` runs this group), `browser` (Puppeteer and
+Chrome for Testing, no model) and `e2e` (the real extension, Ollama and the
+pinned model). Those groups are the gates; they say nothing about correction
+quality, which the research suites measure. Maintainers choose further suites
+according to the changed boundary; [test/TESTING.md](test/TESTING.md) is the
+command matrix and [CONTRIBUTING.md](CONTRIBUTING.md) says which group each
+kind of change needs.
 
 | Tier | Examples | External requirements |
 | --- | --- | --- |
