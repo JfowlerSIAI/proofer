@@ -1,8 +1,8 @@
 # Changelog
 
-## Unreleased — 0.2.0 public release preparation
+## 0.2.0 — 2026-10-23
 
-Preparation reviewed: 21 October 2026. The public release date is not yet set.
+Initial public source release. Preparation reviewed: 21 October 2026.
 
 - Replace the invited-tester training-donation notice with local export and
   support-only sharing. Show the revised notice before an existing user exports
@@ -15,7 +15,7 @@ Preparation reviewed: 21 October 2026. The public release date is not yet set.
 - Add the illustrated README, release-ZIP installation path, usage guide and
   community contribution files.
 
-## 0.2.0 — initial source release candidate
+### Licensing and distribution
 
 - Release the original extension code and development tools under Apache-2.0,
   with author attribution and a voluntary request for visible credit on
@@ -31,6 +31,6 @@ and development/browser tooling changes are listed above. Proofer remains
 an English proofreading extension for Chrome and Brave, with local Ollama
 inference, guarded live edits, a speed qualification check, and limited undo.
 
-The existing version number is retained for the initial source release. Once
-published, subsequent extension releases must increment `manifest.json`'s
+The existing version number is retained for the initial source release.
+Subsequent extension releases must increment `manifest.json`'s
 version and record their user-visible changes here.

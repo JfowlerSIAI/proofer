@@ -7,6 +7,7 @@ authors:
   - family-names: Fowler
     given-names: Jay
 version: 0.2.0
+date-released: 2026-10-23
 license: Apache-2.0
 repository-code: "https://github.com/JfowlerSIAI/proofer"
 url: "https://github.com/JfowlerSIAI/proofer"
