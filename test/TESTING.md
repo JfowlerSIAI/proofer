@@ -2685,7 +2685,7 @@ on hosted operating systems, run by
 `macos-latest` runners. It installs the **packaged** extension
 (`node tools/package.mjs` → `dist/proofer`, verified against its own
 `SHA256SUMS.txt`) into Chrome for Testing with a fresh profile, a real Ollama
-0.34.3 already running on 127.0.0.1:11434 with an **empty** model store, and
+0.35.0 already running on 127.0.0.1:11434 with an **empty** model store, and
 then clicks nothing until setup is done. Checks: install opens setup by itself;
 setup finds Ollama without asking for it; with the engine missing, setup starts
 the download itself, from ollama.com; the engine installed afterwards is the
@@ -2734,7 +2734,7 @@ repository uses `main`; no dedicated force-pushed trigger branch is needed.
 The OS-install workflow runs only through `workflow_dispatch`; ordinary pushes
 do not start it. Manual dispatch can select Windows, macOS or both.
 
-Ollama comes from the official release assets for v0.34.3
+Ollama comes from the official release assets for v0.35.0
 (`ollama-windows-amd64.zip`, `ollama-darwin.tgz`),
 each SHA-256 pinned in the workflow AND required to agree with the release's own
 `sha256sum.txt`; never an install script. It is started in the same step as the
@@ -2763,7 +2763,7 @@ export store=<model store copy> out=<artifacts dir>
 unshare -rn bash -c 'ip link set lo up
   OLLAMA_HOST=127.0.0.1:11434 OLLAMA_MODELS=$store OLLAMA_NOPRUNE=1 \
   CUDA_VISIBLE_DEVICES=-1 GGML_VK_VISIBLE_DEVICES=-1 OLLAMA_VULKAN=0 \
-  taskset -c 0-7 /opt/ollama-v0.34.3/bin/ollama serve >ollama.log 2>&1 &
+  taskset -c 0-7 /opt/ollama-v0.35.0/bin/ollama serve >ollama.log 2>&1 &
   sleep 3; cd test && taskset -c 8-23 node os-install-check.mjs --out $out'
 ```
 
