@@ -80,7 +80,7 @@ export async function loadSentenceGuards({
         getURL: (p) => p.startsWith("data/") ? join(dataRoot, p.slice(5))
           : new URL("../../" + p, import.meta.url).pathname,
       },
-      storage: { local: { get: (k, cb) => cb({}), set: noop, remove: noop } },
+      storage: { local: { setAccessLevel: async () => {}, get: (k, cb) => cb({}), set: noop, remove: noop } },
       tabs: { create: noop },
     },
     console, fetch, setTimeout, clearTimeout, AbortController, AbortSignal, URL,

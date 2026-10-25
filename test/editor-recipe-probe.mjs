@@ -5,6 +5,7 @@
  *
  *   cd test && node editor-recipe-probe.mjs            # 8 trials per phase
  *   node editor-recipe-probe.mjs --nesting-only        # no network, ~2s
+ *   node editor-recipe-probe.mjs --offline             # local files/127.0.0.1 only
  *   PROOFER_CANDIDATES=Trix node editor-recipe-probe.mjs
  *   PROOFER_ARMS=intent,none PROOFER_TRIALS=10 node editor-recipe-probe.mjs
  *   PROOFER_RESULT_JSON=out.json node editor-recipe-probe.mjs
@@ -444,6 +445,7 @@ let rows, pool, adHoc, drift = null;
 // to run on its own -- a two-second check of a safety property against a
 // candidate content.js.
 const NESTING_ONLY = process.argv.includes("--nesting-only");
+const OFFLINE = process.argv.includes("--offline");
 
 // --- The artifact, claimed before anything is measured ----------------------
 //
@@ -473,6 +475,7 @@ const chrome = await resolveChrome();
 const startedAt = new Date();
 console.log("\nEditor characterization bench: candidates x the shipping recipes\n" + "=".repeat(74));
 console.log(`  Chrome: ${chrome.path} (${chrome.source})`);
+if (OFFLINE) console.log("  offline: local files and 127.0.0.1 only; external page requests are blocked");
 console.log(`  content.js: ${CONTENT_PATH}`);
 console.log(`  sha256: ${short(CONTENT_SHA)}${process.env.PROOFER_CONTENT ? "   << PROOFER_CONTENT OVERRIDE IN EFFECT" : ""}`);
 console.log(`  probe: ${short(PROBE_SRC.sha256)}  targets: ${short(TARGETS_SRC.sha256)}`);
@@ -513,9 +516,45 @@ if (RESULT_JSON) {
 
 const browser = await puppeteer.launch({
   headless: true, executablePath: chrome.path,
-  args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+  // CI's network namespace runs as root, which Chromium cannot sandbox.
+  // Only the explicit local-only modes permit that exception. Every live run
+  // and every ordinary-user run keeps Chromium's sandbox.
+  args: [...((NESTING_ONLY || OFFLINE) && process.getuid?.() === 0
+    ? ["--no-sandbox", "--disable-setuid-sandbox"] : []),
+    ...(OFFLINE ? ["--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"] : []), "--disable-gpu"],
 });
 const chromeVersion = await browser.version();
+const blockedRequests = new Set();
+
+// All three page creation paths use this boundary, including reachability
+// probes. A file URL with a host can be a remote UNC share on Windows, so only
+// local files are accepted. The network namespace remains CI's socket boundary;
+// request interception and the resolver rule protect these pages, not Chrome
+// itself. In particular, --offline never retries a blocked URL in live mode.
+async function newPage() {
+  const page = await browser.newPage();
+  if (OFFLINE) {
+    await page.setBypassServiceWorker(true);
+    await page.setRequestInterception(true);
+    page.on("request", (request) => {
+      let allowed = false;
+      try {
+        const url = new URL(request.url());
+        allowed = ["about:", "data:", "blob:"].includes(url.protocol)
+          || (url.protocol === "file:" && (!url.hostname || url.hostname === "localhost"))
+          || (["http:", "https:"].includes(url.protocol) && url.hostname === "127.0.0.1");
+      } catch { /* malformed URLs are refused */ }
+      if (allowed) {
+        request.continue().catch(() => {});
+      } else {
+        if (!blockedRequests.has(request.url())) console.log(`  OFFLINE BLOCKED: ${request.url()}`);
+        blockedRequests.add(request.url());
+        request.abort("blockedbyclient").catch(() => {});
+      }
+    });
+  }
+  return page;
+}
 
 // --- The page ---------------------------------------------------------------
 //
@@ -526,12 +565,12 @@ const chromeVersion = await browser.version();
 // already paid for.
 
 async function session(c) {
-  const page = await browser.newPage();
+  const page = await newPage();
   await page.setViewport({ width: 1280, height: 900 });
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e.message || e).split("\n")[0]));
   await page.evaluateOnNewDocument(`window.chrome = {
-    runtime: { id: "t", lastError: undefined,
+    runtime: { id: "t", lastError: undefined, onMessage: { addListener() {} },
       sendMessage: (m, cb) => setTimeout(() => cb({ ok: true, noChanges: true }), 10) },
     storage: { local: { get: (d, cb) => cb({ ...d }), set: (o, cb) => cb && cb() },
                onChanged: { addListener: () => {} } } };`);
@@ -765,7 +804,7 @@ let nestingFailed = 0;
     console.log(`  FAIL: no nesting fixture for ${missing.join(", ")}`);
     nestingFailed += missing.length;
   }
-  const page = await browser.newPage();
+  const page = await newPage();
   await page.goto("about:blank");
   const checks = [];
   for (const row of known) {
@@ -826,6 +865,8 @@ function writeArtifact(status, extra = {}) {
     schema: "editor-recipe-probe/2",
     status,
     mode: NESTING_ONLY ? "nesting-only" : "full",
+    offline: OFFLINE,
+    blockedRequests: [...blockedRequests],
     startedAt: startedAt.toISOString(),
     finishedAt: finishedAt.toISOString(),
     durationMs: finishedAt - startedAt,
@@ -929,11 +970,9 @@ if (NESTING_ONLY) {
 // So: nothing above asserts what any CI file checks or how. What is asserted is
 // about this file, which is the only thing it can keep true.
 //
-// The property is measured rather than argued, and the control is the half that
-// matters: under `unshare -rn` with only lo up, `--nesting-only` is 24/24 exit 0
-// while a full run against slatejs.org in the SAME namespace is exit 77 naming
-// ERR_INTERNET_DISCONNECTED -- without that arm, a suite that quietly stopped
-// measuring would read identically.
+// editor-bench-selfcheck exercises both paths with --offline: nesting ignores
+// target selection, local full runs measure real cells, and an external target
+// is blocked and exits 77 with no cells. None may fall back to a live request.
 //
 // PROOFER_CANDIDATES keeps its exact old meaning -- a comma-separated filter,
 // and matching NOTHING is an error rather than a run of zero cells -- and it now
@@ -979,7 +1018,7 @@ console.log("");
 
 const skipped = [];
 for (const c of rows) {
-  const probe = await browser.newPage();
+  const probe = await newPage();
   try {
     await probe.goto(c.url, { waitUntil: "domcontentloaded", timeout: 30000 });
     // The URL a run actually measured. A demo site that redirects to a new

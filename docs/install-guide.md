@@ -19,8 +19,8 @@ Windows/macOS installer flows remain unvalidated for this release.
 
 ## Install the release ZIP
 
-The [release ZIP](https://github.com/JfowlerSIAI/proofer/releases/tag/v0.2.0)
-needs no Node.js. Download and extract `proofer-0.2.0.zip`, enable Developer mode
+The [release ZIP](https://github.com/JfowlerSIAI/proofer/releases/tag/v0.2.1)
+needs no Node.js. Download and extract `proofer-0.2.1.zip`, enable Developer mode
 on `chrome://extensions` or `brave://extensions`, and choose **Load unpacked**.
 Select the extracted folder containing `manifest.json`, then continue with
 **Start Ollama** below. Keep that folder in place while using Proofer.
@@ -62,7 +62,7 @@ settings and logs; restore your site exclusions before turning it on.
 
 If Ollama is already installed, start it and return to the setup tab. Proofer
 checks its version and offers an update link if it is too old. The supported
-minimum is defined by `OLLAMA_MIN_VERSION` in `background.js`.
+minimum is **0.35.0**, defined by `OLLAMA_MIN_VERSION` in `background.js`.
 
 ## Complete setup
 

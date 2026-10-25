@@ -1,12 +1,12 @@
 // The Trix website artwork has no established redistribution grant. This
 // locally authored wrapper exercises the same captured Trix engine without it.
 import fs from "node:fs";
-import path from "node:path";
+import { fixtureFile, writeFixtureFile } from "../lib/fixture-paths.mjs";
 
 export function writeTrixFixture(outDir) {
   const base = "_external/unpkg.com/trix@2.1.19/dist/";
   for (const file of ["trix.umd.min.js", "trix.css"]) {
-    if (!fs.existsSync(path.join(outDir, base, file))) {
+    if (!fs.existsSync(fixtureFile(outDir, base + file))) {
       throw new Error(`missing pinned Trix 2.1.19 asset: ${base}${file}; restore it from version control`);
     }
   }
@@ -37,12 +37,12 @@ export function writeTrixFixture(outDir) {
 </body>
 </html>
 `;
-  fs.writeFileSync(path.join(outDir, "index.html"), html);
+  writeFixtureFile(outDir, "index.html", html);
   const types = {
     "index.html": "text/html; charset=utf-8",
     [`${base}trix.css`]: "text/css; charset=utf-8",
     [`${base}trix.umd.min.js`]: "text/javascript; charset=utf-8",
   };
-  fs.writeFileSync(path.join(outDir, "_types.json"), JSON.stringify(types, null, 1) + "\n");
+  writeFixtureFile(outDir, "_types.json", JSON.stringify(types, null, 1) + "\n");
   return { name: "trix", files: 4, bytes: Buffer.byteLength(html), external: [], version: "Trix 2.1.19" };
 }

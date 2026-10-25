@@ -56,10 +56,13 @@ jobs:
         working-directory: test
         run: npm ci
       # Lifecycle scripts are disabled in test/.npmrc. This explicit command
-      # downloads the browser selected by the locked Puppeteer version.
+      # checks the exact Chrome artifact's release age before downloading it.
       - name: Install Chrome for Testing
         working-directory: test
-        run: npx --no-install puppeteer browsers install chrome
+        run: node scripts/install-chrome.mjs
+      - name: Browser version and release-age security gates
+        working-directory: test
+        run: node --test browser-security-test.mjs
       - name: Pin the browser
         working-directory: test
         run: |

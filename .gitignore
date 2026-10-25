@@ -51,3 +51,6 @@ __pycache__/
 audit/
 docs/plans/
 docs/history/
+
+# Explicitly installed, pinned browser binaries.
+test/.cache/

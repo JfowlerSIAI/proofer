@@ -23,7 +23,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  OLLAMA_VERSION: '0.34.3'
+  OLLAMA_VERSION: '0.35.0'
 
 jobs:
   install-check:
@@ -57,7 +57,11 @@ jobs:
 
       - name: Install Chrome for Testing
         working-directory: test
-        run: npx --no-install puppeteer browsers install chrome
+        run: node scripts/install-chrome.mjs
+
+      - name: Browser version and release-age security gates
+        working-directory: test
+        run: node --test browser-security-test.mjs
 
       # Pinned so test/lib/chrome.mjs cannot fall back to a branded Chrome
       # (>= 137 ignores --load-extension without saying so) if the install
@@ -77,8 +81,8 @@ jobs:
         run: |
           set -euo pipefail
           case "$RUNNER_OS" in
-            Windows) ASSET=ollama-windows-amd64.zip; PINNED=306ce9e81e3491d147f558e60d7a389499f244d10f71859c6e4e899241d1b4ae ;;
-            macOS)   ASSET=ollama-darwin.tgz;        PINNED=2c45865f94bce0d4d1d2567603dd2fdacaf375585220a175aa4800105193d36e ;;
+            Windows) ASSET=ollama-windows-amd64.zip; PINNED=d6f7d3dd4f5d013553a78c1e78b2521fcf41d43dd2863e4596cdc046fe6036db ;;
+            macOS)   ASSET=ollama-darwin.tgz;        PINNED=2608dbb0a0f0136a198db9d48b4f74ece55f452314a39452fca35b7cf20c2589 ;;
             *) echo "::error::No Ollama asset is pinned for $RUNNER_OS."; exit 1 ;;
           esac
           RT="$RUNNER_TEMP"

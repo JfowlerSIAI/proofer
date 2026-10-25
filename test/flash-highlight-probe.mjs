@@ -53,8 +53,8 @@
  * VIEWPORT coordinates -- conflating them measured a box scrollY pixels away
  * and reported a confident zero.)
  *
- * Fixtures by default (test/fixtures, read-only, via lib/fixture-server.mjs),
- * live demo sites for the two families with no capture.
+ * Fixtures by default (test/fixtures, read-only, via lib/fixture-server.mjs).
+ * Live demo sites require PROOFER_FLASH_LIVE=1 and Chromium's sandbox.
  */
 import puppeteer from "puppeteer";
 import crypto from "crypto";
@@ -200,22 +200,46 @@ window.__hl = {
 
 const chrome = await resolveChrome();
 const servers = new Map();
+const fixtureOrigins = new Set();
+const externalRequests = new Set();
 async function urlFor(t) {
-  if (LIVE || !t.fixture) return { url: t.url, mode: t.fixture ? "live" : "live (no capture)" };
+  if (LIVE) return { url: t.url, mode: "live" };
+  if (!t.fixture) throw new Error(`No capture for ${t.family}; live pages require PROOFER_FLASH_LIVE=1.`);
   if (!servers.has(t.fixture)) {
     try { servers.set(t.fixture, await serveFixture(path.join(HERE, "fixtures", t.fixture))); }
     catch (e) { servers.set(t.fixture, { err: e.message }); }
   }
   const s = servers.get(t.fixture);
-  if (s.err) return { url: t.url, mode: "live (capture missing)" };
+  if (s.err) throw new Error(`Missing capture for ${t.family}: ${s.err}`);
+  fixtureOrigins.add(new URL(s.url(t.entry)).origin);
   return { url: s.url(t.entry), mode: "fixture" };
 }
 
 const browser = await puppeteer.launch({
   headless: true,
   executablePath: chrome.path,
-  args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+  args: [...(LIVE ? [] : ["--no-sandbox", "--disable-setuid-sandbox",
+    "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1"]), "--disable-gpu"],
 });
+
+// Every offline page admits only the fixture servers created by this run.
+// A missing capture must never silently turn an unsandboxed run into a live one.
+async function monitoredPage() {
+  const page = await browser.newPage();
+  if (!LIVE) {
+    await page.setRequestInterception(true);
+    page.on("request", (request) => {
+      const url = new URL(request.url());
+      if (["about:", "data:", "blob:"].includes(url.protocol) || fixtureOrigins.has(url.origin)) {
+        void request.continue().catch(() => {});
+      } else {
+        externalRequests.add(request.url());
+        void request.abort("blockedbyclient").catch(() => {});
+      }
+    });
+  }
+  return page;
+}
 
 const userText = (page) => page.evaluate(() => {
   const c = window.__ed.cloneNode(true);
@@ -397,12 +421,12 @@ function paintOffset(p) {
 
 async function session(t) {
   const { url, mode } = await urlFor(t);
-  const page = await browser.newPage();
+  const page = await monitoredPage();
   await page.setViewport({ width: 1280, height: 900 });
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e.message || e).split("\n")[0]));
   await page.evaluateOnNewDocument(`window.chrome = {
-    runtime: { id: "t", lastError: undefined,
+    runtime: { id: "t", lastError: undefined, onMessage: { addListener() {} },
       sendMessage: (m, cb) => setTimeout(() => cb({ ok: true, noChanges: true }), 10) },
     storage: { local: { get: (d, cb) => cb({ ...d }), set: (o, cb) => cb && cb() },
                onChanged: { addListener: () => {} } } };`);
@@ -600,7 +624,7 @@ for (const t of rows) {
 console.log(`\n${"=".repeat(72)}\n[C] RTL / centred (plain contenteditable, no framework)`);
 const rtl = [];
 try {
-  const page = await browser.newPage();
+  const page = await monitoredPage();
   await page.setViewport({ width: 1280, height: 900 });
   await page.goto("about:blank");
   await page.evaluate(PROBE
@@ -645,7 +669,7 @@ window.__sent = [];
 window.__store = { disabledSites: [], sentenceDebug: false };
 window.chrome = {
   runtime: {
-    id: "test-ext", lastError: undefined,
+    id: "test-ext", lastError: undefined, onMessage: { addListener() {} },
     sendMessage: (msg, cb) => {
       window.__sent.push(msg);
       setTimeout(() => {
@@ -684,7 +708,7 @@ for (const t of rows) {
   let page = null;
   try {
     const { url } = await urlFor(t);
-    page = await browser.newPage();
+    page = await monitoredPage();
     await page.setViewport({ width: 1280, height: 900 });
     const perr = [];
     page.on("pageerror", (e) => perr.push(String(e.message || e).split("\n")[0]));
@@ -839,10 +863,11 @@ const localServer = http.createServer((req, res) => {
 });
 await new Promise((r) => localServer.listen(0, "127.0.0.1", r));
 const LOCAL = `http://127.0.0.1:${localServer.address().port}/`;
+fixtureOrigins.add(new URL(LOCAL).origin);
 
 /** A local page with sentence mode attached, a correction applied, flash up. */
 async function localFresh(sel, opts = {}) {
-  const page = await browser.newPage();
+  const page = await monitoredPage();
   await page.setViewport({ width: 1280, height: 900 });
   // `typo`/`fixed` override the canned pair, which is how a case can ask what
   // happens for a correction of a DIFFERENT SHAPE -- a pure deletion has no
@@ -1371,8 +1396,9 @@ try {
      `fallback: the centred block does not (${cMarks} mark(s)) -- read off the HOST both would be ${pMarks}`);
 } catch (e) { ok(false, `[F] overlay fallback alignment: ${e.message}`); }
 
-// Chrome can retain speculative connections after its pages close. Stop the
-// client before waiting for the HTTP servers to drain those connections.
+// Chrome can retain speculative connections after the last page closes.
+// Release the client first: server.close otherwise waits for those sockets
+// while the browser's own cleanup is stuck behind that wait.
 await browser.close();
 await new Promise((r) => localServer.close(r));
 
@@ -1389,6 +1415,8 @@ for (const r of report) {
   const b = B.error ? "ERROR" : (B.tracked ? `tracked +${B.movedPx}px` : `collapsed (${JSON.stringify(B.text)})`);
   console.log(`  ${r.family.padEnd(13)} ${String(r.mode).padEnd(10)} ${a.padEnd(26)} ${b}`);
 }
+if (!LIVE) ok(externalRequests.size === 0,
+  `offline pages made no external requests (${externalRequests.size} blocked)`);
 console.log(`\n  ${pass} passed, ${fail} failed`
   + (notRun.length ? `, ${notRun.length} NOT RUN` : ""));
 for (const n of notRun) console.log(`    NOT RUN: ${n}`);

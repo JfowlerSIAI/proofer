@@ -54,7 +54,7 @@ const ctx = vm.createContext({
       onMessage: { addListener: noop }, onInstalled: { addListener: noop },
       getURL: (p) => join(__dirname, "..", p),
     },
-    storage: { local: { get: (k, cb) => cb({}), set: noop, remove: noop } },
+    storage: { local: { setAccessLevel: async () => {}, get: (k, cb) => cb({}), set: noop, remove: noop } },
     tabs: { create: noop },
   },
   console, fetch, setTimeout, clearTimeout, AbortController, URL,

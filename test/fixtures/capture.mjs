@@ -43,6 +43,7 @@ import path from "path";
 import puppeteer from "puppeteer";
 import { resolveChrome } from "../lib/chrome.mjs";
 import { serveFixture } from "../lib/fixture-server.mjs";
+import { fixtureUrlPath, fixtureFile, writeFixtureFile } from "../lib/fixture-paths.mjs";
 import { writeTrixFixture } from "./trix-page.mjs";
 
 const HERE = path.dirname(new URL(import.meta.url).pathname);
@@ -125,14 +126,13 @@ const dropped = (u) => DROP_HOSTS.some((h) => new URL(u).host === h || new URL(u
 
 /** URL path -> a safe relative file path. Decoded, so `%5Bexample%5D` is `[example]`. */
 function pathFor(u) {
-  const url = new URL(u);
-  let p = decodeURIComponent(url.pathname).replace(/^\/+/, "");
+  let p = fixtureUrlPath(u);
   if (p === "" || p.endsWith("/")) p += "index.html";
   // No traversal, no absolute escapes; a captured site never needs them. And a
   // segment longer than a filesystem allows is shortened rather than fatal --
   // a Cloudflare challenge beacon carries an 800-character path, and ENAMETOOLONG
   // from the middle of a capture reads like a bug in the capture tool.
-  return p.split("/").filter((s) => s && s !== "." && s !== "..")
+  return p.split("/").filter(Boolean)
     .map((s) => (s.length > 100 ? s.slice(0, 60) + "-" + shortHash(s) : s))
     .join("/");
 }
@@ -176,14 +176,14 @@ function provenanceFrom(html, bodies) {
  */
 async function absorbOfflineDemands(t, outDir, chromePath, verbose) {
   const origin = new URL(t.url).origin;
-  const typesPath = path.join(outDir, "_types.json");
+  const typesPath = fixtureFile(outDir, "_types.json");
   // A zero-byte captured file is a chunk whose only responses carried no body
   // -- draftjs.org's other-route chunks arrive solely as bodiless prefetches.
   // Served empty, a webpack chunk is a ChunkLoadError; fetch the real bytes.
   const backfill = (dir, rel) => {
     for (const name of fs.readdirSync(dir)) {
-      const p = path.join(dir, name);
       const r = rel ? rel + "/" + name : name;
+      const p = fixtureFile(outDir, r);
       if (fs.statSync(p).isDirectory()) { backfill(p, r); continue; }
       if (fs.statSync(p).size > 0) continue;
       const u = r.startsWith("_external/")
@@ -191,7 +191,7 @@ async function absorbOfflineDemands(t, outDir, chromePath, verbose) {
         : origin + "/" + r;
       fetches.push(fetch(u).then(async (res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        fs.writeFileSync(p, Buffer.from(await res.arrayBuffer()));
+        writeFixtureFile(outDir, r, Buffer.from(await res.arrayBuffer()));
         if (verbose) console.log(`  backfilled empty capture: ${r}`);
       }).catch((e) => console.log(`  WARN: ${r} captured empty and could not be backfilled (${e.message})`)));
     }
@@ -203,7 +203,7 @@ async function absorbOfflineDemands(t, outDir, chromePath, verbose) {
     const server = await serveFixture(outDir);
     const browser = await puppeteer.launch({
       headless: true, executablePath: chromePath,
-      args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+      args: ["--disable-gpu"],
     });
     const page = await browser.newPage();
     await page.setViewport({ width: 1366, height: 900 });
@@ -221,23 +221,24 @@ async function absorbOfflineDemands(t, outDir, chromePath, verbose) {
     const types = JSON.parse(fs.readFileSync(typesPath, "utf8"));
     let added = 0;
     for (const rel of missing) {
-      const u = origin + "/" + rel;
       try {
+        // A miss is an untrusted request made by the captured webpage. Validate
+        // it again at the write boundary, before fetching any replacement.
+        fixtureFile(outDir, rel);
+        const u = origin + "/" + rel;
         const r = await fetch(u);
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         const buf = Buffer.from(await r.arrayBuffer());
-        const dest = path.join(outDir, rel);
-        fs.mkdirSync(path.dirname(dest), { recursive: true });
-        fs.writeFileSync(dest, buf);
+        writeFixtureFile(outDir, rel, buf);
         const ct = r.headers.get("content-type");
         if (ct) types[rel] = ct;
         added++;
         if (verbose) console.log(`  absorbed offline-only demand: ${rel}`);
       } catch (e) {
-        if (verbose) console.log(`  WARN: offline run asked for ${rel}; origin has no ${u} (${e.message})`);
+        if (verbose) console.log(`  WARN: offline demand ${rel} could not be captured (${e.message})`);
       }
     }
-    fs.writeFileSync(typesPath, Buffer.from(JSON.stringify(types, null, 1), "utf8"));
+    writeFixtureFile(outDir, "_types.json", Buffer.from(JSON.stringify(types, null, 1), "utf8"));
     if (!added) return; // every remaining miss is unrecoverable; looping cannot help
   }
 }
@@ -255,7 +256,7 @@ export async function capture(name, { verbose = true } = {}) {
   const browser = await puppeteer.launch({
     headless: true,
     executablePath: chrome.path,
-    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+    args: ["--disable-gpu"],
   });
   const page = await browser.newPage();
   // A desktop viewport, not Puppeteer's 800x600 default: draftjs.org hides its
@@ -406,11 +407,10 @@ export async function capture(name, { verbose = true } = {}) {
   };
 
   fs.rmSync(outDir, { recursive: true, force: true });
+  fs.mkdirSync(outDir, { recursive: true });
   let bytes = 0;
   const write = (rel, buf) => {
-    const dest = path.join(outDir, rel);
-    fs.mkdirSync(path.dirname(dest), { recursive: true });
-    fs.writeFileSync(dest, buf);
+    writeFixtureFile(outDir, rel, buf);
     bytes += buf.length;
   };
   write(t.entry, repoint(Buffer.from(html, "utf8"), t.entry));

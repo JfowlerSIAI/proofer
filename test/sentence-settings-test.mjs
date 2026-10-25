@@ -65,7 +65,7 @@ const scriptOllama = (content) => {
   };
 };
 const ollamaVersionAnswer = () => Promise.resolve({ ok: true, status: 200,
-  json: async () => ({ version: "0.32.12" }), text: async () => '{"version":"0.32.12"}' });
+  json: async () => ({ version: "0.35.0" }), text: async () => '{"version":"0.35.0"}' });
 const pinnedTags = () => {
   const pin = ctx.__cfg.PINNED_MODEL;
   const body = { models: [{ name: pin.tag, model: pin.tag, digest: pin.digest }] };
@@ -110,6 +110,7 @@ const ctx = vm.createContext({
     },
     storage: {
       local: {
+        setAccessLevel: async () => {},
         get: (keys, cb) => defer(() => {
           const out = {};
           if (keys === null) Object.assign(out, store);
@@ -174,7 +175,7 @@ const S = ctx.__cfg;
 // install" means since beta step 3d. Consent, Turn on, requests and warmups all
 // require one.
 const QUAL = (over = {}) => ({
-  v: 1, pass: true, category: "pass", ollamaUrl: "http://localhost:11434", ollamaVersion: "0.32.12",
+  v: 1, pass: true, category: "pass", ollamaUrl: "http://localhost:11434", ollamaVersion: "0.35.0",
   tag: S.PINNED_MODEL.tag, digest: S.PINNED_MODEL.digest, promptRevision: S.PROMPT_REVISION,
   benchmarkRevision: S.SETUP_BENCHMARK_REVISION, options: { num_thread: null }, ...over,
 });

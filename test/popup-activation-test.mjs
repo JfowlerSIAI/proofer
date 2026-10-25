@@ -51,7 +51,7 @@ const browser = await puppeteer.launch({
 
 async function openPopup({ settings, tabs = [{ url: "https://example.com/x", id: 1 }], refuseOn = false,
   consent, pageStatus = null, afterWriteConsent, healthFailure = null,
-  health = { ok: true, version: "0.32.12", ollama: { state: "ok", version: "0.32.12", floor: "0.32.6", versionOk: true }, engine: { state: "ok" } } } = {}) {
+  health = { ok: true, version: "0.35.0", ollama: { state: "ok", version: "0.35.0", floor: "0.35.0", versionOk: true }, engine: { state: "ok" } } } = {}) {
   const page = await browser.newPage();
   const errors = [];
   page.on("pageerror", (e) => errors.push(e.message));
@@ -467,7 +467,7 @@ for (const failRead of [false, true]) {
   const settings = { ...OFF(), qualified: false, qualification: { pass: true, stale: "ollama-updated" } };
   const health = { ok: true, configured: true, settings,
     consent: { activated: false, siteDisabled: false, allowed: false, reason: "switched-off", apply: false },
-    ollama: { state: "ok", version: "0.34.3", versionOk: true, floor: "0.32.6" }, engine: { state: "ok" } };
+    ollama: { state: "ok", version: "0.35.0", versionOk: true, floor: "0.35.0" }, engine: { state: "ok" } };
   const { page } = await openPopup({ settings: OFF(), health });
   ok(await page.$eval("#activateOn", (e) => e.style.display === "none")
     && await page.$eval("#activateSetup", (e) => e.style.display !== "none"),
@@ -476,7 +476,7 @@ for (const failRead of [false, true]) {
     "[9b] configured health qualification refresh names the stale check");
   await page.close();
   const old = await openPopup({ settings: OFF(), health: { ok: true,
-    ollama: { state: "ok", version: "0.32.5", floor: "0.32.6", versionOk: false }, engine: { state: "ok" } } });
+    ollama: { state: "ok", version: "0.32.5", floor: "0.35.0", versionOk: false }, engine: { state: "ok" } } });
   ok(await old.page.$eval("#setupLineText", (e) => e.textContent) === "Ollama needs an update. Open setup.",
     "[9b] popup uses the worker floor decision");
   await old.page.close();

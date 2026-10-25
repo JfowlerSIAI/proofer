@@ -98,7 +98,7 @@ document.addEventListener("input", (e) => {
 window.chrome = {
   runtime: {
     id: "test-ext",
-    lastError: undefined,
+    lastError: undefined, onMessage: { addListener() {} },
     sendMessage: (msg, cb) => {
       const ta = document.activeElement;
       window.__sent.push(Object.assign({}, msg, {

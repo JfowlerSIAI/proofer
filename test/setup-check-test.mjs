@@ -85,6 +85,7 @@ const ctx = vm.createContext({
     },
     storage: {
       local: {
+        setAccessLevel: async () => {},
         get: (keys, cb) => {
           const out = {};
           if (keys === null) Object.assign(out, store);
@@ -134,7 +135,7 @@ W(`PINNED_MODEL.templateSha256 = ${JSON.stringify(await sha(FAKE_TEMPLATE))}`);
 let fake;
 function resetFake(over = {}) {
   fake = {
-    version: "0.32.12", installed: true, digest: PIN.digest, loaded: false, gpu: true,
+    version: "0.35.0", installed: true, digest: PIN.digest, loaded: false, gpu: true,
     template: FAKE_TEMPLATE, parameters: "temperature 0.1\ntop_k 20\ntop_p 0.8\nnum_ctx 2048\nrepeat_penalty 1",
     // fixture id -> { answer?, delayMs? }; "<id>#<n>" scripts only the n-th
     // time that fixture is sent (SETUP_AFTER_LONG is sent twice)
@@ -267,7 +268,7 @@ console.log("\nThe speed check, through the setup messages\n" + "=".repeat(72));
     `[1] ...the long-context case is the last fixture, flagged, and an ordinary sentence follows it (${longCase && longCase.id}, ${afterLong && afterLong.id})`);
   ok(q && q.numbers.longDropped === 0 && typeof q.numbers.longMs === "number",
     "[1] ...and its time is recorded on its own, not dropped");
-  ok(q && q.ollamaVersion === "0.32.12" && q.promptRevision === W("PROMPT_REVISION")
+  ok(q && q.ollamaVersion === "0.35.0" && q.promptRevision === W("PROMPT_REVISION")
     && q.benchmarkRevision === W("SETUP_BENCHMARK_REVISION") && q.digest === PIN.digest,
     "[1] ...bound to the Ollama version, the prompt, the check and the engine");
   ok(r.sawWait, "[1] ...with the idle pause in it, handed to the page as a wait");
@@ -464,12 +465,12 @@ const failedAs = (reason) => {
 {
   freshStore(); resetFake();
   await runCheck();
-  fake.version = "0.40.0";            // the cache still holds 0.32.12, fresh
+  fake.version = "0.40.0";            // the cache still holds 0.35.0, fresh
   const st = await send({ type: "SETUP_STATUS" });
   ok(st.qualified === false && st.lastResult.stale === "ollama-updated",
     `[5f] setup opened after an update: not Ready, the verdict marked stale (${JSON.stringify(st.lastResult)})`);
   freshStore(); resetFake({ script: { "email-5": { delayMs: 5000 } } });
-  await runCheck();                   // too-slow, under 0.32.12
+  await runCheck();                   // too-slow, under 0.35.0
   fake.version = "0.40.0";
   const st2 = await send({ type: "SETUP_STATUS" });
   ok(st2.lastResult.category === "too-slow" && st2.lastResult.current === false,
@@ -901,7 +902,7 @@ const failedAs = (reason) => {
 }
 
 // G3.2 cases use only synthetic service responses and the shipping handlers.
-function seedPass(version = "0.32.12") {
+function seedPass(version = "0.35.0") {
   store[KEY] = { v: 1, runId: "seed", pass: true, category: "pass", reason: null,
     ollamaUrl: "http://localhost:11434", ollamaVersion: version,
     tag: PIN.tag, digest: PIN.digest, promptRevision: W("PROMPT_REVISION"),
@@ -1011,11 +1012,11 @@ for (const phase of ["abort", "body-abort"]) {
 // [11b] Mutant: remove the probe's `if (!ollama.versionOk)` refusal.
 // Red: unsupported direct retests fail as ollama-version before unload/load/chat.
 {
-  for (const version of ["0.32.5", "v0.34.3", "0.33", "0.32.6", "0.34.3", "0.34.3-rc1"]) {
+  for (const version of ["0.32.5", "v0.35.0", "0.33", "0.32.6", "0.34.3", "0.35.0", "0.35.1"]) {
     freshStore(); resetFake({ version });
     const begin = await send({ type: "SETUP_BEGIN" });
     const r = await send({ type: "SETUP_STEP", runId: begin.runId });
-    const supported = ["0.32.6", "0.34.3", "0.34.3-rc1"].includes(version);
+    const supported = ["0.35.0", "0.35.1"].includes(version);
     ok(supported ? r.ok && fake.loads.length === 1 : r.error === "ollama-version" && store[KEY].reason === "ollama-version",
       `[11b] ${version} worker floor verdict`);
     ok(supported || (fake.loads.length === 0 && fake.chats.length === 0 && fake.unloadCalls === 0
@@ -1036,10 +1037,10 @@ for (const phase of ["abort", "body-abort"]) {
 // Red: same-revision below-floor passes cannot qualify; supported speed-v2 holds.
 {
   ok(W("SETUP_BENCHMARK_REVISION") === "speed-v2", "[11c] supported benchmark revision remains speed-v2");
-  for (const version of ["0.32.5", "v0.34.3", "0.33", "0.32.6", "0.34.3"]) {
+  for (const version of ["0.32.5", "v0.35.0", "0.33", "0.32.6", "0.34.3", "0.35.0", "0.35.1"]) {
     freshStore(); resetFake({ version }); seedPass(version);
     const r = await send({ type: "GET_SETTINGS" }, POPUP);
-    ok(r.settings.qualified === ["0.32.6", "0.34.3"].includes(version), `[11c] recorded ${version} floor validity controls qualification`);
+    ok(r.settings.qualified === ["0.35.0", "0.35.1"].includes(version), `[11c] recorded ${version} floor validity controls qualification`);
   }
 }
 
@@ -1168,7 +1169,7 @@ esac
     writeFileSync(join(bin, "curl"), `#!/usr/bin/env bash
 printf 'curl %s\\n' "$*" >> "$FIXTURE_DIR/calls"
 case "$*" in
-  '-fsS http://127.0.0.1:11434/api/version') printf '{"version":"0.34.3"}'; exit 0 ;;
+  '-fsS http://127.0.0.1:11434/api/version') printf '{"version":"0.35.0"}'; exit 0 ;;
   '-fsS http://127.0.0.1:11434/api/tags') cat "$FIXTURE_DIR/inventory.json"; exit "$FIXTURE_HTTP_FAILURE" ;;
   *) echo 'unexpected curl call' >&2; exit 99 ;;
 esac

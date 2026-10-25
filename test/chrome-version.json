@@ -1,0 +1,8 @@
+{
+  "version": "156.0.8078.47",
+  "minimumVersion": "156.0.8078.47",
+  "quarantineDays": 1,
+  "securityFixes": ["CVE-2026-113341", "CVE-2026-113279", "CVE-2026-113072"],
+  "advisory": "https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_02018666648.html",
+  "reason": "Targeted SIAI CVE exception for Chrome only. Official artifacts were published October 19–20, 2026; verified October 24. npm packages retain the normal 10-day quarantine."
+}

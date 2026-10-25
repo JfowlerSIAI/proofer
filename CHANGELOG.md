@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.2.1 — 2026-10-25
+
+Security update for the public beta. Upgrade from 0.2.0 and refresh open writing
+pages after reloading the extension.
+
+- Restrict local extension storage to trusted extension pages and the service
+  worker before reading or changing settings or records. Content scripts receive
+  only the consent and debug fields they need; stale consent replies cannot
+  restore permission after it is revoked.
+- Serialize recording changes with log writes and recheck recording consent
+  before updating existing records. Turning recording off also drops pending
+  feedback collection in the page.
+- Require Ollama 0.35.0 or newer and pin the optional Docker helper to the
+  reviewed 0.35.0 image digest.
+- Reject traversal, symlinks and ambiguous paths in development fixture servers
+  and capture output. Keep live browser tools sandboxed and restrict explicit
+  offline fallback runs to local fixtures.
+- Pin test Chrome to 156.0.8078.47, enforce its minimum security version and
+  check release age before downloading. Add storage, recording, fixture-path
+  and browser-security regression gates.
+
 ## 0.2.0 — 2026-10-23
 
 Initial public source release. Preparation reviewed: 21 October 2026.

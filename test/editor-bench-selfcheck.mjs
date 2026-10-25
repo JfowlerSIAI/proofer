@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * DOES THE BENCH FAIL LOUDLY? 49 checks, offline, ~90 seconds.
+ * DOES THE BENCH FAIL LOUDLY? Offline checks, ~90 seconds.
  *
  *   cd test && node editor-bench-selfcheck.mjs
  *
@@ -18,7 +18,7 @@
  * 2 nobody can read sends the next person to the wrong file, and a good message
  * behind an exit 0 is not going to be read at all.
  *
- * OFFLINE BY CONSTRUCTION. The two cases that need a page use a file:// URL
+ * OFFLINE BY CONSTRUCTION. Every probe is passed --offline. Cases needing a page use a file:// URL
  * pointing at test-page.html -- a demo site outage must not be able to turn
  * this into a skip, because the property under test is "does it complain", and
  * an unreachable site is one more thing to complain about rather than a reason
@@ -60,7 +60,7 @@ const CARRIED = ["PROOFER_RESULT_JSON", "PROOFER_CANDIDATES", "PROOFER_ARMS", "P
 function run(env, args = []) {
   const clean = { ...process.env };
   for (const k of CARRIED) delete clean[k];
-  const r = spawnSync(process.execPath, [PROBE, ...args], {
+  const r = spawnSync(process.execPath, [PROBE, "--offline", ...args], {
     env: { ...clean, ...env }, encoding: "utf8", timeout: 300000,
   });
   return { code: r.status, out: (r.stdout || "") + (r.stderr || "") };
@@ -198,6 +198,25 @@ console.log("\n[C] A page that is there and an element that is not");
      `exit ${r.code}`);
 }
 {
+  // An IP literal bypasses the resolver rule. It must fail at the page request
+  // boundary itself, even outside the CI network namespace, and never retry
+  // in live mode. A DNS error or an unreachable socket would not prove that.
+  const url = "http://192.0.2.1/proofer-offline-boundary";
+  const dest = path.join(TMP, "external-blocked.json");
+  const r = run({ PROOFER_CANDIDATE_URL: url, PROOFER_CANDIDATE_SELECTOR: ".x",
+                  PROOFER_CANDIDATE_NAME: "External", PROOFER_TRIALS: "1",
+                  PROOFER_ARMS: "intent", PROOFER_RESULT_JSON: dest });
+  ok(r.code === 77 && r.out.includes(`OFFLINE BLOCKED: ${url}`)
+     && r.out.includes("ERR_BLOCKED_BY_CLIENT"),
+     "--offline blocks an external IP before a socket attempt, with no live fallback",
+     `exit ${r.code}; ${r.out.trim().split("\n").slice(-3).join(" / ")}`);
+  const body = fs.existsSync(dest) ? JSON.parse(fs.readFileSync(dest, "utf8")) : null;
+  ok(body && body.offline === true && Array.isArray(body.blockedRequests)
+     && body.blockedRequests.includes(url) && body.summary?.cells === 0,
+     "and the artifact names the blocked target rather than reporting measurements",
+     body ? JSON.stringify(body.summary) : "no artifact");
+}
+{
   // #ce-outer is contenteditable and focuses; an <h3> is a real, visible
   // element that a click cannot focus -- Trix's failure shape without Trix.
   //
@@ -270,7 +289,15 @@ console.log("\n[C1] A nesting failure is checked first, and cannot be hidden");
 console.log("\n[C2] A run that WORKS, and whether its artifact is still usable");
 {
   const dest = path.join(TMP, "fullcell.json");
-  const r = run({ PROOFER_CANDIDATE_URL: PAGE, PROOFER_CANDIDATE_SELECTOR: "#ce",
+  // Exercise subresources on BOTH reachability and measurement pages. Only
+  // session() installs this chrome.runtime stub; the distinct URLs let the
+  // artifact prove that no alternate page creation path escaped interception.
+  const boundaryPage = path.join(TMP, "boundary-page.html");
+  const probeURL = "http://192.0.2.1/proofer-probe-subresource";
+  const sessionURL = "http://192.0.2.1/proofer-session-subresource";
+  fs.writeFileSync(boundaryPage, fs.readFileSync(path.join(HERE, "test-page.html"), "utf8")
+    .replace("</body>", `<script>fetch(window.chrome?.runtime?.id === "t" ? ${JSON.stringify(sessionURL)} : ${JSON.stringify(probeURL)}).catch(() => {});</script></body>`));
+  const r = run({ PROOFER_CANDIDATE_URL: "file://" + boundaryPage, PROOFER_CANDIDATE_SELECTOR: "#ce",
                   PROOFER_CANDIDATE_NAME: "LocalCE", PROOFER_TRIALS: "1",
                   PROOFER_ARMS: "mutation-checked", PROOFER_RESULT_JSON: dest });
   ok(r.code === 0 && /LocalCE \/ mutation-checked\s+1\/0\/0\s+1\/0\/0/.test(r.out),
@@ -289,6 +316,10 @@ console.log("\n[C2] A run that WORKS, and whether its artifact is still usable")
      JSON.stringify(trials && trials.map((t) => ({ p: t.phase, v: t.verdict, f: typeof t.final }))));
   ok(body && body.table[0].source === "ad-hoc" && body.table[0].selector === "#ce",
      "and the cell records which row produced it -- the exit rule depends on it");
+  ok(body && body.offline === true && Array.isArray(body.blockedRequests)
+     && body.blockedRequests.includes(probeURL) && body.blockedRequests.includes(sessionURL),
+     "and both reachability and measurement pages block external subresources",
+     body ? JSON.stringify(body.blockedRequests) : "no artifact");
   ok(!fs.existsSync(dest + ".tmp"), "and the atomic write leaves no .tmp behind");
 }
 

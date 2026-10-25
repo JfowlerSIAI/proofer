@@ -54,13 +54,14 @@ Install the browser prerequisites from `test/`:
 ```bash
 cd test
 npm ci
-npx --no-install puppeteer browsers install chrome
+node scripts/install-chrome.mjs
 npm run test:browser
 ```
 
 `test/.npmrc` disables lifecycle scripts, so `npm ci` does not download a
-browser. The explicit command installs the Chrome for Testing version selected
-by the locked Puppeteer dependency. Its download needs `unzip` on Linux/macOS
+browser. The explicit command checks release age, then installs the exact
+Chrome for Testing build in `test/chrome-version.json`. The reviewed security
+floor applies to overrides and system browser fallbacks too. Its download needs `unzip` on Linux/macOS
 or the native archive tools on Windows. You can instead set `PROOFER_CHROME` to a
 compatible Chrome for Testing binary. Use Chrome for Testing for suites that
 load the extension automatically; the everyday branded Chrome browser is not

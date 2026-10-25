@@ -14,6 +14,7 @@
 import fs from "fs";
 import http from "http";
 import path from "path";
+import { fixtureUrlPath, fixtureFile } from "./fixture-paths.mjs";
 
 const TYPES = {
   ".html": "text/html; charset=utf-8",
@@ -48,6 +49,7 @@ export async function serveFixture(root) {
       `No captured fixture at ${root}.\n` +
       `    cd test && node fixtures/capture.mjs <target>   # needs the network, once`);
   }
+  root = fs.realpathSync(root);
   // What the ORIGINAL server said each path was, recorded at capture time.
   // Without it an extension-less path can only be guessed at, and the guess was
   // wrong for three real files: `fonts.googleapis.com/css` and
@@ -56,18 +58,21 @@ export async function serveFixture(root) {
   // assertion stays green. A recorded answer cannot be wrong about this; a
   // sniffer would be a heuristic guarding a heuristic.
   let recorded = {};
-  const typesFile = path.join(root, "_types.json");
+  const typesFile = fixtureFile(root, "_types.json");
   if (fs.existsSync(typesFile)) {
     try { recorded = JSON.parse(fs.readFileSync(typesFile, "utf8")); } catch { /* fall through */ }
   }
 
   const misses = [];
   const server = http.createServer((req, res) => {
-    let rel = decodeURIComponent(new URL(req.url, "http://x").pathname).replace(/^\/+/, "");
+    let rel;
+    try { rel = fixtureUrlPath(req.url); }
+    catch { res.writeHead(400, { "content-type": "text/plain" }); return res.end("invalid fixture path"); }
     const asked = rel;
     if (rel === "" || rel.endsWith("/")) rel += "index.html";
-    const parts = rel.split("/").filter((s) => s && s !== "." && s !== "..");
-    let file = path.join(root, ...parts);
+    let file;
+    try { file = fixtureFile(root, rel); }
+    catch { res.writeHead(403, { "content-type": "text/plain" }); return res.end("unsafe fixture path"); }
     // `/examples/basic` is a directory: REDIRECT rather than serve its
     // index.html here. Serving it at the un-slashed URL leaves the browser
     // resolving `../prosemirror.js` and `example.js` against the wrong base --
@@ -78,7 +83,8 @@ export async function serveFixture(root) {
         res.writeHead(301, { location: "/" + asked + "/" });
         return res.end();
       }
-      file = path.join(file, "index.html");
+      try { file = fixtureFile(root, rel.replace(/\/$/, "") + "/index.html"); }
+      catch { res.writeHead(403, { "content-type": "text/plain" }); return res.end("unsafe fixture path"); }
     }
     // Containment is checked on the REAL path, so a symlink pointing out of the
     // capture is caught rather than merely a `..` in the URL. Two limits, both

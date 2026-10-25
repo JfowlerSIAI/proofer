@@ -71,7 +71,7 @@ const lines = [];
 page.on("console", (m) => { const t = m.text(); if (t.startsWith("PROBE-")) lines.push(t); });
 page.on("pageerror", (e) => lines.push("PAGEERROR " + e.message));
 await page.evaluateOnNewDocument(`window.__FIX = ${JSON.stringify(FIXES)};
-  window.chrome = { runtime: { id:"t", lastError: undefined, sendMessage: (m, cb) => setTimeout(() => {
+  window.chrome = { runtime: { id:"t", lastError: undefined, onMessage: { addListener() {} }, sendMessage: (m, cb) => setTimeout(() => {
       if (m.type === "SENTENCE_CONSENT") return cb({ ok:true, allowed:true, apply:true });
       if (m.type === "SENTENCE_REWRITE") { console.log("PROBE-SEND " + JSON.stringify(m.sentence));
         const f = window.__FIX[m.sentence];

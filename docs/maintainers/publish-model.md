@@ -60,9 +60,12 @@ validation; raw chat behavior is not the product's proofreading contract.
 
 ## Runtime compatibility
 
-`OLLAMA_MIN_VERSION` in `background.js` is **0.32.6**. Setup asks for an update
-below this floor. Version **0.34.3** is pinned in the repository's provisioning
-and OS-install workflow; aggregate measurements are in
-[the runtime comparison](../../test/results/ollama-0.34.3-2026-10-01.json).
+`OLLAMA_MIN_VERSION` in `background.js` is **0.35.0**. Setup asks for an update
+below this floor. Version **0.35.0** is pinned in the repository's provisioning
+and OS-install workflow because it validates model-pull digests before using
+them. Checking the downloaded model's digest does not protect an older engine
+while it downloads a model. Earlier performance measurements remain in
+[the runtime comparison](../../test/results/ollama-0.34.3-2026-10-01.json);
+they describe Ollama 0.34.3, which is below the current security floor.
 Setup qualification is bound to the Ollama version, so changing the runtime
 requires a new speed check.

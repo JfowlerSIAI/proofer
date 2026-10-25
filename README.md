@@ -23,7 +23,7 @@
 > for this release.
 
 <p align="center">
-  <a href="https://github.com/JfowlerSIAI/proofer/releases/tag/v0.2.0"><img src="docs/assets/install-proofer.svg" alt="Install Proofer beta" height="44"></a>
+  <a href="https://github.com/JfowlerSIAI/proofer/releases/tag/v0.2.1"><img src="docs/assets/install-proofer.svg" alt="Install Proofer beta" height="44"></a>
   &nbsp;
   <a href="https://ollama.com/jayafowler/proofer:v1-q4"><img src="docs/assets/explore-model.svg" alt="Explore the Ollama model" height="44"></a>
 </p>
@@ -80,14 +80,19 @@ the setup check on your computer is the deciding test.
 
 ## Install Proofer
 
-**[Download Proofer 0.2.0](https://github.com/JfowlerSIAI/proofer/releases/download/v0.2.0/proofer-0.2.0.zip)**
-· [Release notes and checksums](https://github.com/JfowlerSIAI/proofer/releases/tag/v0.2.0)
+**[Download Proofer 0.2.1](https://github.com/JfowlerSIAI/proofer/releases/download/v0.2.1/proofer-0.2.1.zip)**
+· [Release notes and checksums](https://github.com/JfowlerSIAI/proofer/releases/tag/v0.2.1)
 
-You need **Chrome or Brave** and **Ollama on this computer**. The model download
+You need **Chrome or Brave** and **Ollama 0.35.0 or newer on this computer**. The model download
 is about **1.7 GB**; allow additional space for Ollama and temporary downloads.
 **Plan on a GPU for a responsive experience.** Setup measures your computer's
 actual speed before enabling corrections. Installing the ZIP does not require
 Node.js.
+
+**Updating from 0.2.0:** install this security update and update Ollama if
+setup requests it. Save drafts, reload the extension, and refresh open writing
+pages. See the [update instructions](docs/usage.md#install-the-release-zip)
+for preserving settings when replacing the unpacked files.
 
 1. Download and extract the ZIP to a folder you will keep in place.
 2. Open `chrome://extensions` or `brave://extensions` and enable

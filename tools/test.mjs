@@ -7,6 +7,8 @@ import path from "node:path";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const groups = {
   source: [
+    ["storage-security-test.mjs"],
+    ["fixture-security-test.mjs"],
     ["sanitizer-test.mjs"],
     ["sentence-split-test.mjs"],
     ["build-confusables.mjs", "--check"],
@@ -29,6 +31,8 @@ const groups = {
     ["package-test.mjs"],
   ],
   browser: [
+    ["browser-security-test.mjs"],
+    ["runtime-security-test.mjs"],
     ["editor-recipe-probe.mjs", "--nesting-only"],
     ["fixtures/verify.mjs"],
     ["sentence-typing-test.mjs"],

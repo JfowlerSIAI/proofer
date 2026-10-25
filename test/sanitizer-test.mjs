@@ -27,7 +27,7 @@ const noop = () => {};
 const ctx = vm.createContext({
   chrome: {
     runtime: { onMessage: { addListener: noop }, onInstalled: { addListener: noop } },
-    storage: { local: { get: (k, cb) => cb({}), set: noop, remove: noop } },
+    storage: { local: { setAccessLevel: async () => {}, get: (k, cb) => cb({}), set: noop, remove: noop } },
     tabs: { create: noop },
   },
   console, fetch, setTimeout, clearTimeout, AbortController, URL,

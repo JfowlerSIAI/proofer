@@ -6,8 +6,8 @@ abstract: "Local sentence proofreading for Chrome and Brave, using an Ollama mod
 authors:
   - family-names: Fowler
     given-names: Jay
-version: 0.2.0
-date-released: 2026-10-23
+version: 0.2.1
+date-released: 2026-10-25
 license: Apache-2.0
 repository-code: "https://github.com/JfowlerSIAI/proofer"
 url: "https://github.com/JfowlerSIAI/proofer"

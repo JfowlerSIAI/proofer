@@ -72,7 +72,7 @@ const server = http.createServer(async (req, res) => {
     return;
   }
   if (["/api/show", "/api/version", "/api/ps"].includes(req.url)) {
-    res.end(JSON.stringify(req.url === "/api/version" ? { version: "0.34.3" } : {}));
+    res.end(JSON.stringify(req.url === "/api/version" ? { version: "0.35.0" } : {}));
     return;
   }
   res.statusCode = 404;

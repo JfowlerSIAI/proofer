@@ -165,7 +165,8 @@ const browser = await puppeteer.launch({
   headless: true,
   executablePath: chrome.path,
   args: [
-    "--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu",
+    // Only captured fixtures run as namespace-root in the offline CI gate.
+    ...(LIVE ? [] : ["--no-sandbox", "--disable-setuid-sandbox"]), "--disable-gpu",
     // One of three independent layers, and worth being exact about what each
     // one is -- an earlier version of this comment claimed an absolute
     // guarantee that the code did not give, which is the same defect as a
@@ -222,7 +223,7 @@ async function monitoredPage() {
 async function slatePage(url = URL_) {
   const page = await monitoredPage();
   await page.evaluateOnNewDocument(`window.chrome = {
-    runtime: { id: "test-ext", lastError: undefined,
+    runtime: { id: "test-ext", lastError: undefined, onMessage: { addListener() {} },
       sendMessage: (m, cb) => setTimeout(() => cb({ ok: true, noChanges: true }), 10) },
     storage: { local: { get: (d, cb) => cb({ ...d }), set: (o, cb) => cb && cb() },
                onChanged: { addListener: () => {} } } };`);
@@ -497,7 +498,7 @@ if (!UNTRUSTED_ONLY && !liveRejects) {
   await shaped.setContent(`<!doctype html><html lang="en"><body>
     <div id="fake" contenteditable="true" data-slate-editor="true"
          style="width:400px;min-height:40px"></div></body></html>`);
-  await shaped.evaluate(`window.chrome = { runtime: { id:"t", lastError: undefined,
+  await shaped.evaluate(`window.chrome = { runtime: { id:"t", lastError: undefined, onMessage: { addListener() {} },
       sendMessage: (m, cb) => setTimeout(() => cb({ ok:true, noChanges:true }), 10) },
     storage: { local: { get:(d,cb)=>cb({...d}), set:(o,cb)=>cb&&cb() }, onChanged:{ addListener(){} } } };`);
   await shaped.evaluate(CONTENT);
@@ -636,7 +637,7 @@ if (!UNTRUSTED_ONLY && !liveRejects) {
   for (let trial = 0; trial < 2; trial++) {
     const page = await monitoredPage();
     await page.evaluateOnNewDocument(`window.__FIX = ${JSON.stringify(FIXES)};
-      window.chrome = { runtime: { id:"t", lastError: undefined, sendMessage: (m, cb) => setTimeout(() => {
+      window.chrome = { runtime: { id:"t", lastError: undefined, onMessage: { addListener() {} }, sendMessage: (m, cb) => setTimeout(() => {
           if (m.type === "SENTENCE_CONSENT") return cb({ ok:true, allowed:true, apply:true });
           if (m.type === "SENTENCE_REWRITE") { const f = window.__FIX[m.sentence];
             return cb(f ? { ok:true, rewritten:f, apply:true } : { ok:true, noChanges:true }); }
@@ -1037,7 +1038,7 @@ if (!UNTRUSTED_ONLY && !liveRejects) {
     <div id="fake" contenteditable="true" data-slate-editor="true"
          style="width:400px;min-height:40px"></div></body></html>`);
   await page.evaluate(`window.__replayed = [];
-    window.chrome = { runtime: { id:"t", lastError: undefined,
+    window.chrome = { runtime: { id:"t", lastError: undefined, onMessage: { addListener() {} },
       sendMessage: (m, cb) => setTimeout(() => cb({ ok:true, noChanges:true }), 10) },
     storage: { local: { get:(d,cb)=>cb({...d}), set:(o,cb)=>cb&&cb() }, onChanged:{ addListener(){} } } };`);
   await page.evaluate(CONTENT);
@@ -1637,7 +1638,7 @@ if (!UNTRUSTED_ONLY && !liveRejects) {
 // answers `noChanges` for a reason that has nothing to do with the code.
 const TIMED_STUB = (fixes, delay = 60) => `window.__req = []; window.__outs = [];
   window.__FIX = ${JSON.stringify(fixes)};
-  window.chrome = { runtime: { id:"t", lastError: undefined, sendMessage: (m, cb) => {
+  window.chrome = { runtime: { id:"t", lastError: undefined, onMessage: { addListener() {} }, sendMessage: (m, cb) => {
       if (m.type === "SENTENCE_REWRITE") window.__req.push({ id: m.requestId, sentence: m.sentence, at: performance.now() });
       if (m.type === "REWRITE_OUTCOME") window.__outs.push({ id: m.requestId, verdict: m.verdict, finalText: m.finalText, at: performance.now() });
       setTimeout(() => {
@@ -2054,7 +2055,7 @@ for (const [label, escAfterMs, inside] of [["inside", 200, true], ["after", 900,
           // before the splice's first sample, which is queued after dispatch.
           setTimeout(() => {
             window.__allowed = false;
-            window.__storageListeners.forEach((f) => f({ sentenceMode: { newValue: false } }));
+            window.__statusListener({ type: "SENTENCE_SETTINGS_CHANGED" }, { id: chrome.runtime.id }, () => {});
             revoked = P.sentenceStatusReport();
           }, 0);
         }
