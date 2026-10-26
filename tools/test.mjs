@@ -9,6 +9,7 @@ const groups = {
   source: [
     ["storage-security-test.mjs"],
     ["fixture-security-test.mjs"],
+    ["encoder-security-test.mjs"],
     ["sanitizer-test.mjs"],
     ["sentence-split-test.mjs"],
     ["build-confusables.mjs", "--check"],

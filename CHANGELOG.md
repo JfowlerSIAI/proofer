@@ -20,6 +20,9 @@ pages after reloading the extension.
 - Pin test Chrome to 156.0.8078.47, enforce its minimum security version and
   check release age before downloading. Add storage, recording, fixture-path
   and browser-security regression gates.
+- Load the optional encoder research helper from hash-verified local model
+  files and isolated caches, with remote code references rewritten for offline
+  loading. Include a reviewed dependency lock and fail-closed loader tests.
 
 ## 0.2.0 — 2026-10-23
 

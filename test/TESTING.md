@@ -22,7 +22,7 @@ Run these commands from the repository root:
 
 | Check | Command | What it needs |
 | --- | --- | --- |
-| 22 source suites | `npm --prefix test test` | Node.js; no dependency install, browser or model |
+| 23 source suites | `npm --prefix test test` | Node.js and Python 3; no dependency install, browser or model |
 | 12 browser suites | `npm --prefix test run test:browser` | Locked test dependencies and Chrome for Testing; local fixtures and canned replies |
 | Real-model end-to-end | `npm --prefix test run test:e2e` | Ollama, the exact pinned model, a browser and a passing setup speed check |
 
@@ -36,6 +36,8 @@ private corpora or omitted adapters; they are not part of these routine groups.
 
 - Use Node.js 22.12 or later; Node.js 24 is recommended. Source-only suites need no
   npm dependencies or model.
+- Python 3 runs the encoder loader's standard-library security tests; no Python
+  packages or encoder weights are needed for that check.
 - Browser suites: npm 11.9 or later (11.12.1 recommended and used by CI),
   `npm ci` from this directory, plus Chrome for Testing or `PROOFER_CHROME`
   (see below). Linux/macOS need `unzip` to extract the browser download;
@@ -194,14 +196,16 @@ live in `tools/test.mjs`, shared by local runs and CI:
 
 | Job | What it runs | Needs | Measured |
 |---|---|---|---|
-| `source-only` | `storage-security-test`, `fixture-security-test`, `sanitizer-test`, `sentence-split-test`, `build-confusables --check`, `sentence-guard-test`, `sentence-typo-recall-test`, `sentence-anchor-test`, `sentence-settings-test`, `sentence-request-bytes-test`, `sentence-retry-test`, `log-record-test`, `log-latency-test`, `sentence-retry-handler-test`, `scoring-engine-test`, `log-to-cases-test`, `setup-check-test`, `contributions-test`, `sentence-evidence-test`, `fixtures/verify-provenance`, `privacy-policy-test`, `package-test` | **nothing** — Node builtins and `test/lib` only | Historical: **~20 s** before the later source suites joined (0.5 s before the retry suites); use the workflow step logs for current durations |
+| `source-only` | `storage-security-test`, `fixture-security-test`, `encoder-security-test`, `sanitizer-test`, `sentence-split-test`, `build-confusables --check`, `sentence-guard-test`, `sentence-typo-recall-test`, `sentence-anchor-test`, `sentence-settings-test`, `sentence-request-bytes-test`, `sentence-retry-test`, `log-record-test`, `log-latency-test`, `sentence-retry-handler-test`, `scoring-engine-test`, `log-to-cases-test`, `setup-check-test`, `contributions-test`, `sentence-evidence-test`, `fixtures/verify-provenance`, `privacy-policy-test`, `package-test` | Node.js, Python 3 standard library and local test files; no installed packages | Historical: **~20 s** before the later source suites joined (0.5 s before the retry suites); use the workflow step logs for current durations |
 | `browser` | `browser-security-test`, `runtime-security-test`, `editor-recipe-probe --nesting-only`, `fixtures/verify`, `sentence-typing-test`, `sentence-provenance-test`, `editor-bench-selfcheck`, `popup-views-test`, `welcome-flow-test`, `popup-activation-test`, `sentence-slate-test`, `flash-highlight-probe` | headless Chrome, loopback | **~5 min** before the flash probe joined (2026-08-24, ~2 min locally); remeasure on its first CI run |
 
 `source-only` runs with `test/node_modules` **absent** — measured, not assumed.
-Every suite in it resolves to Node builtins and other files under `test/`
+The JavaScript suites resolve to Node builtins and other files under `test/`
 (`test/lib`, and `sentence-guard-test.mjs` also imports its sibling
 `build-confusables.mjs`) — nothing reaches `node_modules`, so the job needs no
-`npm ci` and finishes in about the time the checkout takes.
+`npm ci`. The encoder loader check invokes Python 3 and uses only its standard
+library with fabricated model files; it does not load model weights or install
+Python dependencies.
 
 **The gate is that the deterministic half did not regress.** It says nothing
 about correction quality: the model, the prompt and everything measured against

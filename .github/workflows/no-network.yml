@@ -34,7 +34,8 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       # Deliberately no npm install: these suites use local files and Node
-      # builtins. Some tests bind loopback ports. Unlike the browser job, their
+      # builtins, plus Python's standard library for the encoder loader check.
+      # Some tests bind loopback ports. Unlike the browser job, their
       # network boundary is supported by inspection, not a namespace.
       - name: Source regression battery
         run: node tools/test.mjs source

@@ -1,12 +1,19 @@
-import json, os, time, sys
-from transformers import AutoModel
+import atexit, json, os, time, sys
+from secure_model import ModelSecurityError, prepare_model
 
 MODEL_DIR = os.environ.get("PROOFER_ENCODER_DIR", os.path.expanduser("~/models/LFM2.5-Encoder-350M-Spellchecker"))
 t0 = time.time()
-model = AutoModel.from_pretrained(MODEL_DIR, trust_remote_code=True).float().eval()
+try:
+    assets = prepare_model(MODEL_DIR)
+except ModelSecurityError as error:
+    raise SystemExit(f"Encoder security check failed: {error}")
+atexit.register(assets.close)
+from transformers import AutoModel
+model = AutoModel.from_pretrained(str(assets.directory), trust_remote_code=True,
+                                  local_files_only=True).float().eval()
 print(f"loaded in {time.time()-t0:.1f}s", flush=True)
 
-examples = json.load(open(f"{MODEL_DIR}/examples.json"))
+examples = json.loads((assets.directory / "examples.json").read_text())
 srcs = [e["source"] for e in examples]
 t0 = time.time()
 out = model.correct(srcs)

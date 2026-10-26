@@ -1,0 +1,19 @@
+{
+  "encoder_revision": "b886781f7c6f10ca9b7096e21b83e30a073c2f39",
+  "model": {
+    "config.json": "edeaa3214d6a34153416e3417c8960c998e9144f2d87e6bff7eac94d4da54102",
+    "modeling_gectagger.py": "ecd2ee64c22e3ad020fc2fd9c926d2163549d624ba28a36b38035483d508d552",
+    "reranker_gectagger.py": "c63b299cab6d24b144642fc106d75b5c7fe1bc3ec620495b56f0294854536a13",
+    "tokenizer_config.json": "ba91dd002005cdf48ada14d3406571d06adc50b141bb4284e390b0e4c8d8aa2c",
+    "tokenizer.json": "1efc3a6609abf6b63b1f47188d139f3b59973a6a434dffe970a7261a51ed2711",
+    "reranker/scorer_config.json": "b543724a48ae85112410c08ff622cf499d9eac0d151f84034bd3cf336c0e2bf3",
+    "reranker/operating_point.json": "816d057845f737800a7f2105f0b74c7ceb5d3f521d3537223ebdd53a01564c2f",
+    "examples.json": "68faaa26a9158741f85c2380f1f83c81c20755edfa8b2c804163ddb5058337d1",
+    "model.safetensors": "e788053172f2dbc5a1573454475230dca21f19cd3ca1193e2dca5b1a9fd27bfa",
+    "reranker/pytorch_model.bin": "628d648c0754a5a50838f9251491fa4a116a59fb11d035849e7b00e4ab51c725"
+  },
+  "encoder": {
+    "config.json": "559f88ddcebfb0a7b46ba99a074b17f3a951f278b3010a0f22fdf5d9cc358d11",
+    "modeling_lfm2_bidirectional.py": "f171f518be2a07da48b17fdea5655cad0a2452ab548e90e8ae903143686647e2"
+  }
+}
