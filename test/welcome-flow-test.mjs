@@ -661,8 +661,11 @@ ok(await stateOf(w14) === "checking" && fake.pulls === before14,
 fake.tagsStatus = 200; fake.pulled = 0; fake.pullStepMs = 30;
 await waitState(["downloading", "verifying", "testing"], 10000, w14);
 ok(fake.pulls === before14 + 1, "[14] successful missing inventory automatically downloads");
-// Let the streamed pull settle before another page owns setup.
-await waitState(["testing", "interrupted", "operational"], 10000, w14);
+// "testing" is shown before SETUP_BEGIN and the first worker step finish.
+// Closing the page there leaves an in-flight probe that can record its load
+// in [15]'s event list. Let this complete run settle before reusing the worker.
+ok(await waitState(["ready", "too-slow", "unexpected", "interrupted", "operational"], 120000, w14) === "ready",
+  "[14] the completed setup check is idle before the next verification case");
 await w14.close();
 
 // [15] Mutant: verifyEngine's digest lookup uses `{ fresh: false }`.
@@ -679,7 +682,7 @@ const show15 = events15.indexOf("show");
 // The page can show testing before its first step finishes: wait for its load.
 for (let i = 0; i < 50 && !fake.events.includes("load"); i++) await sleep(100);
 ok(pull15 >= 0 && fresh15 > pull15 && show15 > fresh15 && fake.events.indexOf("load") > show15,
-  "[15] completed pull precedes fresh tags, show verification and benchmark load");
+  `[15] completed pull precedes fresh tags, show verification and benchmark load (${JSON.stringify(fake.events)})`);
 await w15.close();
 
 // [16] Mutant: checkFreshness's recovery publishes only lastOllamaContact="ok".
