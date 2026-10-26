@@ -237,7 +237,7 @@ const ollama = http.createServer(async (req, res) => {
   const body = raw ? JSON.parse(raw) : null;
   const url = new URL(req.url, "http://x");
   switch (url.pathname) {
-    case "/api/version": return send(res, 200, { version: "0.32.12" });
+    case "/api/version": return send(res, 200, { version: "0.35.0" });
     case "/api/tags": return send(res, 200, { models: fake.installed
       ? [{ name: PIN.tag, model: PIN.tag, digest: PIN.digest, size: PIN.size }] : [] });
     case "/api/ps": return send(res, 200, { models: fake.loaded

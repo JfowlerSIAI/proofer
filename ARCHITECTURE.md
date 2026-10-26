@@ -133,14 +133,15 @@ make private datasets a prerequisite for the deterministic public test suite.
 ## Runtime protocol
 
 Almost all cross-context calls go through chrome.runtime messages handled by
-one router in background.js. There is exactly one exception, and it runs the
-other way: the popup asks the *page* directly with chrome.tabs.sendMessage, so
-content.js registers its own chrome.runtime.onMessage listener.
+one router in background.js. The popup also asks the page directly for status,
+and the worker sends settings invalidations with chrome.tabs.sendMessage.
+Content registers its own chrome.runtime.onMessage listener for these messages.
 
 | Message | Producer | Purpose |
 | --- | --- | --- |
 | CANCEL_REWRITE | content script | Abort a sentence request by request ID. The name is the removed manual path's; renaming it would be churn |
-| SENTENCE_CONSENT | content script | Read effective top-level-origin permission |
+| SENTENCE_CONSENT | content script | Read effective top-level-origin permission and the debug flag |
+| SENTENCE_SETTINGS_CHANGED | **worker to content script** | Invalidate cached consent and pending work; carries no stored keys or values |
 | SENTENCE_WARMUP | content script | Ask the worker to preload the sentence runner when useful |
 | SENTENCE_REWRITE | content script | Rewrite one finished, anchored sentence. Carries a `trigger` naming the evidence that the sentence was finished — `newline`, `next-sentence`, or `idle` — which the worker validates against a fixed allowlist, writes to the log record, and feeds to one guard |
 | SENTENCE_SKIPS | content script | Flush batched pre-request skip counters |
@@ -151,7 +152,7 @@ content.js registers its own chrome.runtime.onMessage listener.
 | SETUP_READY / SETUP_STATUS / SETUP_VERIFY / SETUP_BEGIN / SETUP_STEP / SETUP_PING / SETUP_REPORT | **setup page only** | The speed check and its verdict. The page names nothing but a run id: fixtures, model, options and URL are the worker's. `SETUP_READY` is the page's barrier before it talks to Ollama itself: it returns the URL and pin to use once the Origin rule for that URL is installed and checked. `SETUP_STATUS` uses the same worker snapshot as CHECK_HEALTH, reading version and digest past their caches, and returns global activation and any upgrading reason in `consent` (no target editing tab). `SETUP_STEP` returns controlled failure codes with operational reasons and performs one step per message (so the worker stays awake) and hands the page any deliberate wait; `SETUP_REPORT` returns report version 2: the LAST ATTEMPT's identity, stored bounds and measurements, with current build metadata labeled separately, without text, sites or paths. Refused from any sender whose URL is not this extension's `welcome.html` — not the popup, not a content script |
 | GET_LOG_STATS / EXPORT_LOG / CLEAR_LOG | popup | Inspect, download, or delete local records. The stats describe the sentence ring only (since 2026-09-24): `legacyManual` counts old manual records, `clearable` is the worker's authoritative answer to "is there anything Clear would remove" (asked of storage by the prefixes Clear sweeps, so legacy, orphaned and telemetry-only storage all count), `evictions` reports a quota eviction that came before the count cap (written BEFORE the replacement record is tried, so a failed retry still says so), and `writeFailures` counts records or verdicts that could not be written at all — stored, and held in memory too, since a storage refusing every write refuses that count as well. The popup sends CLEAR_LOG even when `clearable` says nothing is stored: a sentence in flight writes its record when its response lands, and only CLEAR_LOG advances the generation that drops it. EXPORT_LOG returns `{ok, records, counts: {records, warmups, skips}}`: counts come from the same indexed interaction array, warmup array and optional skip row being exported; `skips` is zero or one, not the counter sum. Export excludes orphaned prose, while Clear’s prefix inventory includes it. Counts are response metadata, never JSONL rows. The popup names interaction records and diagnostics separately, allows diagnostic-only downloads with “No interaction records. Exported diagnostics only.”, and saves nothing when all counts are zero. The export is both rings plus the warmup events, and — since 2026-09-14 — one trailing `path: "skips"` row carrying the skip-counter map, the only measure of failures that never produced a record. The popup shows the [export notice](docs/privacy-policy.md#exporting-and-sharing-for-support) the first time, and appends one more row, `path: "notice"`, naming the notice seen, which `test/contributions.mjs` records as notice provenance. Acknowledging the export notice does not grant training permission |
 | GET_RECENT_SENTENCES | popup | The last 20 corrections that reached a text field, newest first, for the popup's "Recent changes" receipt. Eligibility is decided on the VERDICT and never on whether the text changed: on a guard refusal the record's `output` holds the raw model text that was refused, so an `input !== output` filter would present refusals as receipts for edits that happened. Filtered before the cap, and capped worker-side |
-| SENTENCE_STATUS | **popup to content script** | Ask a page why sentence mode is or is not running there. The only message the worker does not route |
+| SENTENCE_STATUS | **popup to content script** | Ask a page why sentence mode is or is not running there |
 
 SENTENCE_STATUS reaches every frame, and Chrome keeps only the first reply.
 Both content listeners use `replySentenceStatus` to schedule bounded priority
@@ -328,8 +329,8 @@ separate `sentenceModeApply` choosing between writing and suggesting (v4,
 The worker derives the top-level origin from the browser-supplied message
 sender. Content has no frame-origin veto: an excluded editor origin embedded
 in an allowed top-level page can attach. Its first trusted editable focus
-registers the storage listener and asks for worker consent; both switch-off
-lists still invalidate that cached answer. The worker checks consent for the
+asks for worker consent; changes to either switch-off list make the worker
+send an invalidation of that cached answer. The worker checks consent for the
 initial probe, every warmup, and every SENTENCE_REWRITE, so a content script's
 cached permission cannot survive the mode or the site being switched off. The migration is one pass and one write. `runSettingsMigration` computes every
 historical step from the stored values — v3 flipped a stored `sentenceMode:
@@ -456,7 +457,7 @@ it was tested on. See the [installation acceptance test](docs/maintainers/accept
 - **Setup** is `welcome.html`, opened by `onInstalled` on a fresh install and on
   an update when the stored verdict no longer holds. It rebuilds its state from
   the worker's `setupSnapshot` each time. `observeOllama` owns the version
-  comparison against `OLLAMA_MIN_VERSION` (0.32.6); `observeEngine` uses the
+  comparison against `OLLAMA_MIN_VERSION` (0.35.0); `observeEngine` uses the
   tag-scoped `installedModelDigest`; `setupVerdictView` projects `shownVerdict`
   and its applicability to the observed installation. Service states are `ok`,
   `unreachable`, `unusable`; engine states are `ok`, `missing`, `mismatch`,
@@ -1865,13 +1866,19 @@ defaults table. The `sentenceMode` it reads is effective v5 activation; the raw
 migration inputs are not changed by that projection. Page replies carry
 `consent` beside settings, never stored, from `sentenceModeState`.
 
-content.js reads only sentenceDebug directly from chrome.storage.local, when
-asking for worker consent. It registers one storage listener lazily on the first
-trusted editable focus; changes to either disabledSites or
-sentenceModeDisabledSites re-ask the worker, without caching either list or
-comparing the frame origin. Frames with no editable focus do neither read nor
-consent IPC. (It duplicated the manual path's hotkey and auto-apply defaults
-until that path was removed.)
+Before any local storage read, migration, or write, the worker restricts
+chrome.storage.local to TRUSTED_CONTEXTS. Failure leaves the worker unable to
+read or write stored state. Content scripts have no direct local-storage access
+or storage-change listeners. They request only effective consent and the debug
+flag through SENTENCE_CONSENT on trusted editable focus. Worker notifications
+carry only an invalidation type; frames re-request consent without receiving
+settings, disabled-site lists, or records. A generation check discards stale
+replies after invalidation.
+
+Recording changes share logQueue with record writes. Each queued write and
+record-outcome update checks current recording permission before persisting.
+Turning recording off invalidates content consent and drops pending feedback
+collection.
 
 Per-site arrays are updated through single-origin toggles applied against the
 latest stored value. This prevents an old popup snapshot from resurrecting a
@@ -2713,10 +2720,9 @@ exit, so a 77 that ever surfaced would be red.
   30 seconds; the retry does not perform a separate lookup. Requests still
   address an Ollama tag, so verification and dispatch are not atomic against
   concurrent retagging. See “Worker validation” for the enforcement path.
-- Docker Compose pins Ollama 0.34.3 by digest (it pinned 0.18.2, below the
-  0.32.6 floor setup enforces, until 2026-10-01). The beta's probes and timing
+- Docker Compose pins Ollama 0.35.0 by digest, matching the security floor
+  setup enforces for the model-pull digest-validation fix. Historical evidence: The beta's probes and timing
   were taken on 0.32.12; 0.34.3 was measured on 2026-10-01 against the same
   pinned model — quality level within run-to-run noise, the prompt-cache reuse
   map identical, ~125 ms less per warm request
-  (aggregate evidence: `test/results/ollama-0.34.3-2026-10-01.json`). The floor stays
-  0.32.6.
+  (aggregate evidence: `test/results/ollama-0.34.3-2026-10-01.json`).

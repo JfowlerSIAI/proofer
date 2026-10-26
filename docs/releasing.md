@@ -7,7 +7,8 @@ extension version lives in `manifest.json`; update `CHANGELOG.md` and
 
 ## Verify the candidate
 
-1. Run `node tools/test.mjs source`.
+1. Run `node tools/test.mjs source` with Python 3 available for the encoder
+   loader's standard-library security tests; no Python packages are needed.
 2. Install the pinned test dependencies and Chrome for Testing as described in
    [CONTRIBUTING.md](../CONTRIBUTING.md), then run the browser group in a
    loopback-only network namespace on Linux, matching CI.

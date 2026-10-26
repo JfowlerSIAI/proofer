@@ -94,7 +94,7 @@ const PIN = {
 // so the fake answers each fixture the way the pinned engine does.
 const FAKE_TEMPLATE = "{{- range .Messages }}<|{{ .Role }}|>{{ .Content }}{{ end }}";
 const fake = {
-  up: true, version: "0.32.12", installed: false, digest: PIN.digest, loaded: false,
+  up: true, version: "0.35.0", installed: false, digest: PIN.digest, loaded: false,
   pulled: 0,                 // bytes "on disk" of a partial pull, for resume
   cutAfter: null,            // cut the connection after this many bytes, once
   pullStepMs: 40, pullSteps: 25,
@@ -310,7 +310,7 @@ if (reportFile) {
     "[4b] ...with the result, every case and the engine");
   ok(rep.reportVersion === 2 && rep.model.tag === "jayafowler/proofer:v1-q4"
     && rep.model.digest === "f920607a347881f5a3482ec8a9d6ea621d9a6f7ea7c27b7372e31d8e4f54b320"
-    && rep.promptRevision === "sentence-v1" && rep.benchmarkRevision === "speed-v2" && rep.ollamaVersion === "0.32.12"
+    && rep.promptRevision === "sentence-v1" && rep.benchmarkRevision === "speed-v2" && rep.ollamaVersion === "0.35.0"
     && rep.currentBuild?.model.tag === "jayafowler/proofer:v1-q4"
     && rep.currentBuild?.model.digest === "f920607a347881f5a3482ec8a9d6ea621d9a6f7ea7c27b7372e31d8e4f54b320"
     && rep.currentBuild?.promptRevision === "sentence-v1" && rep.currentBuild?.benchmarkRevision === "speed-v2"
@@ -364,7 +364,7 @@ await welcome.close();
 
 // [8] Pause survives reopening; Resume carries on.
 await sw.evaluate(async () => { await chrome.storage.local.remove(["setupQualification", "setupPaused"]); });
-fake.installed = false; fake.pulled = 0; fake.version = "0.32.12"; fake.pullStepMs = 120;
+fake.installed = false; fake.pulled = 0; fake.version = "0.35.0"; fake.pullStepMs = 120;
 const w2 = await browser.newPage();
 await w2.goto(WELCOME);
 ok(await waitState("downloading", 15000, w2) === "downloading", "[8] reopened with no engine: the download starts");
@@ -402,14 +402,14 @@ const screenFor = async (label, prep, want) => {
   return buttons;
 };
 await screenFor("Ollama too old", async () => { fake.version = "0.1.0"; }, "update-needed");
-fake.version = "0.32.12";
+fake.version = "0.35.0";
 await screenFor("something else on the port", async () => { fake.notOllama = true; }, "not-ollama");
 fake.notOllama = false;
 fake.installed = true;
 const seed = (v) => sw.evaluate(async (v) => {
   const s = await getSettings();
   await chrome.storage.local.set({ setupQualification: { v: 1, pass: false, category: v.category, reason: v.reason,
-    ollamaUrl: s.ollamaUrl, ollamaVersion: "0.32.12", tag: PINNED_MODEL.tag, digest: PINNED_MODEL.digest,
+    ollamaUrl: s.ollamaUrl, ollamaVersion: "0.35.0", tag: PINNED_MODEL.tag, digest: PINNED_MODEL.digest,
     promptRevision: PROMPT_REVISION, benchmarkRevision: SETUP_BENCHMARK_REVISION, options: { num_thread: null }, cases: [] } });
 }, v);
 for (const [category, reason] of [["too-slow", null], ["unexpected", null]]) {
@@ -423,11 +423,11 @@ for (const [category, reason] of [["too-slow", null], ["unexpected", null]]) {
 await sw.evaluate(async () => {
   const s = await getSettings();
   await chrome.storage.local.set({ setupQualification: { v: 1, runId: "seeded", pass: true, category: "pass", reason: null,
-    ollamaUrl: s.ollamaUrl, ollamaVersion: "0.32.12", tag: PINNED_MODEL.tag, digest: PINNED_MODEL.digest,
+    ollamaUrl: s.ollamaUrl, ollamaVersion: "0.35.0", tag: PINNED_MODEL.tag, digest: PINNED_MODEL.digest,
     promptRevision: PROMPT_REVISION, benchmarkRevision: SETUP_BENCHMARK_REVISION, options: { num_thread: null },
     backend: { kind: "gpu", numThread: null }, cases: [], date: 1 } });
 });
-fake.installed = true; fake.version = "0.32.12"; fake.up = true;
+fake.installed = true; fake.version = "0.35.0"; fake.up = true;
 const w3 = await browser.newPage();
 await w3.goto(WELCOME);
 ok(await waitState("ready", 15000, w3) === "ready", "[10] a stored pass: setup shows Ready, running nothing");
@@ -606,7 +606,7 @@ await workerCDP.detach();
 // G3.2 observation/recovery cases retain this same restarted worker.
 await sw.evaluate((h) => { PINNED_MODEL.templateSha256 = h; }, await sha(FAKE_TEMPLATE));
 const restorePass = async () => {
-  fake.up = true; fake.version = "0.32.12"; fake.installed = true;
+  fake.up = true; fake.version = "0.35.0"; fake.installed = true;
   fake.digest = PIN.digest; fake.tagsStatus = 200; fake.warmupStatus = 200;
   await sw.evaluate(async (q) => { await storeQualification(q); }, q10);
 };
@@ -661,8 +661,11 @@ ok(await stateOf(w14) === "checking" && fake.pulls === before14,
 fake.tagsStatus = 200; fake.pulled = 0; fake.pullStepMs = 30;
 await waitState(["downloading", "verifying", "testing"], 10000, w14);
 ok(fake.pulls === before14 + 1, "[14] successful missing inventory automatically downloads");
-// Let the streamed pull settle before another page owns setup.
-await waitState(["testing", "interrupted", "operational"], 10000, w14);
+// "testing" is shown before SETUP_BEGIN and the first worker step finish.
+// Closing the page there leaves an in-flight probe that can record its load
+// in [15]'s event list. Let this complete run settle before reusing the worker.
+ok(await waitState(["ready", "too-slow", "unexpected", "interrupted", "operational"], 120000, w14) === "ready",
+  "[14] the completed setup check is idle before the next verification case");
 await w14.close();
 
 // [15] Mutant: verifyEngine's digest lookup uses `{ fresh: false }`.
@@ -679,7 +682,7 @@ const show15 = events15.indexOf("show");
 // The page can show testing before its first step finishes: wait for its load.
 for (let i = 0; i < 50 && !fake.events.includes("load"); i++) await sleep(100);
 ok(pull15 >= 0 && fresh15 > pull15 && show15 > fresh15 && fake.events.indexOf("load") > show15,
-  "[15] completed pull precedes fresh tags, show verification and benchmark load");
+  `[15] completed pull precedes fresh tags, show verification and benchmark load (${JSON.stringify(fake.events)})`);
 await w15.close();
 
 // [16] Mutant: checkFreshness's recovery publishes only lastOllamaContact="ok".

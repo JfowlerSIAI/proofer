@@ -35,7 +35,8 @@ node tools/package.mjs
 ```
 
 The first command runs the source-only regression checks without installing
-packages. The second creates `dist/proofer`; load that directory through your
+packages; Python 3 is also needed for the encoder loader's standard-library
+security tests. The second creates `dist/proofer`; load that directory through your
 browser's extensions page with Developer mode and **Load unpacked** enabled.
 Follow the [install guide](docs/install-guide.md) to set up Ollama and
 activate proofreading. After a change, rebuild, reload the extension, then
@@ -45,7 +46,7 @@ refresh writing pages after saving drafts.
 
 | Command from the repository root | What it exercises | Prerequisites |
 | --- | --- | --- |
-| `npm --prefix test test` or `npm --prefix test run test:source` | Source-only regression battery: guards, consent, setup logic, request bytes, records, and packaging | Node.js 22.12+ (24 recommended); no npm install or model |
+| `npm --prefix test test` or `npm --prefix test run test:source` | Source-only regression battery: guards, consent, setup logic, request bytes, records, packaging and encoder loading | Node.js 22.12+ (24 recommended) and Python 3; no package install or model |
 | `npm --prefix test run test:browser` | Real browser behavior with canned replies and local editor captures | Locked test dependencies, Chrome for Testing, and port 11434 free in the test environment |
 | `npm --prefix test run test:e2e` | Real extension, Ollama, and pinned model; setup and a correction through the full pipeline | Browser prerequisites, running Ollama, pinned model, and a machine that passes setup's speed check |
 
@@ -54,13 +55,14 @@ Install the browser prerequisites from `test/`:
 ```bash
 cd test
 npm ci
-npx --no-install puppeteer browsers install chrome
+node scripts/install-chrome.mjs
 npm run test:browser
 ```
 
 `test/.npmrc` disables lifecycle scripts, so `npm ci` does not download a
-browser. The explicit command installs the Chrome for Testing version selected
-by the locked Puppeteer dependency. Its download needs `unzip` on Linux/macOS
+browser. The explicit command checks release age, then installs the exact
+Chrome for Testing build in `test/chrome-version.json`. The reviewed security
+floor applies to overrides and system browser fallbacks too. Its download needs `unzip` on Linux/macOS
 or the native archive tools on Windows. You can instead set `PROOFER_CHROME` to a
 compatible Chrome for Testing binary. Use Chrome for Testing for suites that
 load the extension automatically; the everyday branded Chrome browser is not

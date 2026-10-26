@@ -162,7 +162,7 @@ const chrome = await resolveChrome();
 const browser = await puppeteer.launch({
   headless: true,
   executablePath: chrome.path,
-  args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+  args: ["--disable-gpu"],
 });
 
 // Both the live sessions and the source probe inject the VM's selected snapshot.
@@ -176,7 +176,7 @@ async function sourceProbe() {
     await page.setContent('<div class="ql-editor" contenteditable="true">Source probe.</div>');
     await page.evaluate(() => {
       window.chrome = {
-        runtime: { id: "t", sendMessage: (m, cb) => cb && cb({ ok: true }) },
+        runtime: { id: "t", onMessage: { addListener() {} }, sendMessage: (m, cb) => cb && cb({ ok: true }) },
         storage: { local: { get: (d, cb) => cb(d), set: () => {} },
           onChanged: { addListener: () => {} } },
       };
@@ -238,7 +238,7 @@ async function session(t) {
   // A visible text pass with a thrown React error is not a clean pass.
   page.on("pageerror", (e) => errors.push(String(e.message || e).split("\n")[0]));
   await page.evaluateOnNewDocument(`window.chrome = {
-    runtime: { id: "t", lastError: undefined,
+    runtime: { id: "t", lastError: undefined, onMessage: { addListener() {} },
       sendMessage: (m, cb) => setTimeout(() => cb({ ok: true, noChanges: true }), 10) },
     storage: { local: { get: (d, cb) => cb({ ...d }), set: (o, cb) => cb && cb() },
                onChanged: { addListener: () => {} } } };`);

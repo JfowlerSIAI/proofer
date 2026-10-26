@@ -12,8 +12,8 @@
  *   1. `PROOFER_CHROME`         — an explicit override always wins.
  *   2. Puppeteer's Chrome for Testing — the pinned build, and the only one that
  *      still honours `--load-extension`. `test/.npmrc` disables lifecycle
- *      scripts, so this is only present after `npx --no-install puppeteer browsers install
- *      chrome`; absence is normal, not an error.
+ *      scripts, so this is only present after `node scripts/install-chrome.mjs`
+ *      from test/; absence is normal, not an error.
  *   3. A system install — google-chrome, chromium, or the macOS bundle.
  *
  * Nothing found is thrown, not fallen back on: a non-existent `executablePath`
@@ -21,7 +21,51 @@
  * reads like a Puppeteer bug rather than "install a browser".
  */
 import fs from "fs";
+import path from "node:path";
+import { execFileSync } from "node:child_process";
 import puppeteer from "puppeteer";
+
+const { minimumVersion } = JSON.parse(fs.readFileSync(new URL("../chrome-version.json", import.meta.url), "utf8"));
+// Puppeteer 25 made this asynchronous. Resolve once during ESM initialization
+// so the existing synchronous resolver remains usable by all harnesses.
+let cft;
+try { cft = await puppeteer.executablePath(); } catch { /* not installed */ }
+const checked = new Map();
+
+export function browserVersionAllowed(version, minimum = minimumVersion) {
+  if (!/^\d+\.\d+\.\d+\.\d+$/.test(version)) return false;
+  const actual = version.split(".").map(Number), floor = minimum.split(".").map(Number);
+  for (let i = 0; i < 4; i++) {
+    if (actual[i] !== floor[i]) return actual[i] > floor[i];
+  }
+  return true;
+}
+
+export function checkedChrome(executablePath, source) {
+  if (!checked.has(executablePath)) {
+    let output;
+    try {
+      // Chrome 156 handles --version only on POSIX. Read the Windows PE
+      // metadata without launching the browser; pass the path as data, never
+      // splice it into PowerShell source (paths may contain quotes or spaces).
+      output = process.platform === "win32"
+        ? execFileSync("powershell.exe", ["-NoProfile", "-NonInteractive", "-Command",
+          '$ErrorActionPreference = "Stop"; [System.Diagnostics.FileVersionInfo]::GetVersionInfo($env:PROOFER_VERSION_BINARY).ProductVersion'],
+          { encoding: "utf8", timeout: 10000, windowsHide: true,
+            env: { ...process.env, PROOFER_VERSION_BINARY: path.resolve(executablePath) } })
+        : execFileSync(executablePath, ["--version"], { encoding: "utf8", timeout: 10000 });
+    }
+    catch { throw new Error(`Cannot verify browser version: ${executablePath}`); }
+    const version = process.platform === "win32"
+      ? output.trim().match(/^(\d+\.\d+\.\d+\.\d+)(?:\s|$)/)?.[1]
+      : output.match(/(?:Chrome(?: for Testing)?|Chromium|Brave Browser)\s+(\d+\.\d+\.\d+\.\d+)/)?.[1];
+    if (!version || !browserVersionAllowed(version)) {
+      throw new Error(`Browser ${version || "unknown"} is below the reviewed security floor ${minimumVersion}: ${executablePath}. Run cd test && node scripts/install-chrome.mjs.`);
+    }
+    checked.set(executablePath, version);
+  }
+  return { path: executablePath, source, version: checked.get(executablePath) };
+}
 
 const SYSTEM_CANDIDATES = [
   "/usr/bin/google-chrome",
@@ -34,7 +78,7 @@ const SYSTEM_CANDIDATES = [
 ];
 
 /**
- * @returns {Promise<{ path: string, source: string }>}
+ * @returns {Promise<{ path: string, source: string, version: string }>}
  * @throws if no browser can be found — with the commands that would fix it.
  */
 export async function resolveChrome() {
@@ -43,20 +87,20 @@ export async function resolveChrome() {
     if (!fs.existsSync(env)) {
       throw new Error(`PROOFER_CHROME is set to ${env}, which does not exist.`);
     }
-    return { path: env, source: "PROOFER_CHROME" };
+    return checkedChrome(env, "PROOFER_CHROME");
   }
 
-  let cft;
-  try { cft = await puppeteer.executablePath(); } catch { /* not installed */ }
-  if (cft && fs.existsSync(cft)) return { path: cft, source: "Chrome for Testing" };
+  if (cft && fs.existsSync(cft)) return checkedChrome(cft, "Chrome for Testing");
 
   for (const candidate of SYSTEM_CANDIDATES) {
-    if (fs.existsSync(candidate)) return { path: candidate, source: "system" };
+    if (fs.existsSync(candidate)) {
+      try { return checkedChrome(candidate, "system"); } catch { /* try another current browser */ }
+    }
   }
 
   throw new Error(
     "No Chrome found. Install the pinned build with\n" +
-    "    cd test && npx --no-install puppeteer browsers install chrome\n" +
+    "    cd test && node scripts/install-chrome.mjs\n" +
     "or point PROOFER_CHROME at an existing binary.",
   );
 }

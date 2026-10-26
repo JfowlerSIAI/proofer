@@ -63,7 +63,7 @@ const ctx = vm.createContext({
   },
   Node: { ELEMENT_NODE: 1, TEXT_NODE: 3, DOCUMENT_POSITION_FOLLOWING: 4 },
   chrome: {
-    runtime: { id: "test", lastError: undefined, sendMessage: (m, cb) => cb && cb({ ok: true }) },
+    runtime: { id: "test", lastError: undefined, onMessage: { addListener() {} }, sendMessage: (m, cb) => cb && cb({ ok: true }) },
     storage: { local: { get: (d, cb) => cb(d), set: noop }, onChanged: { addListener: noop } },
   },
 });

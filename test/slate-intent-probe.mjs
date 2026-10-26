@@ -289,7 +289,7 @@ console.log(`  Trials per cell: ${TRIALS}\n`);
 const browser = await puppeteer.launch({
   headless: true,
   executablePath: chrome.path,
-  args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+  args: ["--disable-gpu"],
 });
 
 /* ------------------------------------------------------------------ phase 1
@@ -441,7 +441,7 @@ async function slateSession() {
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e.message || e).split("\n")[0]));
   await page.evaluateOnNewDocument(`window.chrome = {
-    runtime: { id: "t", lastError: undefined,
+    runtime: { id: "t", lastError: undefined, onMessage: { addListener() {} },
       sendMessage: (m, cb) => setTimeout(() => cb({ ok: true, noChanges: true }), 10) },
     storage: { local: { get: (d, cb) => cb({ ...d }), set: (o, cb) => cb && cb() },
                onChanged: { addListener: () => {} } } };`);

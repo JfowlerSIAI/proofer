@@ -11,9 +11,9 @@
 #     node sentence-owner-bench.mjs --corpus random-holdout.json --tag encoder
 # Env: PROOFER_ENCODER_DIR (model dir), PROOFER_ENCODER_PORT (default 11500).
 # See README.md here for the pinned environment and model hashes.
-import json, os, re, time
+import atexit, json, os, re, time
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from transformers import AutoModel
+from secure_model import ModelSecurityError, prepare_model
 
 MODEL_DIR = os.environ.get(
     "PROOFER_ENCODER_DIR",
@@ -21,7 +21,14 @@ MODEL_DIR = os.environ.get(
 PORT = int(os.environ.get("PROOFER_ENCODER_PORT", "11500"))
 
 print("loading model...", flush=True)
-model = AutoModel.from_pretrained(MODEL_DIR, trust_remote_code=True).float().eval()
+try:
+    assets = prepare_model(MODEL_DIR)
+except ModelSecurityError as error:
+    raise SystemExit(f"Encoder security check failed: {error}")
+atexit.register(assets.close)
+from transformers import AutoModel
+model = AutoModel.from_pretrained(str(assets.directory), trust_remote_code=True,
+                                  local_files_only=True).float().eval()
 print("model ready", flush=True)
 
 

@@ -74,7 +74,8 @@ window.chrome = {
       setTimeout(() => {
         // __allowed lets a case withdraw consent the way the worker would
         // after a configuration change (a stale speed check, a new URL).
-        if (msg.type === "SENTENCE_CONSENT") return cb({ ok: true, allowed: window.__allowed !== false, apply: ${apply} && window.__allowed !== false });
+        if (msg.type === "SENTENCE_CONSENT") return cb({ ok: true, allowed: window.__allowed !== false,
+          sentenceDebug: window.__store.sentenceDebug === true, apply: ${apply} && window.__allowed !== false });
         if (msg.type === "SENTENCE_REWRITE") {
           if (window.__rewriteReplies && msg.sentence in window.__rewriteReplies) {
             return cb(window.__rewriteReplies[msg.sentence]);
@@ -1733,8 +1734,8 @@ const outcomes = (page, id) => page.evaluate((wanted) =>
 }
 
 // --- [14d] Initialization stays lazy -------------------------------------
-// Mutant: add `loadSettings();` at the end of the IIFE initialization;
-// the pre-focus zero-listener assertion turns red.
+// Storage access is forbidden; the status/invalidation message listener is
+// registered once, and consent is requested only after trusted field focus.
 {
   const page = await freshPage(true);
   await page.evaluate(() => {
@@ -1745,11 +1746,13 @@ const outcomes = (page, id) => page.evaluate((wanted) =>
   const idle = await page.evaluate(() => ({
     reads: window.__storageReads.length,
     consent: window.__sent.filter(m => m.type === "SENTENCE_CONSENT").length,
-    listeners: (window.__onChanged || []).length,
+    storageListeners: (window.__onChanged || []).length,
+    messageListeners: window.__messageListeners.length,
   }));
   ok(idle.reads === 0 && idle.consent === 0,
     "[14d] no storage reads or consent before trusted editable focus");
-  ok(idle.listeners === 0, "[14d] no storage listener before trusted editable focus");
+  ok(idle.storageListeners === 0 && idle.messageListeners === 1,
+    "[14d] one worker-message listener and no storage listener before focus");
   await page.click("#ta");
   await sleep(100);
   await page.click("#tall");
@@ -1757,12 +1760,14 @@ const outcomes = (page, id) => page.evaluate((wanted) =>
   await page.click("#ta");
   await sleep(100);
   const focused = await page.evaluate(() => ({
-    reads: window.__storageReads, listeners: window.__onChanged.length,
+    reads: window.__storageReads, storageListeners: (window.__onChanged || []).length,
+    messageListeners: window.__messageListeners.length,
     consent: window.__sent.filter(m => m.type === "SENTENCE_CONSENT").length,
   }));
-  ok(focused.listeners === 1, "[14d] repeated focus registers exactly one storage listener");
-  ok(focused.consent === 1 && JSON.stringify(focused.reads) === '[{"sentenceDebug":false}]',
-    "[14d] focus asks worker consent once and reads only sentenceDebug");
+  ok(focused.storageListeners === 0 && focused.messageListeners === 1,
+    "[14d] repeated focus keeps one message listener and no storage listener");
+  ok(focused.consent === 1 && focused.reads.length === 0,
+    "[14d] focus asks worker consent once without accessing storage");
   await page.close();
 }
 
@@ -2523,7 +2528,7 @@ for (const [sel, apply] of [["#ta", true], ["#slate", false]]) {
 // --- [23] A configuration change drops a correction still on its way -------
 // Invalidation clears content-script writes that are waiting.
 // The speed check's verdict changing (e.g. marked stale after an Ollama
-// update) or the Ollama URL changing arrives as a storage change; content.js
+// update) or the Ollama URL changing arrives as a worker invalidation; content.js
 // drops what is in flight and re-asks consent, which the worker now refuses.
 // A textarea writes the moment the response lands, so the change is fired
 // while the request is out; a rich editor's result held for a pause goes
@@ -2537,7 +2542,7 @@ for (const key of ["setupQualification", "ollamaUrl"]) {
   ok((await requests(page)).includes("We recieved the invoice yesterday."), `[23] ${key}: the sentence went out`);
   await page.evaluate((k) => {
     window.__allowed = false;
-    for (const fn of window.__onChanged || []) fn({ [k]: { oldValue: 1, newValue: 2 } }, "local");
+    for (const fn of window.__messageListeners) fn({ type: "SENTENCE_SETTINGS_CHANGED" }, { id: chrome.runtime.id }, () => {});
   }, key);
   await sleep(1200);
   ok(await val(page) === "We recieved the invoice yesterday. Then we",
@@ -2565,7 +2570,7 @@ for (const key of ["setupQualification", "ollamaUrl"]) {
   ok(held, "[23b] the Slate correction is held for a pause");
   await page.evaluate(() => {
     window.__allowed = false;
-    for (const fn of window.__onChanged || []) fn({ setupQualification: { oldValue: 1, newValue: 2 } }, "local");
+    for (const fn of window.__messageListeners) fn({ type: "SENTENCE_SETTINGS_CHANGED" }, { id: chrome.runtime.id }, () => {});
   });
   await sleep(900);
   await page.evaluate(() => window.__prooferSentence.flushSentenceSkips());
@@ -2611,7 +2616,7 @@ for (const key of ["setupQualification", "ollamaUrl"]) {
     "[24] first IDs carry a 128-bit namespace and counter 1");
   await first.evaluate(() => {
     window.__allowed = false;
-    for (const fn of window.__onChanged || []) fn({ setupQualification: { oldValue: 1, newValue: 2 } }, "local");
+    for (const fn of window.__messageListeners) fn({ type: "SENTENCE_SETTINGS_CHANGED" }, { id: chrome.runtime.id }, () => {});
   });
   const cancellations = await first.evaluate(() =>
     window.__sent.filter((m) => m.type === "CANCEL_REWRITE").map((m) => m.requestId));

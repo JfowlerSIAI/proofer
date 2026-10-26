@@ -26,8 +26,8 @@ model of about 1.7 GB, and its speed check decides whether the computer is fast
 enough for live editing. Allow additional disk space for Ollama and temporary
 downloads. Plan on GPU acceleration for a responsive experience.
 
-1. Open the [Proofer 0.2.0 release](https://github.com/JfowlerSIAI/proofer/releases/tag/v0.2.0)
-   and download **`proofer-0.2.0.zip`**. The release's `SHA256SUMS.txt` supplies
+1. Open the [Proofer 0.2.1 release](https://github.com/JfowlerSIAI/proofer/releases/tag/v0.2.1)
+   and download **`proofer-0.2.1.zip`**. The release's `SHA256SUMS.txt` supplies
    the archive checksum for verification. The source archive is a separate
    download; use the extension ZIP for this installation path.
 2. Extract the ZIP to a folder you will keep in place while using the extension.
@@ -99,7 +99,7 @@ names the problem and offers **Open setup**.
 
 For an existing native Ollama installation, start Ollama; setup handles the
 engine download. Proofer requires at least the `OLLAMA_MIN_VERSION` in
-[background.js](../background.js) (currently `0.32.6`).
+[background.js](../background.js) (currently `0.35.0`).
 
 For Docker-based Ollama, the optional helper starts the pinned Compose image,
 pulls the same model, and uses Node.js to verify that the pinned tag itself

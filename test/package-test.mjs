@@ -125,7 +125,7 @@ console.log("\nThe packaged data satisfies the shipping loader's own integrity c
     chrome: {
       runtime: { onMessage: { addListener() {} }, onInstalled: { addListener() {} },
                  getURL: (p) => "packaged:" + p },
-      storage: { local: { get: (k, cb) => cb && cb({}), set() {}, remove() {} } },
+      storage: { local: { setAccessLevel: async () => {}, get: (k, cb) => cb && cb({}), set() {}, remove() {} } },
       tabs: { create() {} },
     },
     fetch, setTimeout, clearTimeout, AbortController, URL,

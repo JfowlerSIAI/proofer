@@ -67,11 +67,10 @@ const PINNED_MODEL = {
   parameters: { temperature: 0.1, top_k: 20, top_p: 0.8, num_ctx: 2048, repeat_penalty: 1 },
 };
 
-// The oldest Ollama this model has run under in use: the owner's machine from
-// 2026-08-20, where the pilot shipped on 2026-08-24. 0.32.12 is what the
-// Origin probe and the timing numbers were measured on. Nothing older was
-// tested, so setup asks for an update below this rather than guessing.
-const OLLAMA_MIN_VERSION = "0.32.6";
+// Security floor: 0.35.0 fixes CVE-2026-103663 (DirtyDigest), where a model
+// download could write outside Ollama's model store. Checking our model's
+// digest AFTER downloading cannot protect an affected engine during the pull.
+const OLLAMA_MIN_VERSION = "0.35.0";
 
 // "0.32.12" -> [0, 32, 12]; anything unparseable compares as older.
 function versionParts(v) {
@@ -103,11 +102,31 @@ const EXPECTED_SENTENCE_MODEL = "proofer-pilot-q8:v1";
 const EXPECTED_SENTENCE_MODEL_DIGEST =
   "0c0862801a15b823c8ce413b76e67c6e05b48e3a247e5cee1dfcb22258d54ca9";
 
+// Content scripts share a renderer with untrusted pages. Message checks alone
+// cannot protect the user's cross-site writing or consent settings while that
+// renderer can call storage.local directly. Restrict it BEFORE the migration,
+// any settings read, or any log write. An unsupported/rejected restriction
+// disables those operations; it must never fall back to exposed storage.
+let storageRestricted = false;
+const storageAccessReady = (async () => {
+  if (typeof chrome.storage.local.setAccessLevel !== "function") {
+    throw new Error("Proofer cannot protect its local storage in this browser.");
+  }
+  await chrome.storage.local.setAccessLevel({ accessLevel: "TRUSTED_CONTEXTS" });
+  storageRestricted = true;
+})();
+// Attach a rejection handler immediately, including in workers that have no
+// caller waiting yet. storageGet/storageSet still await the ORIGINAL promise
+// and fail closed; catching here does not turn a refusal into permission.
+storageAccessReady.catch((e) => console.error("[Proofer] local storage unavailable:", e));
+
 function storageGet(keys) {
+  if (!storageRestricted) return storageAccessReady.then(() => storageGet(keys));
   return new Promise((resolve) => chrome.storage.local.get(keys, resolve));
 }
 
 function storageSet(obj) {
+  if (!storageRestricted) return storageAccessReady.then(() => storageSet(obj));
   return new Promise((resolve, reject) => chrome.storage.local.set(obj, () => {
     // A rejected write must not be reported as a success. chrome.storage
     // rejects the WHOLE object if any value is unserializable, so one bad
@@ -477,7 +496,19 @@ async function applySettingsUpdate(update, consent = null) {
   // editing. Switching every site OFF needs no list action -- that is the
   // global sentenceMode switch.
   if (update && update.clearSentenceModeDisabledSites === true) next.sentenceModeDisabledSites = [];
-  await storageSet(next);
+  if (next.recordAll !== stored.recordAll) {
+    // Share the log's queue for this consent change. An outcome that already
+    // read "recording on" must finish before the switch is persisted, and
+    // every later queued write must observe the new choice. Otherwise the
+    // settings read inside updateLogRecord still has a check/write race.
+    // Preserve rejection for the settings caller; ordinary log writes swallow
+    // it only after recording their failure.
+    const write = logQueue.then(() => storageSet(next));
+    logQueue = write.catch(() => {});
+    await write;
+  } else {
+    await storageSet(next);
+  }
   // The rule names the Ollama origin, so a new URL needs a new rule before the
   // next POST -- which awaits the same promise this starts. And a speed check
   // is bound to the URL it ran against: a sentence job or a check begun under
@@ -800,6 +831,10 @@ function appendLogRecord(record) {
 function updateLogRecord(requestId, patch) {
   const ring = ringForRequestId(requestId);
   return enqueueLogWrite(async () => {
+    // Outcomes can include NEW prose from edits made up to 30 seconds after a
+    // correction. Turning recording off revokes those writes too, even when
+    // the original record exists or the outcome was already queued.
+    if (!(await getSettings()).recordAll) return;
     const key = logKeyFor(requestId, ring);
     const existing = (await storageGet({ [key]: null }))[key];
     if (!existing) return;
@@ -840,7 +875,7 @@ async function clearLog() {
     // log" is the user's guarantee that their text is gone, so it must not
     // inherit the index's blind spots -- an orphaned plog:/slog: key held
     // user text through a clear that reported success.
-    const all = await new Promise((resolve) => chrome.storage.local.get(null, resolve));
+    const all = await storageGet(null);
     const prefixes = [...Object.values(LOG_RINGS).map((r) => r.prefix), WARMUP_LOG_PREFIX];
     const keys = Object.keys(all || {}).filter((k) => prefixes.some((p) => k.startsWith(p)));
     keys.push(...Object.values(LOG_RINGS).map((r) => r.indexKey), SENTENCE_SKIPS_KEY, LOG_EVICTIONS_KEY,
@@ -855,7 +890,7 @@ async function clearLog() {
 // keys an index no longer names, or text-free telemetry would read as empty
 // there -- and the popup's "Nothing to clear." would leave it all on disk.
 async function clearableData() {
-  const all = await new Promise((resolve) => chrome.storage.local.get(null, resolve));
+  const all = await storageGet(null);
   const keys = Object.keys(all || {});
   const proseKeys = keys.filter((k) => Object.values(LOG_RINGS).some((r) => k.startsWith(r.prefix)));
   const legacy = keys.filter((k) => k.startsWith(LOG_RINGS.manual.prefix)).length;
@@ -5396,7 +5431,7 @@ function noteServiceOutcome(payload, ollamaUrl = null) {
 // 3): found by a sentence's pre-send lookup, a warmup's, or setup's check of
 // the download. Every job and every verdict that assumed the pinned engine is
 // void, so the verdict is marked stale (which bumps the configuration
-// generation, so nothing in flight delivers, and fires the storage change
+// generation, so nothing in flight delivers, and broadcasts the invalidation
 // content.js drops held corrections on), work in flight is cancelled, and the
 // badge says why. Setup's check runs again after the engine is downloaded.
 async function invalidateEngine(state, ollamaUrl = null) {
@@ -6054,11 +6089,13 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
       try {
         const settings = await getSettings();
         const state = sentenceModeState(settings, topLevelOriginOf(sender));
-        sendResponse({ ok: true, ...state });
+        // Content needs only its own permission and a debug switch. In
+        // particular, never return the stored settings, qualification or log.
+        sendResponse({ ok: true, ...state, sentenceDebug: settings.sentenceDebug });
         // The first focus of an editable is early status: check
         // freshness now, off the answer's path, so an Ollama that was updated
         // or stopped shows on the badge before the first sentence -- and a
-        // stale verdict reaches content.js as a storage change, which re-asks.
+        // stale verdict reaches content.js as worker invalidation, which re-asks.
         if (state.allowed) checkFreshness(settings, AbortSignal.timeout(5000)).catch(() => {});
       } catch (e) {
         console.error("[Proofer] SENTENCE_CONSENT error:", e);
@@ -6761,7 +6798,25 @@ chrome.runtime.onStartup?.addListener(() => {
 chrome.storage.onChanged?.addListener((changes, area) => {
   if (area && area !== "local") return;
   if (changes.sentenceMode || changes[QUALIFICATION_KEY] || changes.ollamaUrl) updateBadge().catch(() => {});
+  if (["sentenceMode", "sentenceModeDisabledSites", "disabledSites", QUALIFICATION_KEY,
+    "ollamaUrl", "sentenceDebug", "recordAll"].some((key) => changes[key])) {
+    notifySentenceSettingsChanged().catch((e) => console.warn("[Proofer] could not notify pages:", e));
+  }
 });
+
+// Storage changes no longer cross into content scripts: their access is
+// TRUSTED_CONTEXTS-only. Broadcast only an invalidation, never keys or values
+// from storage. Every frame drops pending writes/feedback immediately on
+// receipt and asks SENTENCE_CONSENT again for its own top-level origin.
+// Tab IDs are available without the broad "tabs" permission; URLs are unused.
+async function notifySentenceSettingsChanged() {
+  await storageAccessReady;
+  const tabs = await chrome.tabs.query({});
+  await Promise.allSettled(tabs.filter((tab) => Number.isInteger(tab.id)).map((tab) =>
+    chrome.tabs.sendMessage(tab.id, { type: "SENTENCE_SETTINGS_CHANGED" })));
+  // Missing receivers are normal (browser pages, tabs with no content script,
+  // or frames closed during the query), and contain no state to invalidate.
+}
 
 // On settingsQueue, like every other settings write, and for a sharper version
 // of the same reason. `applySettingsUpdate` is a read-modify-write of the WHOLE
@@ -6904,7 +6959,7 @@ async function runSettingsMigration() {
 //
 // This must stay at the BOTTOM: `settingsQueue` is a `let` declared partway
 // down the file, and calling this above it is a temporal-dead-zone throw.
-migrateSettings();
+migrateSettings().catch(() => {});
 // ...and the Origin rule, for the same reason at every worker start: a rule is
 // persistent, but reconciling it is cheap and makes "the rule matches the
 // configured URL" true by construction rather than by history.

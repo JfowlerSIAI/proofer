@@ -204,14 +204,16 @@ async function popupView(parent) {
   try {
     const target = await browser.waitForTarget(t => t._targetId === targetId);
     const popup = await target.page();
-    await popup.waitForFunction(() => {
-      const text = document.getElementById("sentenceWhere").textContent;
-      return text && !text.startsWith("Checking");
+    // Keep the terminal text and its class in the same observed snapshot: a
+    // permission refresh can start between the wait and a separate evaluate.
+    const terminal = await popup.waitForFunction(() => {
+      const el = document.getElementById("sentenceWhere");
+      const text = el.textContent;
+      return text && !text.startsWith("Checking")
+        ? { text, green: el.classList.contains("ok") } : false;
     }, { polling: 100, timeout: 10000 });
-    return await popup.evaluate(() => ({
-      text: document.getElementById("sentenceWhere").textContent,
-      green: document.getElementById("sentenceWhere").classList.contains("ok"),
-    }));
+    try { return await terminal.jsonValue(); }
+    finally { await terminal.dispose(); }
   } finally {
     await cdp.send("Target.closeTarget", { targetId });
     await cdp.detach();

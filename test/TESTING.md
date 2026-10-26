@@ -22,8 +22,8 @@ Run these commands from the repository root:
 
 | Check | Command | What it needs |
 | --- | --- | --- |
-| 20 source suites | `npm --prefix test test` | Node.js; no dependency install, browser or model |
-| 10 browser suites | `npm --prefix test run test:browser` | Locked test dependencies and Chrome for Testing; local fixtures and canned replies |
+| 23 source suites | `npm --prefix test test` | Node.js and Python 3; no dependency install, browser or model |
+| 12 browser suites | `npm --prefix test run test:browser` | Locked test dependencies and Chrome for Testing; local fixtures and canned replies |
 | Real-model end-to-end | `npm --prefix test run test:e2e` | Ollama, the exact pinned model, a browser and a passing setup speed check |
 
 Follow [contributor setup](../CONTRIBUTING.md#set-up-a-checkout) for the browser
@@ -36,6 +36,8 @@ private corpora or omitted adapters; they are not part of these routine groups.
 
 - Use Node.js 22.12 or later; Node.js 24 is recommended. Source-only suites need no
   npm dependencies or model.
+- Python 3 runs the encoder loader's standard-library security tests; no Python
+  packages or encoder weights are needed for that check.
 - Browser suites: npm 11.9 or later (11.12.1 recommended and used by CI),
   `npm ci` from this directory, plus Chrome for Testing or `PROOFER_CHROME`
   (see below). Linux/macOS need `unzip` to extract the browser download;
@@ -102,7 +104,7 @@ Two more cut across the **browser** suites rather than the LLM ones:
 
 1. `PROOFER_CHROME`, if set — and it's an error, not a fallback, if that path
    doesn't exist.
-2. Puppeteer's Chrome for Testing (`npx --no-install puppeteer browsers install chrome`).
+2. The pinned Chrome for Testing build (`node scripts/install-chrome.mjs`).
    `.npmrc` disables lifecycle scripts, so this is a separate step and its
    absence is normal.
 3. A system install — `google-chrome`, `chromium`, or the macOS bundle.
@@ -112,6 +114,10 @@ Chrome for Testing is preferred over any system Chrome because branded Chrome
 need. Nothing found throws with the install command rather than falling through
 to a path that doesn't exist — a bad `executablePath` surfaces as an ENOENT from
 inside Puppeteer's launcher, which reads like a Puppeteer bug.
+
+All candidates must meet the security floor in `chrome-version.json`. The
+explicit installer checks the official artifact release age before downloading;
+its targeted Chrome CVE exception does not relax the npm dependency quarantine.
 
 ### Exit codes
 
@@ -190,14 +196,16 @@ live in `tools/test.mjs`, shared by local runs and CI:
 
 | Job | What it runs | Needs | Measured |
 |---|---|---|---|
-| `source-only` | `sanitizer-test`, `sentence-split-test`, `build-confusables --check`, `sentence-guard-test`, `sentence-typo-recall-test`, `sentence-anchor-test`, `sentence-settings-test`, `sentence-request-bytes-test`, `sentence-retry-test`, `log-record-test`, `log-latency-test`, `sentence-retry-handler-test`, `scoring-engine-test`, `log-to-cases-test`, `setup-check-test`, `contributions-test`, `sentence-evidence-test`, `fixtures/verify-provenance`, `privacy-policy-test`, `package-test` | **nothing** — Node builtins and `test/lib` only | Historical: **~20 s** before the later source suites joined (0.5 s before the retry suites); use the workflow step logs for current durations |
-| `browser` | `editor-recipe-probe --nesting-only`, `fixtures/verify`, `sentence-typing-test`, `sentence-provenance-test`, `editor-bench-selfcheck`, `popup-views-test`, `welcome-flow-test`, `popup-activation-test`, `sentence-slate-test`, `flash-highlight-probe` | headless Chrome, loopback | **~5 min** before the flash probe joined (2026-08-24, ~2 min locally); remeasure on its first CI run |
+| `source-only` | `storage-security-test`, `fixture-security-test`, `encoder-security-test`, `sanitizer-test`, `sentence-split-test`, `build-confusables --check`, `sentence-guard-test`, `sentence-typo-recall-test`, `sentence-anchor-test`, `sentence-settings-test`, `sentence-request-bytes-test`, `sentence-retry-test`, `log-record-test`, `log-latency-test`, `sentence-retry-handler-test`, `scoring-engine-test`, `log-to-cases-test`, `setup-check-test`, `contributions-test`, `sentence-evidence-test`, `fixtures/verify-provenance`, `privacy-policy-test`, `package-test` | Node.js, Python 3 standard library and local test files; no installed packages | Historical: **~20 s** before the later source suites joined (0.5 s before the retry suites); use the workflow step logs for current durations |
+| `browser` | `browser-security-test`, `runtime-security-test`, `editor-recipe-probe --nesting-only`, `fixtures/verify`, `sentence-typing-test`, `sentence-provenance-test`, `editor-bench-selfcheck`, `popup-views-test`, `welcome-flow-test`, `popup-activation-test`, `sentence-slate-test`, `flash-highlight-probe` | headless Chrome, loopback | **~5 min** before the flash probe joined (2026-08-24, ~2 min locally); remeasure on its first CI run |
 
 `source-only` runs with `test/node_modules` **absent** — measured, not assumed.
-Every suite in it resolves to Node builtins and other files under `test/`
+The JavaScript suites resolve to Node builtins and other files under `test/`
 (`test/lib`, and `sentence-guard-test.mjs` also imports its sibling
 `build-confusables.mjs`) — nothing reaches `node_modules`, so the job needs no
-`npm ci` and finishes in about the time the checkout takes.
+`npm ci`. The encoder loader check invokes Python 3 and uses only its standard
+library with fabricated model files; it does not load model weights or install
+Python dependencies.
 
 **The gate is that the deterministic half did not regress.** It says nothing
 about correction quality: the model, the prompt and everything measured against
@@ -294,7 +302,7 @@ surface, GitHub fails a step on any non-zero exit, so 77 is red.
 ```bash
 cd test
 npm ci                                   # see the worktree warning below
-npx --no-install puppeteer browsers install chrome
+node scripts/install-chrome.mjs
 export PROOFER_CHROME="$(node -e "import('puppeteer').then(async p=>console.log(await p.default.executablePath()))")"
 ```
 
@@ -2681,7 +2689,7 @@ on hosted operating systems, run by
 `macos-latest` runners. It installs the **packaged** extension
 (`node tools/package.mjs` → `dist/proofer`, verified against its own
 `SHA256SUMS.txt`) into Chrome for Testing with a fresh profile, a real Ollama
-0.34.3 already running on 127.0.0.1:11434 with an **empty** model store, and
+0.35.0 already running on 127.0.0.1:11434 with an **empty** model store, and
 then clicks nothing until setup is done. Checks: install opens setup by itself;
 setup finds Ollama without asking for it; with the engine missing, setup starts
 the download itself, from ollama.com; the engine installed afterwards is the
@@ -2730,7 +2738,7 @@ repository uses `main`; no dedicated force-pushed trigger branch is needed.
 The OS-install workflow runs only through `workflow_dispatch`; ordinary pushes
 do not start it. Manual dispatch can select Windows, macOS or both.
 
-Ollama comes from the official release assets for v0.34.3
+Ollama comes from the official release assets for v0.35.0
 (`ollama-windows-amd64.zip`, `ollama-darwin.tgz`),
 each SHA-256 pinned in the workflow AND required to agree with the release's own
 `sha256sum.txt`; never an install script. It is started in the same step as the
@@ -2759,7 +2767,7 @@ export store=<model store copy> out=<artifacts dir>
 unshare -rn bash -c 'ip link set lo up
   OLLAMA_HOST=127.0.0.1:11434 OLLAMA_MODELS=$store OLLAMA_NOPRUNE=1 \
   CUDA_VISIBLE_DEVICES=-1 GGML_VK_VISIBLE_DEVICES=-1 OLLAMA_VULKAN=0 \
-  taskset -c 0-7 /opt/ollama-v0.34.3/bin/ollama serve >ollama.log 2>&1 &
+  taskset -c 0-7 /opt/ollama-v0.35.0/bin/ollama serve >ollama.log 2>&1 &
   sleep 3; cd test && taskset -c 8-23 node os-install-check.mjs --out $out'
 ```
 

@@ -133,6 +133,7 @@ const ctx = vm.createContext({
     },
     storage: {
       local: {
+        setAccessLevel: async () => {},
         get: (keys, cb) => {
           const out = {};
           if (keys && typeof keys === "object" && !Array.isArray(keys)) {
@@ -175,7 +176,7 @@ function seedConsent() {
     sentenceModeDisabledSites: [],
     // A current, passing speed check: nothing writes without one (beta 3d).
     [vm.runInContext("QUALIFICATION_KEY", ctx)]: {
-      v: 1, pass: true, category: "pass", ollamaUrl: "http://localhost:11434", ollamaVersion: "0.32.12",
+      v: 1, pass: true, category: "pass", ollamaUrl: "http://localhost:11434", ollamaVersion: "0.35.0",
       tag: vm.runInContext("PINNED_MODEL.tag", ctx), digest: vm.runInContext("PINNED_MODEL.digest", ctx),
       promptRevision: vm.runInContext("PROMPT_REVISION", ctx),
       benchmarkRevision: vm.runInContext("SETUP_BENCHMARK_REVISION", ctx), options: { num_thread: null },

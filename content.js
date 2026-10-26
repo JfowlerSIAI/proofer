@@ -156,41 +156,21 @@
     return { hostname, heading };
   }
 
-  // Settings-listener registration waits until a field is actually focused.
+  // Settings are first requested when a field is actually focused.
   // This script is injected into every frame -- all_frames is required for
   // iframe-based editors -- and the overwhelming majority of those frames (ads,
-  // trackers, embeds) never contain an editable element. Loading eagerly cost
-  // two storage IPCs per frame on every page load, each one waking the service
-  // worker, for settings nothing in that frame would ever read.
+  // trackers, embeds) never contain an editable element. Their permission is
+  // asked only on focus. Storage itself is restricted to trusted extension
+  // contexts; the worker sends a content-free invalidation when it changes.
   let settingsPromise = null;
+  let sentenceMessagesReady = false;
 
   function loadSettings() {
     if (settingsPromise) return settingsPromise;
-    settingsPromise = new Promise((resolve) => {
-      try {
-        chrome.storage.onChanged.addListener((changes) => {
-          if (changes.sentenceDebug) sentenceDebug = !!changes.sentenceDebug.newValue;
-          // Consent is computed in background.js from the top-level origin, so
-          // it cannot be recomputed here -- re-ask instead. Revoking has to take
-          // effect without a reload; this is the path that writes to the field.
-          // The speed check's verdict and the Ollama URL are part of consent
-          // too (a stale verdict, a new URL): a result waiting for a pause is
-          // dropped with the rest (the configuration generation check).
-          if (changes.sentenceMode || changes.sentenceModeDisabledSites || changes.disabledSites
-              || changes.setupQualification || changes.ollamaUrl) {
-            invalidateSentenceConsent();
-          }
-        });
-        resolve();
-      } catch {
-        // Extension context gone -- chrome.storage disappears with
-        // chrome.runtime. Unblock every awaiting caller rather than leaving the
-        // promise pending forever, and record WHY: this is usually the first
-        // call an orphaned script makes, so it is the first chance to know.
-        markContextDead();
-        resolve();
-      }
-    });
+    // Without the listener below, a cached permission could not be revoked.
+    // An orphaned extension therefore cannot start proofreading.
+    if (!sentenceMessagesReady) markContextDead();
+    settingsPromise = Promise.resolve();
     return settingsPromise;
   }
 
@@ -528,6 +508,7 @@
   let sentenceAllowed = false;
   let sentenceDebug = false;
   let sentenceConsentPromise = null;
+  let sentenceConsentGeneration = 0;
   let sentenceTrack = null;        // { el, watermark, prefix, lastText }
   let sentenceJob = null;          // the one in-flight request for this frame
   let sentenceIdleTimer = null;
@@ -1126,23 +1107,24 @@
       sentenceConsentPromise = Promise.resolve();
       return sentenceConsentPromise;
     }
-    sentenceConsentPromise = Promise.all([
-      sendMessage({ type: "SENTENCE_CONSENT" }),
-      new Promise((resolve) => {
-        try { chrome.storage.local.get({ sentenceDebug: false }, resolve); }
-        catch { resolve({}); }
-      }),
-    ]).then(([r, dbg]) => {
+    const generation = sentenceConsentGeneration;
+    sentenceConsentPromise = sendMessage({ type: "SENTENCE_CONSENT" }).then((r) => {
+      // A pre-revocation reply must never resurrect permission after a newer
+      // invalidation. The worker's answer can be delayed independently of the
+      // broadcast that revoked it.
+      if (generation !== sentenceConsentGeneration) return;
       sentenceAllowed = !!(r && r.ok && r.allowed);
-      sentenceDebug = !!(dbg && dbg.sentenceDebug);
+      sentenceDebug = !!(r && r.ok && r.sentenceDebug);
       sentenceLog("consent", { allowed: sentenceAllowed });
     });
     return sentenceConsentPromise;
   }
 
   function invalidateSentenceConsent() {
+    sentenceConsentGeneration++;
     sentenceConsentPromise = null;
     sentenceAllowed = false;
+    sentenceDebug = false;
     teardownSentence("consent-changed");
     setSentenceStatus("off", "not-allowed", null);
     loadSentenceConsent().then(() => {
@@ -5969,10 +5951,19 @@
 
   try {
     if (typeof chrome !== "undefined" && chrome.runtime && chrome.runtime.onMessage) {
-      chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+      chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+        if (msg?.type === "SENTENCE_SETTINGS_CHANGED") {
+          if (sender?.id !== chrome.runtime.id) return;
+          // No field has been focused: there is no cached permission or edit
+          // feedback to revoke, and no reason to wake the worker for consent.
+          if (settingsPromise) invalidateSentenceConsent();
+          sendResponse({ ok: true });
+          return;
+        }
         if (!msg || msg.type !== "SENTENCE_STATUS") return;
         return replySentenceStatus(focusedEditable, sentenceLastField, sentenceStatusReport, sendResponse);
       });
+      sentenceMessagesReady = true;
     }
   } catch {
     // An orphaned content script has no chrome.runtime. Nothing to register on,
