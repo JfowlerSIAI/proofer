@@ -279,11 +279,17 @@ function splice(page, start, end, replacement) {
  * by a margin. And the accepted signal has to be a COHERENT AREA the size of
  * the range, not `n > 0`: one stray pixel is noise however green it is.
  *
- * `name` is the registered name to toggle: the probe's own in [A]-[C],
- * content.js's in [E].
+ * `name` is null for the probe's Range, or the shipped flash's fade-name list.
+ * Resolve that list and its Range together: a name sampled in an earlier CDP
+ * call can disappear during a normal fade while the same Range stays painted.
  */
 async function paintProof(page, name) {
-  const geo = await page.evaluate((n) => {
+  const geo = await page.evaluate((target) => {
+    const live = Array.isArray(target) ? target.filter((n) => CSS.highlights.has(n)) : null;
+    if (live && live.length !== 1) {
+      return { why: live.length ? "multiple-shipped-highlights" : "no-shipped-highlight" };
+    }
+    const n = live ? live[0] : target;
     const h = n ? CSS.highlights.get(n) : null;
     const range = n ? (h && h.values().next().value) : window.__hlRange;
     if (!range) return { why: "no-range" };
@@ -787,7 +793,7 @@ for (const t of rows) {
     ok(s0.texts.length === 1 && s0.texts[0] === WORD,
        `over exactly ${JSON.stringify(WORD)} and nothing else (${JSON.stringify(s0.texts)})`);
     ok(s0.overlayNodes === 0, `and no overlay div was painted (${s0.overlayNodes})`);
-    const paint0 = await paintProof(page, s0.live[0]);
+    const paint0 = await paintProof(page, FLASH_NAMES);
     ok(paint0.ok, `the extension's own stylesheet visibly tints it `
        + `(${paint0.px || 0} px vs floor ${paint0.floor}, noise ${paint0.noise}, ${paint0.why || "ok"})`);
     const off0 = paintOffset(paint0);
@@ -804,9 +810,9 @@ for (const t of rows) {
     ok(s1.live.length === 1, `still up at +900ms, mid-burst (${JSON.stringify(s1.live)})`);
     ok(s1.texts.length === 1 && s1.texts[0] === WORD,
        `still over exactly the changed word (${JSON.stringify(s1.texts)})`);
-    const paint1 = await paintProof(page, s1.live[0]);
+    const paint1 = await paintProof(page, FLASH_NAMES);
     ok(paint1.ok, `and still visibly tinted after the keystrokes `
-       + `(${paint1.px || 0} px vs floor ${paint1.floor})`);
+       + `(${paint1.px || 0} px vs floor ${paint1.floor}, ${paint1.why || "ok"})`);
 
     const s2 = await waitTo(FLASH_MS + 500);
     ok(s2.live.length === 0, `cleared when the 1600ms is up (${JSON.stringify(s2.live)})`);
@@ -1014,8 +1020,8 @@ try {
      `still naming exactly the changed word (${JSON.stringify(after.texts)})`);
   // Registered is not painted: the re-anchor rebuilds Range objects, and a
   // Highlight holding ranges nobody re-registered paints nothing at all.
-  const paint = after.live.length ? await paintProof(p, after.live[0]) : { ok: false, px: 0 };
-  ok(paint.ok, `and is still visibly tinted (${paint.px || 0} px vs floor ${paint.floor})`);
+  const paint = await paintProof(p, FLASH_NAMES);
+  ok(paint.ok, `and is still visibly tinted (${paint.px || 0} px vs floor ${paint.floor}, ${paint.why || "ok"})`);
   // The affordance the teardown existed to protect, proved unharmed rather than
   // assumed: green visible must still mean Escape works.
   await p.keyboard.press("Escape");
@@ -1133,8 +1139,8 @@ try {
   // what changed is a gap -- so the mark points at the word that visibly moved.
   ok(st.texts.length === 1 && st.texts[0] === "invoice.",
      `over the word that closed up over it (${JSON.stringify(st.texts)})`);
-  const paint = st.live.length ? await paintProof(p, st.live[0]) : { ok: false, px: 0 };
-  ok(paint.ok, `and visibly tinted (${paint.px || 0} px vs floor ${paint.floor})`);
+  const paint = await paintProof(p, FLASH_NAMES);
+  ok(paint.ok, `and visibly tinted (${paint.px || 0} px vs floor ${paint.floor}, ${paint.why || "ok"})`);
   await p.close();
 } catch (e) { ok(false, `[F] deletion-only: ${e.message}`); }
 

@@ -241,10 +241,30 @@ async function slatePage(url = URL_) {
   await page.keyboard.down("Control");
   await page.keyboard.press("KeyA");
   await page.keyboard.up("Control");
+  await page.waitForFunction(() => {
+    const el = document.querySelector('[data-slate-editor="true"]');
+    const selection = window.getSelection();
+    return el && selection?.rangeCount === 1 && !selection.isCollapsed
+      && el.contains(selection.anchorNode) && el.contains(selection.focusNode)
+      && selection.getRangeAt(0).toString() === el.textContent;
+  }, { timeout: 5000 });
+  // Both captured Slate builds throttle DOM-to-model selection changes by
+  // 100ms. Backspace immediately after Ctrl+A can delete at the old collapsed
+  // model selection, leaving the demo text around TYPED. Let that sync settle,
+  // and verify each setup state before loading any extension code.
+  await sleep(200);
   await page.keyboard.press("Backspace");
   await sleep(400);
+  await page.waitForFunction(() => {
+    const el = document.querySelector('[data-slate-editor="true"]');
+    return el && [...el.querySelectorAll('[data-slate-string]')]
+      .every((node) => node.textContent === "");
+  }, { timeout: 5000 });
   await page.keyboard.type(TYPED, { delay: 25 });
   await sleep(400);
+  await page.waitForFunction((expected) =>
+    document.querySelector('[data-slate-editor="true"]')?.textContent === expected,
+  { timeout: 5000 }, TYPED);
   await page.evaluate(CONTENT);
   await sleep(200);
   return page;
